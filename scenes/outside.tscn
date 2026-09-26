@@ -41,6 +41,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5tstl"]
+size = Vector2(127.5, 187)
+
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
 [node name="Crow" type="Node2D" parent="." unique_id=1799719881]
@@ -196,6 +199,7 @@ scale = Vector2(1, 1.48)
 texture = ExtResource("1_nsm10")
 
 [node name="Mountains" type="Parallax2D" parent="." unique_id=1718860442]
+visible = false
 z_index = -32
 scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(-960, -634)
@@ -252,5 +256,27 @@ shadow_enabled = true
 
 [node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=170309682]
 color = Color(0.72156864, 0.5372549, 0.44705883, 1)
+
+[node name="DoorTransitionBedroom" type="Area2D" parent="." unique_id=1987809636]
+position = Vector2(-4300, -43)
+scale = Vector2(-0.75653094, 0.44983667)
+script = ExtResource("3_udpx5")
+target_scene = "uid://cdxx5gmcaonwn"
+spawn_point = "Bedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="HouseDoor" type="Marker2D" parent="DoorTransitionBedroom" unique_id=1371063968]
+position = Vector2(-4300, 0)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransitionBedroom" unique_id=829133563]
+position = Vector2(-4300, 0)
+shape = SubResource("RectangleShape2D_5tstl")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransitionBedroom" unique_id=858102959]
+z_index = 1
+material = ExtResource("6_bkgx0")
+position = Vector2(-4300, 0)
+scale = Vector2(1, 1.48)
+texture = ExtResource("1_nsm10")
 
 [editable path="House/StairTransition"]

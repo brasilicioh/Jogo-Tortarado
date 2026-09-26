@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://vuvcqu3fxdqs"]
+
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="1_ivja1"]
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="2_la5gh"]
+
+[resource]
+script = ExtResource("2_la5gh")
+display_name = "Boneca"
+id = &"doll"
+description = "Uma estranha boneca que pertence a menina chorona."
+icon = ExtResource("1_ivja1")

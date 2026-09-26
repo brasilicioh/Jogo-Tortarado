@@ -13,7 +13,7 @@ var nearby_interactable: Node = null
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_ended)
-	UiManager.set_current_task("teste real de task aaaaaa")
+	#UiManager.set_current_task("teste real de task aaaaaa")
 	
 	GameState.main.minigame_started.connect(_on_minigame_started)
 	GameState.main.minigame_ended.connect(_on_minigame_ended)
