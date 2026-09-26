@@ -130,34 +130,31 @@ position = Vector2(723.80646, 0)
 scale = Vector2(1, 1.48)
 texture = ExtResource("1_2f21x")
 
-[node name="Irma" type="Node2D" parent="." unique_id=1473153426]
+[node name="Irma" type="Area2D" parent="." unique_id=1862668961]
 position = Vector2(561.99976, -40)
 scale = Vector2(1.263954, 0.62400097)
-
-[node name="Irma" type="Sprite2D" parent="Irma" unique_id=1708075807]
-texture = ExtResource("1_2f21x")
-
-[node name="Irma2" type="Area2D" parent="Irma" unique_id=1862668961]
 script = ExtResource("6_pwtdf")
 
-[node name="Irma" type="CollisionShape2D" parent="Irma/Irma2" unique_id=690378885]
+[node name="Sprite2D" type="Sprite2D" parent="Irma" unique_id=1708075807]
+scale = Vector2(0.99999994, 1)
+texture = ExtResource("1_2f21x")
+
+[node name="Irma" type="CollisionShape2D" parent="Irma" unique_id=690378885]
 position = Vector2(-20.001038, -74.99991)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
 
-[node name="Wardrobe" type="Node2D" parent="." unique_id=1736523775]
+[node name="Wardrobe" type="Area2D" parent="." unique_id=422154356]
 position = Vector2(1035, -38)
 scale = Vector2(1.263954, 0.62400097)
-
-[node name="Wardrobe" type="Sprite2D" parent="Wardrobe" unique_id=1453405669]
-position = Vector2(0, -179.53813)
-scale = Vector2(1, 3.8052833)
-texture = ExtResource("1_2f21x")
-
-[node name="Wardrobe2" type="Area2D" parent="Wardrobe" unique_id=422154356]
 script = ExtResource("7_tjgix")
 
-[node name="Wardrobe" type="CollisionShape2D" parent="Wardrobe/Wardrobe2" unique_id=501015710]
+[node name="Sprite2D" type="Sprite2D" parent="Wardrobe" unique_id=1453405669]
+position = Vector2(0, -179.53813)
+scale = Vector2(0.99999994, 3.8052833)
+texture = ExtResource("1_2f21x")
+
+[node name="Wardrobe" type="CollisionShape2D" parent="Wardrobe" unique_id=501015710]
 position = Vector2(-20.001038, -74.99991)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
