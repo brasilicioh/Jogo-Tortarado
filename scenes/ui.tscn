@@ -118,9 +118,6 @@ size_flags_horizontal = 3
 layout_mode = 2
 id = 8
 
-[node name="DebugPanel" parent="." unique_id=252814259 instance=ExtResource("3_yev5y")]
-layout_mode = 1
-
 [node name="CharacterSelectorContainer" type="PanelContainer" parent="." unique_id=1396948181]
 visible = false
 layout_mode = 1
@@ -184,6 +181,9 @@ theme_override_font_sizes/font_size = 50
 text = "Change character"
 autowrap_mode = 2
 script = ExtResource("5_wm3ai")
+
+[node name="DebugPanel" parent="." unique_id=252814259 instance=ExtResource("3_yev5y")]
+layout_mode = 1
 
 [connection signal="pressed" from="InputButtons/Interact" to="InputButtons/Interact" method="_on_pressed"]
 [connection signal="pressed" from="InputButtons/ChangeCharacter" to="InputButtons/ChangeCharacter" method="_on_pressed"]
