@@ -153,6 +153,7 @@ action_up = &"up"
 action_down = &"down"
 
 [node name="InputButtons" type="HBoxContainer" parent="." unique_id=2074615532]
+visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
