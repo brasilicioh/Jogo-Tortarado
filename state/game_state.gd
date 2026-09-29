@@ -2,6 +2,8 @@ extends Node
 
 const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
+var state = {};
+
 signal active_player_changed(id: String)
 signal inventory_updated
 
