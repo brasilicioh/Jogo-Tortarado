@@ -1,6 +1,6 @@
 extends Control
 
-@export var target_password: Array[int] = [1, 3, 7, 2]
+@export var target_password: Array[int] = [1, 1, 4, 9]
 @export var password: Array[Label] = []
 @export var control_panel: Panel
 @export var button_briefcase: TextureButton

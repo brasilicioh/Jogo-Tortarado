@@ -24,12 +24,8 @@ GameState="*uid://dkmjqq7c87rvc"
 
 [dialogic]
 
-directories/dch_directory={
-"domingas": "res://assets/characters/domingas.dch"
-}
-directories/dtl_directory={
-"domingas": "res://assets/timelines/tutorial/domingas.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
