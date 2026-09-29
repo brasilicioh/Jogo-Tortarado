@@ -1,14 +1,14 @@
-[gd_scene format=3 uid="uid://bmxk63qysxaed"]
+[gd_scene format=3 uid="uid://f6mdhwmc2m7o"]
 
 [ext_resource type="Texture2D" uid="uid://c45yfhh7ktsko" path="res://assets/sprites/briefcase.png" id="1_3bvtu"]
-[ext_resource type="Script" uid="uid://jyfjy286shtt" path="res://scripts/briefcase_game_ctrl.gd" id="1_etmmj"]
+[ext_resource type="Script" uid="uid://jyfjy286shtt" path="res://scripts/suitcase/controller.gd" id="1_aadgw"]
 [ext_resource type="AudioStream" uid="uid://dnnjdb2yp26wp" path="res://assets/sfx/case_scroll_change.mp3" id="3_aadgw"]
 [ext_resource type="AudioStream" uid="uid://bqtmspwv2y1k6" path="res://assets/sfx/case_open.mp3" id="4_v02gh"]
 
 [node name="BriefcaseGame" type="Node2D" unique_id=1670666286]
 
 [node name="BriefcaseMinigameCanvas" type="CanvasLayer" parent="." unique_id=731392690 node_paths=PackedStringArray("password", "control_panel", "button_briefcase", "sfx_click", "sfx_unlocked_case")]
-script = ExtResource("1_etmmj")
+script = ExtResource("1_aadgw")
 password = [NodePath("Control/BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont0/Number"), NodePath("Control/BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont1/Number"), NodePath("Control/BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont2/Number"), NodePath("Control/BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont3/Number")]
 control_panel = NodePath("Control/BriefcaseUIPanel")
 button_briefcase = NodePath("Control/ButtonBriefcase")

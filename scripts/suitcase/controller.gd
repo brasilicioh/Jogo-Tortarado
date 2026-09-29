@@ -1,4 +1,4 @@
-extends CanvasLayer
+extends Control
 
 @export var target_password: Array[int] = [1, 3, 7, 2]
 @export var password: Array[Label] = []
@@ -7,7 +7,7 @@ extends CanvasLayer
 @export var sfx_click: AudioStreamPlayer2D
 @export var sfx_unlocked_case: AudioStreamPlayer2D
 
-var unlocked:bool = false
+var unlocked: bool = false
 
 signal mala_aberta
 
@@ -45,3 +45,7 @@ func _open_briefcase() -> void:
 	control_panel.visible = false
 	#emit_signal("mala_aberta") isso aq é o sinal de fim de jogo.
 	# aqui entra depois a animação de abertura + revelar a faca de marfim
+
+#TODO: pós final da animação chamar essa função
+#func end_minigame():
+#	GameState.main.minigame_ended.emit()
