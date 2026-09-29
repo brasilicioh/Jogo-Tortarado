@@ -12,11 +12,12 @@ script = ExtResource("1_7of2g")
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=322086608]
 layout_mode = 1
-anchors_preset = 9
+anchors_preset = 2
+anchor_top = 1.0
 anchor_bottom = 1.0
-offset_top = -91.0
-offset_right = 225.0
-grow_vertical = 2
+offset_top = -163.0
+offset_right = 176.0
+grow_vertical = 0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer" unique_id=1337381157]
 layout_mode = 2
@@ -42,8 +43,27 @@ max_value = 1200.0
 step = 10.0
 value = 300.0
 
-[node name="ToggleAnimation" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1834135826]
+[node name="ToggleAnimationButton" type="Button" parent="PanelContainer/VBoxContainer" unique_id=1834135826]
 unique_name_in_owner = true
 layout_mode = 2
 toggle_mode = true
 text = "Toggle animation test"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/VBoxContainer" unique_id=1456045919]
+layout_mode = 2
+
+[node name="ScenePath" type="LineEdit" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=107073047]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Insert scene path here"
+emoji_menu_enabled = false
+
+[node name="SpawnPointName" type="LineEdit" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=1088420413]
+unique_name_in_owner = true
+layout_mode = 2
+placeholder_text = "Spawn point name"
+
+[node name="SubmitSceneButton" type="Button" parent="PanelContainer/VBoxContainer/VBoxContainer" unique_id=7256402]
+unique_name_in_owner = true
+layout_mode = 2
+text = "Load scene"
