@@ -184,6 +184,7 @@ autowrap_mode = 2
 script = ExtResource("5_wm3ai")
 
 [node name="DebugPanel" parent="." unique_id=252814259 instance=ExtResource("3_yev5y")]
+visible = false
 layout_mode = 1
 
 [connection signal="pressed" from="InputButtons/Interact" to="InputButtons/Interact" method="_on_pressed"]
