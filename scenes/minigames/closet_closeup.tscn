@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://b746v2yg72ojx"]
+
+[ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/tutorial/closet.png" id="1_coitd"]
+[ext_resource type="Script" uid="uid://dmx1jljoh85x" path="res://scripts/closet/doll.gd" id="2_bu4yi"]
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="2_wec6w"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wec6w"]
+size = Vector2(167, 187)
+
+[node name="ClosetCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_coitd")
+
+[node name="Doll" type="Area2D" parent="." unique_id=1213599610]
+z_index = 1
+position = Vector2(1024, 521)
+monitoring = false
+monitorable = false
+priority = 1
+script = ExtResource("2_bu4yi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Doll" unique_id=355412118]
+position = Vector2(-0.5, 2.5)
+shape = SubResource("RectangleShape2D_wec6w")
+
+[node name="Sprite2D" type="Sprite2D" parent="Doll" unique_id=1650683574]
+scale = Vector2(6, 6)
+texture = ExtResource("2_wec6w")
+
+[connection signal="mouse_entered" from="Doll" to="Doll" method="_on_mouse_entered"]

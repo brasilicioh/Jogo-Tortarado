@@ -1,10 +1,8 @@
 extends Area2D
 
-var doll: ItemData = load("res://assets/items/doll.tres")
-
 var gave_doll = false
 
 func interact():
-	if !GameState.inventories[GameState.active_player].has_item(doll) and !gave_doll:
-		GameState.inventories[GameState.active_player].add_item(doll)
+	if not gave_doll:
+		GameState.main.load_minigame("closet_closeup")
 		gave_doll = true
