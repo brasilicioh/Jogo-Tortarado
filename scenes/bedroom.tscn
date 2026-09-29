@@ -3,104 +3,59 @@
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_2f21x"]
 [ext_resource type="Script" uid="uid://debqb8ihbgeyf" path="res://scripts/start_tutorial.gd" id="1_pwtdf"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_bx5pa"]
+[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/tutorial/room.png" id="2_xunnl"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_mkmp1"]
-[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_7lolw"]
 [ext_resource type="Script" uid="uid://irtwdfwkmle7" path="res://scripts/irma.gd" id="6_pwtdf"]
 [ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_tjgix"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2f21x"]
-a = Vector2(-0.13595079, -36.48373)
-b = Vector2(0.045316927, 31.055355)
+a = Vector2(12, -340)
+b = Vector2(12, 284)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_0grwd"]
-a = Vector2(-0.13595079, -36.48373)
-b = Vector2(0.045316927, 31.055355)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tuyoq"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_bx5pa"]
 a = Vector2(64000, 0)
 b = Vector2(-64000, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pwtdf"]
-size = Vector2(127.5, 187)
+size = Vector2(293.74744, 576.45917)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjgix"]
-size = Vector2(262.51276, 237.4997)
+size = Vector2(249.9315, 237.4997)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
+size = Vector2(173.26588, 370.1917)
 
 [node name="Bedroom" type="Node2D" unique_id=1451377204]
 script = ExtResource("1_pwtdf")
 
-[node name="Ground2" type="StaticBody2D" parent="." unique_id=2140995200]
-position = Vector2(4, -243)
+[node name="Background" type="Sprite2D" parent="." unique_id=1215372281]
+position = Vector2(918, -242)
+scale = Vector2(3, 3)
+texture = ExtResource("2_xunnl")
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground2" unique_id=1769581293]
-position = Vector2(0, 128)
-scale = Vector2(1.4567224, 6.612771)
-texture = ExtResource("1_2f21x")
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=2140995200]
+position = Vector2(-13, -285)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground2" unique_id=363557033]
-scale = Vector2(64.05362, 7.92134)
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=363557033]
 shape = SubResource("SegmentShape2D_2f21x")
 
-[node name="Ground3" type="StaticBody2D" parent="." unique_id=1654935159]
-position = Vector2(712, -243)
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1654935159]
+position = Vector2(1833, -247)
 
-[node name="Sprite2D" type="Sprite2D" parent="Ground3" unique_id=283897128]
-position = Vector2(712, 128)
-scale = Vector2(1.4567224, 6.612771)
-texture = ExtResource("1_2f21x")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground3" unique_id=602841317]
-position = Vector2(712, 0)
-scale = Vector2(64.05362, 7.92134)
-shape = SubResource("SegmentShape2D_0grwd")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=602841317]
+shape = SubResource("SegmentShape2D_tuyoq")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1823080203]
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=376084593]
-position = Vector2(0, 128)
-scale = Vector2(50, 2)
-texture = ExtResource("1_2f21x")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1325624490]
 shape = SubResource("SegmentShape2D_bx5pa")
 
-[node name="ColorRect2" type="ColorRect" parent="." unique_id=234095473]
-offset_left = -565.0
-offset_top = 6.000004
-offset_right = -525.0
-offset_bottom = 46.000004
-scale = Vector2(11.759998, -18.480001)
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect2" unique_id=490399010]
-layout_mode = 0
-offset_left = -87.670044
-offset_top = 759.41547
-offset_right = -47.670044
-offset_bottom = 799.41547
-scale = Vector2(11.759998, -18.480001)
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="." unique_id=118325031]
-offset_left = 1518.9999
-offset_top = -3.0000038
-offset_right = 1661.5168
-offset_bottom = 36.999996
-scale = Vector2(11.759998, -18.480001)
-offset_transform_enabled = true
-color = Color(0, 0, 0, 1)
-
-[node name="ColorRect" type="ColorRect" parent="ColorRect" unique_id=887038092]
-layout_mode = 0
-offset_left = -228.57146
-offset_top = -14.826839
-offset_right = -188.57146
-offset_bottom = 25.17316
-scale = Vector2(11.759998, -3.4000022)
-color = Color(0, 0, 0, 1)
-
 [node name="Bedroom" type="Marker2D" parent="." unique_id=351361094 groups=["spawn point"]]
-position = Vector2(341, -111.99999)
+position = Vector2(1616.9999, -95.99999)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_bx5pa")
@@ -109,7 +64,7 @@ active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=470459369]
-position = Vector2(730.99994, -43)
+position = Vector2(1617.0001, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
 script = ExtResource("3_mkmp1")
 target_scene = "uid://beufraofiugvr"
@@ -117,21 +72,15 @@ spawn_point = "ScareBird"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=1914249399]
-position = Vector2(723.8064, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1659317801]
-position = Vector2(723.8064, 0)
+scale = Vector2(0.99999946, 0.9999996)
 shape = SubResource("RectangleShape2D_pwtdf")
 
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=482886031]
-z_index = 1
-material = ExtResource("4_7lolw")
-position = Vector2(723.80646, 0)
-scale = Vector2(1, 1.48)
-texture = ExtResource("1_2f21x")
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=782998894]
 
 [node name="Irma" type="Area2D" parent="." unique_id=1862668961]
-position = Vector2(561.99976, -40)
+position = Vector2(1042, -142)
 scale = Vector2(1.263954, 0.62400097)
 script = ExtResource("6_pwtdf")
 
@@ -140,7 +89,6 @@ scale = Vector2(0.99999994, 1)
 texture = ExtResource("1_2f21x")
 
 [node name="Irma" type="CollisionShape2D" parent="Irma" unique_id=690378885]
-position = Vector2(-20.001038, -74.99991)
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
 
@@ -149,12 +97,7 @@ position = Vector2(1035, -38)
 scale = Vector2(1.263954, 0.62400097)
 script = ExtResource("7_tjgix")
 
-[node name="Sprite2D" type="Sprite2D" parent="Wardrobe" unique_id=1453405669]
-position = Vector2(0, -179.53813)
-scale = Vector2(0.99999994, 3.8052833)
-texture = ExtResource("1_2f21x")
-
 [node name="Wardrobe" type="CollisionShape2D" parent="Wardrobe" unique_id=501015710]
-position = Vector2(-20.001038, -74.99991)
-scale = Vector2(0.9999998, 1)
-shape = SubResource("RectangleShape2D_tjgix")
+position = Vector2(-300.24823, -127.40364)
+scale = Vector2(0.9999997, 1)
+shape = SubResource("RectangleShape2D_qlg0r")

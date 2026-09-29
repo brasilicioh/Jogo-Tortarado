@@ -1,12 +1,9 @@
 extends Node
 
+@export var camera_limits: Array[int] = [-INF, INF, -INF, INF]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
 	UiManager.set_current_task("Complete o tutorial: Ajudando Domingas")
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
+	
+	GameState.camera_limits = camera_limits

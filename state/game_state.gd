@@ -15,6 +15,9 @@ var active_characters: Array[String] = []
 # just throw things in here if you need any debugging option
 var debug: Dictionary[String, Variant]
 
+## x start, x end, y start, y end
+var camera_limits: Array[int] = [-INF, INF, INF, -INF]
+
 var main
 
 #TODO: get id to change here later
