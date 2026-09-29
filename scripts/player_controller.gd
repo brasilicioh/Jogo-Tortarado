@@ -1,5 +1,13 @@
 extends CharacterBody2D
 
+enum STATE {
+	IDLE,
+	WALK_LEFT,
+	WALK_RIGHT
+}
+
+var state := STATE.IDLE
+
 var speed = 300.0
 
 @export var ground_raycast: RayCast2D
@@ -10,10 +18,11 @@ var nearby_interactable: Node = null
 @export var character_id: String
 @export var can_move: bool = true
 
+@onready var sprite: AnimatedSprite2D = $Sprite
+
 func _ready() -> void:
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_ended)
-	#UiManager.set_current_task("teste real de task aaaaaa")
 	
 	GameState.main.minigame_started.connect(_on_minigame_started)
 	GameState.main.minigame_ended.connect(_on_minigame_ended)
@@ -30,13 +39,34 @@ func _physics_process(delta: float) -> void:
 	if character_id == GameState.active_player and can_move:
 			var direction := Input.get_axis("left", "right")
 			velocity.x = direction * speed
+			
+			if direction > 0:
+				state = STATE.WALK_RIGHT
+			elif direction < 0:
+				state = STATE.WALK_LEFT
+			else:
+				state = STATE.IDLE
 	else:
+		state = STATE.IDLE
 		velocity.x = 0
 	
 	move_and_slide()
 
 func _process(delta: float) -> void:
 	$Camera2D.enabled = character_id == GameState.active_player
+	
+	if GameState.debug.get("toggle_animations", false):
+		match state:
+			STATE.IDLE:
+				sprite.play("idle")
+			STATE.WALK_LEFT:
+				sprite.flip_h = true
+				sprite.play("walk")
+			STATE.WALK_RIGHT:
+				sprite.flip_h = false
+				sprite.play("walk")
+	else:
+		sprite.play("normal")
 
 func _input(event: InputEvent) -> void:
 	if character_id == GameState.active_player:

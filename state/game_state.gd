@@ -12,6 +12,9 @@ var inventories: Dictionary[String, Inventory] = {}
 
 var active_characters: Array[String] = []
 
+# just throw things in here if you need any debugging option
+var debug: Dictionary[String, Variant]
+
 var main
 
 #TODO: get id to change here later
