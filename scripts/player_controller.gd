@@ -14,6 +14,7 @@ var speed = 300.0
 @export var interaction_area: Area2D
 
 var nearby_interactable: Node = null
+var can_interact: bool = true
 
 @export var character_id: String
 @export var can_move: bool = true
@@ -69,7 +70,8 @@ func _process(delta: float) -> void:
 		sprite.play("normal")
 
 func _input(event: InputEvent) -> void:
-	if character_id == GameState.active_player:
+	if character_id == GameState.active_player\
+	   and can_interact:
 		if event.is_action_pressed("interact") and nearby_interactable:
 			# try to use item
 			if GameState.held_item_index() != -1 and\
@@ -82,7 +84,8 @@ func _input(event: InputEvent) -> void:
 				nearby_interactable.interact()
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
-	if area.has_method("interact") or area.has_method("use_item"):
+	if area.has_method("interact") or area.has_method("use_item")\
+	   and can_interact:
 		if area.has_method("highlight"):
 			area.highlight(true)
 		nearby_interactable = area
@@ -95,12 +98,16 @@ func _on_interaction_area_area_exited(area: Area2D) -> void:
 
 func _on_minigame_started():
 	can_move = false
+	can_interact = false
 
 func _on_minigame_ended():
 	can_move = true
+	can_interact = true
 
 func _on_dialogue_started() -> void:
 	can_move = false
+	can_interact = false
 
 func _on_dialogue_ended() -> void:
 	can_move = true
+	can_interact = true
