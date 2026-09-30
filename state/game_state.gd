@@ -4,7 +4,7 @@ const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
 var state = {};
 
-signal active_player_changed(id: String)
+signal active_player_changed
 signal inventory_updated
 
 var active_player: String
@@ -18,7 +18,7 @@ var active_characters: Array[String] = []
 var debug: Dictionary[String, Variant]
 
 ## x start, x end, y start, y end
-var camera_limits: Array[int] = [-INF, INF, INF, -INF]
+var camera_limits: Array[int] = [INT64_MIN, INT64_MAX, INT64_MAX, INT64_MIN]
 
 var main
 
@@ -31,7 +31,7 @@ func change_active_player(new_active_player: String):
 			player.character_id == active_player
 		)
 	
-	active_player_changed.emit(active_player)
+	active_player_changed.emit()
 
 func active_inventory() -> Inventory:
 	return inventories.get_or_add(active_player, Inventory.new())

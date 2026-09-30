@@ -1,6 +1,6 @@
 extends Node
 
-@export var camera_limits: Array[int] = [-INF, INF, -INF, INF]
+@export var camera_limits: Array[int] = [INT64_MIN, INT64_MAX, INT64_MAX, INT64_MIN]
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

@@ -18,11 +18,11 @@ func _ready() -> void:
 	
 	minigame_ended.connect(_on_minigame_ended)
 
-func new_player(global_position: Vector2, id: String):
+func new_player(player_position: Vector2, id: String):
 	var player: Node2D = PLAYER_SCENE.instantiate()
 	
 	player.character_id = id
-	player.global_position = global_position
+	player.global_position = player_position
 	
 	return player
 
@@ -49,8 +49,8 @@ func load_scene(scene: String, spawn_name: String):
 				GameState.change_active_player(spawn.active_character)
 			break
 
-func load_minigame(name: String):
-	var minigame: PackedScene = load("res://scenes/minigames/" + name + ".tscn")
+func load_minigame(minigame_name: String):
+	var minigame: PackedScene = load("res://scenes/minigames/" + minigame_name + ".tscn")
 	var instance = minigame.instantiate()
 	# add a separate container later
 	ui.add_child(instance)

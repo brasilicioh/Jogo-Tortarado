@@ -22,10 +22,18 @@ Dialogic="*uid://ds2q0uclmolvu"
 UiManager="*uid://x56gosye60cs"
 GameState="*uid://dkmjqq7c87rvc"
 
+[debug]
+
+gdscript/warnings/unused_signal=0
+
 [dialogic]
 
-directories/dch_directory={}
-directories/dtl_directory={}
+directories/dch_directory={
+"domingas": "res://assets/characters/domingas.dch"
+}
+directories/dtl_directory={
+"domingas": "res://assets/timelines/tutorial/domingas.dtl"
+}
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
