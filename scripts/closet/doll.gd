@@ -1,11 +1,8 @@
-extends Area2D
+extends TextureButton
 
 var doll: ItemData = load("res://assets/items/doll.tres")
 
-func _ready():
-	_on_mouse_entered()
-
-func _on_mouse_entered() -> void:
+func _on_pressed() -> void:
+	hide()
 	GameState.active_inventory().add_item(doll)
-	
-	GameState.main.minigame_ended.emit()
+	GameState.main.end_minigame()

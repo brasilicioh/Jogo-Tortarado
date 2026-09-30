@@ -15,8 +15,6 @@ func _ready() -> void:
 	GameState.main = self
 	await get_tree().process_frame
 	load_scene("res://scenes/outside.tscn", "Outside")
-	
-	minigame_ended.connect(_on_minigame_ended)
 
 func new_player(player_position: Vector2, id: String):
 	var player: Node2D = PLAYER_SCENE.instantiate()
@@ -57,7 +55,9 @@ func load_minigame(minigame_name: String):
 	
 	minigame_started.emit()
 
-func _on_minigame_ended():
+func end_minigame():
 	#kill 8 billion minigames
 	for minigame in get_tree().get_nodes_in_group("minigame"):
 		minigame.queue_free()
+	
+	minigame_ended.emit()

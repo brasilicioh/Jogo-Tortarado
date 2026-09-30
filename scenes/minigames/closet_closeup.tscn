@@ -4,9 +4,6 @@
 [ext_resource type="Script" uid="uid://dmx1jljoh85x" path="res://scripts/closet/doll.gd" id="2_bu4yi"]
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="2_wec6w"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_wec6w"]
-size = Vector2(167, 187)
-
 [node name="ClosetCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
 layout_mode = 3
 anchors_preset = 15
@@ -24,20 +21,15 @@ grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("1_coitd")
 
-[node name="Doll" type="Area2D" parent="." unique_id=1213599610]
-z_index = 1
-position = Vector2(1024, 521)
-monitoring = false
-monitorable = false
-priority = 1
+[node name="Doll" type="TextureButton" parent="." unique_id=660045445]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 937.0
+offset_top = 430.0
+offset_right = 977.0
+offset_bottom = 470.0
+texture_normal = ExtResource("2_wec6w")
+stretch_mode = 0
 script = ExtResource("2_bu4yi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Doll" unique_id=355412118]
-position = Vector2(-0.5, 2.5)
-shape = SubResource("RectangleShape2D_wec6w")
-
-[node name="Sprite2D" type="Sprite2D" parent="Doll" unique_id=1650683574]
-scale = Vector2(6, 6)
-texture = ExtResource("2_wec6w")
-
-[connection signal="mouse_entered" from="Doll" to="Doll" method="_on_mouse_entered"]
+[connection signal="pressed" from="Doll" to="Doll" method="_on_pressed"]

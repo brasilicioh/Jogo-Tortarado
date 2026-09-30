@@ -47,9 +47,9 @@ func update_inventory(items: Inventory):
 func _on_minigame_started():
 	var ui: Control = get_ui().get_child(0) as Control
 	
-	(ui.get_child(0) as Control).hide()
+	#(ui.get_child(0) as Control).hide()
 
 func _on_minigame_ended():
 	var ui: Control = get_ui().get_child(0) as Control
 	
-	(ui.get_child(0) as Control).show()
+	#(ui.get_child(0) as Control).show()
