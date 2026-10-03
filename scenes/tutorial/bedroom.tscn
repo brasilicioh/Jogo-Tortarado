@@ -1,12 +1,12 @@
 [gd_scene format=3 uid="uid://cdxx5gmcaonwn"]
 
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_2f21x"]
-[ext_resource type="Script" uid="uid://debqb8ihbgeyf" path="res://scripts/start_tutorial.gd" id="1_pwtdf"]
-[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_bx5pa"]
-[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/tutorial/room.png" id="2_xunnl"]
-[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_mkmp1"]
-[ext_resource type="Script" uid="uid://irtwdfwkmle7" path="res://scripts/irma.gd" id="6_pwtdf"]
-[ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_tjgix"]
+[ext_resource type="Script" uid="uid://debqb8ihbgeyf" path="res://scripts/start_tutorial.gd" id="1_d0hh2"]
+[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/tutorial/room.png" id="2_1m7x5"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="3_2h03l"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_s0s36"]
+[ext_resource type="Script" uid="uid://irtwdfwkmle7" path="res://scripts/irma.gd" id="5_7ii52"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_5sodr"]
+[ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_04xgw"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_2f21x"]
 a = Vector2(12, -340)
@@ -24,18 +24,18 @@ b = Vector2(-64000, 0)
 size = Vector2(293.74744, 576.45917)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjgix"]
-size = Vector2(249.9315, 237.4997)
+size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(173.26588, 370.1917)
+size = Vector2(219.0001, 231)
 
 [node name="Bedroom" type="Node2D" unique_id=1451377204]
-script = ExtResource("1_pwtdf")
+script = ExtResource("1_d0hh2")
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1215372281]
 position = Vector2(918, -242)
 scale = Vector2(3, 3)
-texture = ExtResource("2_xunnl")
+texture = ExtResource("2_1m7x5")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=2140995200]
 position = Vector2(-13, -285)
@@ -58,15 +58,17 @@ shape = SubResource("SegmentShape2D_bx5pa")
 position = Vector2(1616.9999, -95.99999)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
-script = ExtResource("2_bx5pa")
+script = ExtResource("3_2h03l")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=470459369]
+process_mode = 4
+visible = false
 position = Vector2(1617.0001, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
-script = ExtResource("3_mkmp1")
+script = ExtResource("4_s0s36")
 target_scene = "uid://beufraofiugvr"
 spawn_point = "ScareBird"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
@@ -80,24 +82,22 @@ shape = SubResource("RectangleShape2D_pwtdf")
 [node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=782998894]
 
 [node name="Irma" type="Area2D" parent="." unique_id=1862668961]
-position = Vector2(1042, -142)
-scale = Vector2(1.263954, 0.62400097)
-script = ExtResource("6_pwtdf")
+position = Vector2(1041, -164)
+script = ExtResource("5_7ii52")
 
 [node name="Sprite2D" type="Sprite2D" parent="Irma" unique_id=1708075807]
 scale = Vector2(0.99999994, 1)
-texture = ExtResource("1_2f21x")
+texture = ExtResource("6_5sodr")
 
 [node name="Irma" type="CollisionShape2D" parent="Irma" unique_id=690378885]
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
 
 [node name="Wardrobe" type="Area2D" parent="." unique_id=422154356]
-position = Vector2(1035, -38)
-scale = Vector2(1.263954, 0.62400097)
-script = ExtResource("7_tjgix")
+position = Vector2(652, -110)
+script = ExtResource("7_04xgw")
 
 [node name="Wardrobe" type="CollisionShape2D" parent="Wardrobe" unique_id=501015710]
-position = Vector2(-300.24823, -127.40364)
+position = Vector2(3.5, -7.5)
 scale = Vector2(0.9999997, 1)
 shape = SubResource("RectangleShape2D_qlg0r")

@@ -13,6 +13,10 @@ func _ready() -> void:
 	
 	main = GameState.main
 	
+	if not main:
+		# don't shit yourself
+		return
+	
 	main.cutscene_started.connect(_on_cutscene_started)
 	main.cutscene_ended.connect(_on_cutscene_ended)
 

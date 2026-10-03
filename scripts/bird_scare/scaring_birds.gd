@@ -147,7 +147,7 @@ func pick_random_no_repeat():
 func check_win_condition(condition):
 	if condition >= 4:
 		print("Assustou os passaroosodo")
-		GameState.main.minigame_ended.emit()
+		GameState.main.end_minigame()
 	else:
 		return
 

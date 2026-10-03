@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://despj3e5uf3rb"]
+
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_3q0b4"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_bxvk8"]
+[ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="3_y7xuq"]
+[ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="4_7oiyi"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
+size = Vector2(5000, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wrhxb"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
+size = Vector2(128, 128)
+
+[node name="Outside" type="Node2D" unique_id=724247517]
+
+[node name="Outside" type="Marker2D" parent="." unique_id=176470904 groups=["spawn point"]]
+position = Vector2(901, -175)
+script = ExtResource("1_3q0b4")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=62377360]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1636216879]
+scale = Vector2(82.636894, 0.14697836)
+texture = ExtResource("2_bxvk8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2047638995]
+shape = SubResource("RectangleShape2D_2i0da")
+
+[node name="Crow" type="Node2D" parent="." unique_id=1928070463]
+position = Vector2(-472, -79)
+
+[node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=1541964808]
+texture = ExtResource("2_bxvk8")
+
+[node name="Area2D" type="Area2D" parent="Crow" unique_id=1940569417]
+script = ExtResource("3_y7xuq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/Area2D" unique_id=731466537]
+shape = SubResource("RectangleShape2D_wrhxb")
+
+[node name="Zeca" type="Node2D" parent="." unique_id=1910350548]
+position = Vector2(330, -80)
+
+[node name="Sprite2D" type="Sprite2D" parent="Zeca" unique_id=1331022899]
+texture = ExtResource("2_bxvk8")
+
+[node name="Area2D" type="Area2D" parent="Zeca" unique_id=1874819971]
+script = ExtResource("4_7oiyi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca/Area2D" unique_id=361648425]
+position = Vector2(0.5004883, 0)
+shape = SubResource("RectangleShape2D_l85ff")

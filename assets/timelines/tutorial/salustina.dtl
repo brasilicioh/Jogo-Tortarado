@@ -1,0 +1,8 @@
+join salustina center
+if {Tutorial.interacted_with_salustina} == false:
+	salustina: Minha filha, seu tio Servó tá chegando com dona Hermeline e seus filhos.
+	salustina: Inclusive, o filho mais velho deles tem quase a sua idade.\
+	Ajude o seu pai a arrumar as coisas lá fora.
+	set {Tutorial.interacted_with_salustina} = true
+else:
+	salustina: Vá ajudar o seu pai.

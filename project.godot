@@ -29,10 +29,14 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
-"domingas": "res://assets/characters/domingas.dch"
+"domingas": "res://assets/characters/domingas.dch",
+"salustina": "res://assets/characters/salustina.dch",
+"zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
-"domingas": "res://assets/timelines/tutorial/domingas.dtl"
+"domingas": "res://assets/timelines/tutorial/domingas.dtl",
+"salustina": "res://assets/timelines/tutorial/salustina.dtl",
+"zeca": "res://assets/timelines/tutorial/zeca.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
@@ -41,7 +45,9 @@ layout/default_style="Default"
 variables={
 "Tutorial": {
 "gave_doll": false,
-"interacted_with_sister": false
+"interacted_with_domingas": false,
+"interacted_with_father": false,
+"interacted_with_salustina": false
 }
 }
 text/letter_speed=0.01
