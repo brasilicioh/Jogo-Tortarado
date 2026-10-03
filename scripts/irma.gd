@@ -10,6 +10,7 @@ func use_item(item: ItemData):
 	if GameState.held_item() == doll:
 		Dialogic.VAR.Tutorial.gave_doll = true
 		GameState.active_inventory().remove_item(item)
+		UiManager.set_current_task("Troque para Belonísia")
 		
 		Dialogic.start(timeline)
 		

@@ -43,12 +43,13 @@ func held_item() -> ItemData:
 	return active_inventory().inventory[held_item_index()]
 
 func _physics_process(_delta: float) -> void:
-	# change to menu later
 	if Input.is_action_just_pressed("up"):
 		if active_player == "belonisia":
-			GameState.change_active_player("bibiana")
+			if "bibiana" in active_characters:
+				change_active_player("bibiana")
 		elif active_player == "bibiana":
-			GameState.change_active_player("belonisia")
+			if "belonisia" in active_characters:
+				change_active_player("belonisia")
 
 func change_scene(scene: String, spawn_name: String):
 	main.load_scene(scene, spawn_name)

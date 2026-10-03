@@ -148,6 +148,7 @@ func check_win_condition(condition):
 	if condition >= 4:
 		print("Assustou os passaroosodo")
 		GameState.main.end_minigame()
+		UiManager.set_current_task("")
 	else:
 		return
 

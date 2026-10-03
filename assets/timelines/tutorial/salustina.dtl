@@ -4,5 +4,6 @@ if {Tutorial.interacted_with_salustina} == false:
 	salustina: Inclusive, o filho mais velho deles tem quase a sua idade.\
 	Ajude o seu pai a arrumar as coisas lá fora.
 	set {Tutorial.interacted_with_salustina} = true
+	do UiManager.set_current_task("Vá ajudar seu pai lá fora")
 else:
 	salustina: Vá ajudar o seu pai.
