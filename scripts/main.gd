@@ -3,10 +3,14 @@ extends Node2D
 signal minigame_started
 signal minigame_ended
 
+signal cutscene_started
+signal cutscene_ended
+
 const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
 @onready var level_container = $Level
 @onready var ui = $Ui
+@onready var cutscene_container = $Cutscene
 
 func _enter_tree() -> void:
 	GameState.main = self
@@ -55,9 +59,27 @@ func load_minigame(minigame_name: String):
 	
 	minigame_started.emit()
 
+func load_cutscene(cutscene_name: String):
+	var cutscene = load("res://scenes/cutscenes/" + cutscene_name + ".tscn").instantiate()
+	
+	GameState.active_characters = []
+	for child in level_container.get_children():
+		child.queue_free()
+	
+	cutscene_container.add_child(cutscene)
+	
+	cutscene_started.emit()
+
 func end_minigame():
 	#kill 8 billion minigames
 	for minigame in get_tree().get_nodes_in_group("minigame"):
 		minigame.queue_free()
 	
 	minigame_ended.emit()
+
+func end_cutscene():
+	#kill 8 billion ~minigames~cutscenes
+	for cutscene in get_tree().get_nodes_in_group("cutscene"):
+		cutscene.queue_free()
+	
+	cutscene_ended.emit()

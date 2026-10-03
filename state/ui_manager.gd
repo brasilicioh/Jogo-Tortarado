@@ -13,8 +13,8 @@ func _ready() -> void:
 	
 	main = GameState.main
 	
-	main.minigame_started.connect(_on_minigame_started)
-	main.minigame_ended.connect(_on_minigame_ended)
+	main.cutscene_started.connect(_on_cutscene_started)
+	main.cutscene_ended.connect(_on_cutscene_ended)
 
 func set_current_task(task: String) -> void:
 	current_task = task
@@ -44,12 +44,10 @@ func update_inventory(items: Inventory):
 		else:
 			slots[2*i].icon = items.inventory[i].icon
 
-func _on_minigame_started():
+func _on_cutscene_started():
 	var ui: Control = get_ui().get_child(0) as Control
-	
-	#(ui.get_child(0) as Control).hide()
+	ui.hide()
 
-func _on_minigame_ended():
+func _on_cutscene_ended():
 	var ui: Control = get_ui().get_child(0) as Control
-	
-	#(ui.get_child(0) as Control).show()
+	ui.show()

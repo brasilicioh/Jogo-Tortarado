@@ -52,3 +52,6 @@ func _physics_process(_delta: float) -> void:
 
 func change_scene(scene: String, spawn_name: String):
 	main.load_scene(scene, spawn_name)
+
+func load_cutscene(scene: String):
+	main.load_cutscene(scene)
