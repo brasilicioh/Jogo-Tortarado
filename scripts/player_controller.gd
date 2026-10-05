@@ -111,3 +111,4 @@ func _on_dialogue_started() -> void:
 func _on_dialogue_ended() -> void:
 	can_move = true
 	can_interact = true
+	

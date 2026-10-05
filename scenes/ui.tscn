@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://ds21gqikj36pd" path="res://scenes/inventory_slot.tscn" id="2_x4jx1"]
 [ext_resource type="PackedScene" uid="uid://d22kpim6mmcyu" path="res://scenes/debug_panel.tscn" id="3_yev5y"]
 [ext_resource type="Script" uid="uid://ty2c0i1pwil8" path="res://scripts/character_selector.gd" id="4_gdt2y"]
+[ext_resource type="Script" uid="uid://vojy0cdgj3vp" path="res://scripts/joystick.gd" id="4_p7vwb"]
 [ext_resource type="Script" uid="uid://doggs3wn5chsm" path="res://scripts/interact_button.gd" id="5_8dubc"]
 [ext_resource type="Script" uid="uid://d4flgd85231as" path="res://scripts/change_character_button.gd" id="5_wm3ai"]
 
@@ -151,6 +152,7 @@ action_left = &"left"
 action_right = &"right"
 action_up = &"up"
 action_down = &"down"
+script = ExtResource("4_p7vwb")
 
 [node name="InputButtons" type="HBoxContainer" parent="." unique_id=2074615532]
 visible = false
