@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cdxx5gmcaonwn"]
 
 [ext_resource type="Script" uid="uid://debqb8ihbgeyf" path="res://scripts/start_tutorial.gd" id="1_d0hh2"]
-[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/tutorial/room.png" id="2_1m7x5"]
+[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="2_1m7x5"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="3_2h03l"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_s0s36"]
 [ext_resource type="Script" uid="uid://irtwdfwkmle7" path="res://scripts/irma.gd" id="5_7ii52"]

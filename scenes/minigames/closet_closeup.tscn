@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b746v2yg72ojx"]
 
-[ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/tutorial/closet.png" id="1_coitd"]
+[ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/closet.png" id="1_coitd"]
 [ext_resource type="Script" uid="uid://dmx1jljoh85x" path="res://scripts/tutorial/doll.gd" id="2_bu4yi"]
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="2_wec6w"]
 

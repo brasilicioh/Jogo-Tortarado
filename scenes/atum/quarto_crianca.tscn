@@ -1,0 +1,79 @@
+[gd_scene format=3 uid="uid://hspfqxldac2k"]
+
+[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_ak6wi"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_4i7bl"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_lnihn"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
+a = Vector2(12, -340)
+b = Vector2(12, 284)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gjln5"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gdlgw"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0dh"]
+size = Vector2(293.74744, 576.45917)
+
+[node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
+position = Vector2(918, -242)
+scale = Vector2(3, 3)
+texture = ExtResource("1_ak6wi")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=303620323]
+position = Vector2(-13, -285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=368322770]
+shape = SubResource("SegmentShape2D_nwuim")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1432632413]
+position = Vector2(1833, -247)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1046519658]
+shape = SubResource("SegmentShape2D_gjln5")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=518471997]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1106246607]
+shape = SubResource("SegmentShape2D_gdlgw")
+
+[node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
+position = Vector2(1616.9999, -95.99999)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("2_4i7bl")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=1984012739]
+process_mode = 4
+visible = false
+position = Vector2(1617.0001, -130.00002)
+scale = Vector2(-0.75653094, 0.44983667)
+script = ExtResource("3_lnihn")
+target_scene = "uid://beufraofiugvr"
+spawn_point = "ScareBird"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=509836146]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1247419857]
+scale = Vector2(0.99999946, 0.9999996)
+shape = SubResource("RectangleShape2D_2l0dh")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=497746735]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=1075622753]
+offset_left = 533.0
+offset_top = 30.0
+offset_right = 775.0
+offset_bottom = 105.0
+text = "BELONÍSIA CRIANÇA 
+SENTADA NO CHÃO"
