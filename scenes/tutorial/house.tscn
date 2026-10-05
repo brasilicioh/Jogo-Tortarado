@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://c5o4ccbq080fw"]
+
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_j8v84"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_g1flj"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_eddn4"]
+size = Vector2(5000, 20)
+
+[node name="House" type="Node2D" unique_id=946214458]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=222052316]
+
+[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1330374819]
+scale = Vector2(82.636894, 0.14697836)
+texture = ExtResource("1_j8v84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=316807793]
+shape = SubResource("RectangleShape2D_eddn4")
+
+[node name="SpawnMarker" type="Marker2D" parent="." unique_id=432029954]
+position = Vector2(49, -144)
+script = ExtResource("2_g1flj")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
