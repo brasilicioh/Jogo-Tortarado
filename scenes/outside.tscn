@@ -199,7 +199,6 @@ scale = Vector2(1, 1.48)
 texture = ExtResource("1_nsm10")
 
 [node name="Mountains" type="Parallax2D" parent="." unique_id=1718860442]
-visible = false
 z_index = -32
 scroll_scale = Vector2(0.5, 0.5)
 scroll_offset = Vector2(-960, -634)

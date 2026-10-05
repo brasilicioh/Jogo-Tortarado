@@ -1,24 +1,37 @@
 [gd_scene format=3 uid="uid://msbs60ar4rsm"]
 
 [ext_resource type="Script" uid="uid://lvkib50pauxb" path="res://scripts/player_controller.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="2_dqkch"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_qhqgy"]
-[ext_resource type="Texture2D" uid="uid://bj1xswfvf5rxo" path="res://assets/sprites/crosshair.png" id="3_dqkch"]
-[ext_resource type="Texture2D" uid="uid://c7jt7u7g6biat" path="res://assets/sprites/crow.png" id="3_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://dqvgdbqxvosnh" path="res://assets/characters/bibiana_walk.png" id="3_qhqgy"]
 
-[sub_resource type="SpriteFrames" id="SpriteFrames_l85ff"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tstl"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_dqkch")
+"texture": SubResource("AtlasTexture_qlg0r")
 }],
 "loop": 1,
 "name": &"idle",
-"speed": 6.0
+"speed": 5.0
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_qhqgy")
+"texture": SubResource("AtlasTexture_qlg0r")
 }],
 "loop": 1,
 "name": &"normal",
@@ -26,17 +39,20 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_dqkch")
+"texture": SubResource("AtlasTexture_dqkch")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dqkch")
+"texture": SubResource("AtlasTexture_qlg0r")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_qlg0r")
+"texture": SubResource("AtlasTexture_tuyoq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjrip")
 }],
 "loop": 1,
 "name": &"walk",
-"speed": 3.0
+"speed": 6.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
@@ -44,19 +60,6 @@ size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(196, 196)
-
-[sub_resource type="Animation" id="Animation_dqkch"]
-resource_name = "idle"
-loop_mode = 1
-
-[sub_resource type="AnimationLibrary" id="AnimationLibrary_qlg0r"]
-_data = {
-&"idle": SubResource("Animation_dqkch")
-}
-
-[sub_resource type="AnimationNodeBlendTree" id="AnimationNodeBlendTree_l0mo1"]
-graph_offset = Vector2(-265.65945, 50.29242)
-nodes/output/position = Vector2(440, 140)
 
 [node name="Character" type="CharacterBody2D" unique_id=1215354689 node_paths=PackedStringArray("ground_raycast", "interaction_area") groups=["player"]]
 collision_layer = 0
@@ -69,8 +72,10 @@ can_move = null
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=396474184]
 light_mask = 3
-sprite_frames = SubResource("SpriteFrames_l85ff")
-animation = &"normal"
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_5tstl")
+animation = &"walk"
+frame_progress = 0.46639833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=551043829]
 shape = SubResource("RectangleShape2D_2i0da")
@@ -86,10 +91,6 @@ enabled = false
 [node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1001387649]
 position = Vector2(0, -34)
 shape = SubResource("RectangleShape2D_l85ff")
-
-[node name="AnimationTree" type="AnimationTree" parent="." unique_id=1051119502]
-libraries/ = SubResource("AnimationLibrary_qlg0r")
-tree_root = SubResource("AnimationNodeBlendTree_l0mo1")
 
 [connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
 [connection signal="area_exited" from="InteractionArea" to="." method="_on_interaction_area_area_exited"]
