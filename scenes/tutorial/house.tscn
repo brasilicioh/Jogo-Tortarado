@@ -2,9 +2,17 @@
 
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_j8v84"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_g1flj"]
+[ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
+[ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eddn4"]
 size = Vector2(5000, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
+size = Vector2(20, 765)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
+size = Vector2(128, 128)
 
 [node name="House" type="Node2D" unique_id=946214458]
 
@@ -17,9 +25,29 @@ texture = ExtResource("1_j8v84")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=316807793]
 shape = SubResource("RectangleShape2D_eddn4")
 
-[node name="SpawnMarker" type="Marker2D" parent="." unique_id=432029954]
+[node name="Start" type="Marker2D" parent="." unique_id=432029954 groups=["spawn point"]]
 position = Vector2(49, -144)
 script = ExtResource("2_g1flj")
 spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
+position = Vector2(-187, -74)
+target = Vector2(-600, -128)
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=532503459]
+position = Vector2(-465, -375)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1307385779]
+shape = SubResource("RectangleShape2D_tl472")
+
+[node name="Bibiana" type="Area2D" parent="." unique_id=1367271309]
+position = Vector2(-1389, -95)
+script = ExtResource("4_eddn4")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=1352322646]
+texture = ExtResource("1_j8v84")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=957274452]
+shape = SubResource("RectangleShape2D_c5ysd")

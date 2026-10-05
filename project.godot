@@ -29,11 +29,13 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
+"bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
 "salustina": "res://assets/characters/salustina.dch",
 "zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
+"clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"
