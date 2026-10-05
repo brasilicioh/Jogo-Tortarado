@@ -1,0 +1,11 @@
+[gd_scene format=3 uid="uid://d36b43h2e74hx"]
+
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_qg0be"]
+[ext_resource type="Script" uid="uid://bodmxnrq14nv" path="res://scripts/cutscenes/puxa_faca/puxa_faca.gd" id="2_sdogr"]
+
+[node name="PuxaFaca" type="Node2D" unique_id=1762787934]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=814663961]
+position = Vector2(68, 66)
+texture = ExtResource("1_qg0be")
+script = ExtResource("2_sdogr")
