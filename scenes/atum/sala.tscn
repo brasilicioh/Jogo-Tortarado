@@ -2,10 +2,10 @@
 
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="1_s2kx5"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_tqtd5"]
+[ext_resource type="Script" uid="uid://dr2vml72xavsu" path="res://scripts/atum/bibiana_sala.gd" id="3_s2kx5"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="3_yok2d"]
-[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_6tlmi"]
-[ext_resource type="Script" uid="uid://dhjvb6udggwyy" path="res://scripts/atum/bibiana.gd" id="5_m1dkd"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_rp4wa"]
+[ext_resource type="Script" uid="uid://b3qnmqkx4gsc" path="res://scripts/atum/donana_saindo_quarto.gd" id="6_s2kx5"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dxknv"]
 a = Vector2(12, -340)
@@ -19,9 +19,6 @@ b = Vector2(4, 246)
 a = Vector2(64000, 0)
 b = Vector2(-64000, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysxba"]
-size = Vector2(293.74744, 576.45917)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cumoy"]
 size = Vector2(128, 128)
 
@@ -33,13 +30,13 @@ scale = Vector2(504.49997, 53.09375)
 texture = ExtResource("1_s2kx5")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=1543226855]
-position = Vector2(-13, -285)
+position = Vector2(-2421, -266)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=365506100]
 shape = SubResource("SegmentShape2D_dxknv")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=206854678]
-position = Vector2(1833, -247)
+position = Vector2(9460, -196)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=635969069]
 shape = SubResource("SegmentShape2D_ccf2k")
@@ -50,31 +47,14 @@ shape = SubResource("SegmentShape2D_ccf2k")
 position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_3bruv")
 
-[node name="Bedroom" type="Marker2D" parent="." unique_id=1164742463 groups=["spawn point"]]
-position = Vector2(800, -1)
+[node name="Sala" type="Marker2D" parent="." unique_id=1164742463 groups=["spawn point"]]
+position = Vector2(806, -5)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_tqtd5")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="DoorTransition" type="Area2D" parent="." unique_id=1423287780]
-process_mode = 4
-material = ExtResource("3_yok2d")
-position = Vector2(1617.0001, -130.00002)
-scale = Vector2(-0.75653094, 0.44983667)
-script = ExtResource("4_6tlmi")
-target_scene = "uid://bs6as484p4ird"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=1253720809]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=579665472]
-scale = Vector2(0.99999946, 0.9999996)
-shape = SubResource("RectangleShape2D_ysxba")
-
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1601234620]
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=476588663]
 offset_left = 533.0
@@ -85,8 +65,8 @@ text = "TODO: MUDAR SPRITE DE FUNDO PARA CASA"
 metadata/_edit_use_anchors_ = true
 
 [node name="Bibiana" type="Area2D" parent="." unique_id=189156257]
-position = Vector2(1064, 17)
-script = ExtResource("5_m1dkd")
+position = Vector2(1092, -73)
+script = ExtResource("3_s2kx5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=705269240]
 material = ExtResource("3_yok2d")
@@ -96,3 +76,39 @@ texture = ExtResource("6_rp4wa")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1588772389]
 position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_cumoy")
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=2073372327]
+anchors_preset = -1
+anchor_left = -0.42465752
+anchor_top = -4.2266665
+anchor_right = -0.42465752
+anchor_bottom = -4.2266665
+offset_left = 911.0
+offset_top = -256.99997
+offset_right = 1276.0
+offset_bottom = -181.99997
+text = "Bibiana parada sempre
+(pode ser belonisia caso user troque)"
+metadata/_edit_use_anchors_ = true
+
+[node name="Donana" type="Area2D" parent="." unique_id=1128933496]
+position = Vector2(-2020, -73)
+script = ExtResource("6_s2kx5")
+
+[node name="Sprite2D" type="Sprite2D" parent="Donana" unique_id=800361759]
+material = ExtResource("3_yok2d")
+position = Vector2(1, 0)
+texture = ExtResource("6_rp4wa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Donana" unique_id=640539089]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_cumoy")
+
+[node name="TextEdit3" type="TextEdit" parent="." unique_id=1922239724]
+offset_left = -2205.0
+offset_top = -247.0
+offset_right = -1840.0
+offset_bottom = -172.0
+text = "DONANA SÓ APARECE E FALA QUANDO SE 
+APROXIMAM DA PORTA"
+metadata/_edit_use_anchors_ = true

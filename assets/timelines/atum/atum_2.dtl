@@ -1,0 +1,5 @@
+join bibiana center
+if {Atum.interacted_with_bibiana}  ==  false:
+	bibiana: Não estou achando o quarto da vovó!
+elif {Atum.interacted_with_belonisia} == false:
+	belonisia: Não estou achando o quarto da vovó!

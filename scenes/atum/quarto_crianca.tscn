@@ -19,39 +19,41 @@ b = Vector2(4, 246)
 a = Vector2(64000, 0)
 b = Vector2(-64000, 0)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0dh"]
-size = Vector2(293.74744, 576.45917)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_lnihn"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
+size = Vector2(140, 171)
 
 [node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
 position = Vector2(918, -242)
-scale = Vector2(3, 3)
+scale = Vector2(2, 2)
 texture = ExtResource("1_ak6wi")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=303620323]
-position = Vector2(-13, -285)
+position = Vector2(294, -204)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=368322770]
 shape = SubResource("SegmentShape2D_nwuim")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=1432632413]
-position = Vector2(1833, -247)
+position = Vector2(1500, -200)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1046519658]
+position = Vector2(25, 1)
 shape = SubResource("SegmentShape2D_gjln5")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=518471997]
+position = Vector2(0, -81)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1106246607]
 position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_gdlgw")
 
 [node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
-position = Vector2(800, -1)
+position = Vector2(837, -86)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_4i7bl")
@@ -59,35 +61,18 @@ spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="DoorTransition" type="Area2D" parent="." unique_id=1984012739]
-process_mode = 4
-material = ExtResource("4_4i7bl")
-position = Vector2(1617.0001, -130.00002)
-scale = Vector2(-0.75653094, 0.44983667)
-script = ExtResource("3_lnihn")
-target_scene = "uid://bs6as484p4ird"
-spawn_point = "Bedroom"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=509836146]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1247419857]
-scale = Vector2(0.99999946, 0.9999996)
-shape = SubResource("RectangleShape2D_2l0dh")
-
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=497746735]
-
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1075622753]
-offset_left = 533.0
-offset_top = 30.0
-offset_right = 775.0
-offset_bottom = 105.0
+offset_left = 559.0
+offset_top = -92.0
+offset_right = 801.0
+offset_bottom = -17.0
 text = "BELONÍSIA CRIANÇA 
 SENTADA NO CHÃO"
 metadata/_edit_use_anchors_ = true
 
 [node name="Bibiana" type="Area2D" parent="." unique_id=1505591510]
-position = Vector2(1064, 17)
+position = Vector2(1125, -113)
+scale = Vector2(0.39999998, 0.5200003)
 script = ExtResource("4_n4q13")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=899709704]
@@ -100,11 +85,22 @@ position = Vector2(0, -1)
 shape = SubResource("RectangleShape2D_lnihn")
 
 [node name="TextEdit2" type="TextEdit" parent="." unique_id=1928036999]
-offset_left = 774.0
-offset_top = -339.0
-offset_right = 1124.0
-offset_bottom = -239.0
+offset_left = 718.0
+offset_top = -391.0
+offset_right = 1068.0
+offset_bottom = -291.0
 text = "TODO: BIBIANA CHEGAR NA PORTA
 BELONISIA SE LEVANTAR
 PERMITIR SAIR APENAS PÓS CONVERSA"
 metadata/_edit_use_anchors_ = true
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
+position = Vector2(1381, -149)
+script = ExtResource("3_lnihn")
+target_scene = "uid://bs6as484p4ird"
+spawn_point = "Sala"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1353985260]
+position = Vector2(3, -15.5)
+shape = SubResource("RectangleShape2D_b5uqm")
