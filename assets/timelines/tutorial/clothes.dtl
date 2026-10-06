@@ -1,5 +1,23 @@
 join bibiana center
-bibiana: Roupa 1 ou 2?
-- 1
-- 2
-[signal arg="clothe_choosen"]
+bibiana: Belo, mainha disse que o primo Severo tem nossa idade.
+bibiana: Quero estar bonita. Qual roupa é melhor, a azul ou a amarela?
+- A azul
+- A amarela
+bibiana: Então vou vestir essa mesmo!
+audio "res://assets/sfx/crow.mp3"
+[wait time="2.0" hide_text="false"]
+[signal arg="severo"]
+# Severo entra
+join severo center
+severo: Boa tarde, vocês são bibiana e Belonisía?
+severo: Eu sou Severo, primo de vocês.
+bibiana: Ah, boa tarde! Isso, eu sou Bibiana, é um prazer.
+severo: Eu interrompi algo? Me desculpem.
+severo: Bem,[pause=0.5+] tio Zeca tá chamando vocês.
+bibiana: Não bão. A gente já tava indo lá para fora.
+severo: Então vamos!
+[wait time="0.5"]
+severo: Inclusive[lspeed=0.5]...[lspeed]\
+Algum gato mordeu sua lingua, Belonísia?
+bibiana: A Belonísia é muda, e essa é uma história um pouco longa.
+[signal arg="end_scene"]

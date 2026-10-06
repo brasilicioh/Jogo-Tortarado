@@ -1,0 +1,5 @@
+join bibiana center
+bibiana: Roupa 1 ou 2?
+- 1
+- 2
+[signal arg="clothe_choosen"]

@@ -8,6 +8,9 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_eddn4"]
 size = Vector2(5000, 20)
 
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eddn4"]
+load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
 size = Vector2(20, 765)
 
@@ -35,6 +38,17 @@ metadata/_custom_type_script = "uid://xxber3ayswrc"
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
 position = Vector2(-187, -74)
 target = Vector2(-600, -128)
+
+[node name="Sprite2D" type="Sprite2D" parent="Teleporter" unique_id=945590484]
+texture = SubResource("CompressedTexture2D_eddn4")
+
+[node name="Label" type="Label" parent="Teleporter" unique_id=402166908]
+offset_left = -36.0
+offset_top = -159.0
+offset_right = 4.0
+offset_bottom = -136.0
+size_flags_horizontal = 4
+text = "porta para o quarto"
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=532503459]
 position = Vector2(-465, -375)
