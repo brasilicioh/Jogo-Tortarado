@@ -56,7 +56,7 @@ func _physics_process(delta: float) -> void:
 func _process(_delta: float) -> void:
 	$Camera2D.enabled = character_id == GameState.active_player
 	
-	if GameState.debug.get("toggle_animations", false):
+	if GameState.debug.get("toggle_animations", true):
 		match state:
 			STATE.IDLE:
 				sprite.play("idle")
