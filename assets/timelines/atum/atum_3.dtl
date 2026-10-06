@@ -5,3 +5,5 @@ if {Atum.interacted_with_donana} == false:
 	belonisia: Nada mesmo.
 	\donana: Tenham cuidado fora de casa, eu acho que tem uma onça lá fora.
 	[signal arg="donana_sair"]
+	belonisia: Onça?
+	bibiana: Loucura da vovó. Bora procurar a mala!
