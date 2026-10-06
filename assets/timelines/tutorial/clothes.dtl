@@ -20,4 +20,5 @@ severo: Então vamos!
 severo: Inclusive[lspeed=0.5]...[lspeed]\
 Algum gato mordeu sua lingua, Belonísia?
 bibiana: A Belonísia é muda, e essa é uma história um pouco longa.
-[signal arg="end_scene"]
+[wait time="0.5"]
+do GameState.change_scene("res://scenes/atum/quarto_crianca.tscn", "Bedroom")

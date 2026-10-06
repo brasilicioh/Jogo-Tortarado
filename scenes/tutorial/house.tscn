@@ -1,6 +1,8 @@
 [gd_scene format=3 uid="uid://c5o4ccbq080fw"]
 
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_j8v84"]
+[ext_resource type="Script" uid="uid://c6reqv1xtlcwc" path="res://scripts/tutorial/house.gd" id="1_viu1i"]
+[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="2_ed01o"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_g1flj"]
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
@@ -18,6 +20,12 @@ size = Vector2(20, 765)
 size = Vector2(128, 128)
 
 [node name="House" type="Node2D" unique_id=946214458]
+script = ExtResource("1_viu1i")
+
+[node name="Room" type="Sprite2D" parent="." unique_id=1869045958]
+position = Vector2(-1390, -376)
+scale = Vector2(3, 3)
+texture = ExtResource("2_ed01o")
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=222052316]
 
@@ -53,6 +61,11 @@ text = "porta para o quarto"
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=532503459]
 position = Vector2(-465, -375)
 
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=381355339]
+position = Vector2(0, -3.0517578e-05)
+scale = Vector2(0.15625004, 5.9843745)
+texture = ExtResource("1_j8v84")
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1307385779]
 shape = SubResource("RectangleShape2D_tl472")
 
@@ -65,3 +78,8 @@ texture = ExtResource("1_j8v84")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=957274452]
 shape = SubResource("RectangleShape2D_c5ysd")
+
+[node name="Severo" type="Sprite2D" parent="." unique_id=1283774295]
+visible = false
+position = Vector2(-703, -204)
+texture = ExtResource("1_j8v84")
