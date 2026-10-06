@@ -1,9 +1,13 @@
 [gd_scene format=3 uid="uid://despj3e5uf3rb"]
 
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_3q0b4"]
+[ext_resource type="Script" uid="uid://eyek5arxnd2" path="res://scripts/tutorial/outside.gd" id="1_7oiyi"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_bxvk8"]
 [ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="3_y7xuq"]
 [ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="4_7oiyi"]
+[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_b3qvv"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_gk2p8"]
+[ext_resource type="PackedScene" uid="uid://msbs60ar4rsm" path="res://scenes/player.tscn" id="8_pdayf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(5000, 20)
@@ -14,10 +18,14 @@ size = Vector2(128, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(128, 128)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
+size = Vector2(100, 182)
+
 [node name="Outside" type="Node2D" unique_id=724247517]
+script = ExtResource("1_7oiyi")
 
 [node name="Outside" type="Marker2D" parent="." unique_id=176470904 groups=["spawn point"]]
-position = Vector2(901, -175)
+position = Vector2(787, -94)
 script = ExtResource("1_3q0b4")
 spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"
@@ -56,3 +64,22 @@ script = ExtResource("4_7oiyi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca/Area2D" unique_id=361648425]
 position = Vector2(0.5004883, 0)
 shape = SubResource("RectangleShape2D_l85ff")
+
+[node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
+position = Vector2(787, -249)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("6_b3qvv")
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=8250780]
+process_mode = 4
+position = Vector2(787, -94)
+script = ExtResource("7_gk2p8")
+target_scene = "uid://c5o4ccbq080fw"
+spawn_point = "Start"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1802774484]
+shape = SubResource("RectangleShape2D_tl472")
+
+[node name="Character" parent="." unique_id=1215354689 instance=ExtResource("8_pdayf")]
+position = Vector2(1380, -78)
