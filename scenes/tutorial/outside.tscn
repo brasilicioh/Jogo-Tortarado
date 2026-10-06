@@ -7,7 +7,6 @@
 [ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="4_7oiyi"]
 [ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_b3qvv"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_gk2p8"]
-[ext_resource type="PackedScene" uid="uid://msbs60ar4rsm" path="res://scenes/player.tscn" id="8_pdayf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(5000, 20)
@@ -80,6 +79,3 @@ metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1802774484]
 shape = SubResource("RectangleShape2D_tl472")
-
-[node name="Character" parent="." unique_id=1215354689 instance=ExtResource("8_pdayf")]
-position = Vector2(1380, -78)
