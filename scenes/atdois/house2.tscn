@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://ddl3or1wnkwtf"]
+
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_xg0qb"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_kl2nh"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2i0da"]
+a = Vector2(-1000, 0)
+b = Vector2(1000, 0)
+
+[node name="House" type="Node2D" unique_id=1394089690]
+
+[node name="Door" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
+position = Vector2(49, -80)
+script = ExtResource("1_xg0qb")
+spawn_characters = Array[String](["belonisia", "bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1219923547]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1310512805]
+shape = SubResource("SegmentShape2D_2i0da")
+
+[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=183782919]
+position = Vector2(0, 64)
+scale = Vector2(100, 1)
+texture = ExtResource("2_kl2nh")
+
+[node name="Label" type="Label" parent="." unique_id=935178039]
+offset_left = 168.0
+offset_top = -148.0
+offset_right = 349.0
+offset_bottom = -125.0
+text = "sei la oque botar aqui :("

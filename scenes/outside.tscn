@@ -47,6 +47,9 @@ size = Vector2(127.5, 187)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
 size = Vector2(110, 160.5)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2aq7t"]
+size = Vector2(128, 128)
+
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
 [node name="Crow" type="Node2D" parent="." unique_id=1799719881]
@@ -304,5 +307,25 @@ offset_top = -150.0
 offset_right = 151.0
 offset_bottom = -103.0
 text = "PORTA LEVA AO ATO 1"
+
+[node name="DoorTransition3" type="Area2D" parent="." unique_id=1788716658]
+position = Vector2(5842, -101)
+script = ExtResource("3_udpx5")
+target_scene = "uid://bcgkh4hyb8pqu"
+spawn_point = "Bedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition3" unique_id=1673304668]
+texture = ExtResource("1_nsm10")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=1761594106]
+shape = SubResource("RectangleShape2D_2aq7t")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition3" unique_id=801384030]
+offset_left = -64.0
+offset_top = -131.0
+offset_right = 64.0
+offset_bottom = -67.0
+text = "porta poATO 2"
 
 [editable path="House/StairTransition"]
