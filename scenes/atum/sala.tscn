@@ -1,0 +1,98 @@
+[gd_scene format=3 uid="uid://bs6as484p4ird"]
+
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="1_s2kx5"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_tqtd5"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="3_yok2d"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_6tlmi"]
+[ext_resource type="Script" uid="uid://dhjvb6udggwyy" path="res://scripts/atum/bibiana.gd" id="5_m1dkd"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_rp4wa"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_dxknv"]
+a = Vector2(12, -340)
+b = Vector2(15, 283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ccf2k"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3bruv"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ysxba"]
+size = Vector2(293.74744, 576.45917)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cumoy"]
+size = Vector2(128, 128)
+
+[node name="Sala" type="Node2D" unique_id=1848214340]
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=357045988]
+position = Vector2(3572.9998, -817.5)
+scale = Vector2(504.49997, 53.09375)
+texture = ExtResource("1_s2kx5")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1543226855]
+position = Vector2(-13, -285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=365506100]
+shape = SubResource("SegmentShape2D_dxknv")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=206854678]
+position = Vector2(1833, -247)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=635969069]
+shape = SubResource("SegmentShape2D_ccf2k")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1032372746]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1281805388]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_3bruv")
+
+[node name="Bedroom" type="Marker2D" parent="." unique_id=1164742463 groups=["spawn point"]]
+position = Vector2(800, -1)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("2_tqtd5")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=1423287780]
+process_mode = 4
+material = ExtResource("3_yok2d")
+position = Vector2(1617.0001, -130.00002)
+scale = Vector2(-0.75653094, 0.44983667)
+script = ExtResource("4_6tlmi")
+target_scene = "uid://bs6as484p4ird"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=1253720809]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=579665472]
+scale = Vector2(0.99999946, 0.9999996)
+shape = SubResource("RectangleShape2D_ysxba")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1601234620]
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=476588663]
+offset_left = 533.0
+offset_top = 30.0
+offset_right = 898.0
+offset_bottom = 105.0
+text = "TODO: MUDAR SPRITE DE FUNDO PARA CASA"
+metadata/_edit_use_anchors_ = true
+
+[node name="Bibiana" type="Area2D" parent="." unique_id=189156257]
+position = Vector2(1064, 17)
+script = ExtResource("5_m1dkd")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=705269240]
+material = ExtResource("3_yok2d")
+position = Vector2(1, 0)
+texture = ExtResource("6_rp4wa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1588772389]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_cumoy")

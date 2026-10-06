@@ -3,10 +3,13 @@
 [ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_ak6wi"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_4i7bl"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_lnihn"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_4i7bl"]
+[ext_resource type="Script" uid="uid://dhjvb6udggwyy" path="res://scripts/atum/bibiana.gd" id="4_n4q13"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="5_4i7bl"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
 a = Vector2(12, -340)
-b = Vector2(12, 284)
+b = Vector2(15, 283)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_gjln5"]
 a = Vector2(4, -379)
@@ -18,6 +21,9 @@ b = Vector2(-64000, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0dh"]
 size = Vector2(293.74744, 576.45917)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lnihn"]
+size = Vector2(128, 128)
 
 [node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
 
@@ -41,10 +47,11 @@ shape = SubResource("SegmentShape2D_gjln5")
 [node name="Ground" type="StaticBody2D" parent="." unique_id=518471997]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1106246607]
+position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_gdlgw")
 
 [node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
-position = Vector2(1616.9999, -95.99999)
+position = Vector2(800, -1)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_4i7bl")
@@ -54,12 +61,12 @@ metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1984012739]
 process_mode = 4
-visible = false
+material = ExtResource("4_4i7bl")
 position = Vector2(1617.0001, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
 script = ExtResource("3_lnihn")
-target_scene = "uid://beufraofiugvr"
-spawn_point = "ScareBird"
+target_scene = "uid://bs6as484p4ird"
+spawn_point = "Bedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=509836146]
@@ -77,3 +84,27 @@ offset_right = 775.0
 offset_bottom = 105.0
 text = "BELONÍSIA CRIANÇA 
 SENTADA NO CHÃO"
+metadata/_edit_use_anchors_ = true
+
+[node name="Bibiana" type="Area2D" parent="." unique_id=1505591510]
+position = Vector2(1064, 17)
+script = ExtResource("4_n4q13")
+
+[node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=899709704]
+material = ExtResource("4_4i7bl")
+position = Vector2(1, 0)
+texture = ExtResource("5_4i7bl")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1573801079]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_lnihn")
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=1928036999]
+offset_left = 774.0
+offset_top = -339.0
+offset_right = 1124.0
+offset_bottom = -239.0
+text = "TODO: BIBIANA CHEGAR NA PORTA
+BELONISIA SE LEVANTAR
+PERMITIR SAIR APENAS PÓS CONVERSA"
+metadata/_edit_use_anchors_ = true

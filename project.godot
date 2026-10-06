@@ -29,6 +29,7 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
+"belonisia": "res://assets/characters/belonisia.dch",
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
 "salustina": "res://assets/characters/salustina.dch",
@@ -37,6 +38,7 @@ directories/dch_directory={
 directories/dtl_directory={
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
+"mala1": "res://assets/timelines/atum/mala1.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"
 }
@@ -45,6 +47,9 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"Atum": {
+"interacted_with_bibiana": false
+},
 "Tutorial": {
 "gave_doll": false,
 "interacted_with_domingas": false,
