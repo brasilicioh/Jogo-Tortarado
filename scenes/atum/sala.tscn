@@ -6,6 +6,8 @@
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="3_yok2d"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_rp4wa"]
 [ext_resource type="Script" uid="uid://b3qnmqkx4gsc" path="res://scripts/atum/donana_saindo_quarto.gd" id="6_s2kx5"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_yok2d"]
+[ext_resource type="Script" uid="uid://dkg8mc8njedxl" path="res://scenes/atum/door_trigger.gd" id="8_6tlmi"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dxknv"]
 a = Vector2(12, -340)
@@ -21,6 +23,12 @@ b = Vector2(-64000, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cumoy"]
 size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m1dkd"]
+size = Vector2(110, 160.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(158, 218)
 
 [node name="Sala" type="Node2D" unique_id=1848214340]
 
@@ -92,7 +100,7 @@ text = "Bibiana parada sempre
 metadata/_edit_use_anchors_ = true
 
 [node name="Donana" type="Area2D" parent="." unique_id=1128933496]
-position = Vector2(-2020, -73)
+position = Vector2(-1363, -67)
 script = ExtResource("6_s2kx5")
 
 [node name="Sprite2D" type="Sprite2D" parent="Donana" unique_id=800361759]
@@ -112,3 +120,35 @@ offset_bottom = -172.0
 text = "DONANA SÓ APARECE E FALA QUANDO SE 
 APROXIMAM DA PORTA"
 metadata/_edit_use_anchors_ = true
+
+[node name="DoorTransition2" type="Area2D" parent="." unique_id=2012293754]
+position = Vector2(-746, -69)
+script = ExtResource("7_yok2d")
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2" unique_id=510080167]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_m1dkd")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition2" unique_id=1426806164]
+material = ExtResource("3_yok2d")
+position = Vector2(1.0000076, -5.499998)
+scale = Vector2(0.7343751, 1.4140625)
+texture = ExtResource("6_rp4wa")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition2" unique_id=1183273958]
+offset_left = -91.0
+offset_top = -150.0
+offset_right = 151.0
+offset_bottom = -103.0
+text = "PORTA DO QUARTO DA VELHA"
+
+[node name="DoorTriggerArea" type="Area2D" parent="DoorTransition2" unique_id=1977621560]
+script = ExtResource("8_6tlmi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2/DoorTriggerArea" unique_id=1635152127]
+position = Vector2(69, -35)
+shape = SubResource("RectangleShape2D_8w0r3")
+
+[node name="PontoDonana" type="Marker2D" parent="." unique_id=43720938]
+position = Vector2(-826, -69)

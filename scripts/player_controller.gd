@@ -89,6 +89,12 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 		if area.has_method("highlight"):
 			area.highlight(true)
 		nearby_interactable = area
+		
+	if area.name == "DoorTriggerArea":
+		can_move = false
+		area.ativar()
+		return
+
 
 func _on_interaction_area_area_exited(area: Area2D) -> void:
 	if area == nearby_interactable:
