@@ -53,13 +53,11 @@ active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1984012739]
-process_mode = 4
-visible = false
 position = Vector2(1617.0001, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
 script = ExtResource("3_7gfdh")
 target_scene = "uid://ddl3or1wnkwtf"
-spawn_point = "Party"
+spawn_point = "Hallway"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=509836146]
