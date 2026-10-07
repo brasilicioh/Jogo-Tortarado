@@ -38,15 +38,17 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		velocity += get_gravity() * delta
 	if character_id == GameState.active_player and can_move:
-			var direction := Input.get_axis("left", "right")
-			velocity.x = direction * speed
-			
-			if direction > 0:
-				state = STATE.WALK_RIGHT
-			elif direction < 0:
-				state = STATE.WALK_LEFT
-			else:
-				state = STATE.IDLE
+		var direction := Input.get_axis("left", "right")
+		if GameState.no_left and direction < 0:
+			direction = 0
+		velocity.x = direction * speed
+		
+		if direction > 0:
+			state = STATE.WALK_RIGHT
+		elif direction < 0:
+			state = STATE.WALK_LEFT
+		else:
+			state = STATE.IDLE
 	else:
 		state = STATE.IDLE
 		velocity.x = 0

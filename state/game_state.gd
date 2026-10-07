@@ -20,6 +20,8 @@ var debug: Dictionary[String, Variant]
 ## x start, x end, y start, y end
 var camera_limits: Array[int] = [INT64_MIN, INT64_MAX, INT64_MAX, INT64_MIN]
 
+var no_left := false
+
 var main
 
 #TODO: get id to change here later
@@ -43,6 +45,7 @@ func held_item() -> ItemData:
 	return active_inventory().inventory[held_item_index()]
 
 func change_scene(scene: String, spawn_name: String):
+	no_left = false
 	main.load_scene(scene, spawn_name)
 
 func load_cutscene(scene: String):
