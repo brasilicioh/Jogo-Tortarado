@@ -1,0 +1,126 @@
+[gd_scene format=3 uid="uid://b5he2wu862wg3"]
+
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_2m3r7"]
+[ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="3_xu2do"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_xfqnf"]
+[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="5_hn46e"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="6_2l26s"]
+[ext_resource type="Script" uid="uid://btet3ghnd7w3" path="res://scripts/some_testing_object.gd" id="7_w6ggo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
+size = Vector2(262.51276, 237.4997)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2i0da"]
+radius = 136.09187
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
+size = Vector2(127.5, 187)
+
+[node name="Outside" type="Node2D" unique_id=1893350408]
+
+[node name="Bibiana" type="Node2D" parent="." unique_id=324790912]
+position = Vector2(-3175, -34)
+scale = Vector2(1.263954, 0.62400097)
+
+[node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=2056038797]
+texture = ExtResource("1_2m3r7")
+
+[node name="Area2D" type="Area2D" parent="Bibiana" unique_id=707752180]
+script = ExtResource("3_xu2do")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana/Area2D" unique_id=390585248]
+position = Vector2(-20.001038, -74.99991)
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_8w0r3")
+
+[node name="KeyGiber" type="Area2D" parent="." unique_id=934398588]
+position = Vector2(1016, -143)
+script = ExtResource("7_w6ggo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyGiber" unique_id=1555913843]
+shape = SubResource("CircleShape2D_2i0da")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=769522013]
+
+[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1825814621]
+position = Vector2(0, 128)
+scale = Vector2(100, 2)
+texture = ExtResource("1_2m3r7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=227719484]
+shape = SubResource("SegmentShape2D_nsm10")
+
+[node name="Mountains" type="Parallax2D" parent="." unique_id=1718860442]
+visible = false
+z_index = -32
+scroll_scale = Vector2(0.5, 0.5)
+scroll_offset = Vector2(-960, -634)
+
+[node name="Icon" type="Sprite2D" parent="Mountains" unique_id=1763166656]
+position = Vector2(634.68494, 817.2617)
+rotation = -0.573568
+scale = Vector2(5.9921875, 9)
+texture = ExtResource("1_2m3r7")
+
+[node name="Icon2" type="Sprite2D" parent="Mountains" unique_id=1217801479]
+position = Vector2(1152.6849, 831.2617)
+rotation = 0.8446477
+scale = Vector2(5.9921875, 9)
+texture = ExtResource("1_2m3r7")
+
+[node name="Icon3" type="Sprite2D" parent="Mountains" unique_id=975021212]
+position = Vector2(1765.6849, 949.26184)
+rotation = -1.0200288
+scale = Vector2(5.9921875, 9)
+texture = ExtResource("1_2m3r7")
+
+[node name="Icon6" type="Sprite2D" parent="Mountains" unique_id=97851634]
+position = Vector2(3139.685, 583)
+rotation = -0.94858766
+scale = Vector2(6.3784175, 6.7436466)
+texture = ExtResource("1_2m3r7")
+
+[node name="Icon4" type="Sprite2D" parent="Mountains" unique_id=1115492320]
+position = Vector2(2750.685, 673.00006)
+rotation = 0.35142136
+scale = Vector2(5.9921875, 9)
+texture = ExtResource("1_2m3r7")
+
+[node name="Icon5" type="Sprite2D" parent="Mountains" unique_id=1907886804]
+position = Vector2(3448, 665.9999)
+rotation = 0.35142136
+scale = Vector2(8.16619, 5.315786)
+texture = ExtResource("1_2m3r7")
+
+[node name="OutsideMarker" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
+position = Vector2(2178, -101)
+script = ExtResource("6_2l26s")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="House" type="StaticBody2D" parent="." unique_id=1153298674]
+z_index = -1
+position = Vector2(2503, -128)
+
+[node name="Sprite2D" type="Sprite2D" parent="House" unique_id=698622877]
+z_index = 1
+position = Vector2(-76, -89)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_hn46e")
+
+[node name="DoorTransition" type="Area2D" parent="House" unique_id=497513784]
+position = Vector2(-78, 28)
+script = ExtResource("4_xfqnf")
+target_scene = "uid://ddl3or1wnkwtf"
+spawn_point = "Hallway"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="HouseDoor" type="Marker2D" parent="House/DoorTransition" unique_id=122138981]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/DoorTransition" unique_id=608501714]
+shape = SubResource("RectangleShape2D_l85ff")

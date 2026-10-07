@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_xg0qb"]
 [ext_resource type="Texture2D" uid="uid://dgcig74hs18rc" path="res://assets/scenaries/633758-crop0_403_960_643-ll-cfkxuevy-v4.webp" id="2_clvdy"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_uj655"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_w2twm"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uj655"]
 a = Vector2(64000, 0)
@@ -17,16 +18,16 @@ a = Vector2(12, -340)
 b = Vector2(12, 284)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2twm"]
-size = Vector2(109.711105, 554.99316)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m8cj8"]
-size = Vector2(82, 238)
+size = Vector2(109.711105, 534.98596)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_626oh"]
-size = Vector2(119, 238)
+size = Vector2(82, 238)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmohc"]
 size = Vector2(116, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
+size = Vector2(128.00002, 130)
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
@@ -71,8 +72,8 @@ spawn_point = "Bedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition1" unique_id=2030070674]
-position = Vector2(-1378, 10.733032)
-scale = Vector2(0.9999993, 0.99999946)
+position = Vector2(-1377.9996, 20.736664)
+scale = Vector2(0.9999992, 0.9999994)
 shape = SubResource("RectangleShape2D_w2twm")
 
 [node name="Label" type="Label" parent="." unique_id=935178039]
@@ -81,14 +82,6 @@ offset_top = -290.0
 offset_right = 162.0
 offset_bottom = -267.0
 text = "Quarto Irmas"
-
-[node name="Label2" type="Label" parent="Label" unique_id=576676950]
-layout_mode = 0
-offset_left = 1128.0
-offset_top = 19.0
-offset_right = 1238.0
-offset_bottom = 42.0
-text = "Quarto Mãe"
 
 [node name="Label3" type="Label" parent="Label" unique_id=333980591]
 layout_mode = 0
@@ -104,39 +97,45 @@ offset_left = 747.0
 offset_top = 13.0
 offset_right = 990.0
 offset_bottom = 36.0
-text = "cozinha"
+text = "Quarto de Mae"
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1860661191]
-offset_left = -107.0
-offset_top = -216.0
-offset_right = 83.0
-offset_bottom = -133.0
+offset_left = 133.0
+offset_top = -222.0
+offset_right = 311.0
+offset_bottom = -139.0
 text = "Quadro muito foda 
 com os itens pra festa"
 
-[node name="DoorTransition2" type="Area2D" parent="." unique_id=372976018]
-position = Vector2(441, -150)
-script = ExtResource("3_uj655")
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2" unique_id=1755129862]
-position = Vector2(1, 30)
-shape = SubResource("RectangleShape2D_m8cj8")
-
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1378394788]
-position = Vector2(780, -150)
+position = Vector2(440, -150)
 script = ExtResource("3_uj655")
+target_scene = "uid://bcgkh4hyb8pqu"
+spawn_point = "Bedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
-position = Vector2(0.5, 28)
+position = Vector2(2, 28)
 shape = SubResource("RectangleShape2D_626oh")
 
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
 position = Vector2(1020, -150)
 script = ExtResource("3_uj655")
+target_scene = "uid://b5he2wu862wg3"
+spawn_point = "OutsideMarker"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=952093493]
 position = Vector2(3, 30)
 shape = SubResource("RectangleShape2D_kmohc")
+
+[node name="Table" type="Area2D" parent="." unique_id=306320946]
+
+[node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=737560562]
+position = Vector2(-18.000006, -78)
+scale = Vector2(1.3749999, 0.5)
+texture = ExtResource("4_w2twm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table/Sprite2D" unique_id=2105996227]
+position = Vector2(9.536743e-07, 1)
+shape = SubResource("RectangleShape2D_grbu6")
