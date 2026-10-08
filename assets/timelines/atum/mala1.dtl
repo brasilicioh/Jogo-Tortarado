@@ -6,4 +6,4 @@ if {Atum.interacted_with_bibiana} == false:
 	belonisia: E tem o que dentro?
 	bibiana: Eu não sei, mas eu quero descobrir!
 	belonisia: Vamos então!
-	[signal arg="suma"]
+	[signal arg="bibiana_sair"]
