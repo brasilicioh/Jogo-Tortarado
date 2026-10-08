@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c2pbp58euybd4"]
+
+[ext_resource type="Texture2D" uid="uid://dhwap1eri7ldn" path="res://assets/sprites/itemtest.png" id="1_gcgs2"]
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="2_rogqq"]
+
+[resource]
+script = ExtResource("2_rogqq")
+display_name = "Presente"
+id = &"gift"
+description = "Um presente para a festa de meu pai, devo coloca-lo na mesa para a festa,"
+icon = ExtResource("1_gcgs2")

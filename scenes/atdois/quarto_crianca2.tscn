@@ -57,7 +57,7 @@ position = Vector2(1617.0001, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
 script = ExtResource("3_7gfdh")
 target_scene = "uid://ddl3or1wnkwtf"
-spawn_point = "Hallway"
+spawn_point = "BedroomToHall"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=509836146]

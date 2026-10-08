@@ -23,7 +23,7 @@ size = Vector2(127.5, 187)
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
 [node name="Bibiana" type="Node2D" parent="." unique_id=324790912]
-position = Vector2(-3175, -34)
+position = Vector2(1587.9998, -34)
 scale = Vector2(1.263954, 0.62400097)
 
 [node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=2056038797]

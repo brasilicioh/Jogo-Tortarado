@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://ddl3or1wnkwtf"]
 
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_xg0qb"]
-[ext_resource type="Texture2D" uid="uid://dgcig74hs18rc" path="res://assets/scenaries/633758-crop0_403_960_643-ll-cfkxuevy-v4.webp" id="2_clvdy"]
+[ext_resource type="Texture2D" uid="uid://tfktpt2xhjem" path="res://assets/scenaries/ParedeTest.png" id="2_w2twm"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_uj655"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_w2twm"]
 
@@ -31,20 +31,38 @@ size = Vector2(128.00002, 130)
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
-[node name="Hallway" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
+[node name="BedroomToHall" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
 position = Vector2(-355, -80)
 script = ExtResource("1_xg0qb")
 spawn_characters = Array[String](["belonisia", "bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
+[node name="MotherToHall" type="Marker2D" parent="." unique_id=791303504 groups=["spawn point"]]
+position = Vector2(442, -80)
+script = ExtResource("1_xg0qb")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="OutsideToHall" type="Marker2D" parent="." unique_id=1247868253 groups=["spawn point"]]
+position = Vector2(1023, -80)
+script = ExtResource("1_xg0qb")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
 [node name="Background1" type="Sprite2D" parent="." unique_id=1734855637]
-position = Vector2(0, -120)
-texture = ExtResource("2_clvdy")
+position = Vector2(-171, -120)
+texture = ExtResource("2_w2twm")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
-position = Vector2(800, -120)
-texture = ExtResource("2_clvdy")
+position = Vector2(441, -120)
+texture = ExtResource("2_w2twm")
+
+[node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
+position = Vector2(1053, -120)
+texture = ExtResource("2_w2twm")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1396541921]
 
@@ -100,12 +118,15 @@ offset_bottom = 36.0
 text = "Quarto de Mae"
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=1860661191]
-offset_left = 133.0
-offset_top = -222.0
-offset_right = 311.0
-offset_bottom = -139.0
-text = "Quadro muito foda 
-com os itens pra festa"
+offset_left = 132.0
+offset_top = -237.0
+offset_right = 310.0
+offset_bottom = -94.0
+text = "Festa do Pai
+	- Copo de Plastico
+	- Toalha de mesa
+	- Enfeites de festa
+	-Presente"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1378394788]
 position = Vector2(440, -150)
@@ -117,6 +138,8 @@ metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
 position = Vector2(2, 28)
 shape = SubResource("RectangleShape2D_626oh")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1117280381]
 
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
 position = Vector2(1020, -150)

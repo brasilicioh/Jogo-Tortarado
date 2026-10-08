@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://cqct7jscskmio"]
+
+[ext_resource type="Texture2D" uid="uid://dhwap1eri7ldn" path="res://assets/sprites/itemtest.png" id="1_lgqrd"]
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="2_6pblg"]
+
+[resource]
+script = ExtResource("2_6pblg")
+display_name = "Copos"
+id = &"cups"
+description = "Copos para a festa, devo coloca-los na mesa para a festa."
+icon = ExtResource("1_lgqrd")
