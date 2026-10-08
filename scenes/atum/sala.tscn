@@ -7,7 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_rp4wa"]
 [ext_resource type="Script" uid="uid://b3qnmqkx4gsc" path="res://scripts/atum/donana_saindo_quarto.gd" id="6_s2kx5"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_yok2d"]
-[ext_resource type="Script" uid="uid://dkg8mc8njedxl" path="res://scenes/atum/door_trigger.gd" id="8_6tlmi"]
+[ext_resource type="Script" uid="uid://dkg8mc8njedxl" path="res://scripts/atum/door_trigger.gd" id="8_6tlmi"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_dxknv"]
 a = Vector2(12, -340)
@@ -124,6 +124,8 @@ metadata/_edit_use_anchors_ = true
 [node name="DoorTransition2" type="Area2D" parent="." unique_id=2012293754]
 position = Vector2(-746, -69)
 script = ExtResource("7_yok2d")
+target_scene = "uid://orcvwblkeeec"
+spawn_point = "Bedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2" unique_id=510080167]
