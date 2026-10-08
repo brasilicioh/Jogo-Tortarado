@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://dhkeqrmrrxvtb"]
 
+[ext_resource type="Script" uid="uid://by5svy43s2006" path="res://scripts/atrez/house.gd" id="1_as8sy"]
 [ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_t26a3"]
 [ext_resource type="Script" uid="uid://cgqdafwiroegj" path="res://scripts/atrez/mala.gd" id="2_bt4ot"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_d5tvp"]
@@ -19,6 +20,7 @@ size = Vector2(64, 32)
 size = Vector2(136, 4121)
 
 [node name="House" type="Node2D" unique_id=791172823]
+script = ExtResource("1_as8sy")
 
 [node name="Room" type="Sprite2D" parent="." unique_id=2098664819]
 position = Vector2(0, -224)
@@ -36,9 +38,10 @@ position = Vector2(622, -246)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1896075528]
 shape = SubResource("RectangleShape2D_rqoc5")
 
-[node name="Mala" type="Area2D" parent="." unique_id=187649299]
+[node name="Mala" type="Area2D" parent="." unique_id=187649299 node_paths=PackedStringArray("door")]
 position = Vector2(-111, -26)
 script = ExtResource("2_bt4ot")
+door = NodePath("../DoorTransition")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=240490833]
 scale = Vector2(0.5, 0.25)
@@ -54,6 +57,7 @@ position = Vector2(-622, -246)
 shape = SubResource("RectangleShape2D_rqoc5")
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=172809540]
+process_mode = 4
 position = Vector2(464, -151)
 script = ExtResource("4_37p1q")
 target_scene = "uid://bnmhhcpmc05gd"
@@ -70,3 +74,10 @@ script = ExtResource("5_as8sy")
 spawn_characters = Array[String](["donana"])
 active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="ColorRect" type="ColorRect" parent="." unique_id=5583337]
+offset_left = -1372.0
+offset_top = -1075.0
+offset_right = 1383.0
+offset_bottom = 948.0
+color = Color(0, 0, 0, 1)

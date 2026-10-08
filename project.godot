@@ -31,11 +31,13 @@ gdscript/warnings/unused_signal=0
 directories/dch_directory={
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
+"donana": "res://assets/characters/donana.dch",
 "salustina": "res://assets/characters/salustina.dch",
 "severo": "res://assets/characters/severo.dch",
 "zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
+"bedroom": "res://assets/timelines/atrez/bedroom.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
@@ -46,6 +48,9 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"Ato3": {
+"bedroom_progression": 0
+},
 "Tutorial": {
 "gave_doll": false,
 "interacted_with_domingas": false,

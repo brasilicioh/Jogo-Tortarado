@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://dkg5k0jttda7y"]
 
-[ext_resource type="Script" uid="uid://r1ujb2px70uc" path="res://scenes/tutorial/kitchen.gd" id="1_bcxjj"]
+[ext_resource type="Script" uid="uid://r1ujb2px70uc" path="res://scripts/tutorial/kitchen.gd" id="1_bcxjj"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_prlpt"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="2_15wj3"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="3_bcxjj"]

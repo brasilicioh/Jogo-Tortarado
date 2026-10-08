@@ -91,12 +91,14 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 		if area.has_method("highlight"):
 			area.highlight(true)
 		nearby_interactable = area
+		print("new interactible", area)
 
 func _on_interaction_area_area_exited(area: Area2D) -> void:
 	if area == nearby_interactable:
 		if area.has_method("highlight"):
 			area.highlight(false)
 		nearby_interactable = null
+		print("reset interactible")
 
 func _on_minigame_started():
 	can_move = false

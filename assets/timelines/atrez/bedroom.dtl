@@ -1,0 +1,14 @@
+join donana center
+if {Ato3.bedroom_progression} == 0.0:
+	\donana: Porque eu deixei isso acontecer?
+	\donana: As minhas netinhas...
+	\donana: É tudo culpa desses encantados!\
+	É tudo culpa dessa onça que me persegue!
+	\donana: Eu tenho que dar um fim nisso.
+	set {Ato3.bedroom_progression} = 1.0
+	[signal arg="undarken"]
+elif {Ato3.bedroom_progression} == 1.0:
+	\donana: Ainda esta aqui...
+	[signal arg="give_items"]
+	\donana: O rio é um lugar perfeito para descartar isso.
+	[signal arg="ended"]

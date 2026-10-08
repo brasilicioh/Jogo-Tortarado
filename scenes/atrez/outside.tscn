@@ -65,3 +65,11 @@ position = Vector2(-284, -219)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D2" unique_id=426486859]
 shape = SubResource("SegmentShape2D_tl472")
+
+[node name="Label" type="RichTextLabel" parent="." unique_id=139815582]
+offset_left = 311.0
+offset_top = -165.0
+offset_right = 561.0
+offset_bottom = -135.0
+bbcode_enabled = true
+text = "Imagine que tá chovendo [b]muito[/b]"
