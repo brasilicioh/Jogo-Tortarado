@@ -76,6 +76,7 @@ active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=5583337]
+z_index = 1000
 offset_left = -1372.0
 offset_top = -1075.0
 offset_right = 1383.0
