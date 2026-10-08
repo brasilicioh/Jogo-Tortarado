@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_lnihn"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_4i7bl"]
 [ext_resource type="Script" uid="uid://dhjvb6udggwyy" path="res://scripts/atum/bibiana.gd" id="4_n4q13"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="5_4i7bl"]
+[ext_resource type="Texture2D" uid="uid://dqvgdbqxvosnh" path="res://assets/characters/bibiana_walk.png" id="5_4i7bl"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
 a = Vector2(12, -340)
@@ -23,7 +23,7 @@ b = Vector2(-64000, 0)
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
-size = Vector2(140, 171)
+size = Vector2(146, 170)
 
 [node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
 
@@ -79,7 +79,11 @@ script = ExtResource("4_n4q13")
 visible = false
 material = ExtResource("4_4i7bl")
 position = Vector2(1, 0)
+scale = Vector2(2, 2)
 texture = ExtResource("5_4i7bl")
+flip_h = true
+hframes = 4
+frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1573801079]
 position = Vector2(0, -1)
@@ -96,14 +100,14 @@ PERMITIR SAIR APENAS PÓS CONVERSA"
 metadata/_edit_use_anchors_ = true
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
-position = Vector2(1381, -115)
+position = Vector2(1351, -115)
 script = ExtResource("3_lnihn")
 target_scene = "uid://bs6as484p4ird"
 spawn_point = "Sala"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1353985260]
-position = Vector2(3, -15.5)
+position = Vector2(35, -48)
 shape = SubResource("RectangleShape2D_b5uqm")
 
 [node name="PontoParada" type="Marker2D" parent="." unique_id=1381366409]

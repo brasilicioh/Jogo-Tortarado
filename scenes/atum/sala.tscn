@@ -2,7 +2,6 @@
 
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="1_s2kx5"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_tqtd5"]
-[ext_resource type="Script" uid="uid://dr2vml72xavsu" path="res://scripts/atum/bibiana_sala.gd" id="3_s2kx5"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="3_yok2d"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_rp4wa"]
 [ext_resource type="Script" uid="uid://b3qnmqkx4gsc" path="res://scripts/atum/donana_saindo_quarto.gd" id="6_s2kx5"]
@@ -28,7 +27,7 @@ size = Vector2(128, 128)
 size = Vector2(110, 160.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(158, 218)
+size = Vector2(213, 218)
 
 [node name="Sala" type="Node2D" unique_id=1848214340]
 
@@ -60,7 +59,7 @@ position = Vector2(806, -5)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_tqtd5")
-spawn_characters = Array[String](["bibiana"])
+spawn_characters = Array[String](["bibiana", "belonisia"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
@@ -71,19 +70,6 @@ offset_right = 898.0
 offset_bottom = 105.0
 text = "TODO: MUDAR SPRITE DE FUNDO PARA CASA"
 metadata/_edit_use_anchors_ = true
-
-[node name="Bibiana" type="Area2D" parent="." unique_id=189156257]
-position = Vector2(1092, -73)
-script = ExtResource("3_s2kx5")
-
-[node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=705269240]
-material = ExtResource("3_yok2d")
-position = Vector2(1, 0)
-texture = ExtResource("6_rp4wa")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1588772389]
-position = Vector2(0, -1)
-shape = SubResource("RectangleShape2D_cumoy")
 
 [node name="TextEdit2" type="TextEdit" parent="." unique_id=2073372327]
 anchors_preset = -1
@@ -149,8 +135,14 @@ text = "PORTA DO QUARTO DA VELHA"
 script = ExtResource("8_6tlmi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2/DoorTriggerArea" unique_id=1635152127]
-position = Vector2(69, -35)
+position = Vector2(96.5, -35)
 shape = SubResource("RectangleShape2D_8w0r3")
 
 [node name="PontoDonana" type="Marker2D" parent="." unique_id=43720938]
 position = Vector2(-826, -69)
+
+[node name="SaidaDonana" type="Marker2D" parent="." unique_id=908463325]
+position = Vector2(-1437, -72)
+
+[node name="IdaIrma" type="Marker2D" parent="." unique_id=1585629313]
+position = Vector2(-249, -82)

@@ -43,7 +43,7 @@ func sucumba(event_name):
 			self,
 			"global_position",
 			ponto_sair_porta.global_position,
-			2.0
+			1.5
 		)
 
 		await tween.finished
