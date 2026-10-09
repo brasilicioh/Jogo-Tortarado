@@ -1,0 +1,95 @@
+[gd_scene format=3 uid="uid://orcvwblkeeec"]
+
+[ext_resource type="Texture2D" uid="uid://buepm4gug6vlj" path="res://assets/scenaries/quartoAvo.png" id="1_7ysry"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_qpmet"]
+[ext_resource type="Script" uid="uid://diwmmws77vykn" path="res://scripts/atum/drawer.gd" id="4_1hk0o"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="5_1hk0o"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="6_6wtov"]
+[ext_resource type="Script" uid="uid://cixk671vse1yx" path="res://scenes/atum/table.gd" id="6_cyo67"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
+a = Vector2(12, -340)
+b = Vector2(15, 283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gjln5"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gdlgw"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
+size = Vector2(140, 171)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ltfdy"]
+size = Vector2(112, 32)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qpmet"]
+size = Vector2(242.64719, 54.54561)
+
+[node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
+position = Vector2(918, -244)
+scale = Vector2(2, 2)
+texture = ExtResource("1_7ysry")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=303620323]
+position = Vector2(294, -204)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=368322770]
+shape = SubResource("SegmentShape2D_nwuim")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1432632413]
+position = Vector2(1500, -200)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1046519658]
+position = Vector2(25, 1)
+shape = SubResource("SegmentShape2D_gjln5")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=518471997]
+position = Vector2(0, -81)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1106246607]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_gdlgw")
+
+[node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
+position = Vector2(837, -86)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("2_qpmet")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
+position = Vector2(1381, -149)
+script = ExtResource("6_6wtov")
+target_scene = "uid://bs6as484p4ird"
+spawn_point = "Sala"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1353985260]
+position = Vector2(3, -15.5)
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="Drawer" type="Area2D" parent="." unique_id=1212666181]
+position = Vector2(741, -151)
+script = ExtResource("4_1hk0o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Drawer" unique_id=869011750]
+material = ExtResource("5_1hk0o")
+position = Vector2(-2, 0)
+shape = SubResource("RectangleShape2D_ltfdy")
+
+[node name="Table" type="Area2D" parent="." unique_id=2014765406]
+position = Vector2(898, -140)
+scale = Vector2(0.68, 0.4399988)
+script = ExtResource("6_cyo67")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=643723443]
+material = ExtResource("5_1hk0o")
+position = Vector2(37.499878, -9.090942)
+shape = SubResource("RectangleShape2D_qpmet")

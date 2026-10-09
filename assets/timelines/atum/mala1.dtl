@@ -1,0 +1,9 @@
+join bibiana center
+if {Atum.interacted_with_bibiana} == false:
+	bibiana: Belonísia, você não sabe o que eu vi no quarto da vovó.
+	belonisia: O que tem lá?
+	bibiana: Ela tem uma mala gigante! Mas ela nunca deixa eu ver ela!
+	belonisia: E tem o que dentro?
+	bibiana: Eu não sei, mas eu quero descobrir!
+	belonisia: Vamos então!
+	[signal arg="bibiana_sair"]
