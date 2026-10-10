@@ -9,6 +9,7 @@ func ativar() -> void:
 	if ativado:
 		return
 
+	self.hide()
 	ativado = true
 
 	var donana = get_parent().get_parent().get_node("Donana")

@@ -1,0 +1,120 @@
+[gd_scene format=3 uid="uid://c4y8wfmhf8gjx"]
+
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="1_efra6"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_5q6in"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_tjqfd"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_ufeqn"]
+[ext_resource type="Script" uid="uid://dw26qyxgtpyel" path="res://scenes/atum/interacao_donana_salustiana.gd" id="6_5q6in"]
+[ext_resource type="Texture2D" uid="uid://f16538wte0mh" path="res://dict/index.icon.png" id="6_efra6"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8k1hs"]
+a = Vector2(12, -340)
+b = Vector2(15, 283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ppoab"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_yftcj"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_odb3p"]
+size = Vector2(110, 160.5)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
+size = Vector2(126, 129)
+
+[node name="Sala2" type="Node2D" unique_id=1589146013]
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1552026670]
+position = Vector2(3572.9998, -817.5)
+scale = Vector2(504.49997, 53.09375)
+texture = ExtResource("1_efra6")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=627003632]
+position = Vector2(-2421, -266)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=1058407952]
+shape = SubResource("SegmentShape2D_8k1hs")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1334420772]
+position = Vector2(1831, -196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1471891923]
+shape = SubResource("SegmentShape2D_ppoab")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1029610527]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=791682343]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_yftcj")
+
+[node name="Sala2" type="Marker2D" parent="." unique_id=1244845952 groups=["spawn point"]]
+position = Vector2(-645.9999, -5)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("2_5q6in")
+spawn_characters = Array[String](["bibiana", "belonisia"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="DoorTransition2" type="Area2D" parent="." unique_id=899988986]
+position = Vector2(-746, -69)
+script = ExtResource("3_tjqfd")
+target_scene = "uid://orcvwblkeeec"
+spawn_point = "Bedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2" unique_id=1444099678]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_odb3p")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition2" unique_id=1359373222]
+position = Vector2(1.0000076, -5.499998)
+scale = Vector2(0.7343751, 1.4140625)
+texture = ExtResource("6_efra6")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition2" unique_id=1361079490]
+offset_left = -91.0
+offset_top = -150.0
+offset_right = 151.0
+offset_bottom = -103.0
+text = "PORTA DO QUARTO DA VELHA"
+
+[node name="Donana" type="Area2D" parent="." unique_id=1686287657]
+position = Vector2(-2082, -81)
+script = ExtResource("6_5q6in")
+
+[node name="Sprite2D" type="Sprite2D" parent="Donana" unique_id=1339950428]
+material = ExtResource("4_ufeqn")
+texture = ExtResource("6_efra6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Donana" unique_id=1575117677]
+position = Vector2(1, 1.5)
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="TextEdit" type="TextEdit" parent="Donana" unique_id=444338596]
+offset_left = -50.0
+offset_top = -104.0
+offset_right = 57.0
+offset_bottom = -70.0
+text = "DONANA"
+
+[node name="Salustiana" type="Area2D" parent="." unique_id=357217537]
+position = Vector2(-2297, -79)
+script = ExtResource("6_5q6in")
+
+[node name="Sprite2D" type="Sprite2D" parent="Salustiana" unique_id=1143964968]
+material = ExtResource("4_ufeqn")
+texture = ExtResource("6_efra6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salustiana" unique_id=396208359]
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="TextEdit" type="TextEdit" parent="Salustiana" unique_id=509886562]
+offset_left = -50.0
+offset_top = -104.0
+offset_right = 57.0
+offset_bottom = -70.0
+text = "SALUSTIANA"

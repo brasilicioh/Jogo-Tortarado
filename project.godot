@@ -42,6 +42,7 @@ directories/dtl_directory={
 "atum_3": "res://assets/timelines/atum/atum_3.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
+"interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"

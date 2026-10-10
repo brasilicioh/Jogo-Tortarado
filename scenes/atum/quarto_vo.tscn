@@ -56,19 +56,19 @@ position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_gdlgw")
 
 [node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
-position = Vector2(837, -86)
+position = Vector2(1388, -85.99999)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_qpmet")
-spawn_characters = Array[String](["bibiana"])
+spawn_characters = Array[String](["bibiana", "belonisia"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
 position = Vector2(1381, -149)
 script = ExtResource("6_6wtov")
-target_scene = "uid://bs6as484p4ird"
-spawn_point = "Sala"
+target_scene = "uid://c4y8wfmhf8gjx"
+spawn_point = "Sala2"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1353985260]
@@ -84,6 +84,8 @@ material = ExtResource("5_1hk0o")
 position = Vector2(-2, 0)
 shape = SubResource("RectangleShape2D_ltfdy")
 
+[node name="Sprite2D" type="Sprite2D" parent="Drawer" unique_id=1450821691]
+
 [node name="Table" type="Area2D" parent="." unique_id=2014765406]
 position = Vector2(898, -140)
 scale = Vector2(0.68, 0.4399988)
@@ -93,3 +95,5 @@ script = ExtResource("6_cyo67")
 material = ExtResource("5_1hk0o")
 position = Vector2(37.499878, -9.090942)
 shape = SubResource("RectangleShape2D_qpmet")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=6077518]
