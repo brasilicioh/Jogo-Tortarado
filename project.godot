@@ -38,6 +38,7 @@ directories/dch_directory={
 "zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
+"ato_2": "res://assets/timelines/ato2/ato_2.dtl",
 "atum_2": "res://assets/timelines/atum/atum_2.dtl",
 "atum_3": "res://assets/timelines/atum/atum_3.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
@@ -52,6 +53,9 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
+"Ato2": {
+"interacted_with_belonisia_firsttime": false
+},
 "Atum": {
 "interacted_with_belonisia": false,
 "interacted_with_bibiana": false,

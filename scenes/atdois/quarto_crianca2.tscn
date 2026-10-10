@@ -3,6 +3,11 @@
 [ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_h4wa5"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_ds7x1"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_7gfdh"]
+[ext_resource type="Script" uid="uid://b6ti8j8twoqeq" path="res://scripts/ato2/belonisia.gd" id="4_0wguo"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="5_o2psn"]
+[ext_resource type="Script" uid="uid://c11gqgpaddsx4" path="res://scripts/ato2/cloth_giver.gd" id="6_ekdlp"]
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="6_o2psn"]
+[ext_resource type="Script" uid="uid://dc6gp7ywifw75" path="res://scripts/ato2/gift_giver.gd" id="7_8uf34"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
 a = Vector2(12, -340)
@@ -18,6 +23,15 @@ b = Vector2(-64000, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0dh"]
 size = Vector2(293.74744, 576.45917)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
+size = Vector2(276, 169)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
+size = Vector2(73.333336, 77.66667)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3o4s"]
+size = Vector2(112, 103)
 
 [node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
 
@@ -75,3 +89,37 @@ offset_right = 775.0
 offset_bottom = 105.0
 text = "As irmãs procuram itens 
 para festa do pai"
+
+[node name="Belonisia" type="Node2D" parent="." unique_id=1789059207]
+position = Vector2(1141, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1158903697]
+texture = ExtResource("5_o2psn")
+
+[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1614044431]
+script = ExtResource("4_0wguo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=2129015538]
+position = Vector2(5, -20.5)
+shape = SubResource("RectangleShape2D_yuu2t")
+
+[node name="ClothGiver" type="Area2D" parent="." unique_id=707933941]
+position = Vector2(655, -123.000015)
+scale = Vector2(3, 3)
+script = ExtResource("6_ekdlp")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ClothGiver" unique_id=384994752]
+position = Vector2(0, 2.1666718)
+shape = SubResource("RectangleShape2D_fosw3")
+
+[node name="GiftGiver" type="Area2D" parent="." unique_id=736368461]
+position = Vector2(317, -100)
+script = ExtResource("7_8uf34")
+
+[node name="Sprite2D" type="Sprite2D" parent="GiftGiver" unique_id=1719687593]
+position = Vector2(-116, -42)
+texture = ExtResource("6_o2psn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GiftGiver" unique_id=939686543]
+position = Vector2(-66, 46.5)
+shape = SubResource("RectangleShape2D_a3o4s")

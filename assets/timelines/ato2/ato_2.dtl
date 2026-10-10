@@ -1,0 +1,3 @@
+join bibiana center
+if {Ato2.interacted_with_belonisia_firsttime} == true:
+	bibiana: Bom dia, irmã! Veio me chamar para os preparativos da festa do papai? Falaram que virá muita gente, então temos que fazer um negócio bem bonito!

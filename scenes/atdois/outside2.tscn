@@ -99,8 +99,8 @@ texture = ExtResource("1_2m3r7")
 [node name="OutsideMarker" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
 position = Vector2(2178, -101)
 script = ExtResource("6_2l26s")
-spawn_characters = Array[String](["belonisia"])
-active_character = "belonisia"
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="House" type="StaticBody2D" parent="." unique_id=1153298674]
