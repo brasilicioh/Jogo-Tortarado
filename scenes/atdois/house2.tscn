@@ -7,6 +7,11 @@
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_w2twm"]
 [ext_resource type="Script" uid="uid://db3kbvp1eaxgf" path="res://scripts/ato2/table.gd" id="4_y0qge"]
 [ext_resource type="Script" uid="uid://biqvym8aamulh" path="res://scripts/ato2/cups_giver.gd" id="5_3gr70"]
+[ext_resource type="Texture2D" uid="uid://bf07l0nxmo86x" path="res://assets/sprites/copos.png" id="8_plsys"]
+[ext_resource type="Texture2D" uid="uid://bko04h5rs3e1p" path="res://assets/sprites/toalha.png" id="9_y7g12"]
+[ext_resource type="Texture2D" uid="uid://djcnd5fg118ms" path="res://assets/sprites/presente.png" id="10_aw45g"]
+[ext_resource type="Texture2D" uid="uid://dnyw2m13cr3ut" path="res://assets/sprites/enfeites.png" id="11_yjkpm"]
+[ext_resource type="Script" uid="uid://b6ti8j8twoqeq" path="res://scripts/ato2/belonisia.gd" id="12_y7g12"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
 size = Vector2(128, 20)
@@ -37,6 +42,9 @@ size = Vector2(116, 240)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
 size = Vector2(128.00002, 130)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_aw45g"]
+size = Vector2(125, 169)
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
@@ -163,8 +171,8 @@ text = "Festa do Pai
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1378394788]
 position = Vector2(440, -150)
 script = ExtResource("3_uj655")
-target_scene = "uid://bcgkh4hyb8pqu"
-spawn_point = "Bedroom"
+target_scene = "uid://beqctjtnlsan3"
+spawn_point = "MotherBedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
@@ -196,3 +204,41 @@ texture = ExtResource("4_w2twm")
 position = Vector2(-18.000004, -77.5)
 scale = Vector2(1.3749999, 0.5)
 shape = SubResource("RectangleShape2D_grbu6")
+
+[node name="Cups" type="Sprite2D" parent="Table" unique_id=1354714699]
+visible = false
+position = Vector2(-57.000008, -119.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("8_plsys")
+
+[node name="Cloth" type="Sprite2D" parent="Table" unique_id=1317653520]
+visible = false
+position = Vector2(-91.99999, -121.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("9_y7g12")
+
+[node name="Gift" type="Sprite2D" parent="Table" unique_id=2112307205]
+visible = false
+position = Vector2(-18.999998, -118.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("10_aw45g")
+
+[node name="Decor" type="Sprite2D" parent="Table" unique_id=1002735945]
+visible = false
+position = Vector2(53.999996, -125.99999)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("11_yjkpm")
+
+[node name="Belonisia" type="Node2D" parent="." unique_id=1351386329]
+position = Vector2(-172, -94)
+
+[node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1087991546]
+texture = ExtResource("4_w2twm")
+
+[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1590905186 node_paths=PackedStringArray("selfnode")]
+script = ExtResource("12_y7g12")
+selfnode = NodePath("..")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=1557855882]
+position = Vector2(-0.5, -20.5)
+shape = SubResource("RectangleShape2D_aw45g")

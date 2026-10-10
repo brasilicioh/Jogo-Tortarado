@@ -117,7 +117,7 @@ texture = ExtResource("5_hn46e")
 position = Vector2(-78, 28)
 script = ExtResource("4_xfqnf")
 target_scene = "uid://ddl3or1wnkwtf"
-spawn_point = "Hallway"
+spawn_point = "OutsideToHall"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="House/DoorTransition" unique_id=122138981]

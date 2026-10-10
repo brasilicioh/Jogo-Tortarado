@@ -1,10 +1,9 @@
 extends Area2D
 
-var gave_cups := false
 var cups: ItemData = load("res://assets/items/cups.tres")
 
 func interact():
-	if not GameState.inventories[GameState.active_player].has_item(cups) and not gave_cups:
+	if not GameState.inventories[GameState.active_player].has_item(cups) and Dialogic.VAR.Ato2.GaveItems.cups == false:
 		GameState.inventories[GameState.active_player].add_item(cups)
 		#UiManager.set_current_task("Espante os pássaros")
-		gave_cups = true;
+		Dialogic.VAR.Ato2.GaveItems.cups = true;

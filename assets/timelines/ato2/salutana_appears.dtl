@@ -1,0 +1,4 @@
+join salustina center
+if {Ato2.table_half_complete} == true:
+	[wait time="2.0"]
+	salustina: Nem pense em contar para suas irmãs, Domingas!

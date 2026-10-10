@@ -38,6 +38,7 @@ directories/dch_directory={
 "zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
+"ask_domingas": "res://assets/timelines/ato2/ask_domingas.dtl",
 "ato_2": "res://assets/timelines/ato2/ato_2.dtl",
 "atum_2": "res://assets/timelines/atum/atum_2.dtl",
 "atum_3": "res://assets/timelines/atum/atum_3.dtl",
@@ -46,6 +47,7 @@ directories/dtl_directory={
 "interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
+"salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"
 }
 layout/style_directory={}
@@ -54,7 +56,23 @@ layout/style_list=[]
 layout/default_style="Default"
 variables={
 "Ato2": {
-"interacted_with_belonisia_firsttime": false
+"GaveItems": {
+"cloth": false,
+"cups": false,
+"decor": false,
+"gift": false
+},
+"PutItems": {
+"cloth": false,
+"cups": false,
+"decor": false,
+"gift": false
+},
+"interacted_with_belonisia_firsttime": false,
+"interacted_with_belonisia_secondtime": false,
+"interacted_with_domingas": false,
+"table_complete": false,
+"table_half_complete": false
 },
 "Atum": {
 "interacted_with_belonisia": false,

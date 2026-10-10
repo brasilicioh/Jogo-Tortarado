@@ -96,8 +96,9 @@ position = Vector2(1141, 0)
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1158903697]
 texture = ExtResource("5_o2psn")
 
-[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1614044431]
+[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1614044431 node_paths=PackedStringArray("selfnode")]
 script = ExtResource("4_0wguo")
+selfnode = NodePath("..")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=2129015538]
 position = Vector2(5, -20.5)
