@@ -21,12 +21,12 @@ position = Vector2(-1224, -192)
 scale = Vector2(2, 2)
 texture = ExtResource("2_qtlar")
 
-[node name="Corredor1Direita" type="Marker2D" parent="Corredor1" unique_id=1616098316]
+[node name="Corredor1Direita" type="Marker2D" parent="Corredor1" unique_id=1616098316 groups=["spawn point"]]
 position = Vector2(125, 41.5)
 script = ExtResource("1_qtlar")
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="Corredor1Esquerda" type="Marker2D" parent="Corredor1" unique_id=1381089345]
+[node name="Corredor1Esquerda" type="Marker2D" parent="Corredor1" unique_id=1381089345 groups=["spawn point"]]
 position = Vector2(-135, 38)
 script = ExtResource("1_qtlar")
 metadata/_custom_type_script = "uid://xxber3ayswrc"
@@ -43,7 +43,7 @@ position = Vector2(1224, -192)
 scale = Vector2(2, 2)
 texture = ExtResource("2_f74lx")
 
-[node name="Corredor2" type="Marker2D" parent="Corredor2" unique_id=679902272]
+[node name="Corredor2" type="Marker2D" parent="Corredor2" unique_id=679902272 groups=["spawn point"]]
 position = Vector2(51, 41.5)
 script = ExtResource("1_qtlar")
 metadata/_custom_type_script = "uid://xxber3ayswrc"
