@@ -5,8 +5,6 @@
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_rhccg"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_xfrhd"]
 [ext_resource type="Script" uid="uid://bdnjvbfv0j0to" path="res://scripts/ato2/domingas.gd" id="7_m30qc"]
-[ext_resource type="Script" uid="uid://dc6gp7ywifw75" path="res://scripts/ato2/gift_giver.gd" id="7_w3epb"]
-[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="8_o38du"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
 a = Vector2(12, -340)
@@ -23,15 +21,12 @@ b = Vector2(-64000, 0)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2l0dh"]
 size = Vector2(293.74744, 576.45917)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a3o4s"]
-size = Vector2(112, 103)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_m30qc"]
 size = Vector2(276, 169)
 
 [node name="QuartoMae" type="Node2D" unique_id=1471913803]
 
-[node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
+[node name="Background" type="Sprite2D" parent="." unique_id=1015145927]
 position = Vector2(918, -242)
 scale = Vector2(3, 3)
 texture = ExtResource("1_hc35h")
@@ -84,18 +79,6 @@ offset_top = 30.0
 offset_right = 775.0
 offset_bottom = 105.0
 text = "Quarto da mae"
-
-[node name="GiftGiver" type="Area2D" parent="." unique_id=736368461]
-position = Vector2(317, -100)
-script = ExtResource("7_w3epb")
-
-[node name="Sprite2D" type="Sprite2D" parent="GiftGiver" unique_id=1719687593]
-position = Vector2(-116, -42)
-texture = ExtResource("8_o38du")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="GiftGiver" unique_id=939686543]
-position = Vector2(-66, 46.5)
-shape = SubResource("RectangleShape2D_a3o4s")
 
 [node name="Domingas" type="Node2D" parent="." unique_id=1651890439]
 position = Vector2(1141, 0)

@@ -29,6 +29,7 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
+"???": "res://assets/characters/???.dch",
 "belonisia": "res://assets/characters/belonisia.dch",
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
@@ -44,10 +45,14 @@ directories/dtl_directory={
 "atum_3": "res://assets/timelines/atum/atum_3.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
+"find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",
 "interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
+"kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
+"salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
+"severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"
 }
 layout/style_directory={}
@@ -68,9 +73,12 @@ variables={
 "decor": false,
 "gift": false
 },
+"found_domingas": false,
 "interacted_with_belonisia_firsttime": false,
 "interacted_with_belonisia_secondtime": false,
 "interacted_with_domingas": false,
+"kissscene_played": false,
+"second_intro_played": false,
 "table_complete": false,
 "table_half_complete": false
 },

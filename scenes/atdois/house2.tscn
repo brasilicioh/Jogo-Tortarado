@@ -35,7 +35,7 @@ b = Vector2(12, 284)
 size = Vector2(109.711105, 534.98596)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_626oh"]
-size = Vector2(82, 238)
+size = Vector2(122, 238)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmohc"]
 size = Vector2(116, 240)
@@ -176,7 +176,7 @@ spawn_point = "MotherBedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
-position = Vector2(2, 28)
+position = Vector2(-50, 28)
 shape = SubResource("RectangleShape2D_626oh")
 
 [node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1117280381]

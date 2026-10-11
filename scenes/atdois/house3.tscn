@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://cfosqv0kh1n6i"]
+
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_fpmhl"]
+[ext_resource type="Texture2D" uid="uid://tfktpt2xhjem" path="res://assets/scenaries/ParedeTest.png" id="2_kjqlh"]
+[ext_resource type="Script" uid="uid://bgsdb4p400gjb" path="res://scenes/atdois/table_domingas.gd" id="4_51g7e"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_ewfdh"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="6_e0rgi"]
+[ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="6_jjk1o"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_uj655"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_clvdy"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_w2twm"]
+a = Vector2(12, -340)
+b = Vector2(12, 284)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_w2twm"]
+size = Vector2(109.711105, 534.98596)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_626oh"]
+size = Vector2(122, 238)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kmohc"]
+size = Vector2(116, 240)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
+size = Vector2(128.00002, 130)
+
+[node name="House" type="Node2D" unique_id=1394089690]
+
+[node name="BedroomToHall" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
+position = Vector2(-355, -80)
+script = ExtResource("1_fpmhl")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="MotherToHall" type="Marker2D" parent="." unique_id=791303504 groups=["spawn point"]]
+position = Vector2(442, -80)
+script = ExtResource("1_fpmhl")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="OutsideToHall" type="Marker2D" parent="." unique_id=1247868253 groups=["spawn point"]]
+position = Vector2(1023, -80)
+script = ExtResource("1_fpmhl")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Background1" type="Sprite2D" parent="." unique_id=1734855637]
+position = Vector2(-171, -120)
+texture = ExtResource("2_kjqlh")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
+position = Vector2(441, -120)
+texture = ExtResource("2_kjqlh")
+
+[node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
+position = Vector2(1053, -120)
+texture = ExtResource("2_kjqlh")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1396541921]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=180853329]
+shape = SubResource("SegmentShape2D_uj655")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=147488591]
+position = Vector2(1356, -247)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=2049285261]
+shape = SubResource("SegmentShape2D_clvdy")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1405121082]
+position = Vector2(-490, -285)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=68545113]
+shape = SubResource("SegmentShape2D_w2twm")
+
+[node name="DoorTransition1" type="Area2D" parent="." unique_id=1592075119]
+position = Vector2(-1400, -130.00002)
+scale = Vector2(-0.75653094, 0.44983667)
+script = ExtResource("6_e0rgi")
+target_scene = "uid://bcgkh4hyb8pqu"
+spawn_point = "Bedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition1" unique_id=2030070674]
+position = Vector2(-1377.9996, 20.736664)
+scale = Vector2(0.9999992, 0.9999994)
+shape = SubResource("RectangleShape2D_w2twm")
+
+[node name="Label" type="Label" parent="." unique_id=935178039]
+offset_left = -416.0
+offset_top = -290.0
+offset_right = 162.0
+offset_bottom = -267.0
+text = "Quarto Irmas"
+
+[node name="Label3" type="Label" parent="Label" unique_id=333980591]
+layout_mode = 0
+offset_left = 1380.0
+offset_top = 17.0
+offset_right = 1490.0
+offset_bottom = 40.0
+text = "lado da fora"
+
+[node name="Label" type="Label" parent="Label" unique_id=1185367824]
+layout_mode = 0
+offset_left = 747.0
+offset_top = 13.0
+offset_right = 990.0
+offset_bottom = 36.0
+text = "Quarto de Mae"
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=1378394788]
+position = Vector2(440, -150)
+script = ExtResource("6_e0rgi")
+target_scene = "uid://beqctjtnlsan3"
+spawn_point = "MotherBedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
+position = Vector2(-50, 28)
+shape = SubResource("RectangleShape2D_626oh")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1117280381]
+
+[node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
+position = Vector2(1020, -150)
+script = ExtResource("6_e0rgi")
+target_scene = "uid://b5he2wu862wg3"
+spawn_point = "OutsideMarker"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=952093493]
+position = Vector2(3, 30)
+shape = SubResource("RectangleShape2D_kmohc")
+
+[node name="Table" type="Area2D" parent="." unique_id=306320946]
+script = ExtResource("4_51g7e")
+
+[node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=737560562]
+position = Vector2(-18.000006, -78)
+scale = Vector2(1.3749999, 0.5)
+texture = ExtResource("4_ewfdh")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=2105996227]
+position = Vector2(-18.000004, -77.5)
+scale = Vector2(1.3749999, 0.5)
+shape = SubResource("RectangleShape2D_grbu6")
+
+[node name="Doll" type="Sprite2D" parent="Table" unique_id=584306983]
+position = Vector2(-71, -120)
+texture = ExtResource("6_jjk1o")

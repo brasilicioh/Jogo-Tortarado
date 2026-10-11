@@ -50,6 +50,9 @@ func interact():
 		print("mesa completa")
 		table_complete = true;
 		Dialogic.VAR.Ato2.table_complete = true;
+		await get_tree().create_timer(2.0).timeout
+		#fazer cutscene de noite aqui.
+		GameState.change_scene("res://scenes/atdois/outside3.tscn","OutsideMarker2")
 		
 	elif Dialogic.VAR.Ato2.PutItems.cups and Dialogic.VAR.Ato2.PutItems.cloth and Dialogic.VAR.Ato2.PutItems.decor:
 		#UiManager.set_current_task("Espante os pássaros")
