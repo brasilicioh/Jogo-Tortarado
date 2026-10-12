@@ -5,7 +5,7 @@
 [ext_resource type="Script" uid="uid://diwmmws77vykn" path="res://scripts/atum/drawer.gd" id="4_1hk0o"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="5_1hk0o"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="6_6wtov"]
-[ext_resource type="Script" uid="uid://cixk671vse1yx" path="res://scenes/atum/table.gd" id="6_cyo67"]
+[ext_resource type="Script" uid="uid://cixk671vse1yx" path="res://scripts/atum/table.gd" id="6_cyo67"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nwuim"]
 a = Vector2(12, -340)

@@ -4,7 +4,7 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_5q6in"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_tjqfd"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_ufeqn"]
-[ext_resource type="Script" uid="uid://dw26qyxgtpyel" path="res://scenes/atum/interacao_donana_salustiana.gd" id="6_5q6in"]
+[ext_resource type="Script" uid="uid://dw26qyxgtpyel" path="res://scripts/atum/interacao_donana_salustiana.gd" id="6_5q6in"]
 [ext_resource type="Texture2D" uid="uid://f16538wte0mh" path="res://dict/index.icon.png" id="6_efra6"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_8k1hs"]

@@ -7,3 +7,4 @@ if {Atum.interacted_with_bibiana} == false:
 	bibiana: Eu não sei, mas eu quero descobrir!
 	belonisia: Vamos então!
 	[signal arg="bibiana_sair"]
+	[wait time="1.5"]

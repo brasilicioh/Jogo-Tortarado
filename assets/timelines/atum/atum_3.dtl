@@ -1,4 +1,5 @@
 join donana center
+[wait time="1.5"]
 if {Atum.interacted_with_donana} == false:
 	\donana: O quê que vocês querem?
 	bibiana: Não é nada vovó.
@@ -7,3 +8,4 @@ if {Atum.interacted_with_donana} == false:
 	[signal arg="donana_sair"]
 	belonisia: Onça?
 	bibiana: Loucura da vovó. Bora procurar a mala!
+	[wait time="2.0"]
