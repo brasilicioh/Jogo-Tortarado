@@ -48,6 +48,7 @@ directories/dtl_directory={
 "casa_ricos_faca": "res://assets/timelines/atatro/casa_ricos_faca.dtl",
 "casa_ricos_mala": "res://assets/timelines/atatro/casa_ricos_mala.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
+"cutscene": "res://assets/timelines/atrez/cutscene.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
 "donana_fim": "res://assets/timelines/atatro/donana_fim.dtl",
 "donana_sozinha": "res://assets/timelines/atatro/donana_sozinha.dtl",
