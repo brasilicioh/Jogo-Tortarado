@@ -12,6 +12,8 @@ const PLAYER_SCENE = preload("res://scenes/player.tscn")
 @onready var ui = $Ui
 @onready var cutscene_container = $Cutscene
 
+var is_loading_scene := false
+
 func _enter_tree() -> void:
 	GameState.main = self
 
@@ -29,15 +31,27 @@ func new_player(player_position: Vector2, id: String):
 	return player
 
 func load_scene(scene: String, spawn_name: String):
+	if is_loading_scene:
+		return
+	
+	is_loading_scene = true
+	
 	GameState.active_characters = []
 	for child in level_container.get_children():
-		child.free()
+		child.queue_free()
+	
+	await get_tree().process_frame
 	
 	var current_scene: Node2D = load(scene).instantiate()
 	
-	level_container.add_child(current_scene)
+	var spawns: Array[Node] = current_scene.find_children(
+		"*",
+		"SpawnMarker",
+		true,
+		false
+	)
 	
-	var spawns: Array[Node] = get_tree().get_nodes_in_group("spawn point")
+	level_container.add_child(current_scene)
 
 	for spawn in spawns:
 		if spawn is SpawnMarker and spawn.name == spawn_name:
@@ -50,6 +64,8 @@ func load_scene(scene: String, spawn_name: String):
 			if spawn.active_character != null:
 				GameState.change_active_player(spawn.active_character)
 			break
+	
+	is_loading_scene = false
 
 func load_minigame(minigame_name: String):
 	var minigame: PackedScene = load("res://scenes/minigames/" + minigame_name + ".tscn")

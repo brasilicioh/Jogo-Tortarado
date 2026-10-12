@@ -94,7 +94,7 @@ func _input(event: InputEvent) -> void:
 			GameState.was_interacting = false
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
-	if area.has_method("interact") or area.has_method("use_item")\
+	if (area.has_method("interact") or area.has_method("use_item"))\
 	   and can_interact:
 		if area.has_method("highlight"):
 			area.highlight(true)
