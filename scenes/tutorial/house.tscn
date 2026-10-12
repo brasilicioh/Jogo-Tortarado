@@ -15,6 +15,10 @@ script = ExtResource("1_viu1i")
 
 [node name="House" parent="." unique_id=1394089690 instance=ExtResource("2_nk3l3")]
 
+[node name="QuartoMeninasRoupa" parent="House/QuartoDasMeninasComCamisa" parent_id_path=PackedInt32Array(1394089690, 1118305505) index="0" unique_id=2135177472]
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
 position = Vector2(-968, -96)
 target = Vector2(7467, -108)
@@ -46,3 +50,5 @@ texture = ExtResource("6_ed01o")
 flip_h = true
 hframes = 4
 frame = 1
+
+[editable path="House"]
