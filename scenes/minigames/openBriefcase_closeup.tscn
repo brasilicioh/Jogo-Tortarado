@@ -1,0 +1,60 @@
+[gd_scene format=3 uid="uid://cdgom7x7pw6i3"]
+
+[ext_resource type="Texture2D" uid="uid://cm4cbjbdq6qtj" path="res://assets/scenaries/mala_aberta.png" id="1_8qgq4"]
+[ext_resource type="Script" uid="uid://ddkovejaj3u08" path="res://scripts/atum/lighthandbag.gd" id="2_8qgq4"]
+[ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="2_vhtk1"]
+
+[node name="DrawerCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = -2.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_8qgq4")
+expand_mode = 1
+
+[node name="openhandbag" type="TextureButton" parent="." unique_id=660045445]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 365.0
+offset_top = 306.0
+offset_right = 919.0
+offset_bottom = 688.0
+stretch_mode = 0
+script = ExtResource("2_8qgq4")
+
+[node name="Panel" type="Panel" parent="." unique_id=861543560]
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 35.0
+offset_right = 1231.0
+offset_bottom = 75.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1599957230]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 39.0
+offset_bottom = 41.0
+text = "X"
+flat = true
+script = ExtResource("2_vhtk1")
+
+[connection signal="pressed" from="openhandbag" to="openhandbag" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

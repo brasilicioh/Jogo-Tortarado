@@ -108,7 +108,6 @@ shape = SubResource("RectangleShape2D_qlg0r")
 [node name="Character" parent="." unique_id=1215354689 instance=ExtResource("7_d0hh2")]
 position = Vector2(-4387, -64)
 character_id = "belonisia"
-can_move = true
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=847651489]
 position = Vector2(-4160, -64)

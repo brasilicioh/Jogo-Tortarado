@@ -43,6 +43,8 @@ func _open_briefcase() -> void:
 	print("case opened")
 	await get_tree().create_timer(2.0).timeout
 	control_panel.visible = false
+	GameState.state["briefcase_opened"] = true
+	GameState.main.load_minigame("lightBriefcase_closeup")
 	#emit_signal("mala_aberta") isso aq é o sinal de fim de jogo.
 	# aqui entra depois a animação de abertura + revelar a faca de marfim
 

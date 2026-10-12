@@ -1,0 +1,41 @@
+[gd_scene format=3 uid="uid://cp0trnqkgur1s"]
+
+[ext_resource type="Texture2D" uid="uid://hi8xx7c0w3bj" path="res://assets/scenaries/mesaCloseUp.png" id="1_q3s08"]
+[ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="2_x4mtd"]
+
+[node name="TableCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_q3s08")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=1088136673]
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 35.0
+offset_right = 1231.0
+offset_bottom = 75.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1561765833]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 39.0
+offset_bottom = 41.0
+text = "X"
+flat = true
+script = ExtResource("2_x4mtd")
+
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

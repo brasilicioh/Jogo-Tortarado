@@ -1,9 +1,13 @@
 extends Area2D
 
-var gave_handbag = false
 
 func interact():
-	GameState.main.load_minigame("drawer_closeup")
+	if not GameState.state["briefcase_opened"]:
+		GameState.main.load_minigame("drawer_closeup")
+	elif not GameState.state["gave_knife"]:
+		GameState.main.load_minigame("lightBriefcase_closeup")
+	else:
+		GameState.main.load_minigame("openBriefcase_closeup")
 	
 func highlight(state: bool) -> void:
 	if $Sprite2D is Node:

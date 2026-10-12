@@ -14,3 +14,4 @@ func ativar() -> void:
 
 	var donana = get_parent().get_parent().get_node("Donana")
 	donana.iniciar_evento()
+	queue_free()
