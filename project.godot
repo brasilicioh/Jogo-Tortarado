@@ -58,6 +58,7 @@ directories/dtl_directory={
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
+"rock_giver": "res://assets/timelines/tutorial/rock_giver.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
 "salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",

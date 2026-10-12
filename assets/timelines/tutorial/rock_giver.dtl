@@ -1,0 +1,5 @@
+join zeca center
+if {Tutorial.interacted_with_zeca} == true:
+zeca: Ei, tem visita chegando e a plantação tá um caos.\
+Aqueles pássaros apareceram de novo.
+zeca: Pegue essas pedras e espante eles.

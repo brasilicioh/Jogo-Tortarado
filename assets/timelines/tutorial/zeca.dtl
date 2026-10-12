@@ -1,7 +1,10 @@
 join zeca center
+{Tutorial.interacted_with_father}
 if {Tutorial.interacted_with_father} == false:
 	zeca: Ei, tem visita chegando e a plantação tá um caos.
-	zeca: Aqueles pássaros apareceram de novo. Pegue essas pedras e espante eles.
+	zeca: Aqueles pássaros apareceram de novo.\
+	Pegue essas pedras e espante eles.
+	[signal arg="give_rock"]
 	set {Tutorial.interacted_with_father} = true
 else:
 	zeca: Vá assustar o pássaros!
