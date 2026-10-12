@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://d038w32ad8r7x"
-path="res://.godot/imported/copos.png-1eafef1a931de0db80d2377be075d154.ctex"
+uid="uid://bay3kc7tfdhk8"
+path="res://.godot/imported/severo_walk.png-6e937ee3ced966bf6e5fb186a5c85d86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/itens_inventário/copos.png"
-dest_files=["res://.godot/imported/copos.png-1eafef1a931de0db80d2377be075d154.ctex"]
+source_file="res://assets/characters/severo_walk.png"
+dest_files=["res://.godot/imported/severo_walk.png-6e937ee3ced966bf6e5fb186a5c85d86.ctex"]
 
 [params]
 

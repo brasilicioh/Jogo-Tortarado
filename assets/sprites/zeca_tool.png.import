@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dgm3m2kifxnmj"
-path="res://.godot/imported/belonisia.png-01a3c64a7f28c45afb2f1e4b3f509841.ctex"
+uid="uid://cjf3i1veafjqr"
+path="res://.godot/imported/zeca_tool.png-0128c715777c97b9589cfb1df6a9dfe3.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/belonisia.png"
-dest_files=["res://.godot/imported/belonisia.png-01a3c64a7f28c45afb2f1e4b3f509841.ctex"]
+source_file="res://assets/sprites/zeca_tool.png"
+dest_files=["res://.godot/imported/zeca_tool.png-0128c715777c97b9589cfb1df6a9dfe3.ctex"]
 
 [params]
 

@@ -1,103 +1,117 @@
 [gd_scene format=3 uid="uid://cdxx5gmcaonwn"]
 
 [ext_resource type="Script" uid="uid://debqb8ihbgeyf" path="res://scripts/start_tutorial.gd" id="1_d0hh2"]
-[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="2_1m7x5"]
-[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="3_2h03l"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_s0s36"]
 [ext_resource type="Script" uid="uid://irtwdfwkmle7" path="res://scripts/irma.gd" id="5_7ii52"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="6_5sodr"]
+[ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="5_8i0xj"]
+[ext_resource type="Texture2D" uid="uid://ca37t6d1urkd2" path="res://assets/sprites/domingas_crying.png" id="5_650wj"]
+[ext_resource type="Texture2D" uid="uid://der7qgm00nba2" path="res://assets/sprites/domingas_doll.png" id="5_d0hh2"]
 [ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_04xgw"]
+[ext_resource type="PackedScene" uid="uid://msbs60ar4rsm" path="res://scenes/player.tscn" id="7_d0hh2"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_2f21x"]
-a = Vector2(12, -340)
-b = Vector2(12, 284)
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0hh2"]
+atlas = ExtResource("5_650wj")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_tuyoq"]
-a = Vector2(4, -379)
-b = Vector2(4, 246)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1m7x5"]
+atlas = ExtResource("5_650wj")
+region = Rect2(64, 0, 64, 64)
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_bx5pa"]
-a = Vector2(64000, 0)
-b = Vector2(-64000, 0)
+[sub_resource type="AtlasTexture" id="AtlasTexture_2h03l"]
+atlas = ExtResource("5_d0hh2")
+region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_pwtdf"]
-size = Vector2(293.74744, 576.45917)
+[sub_resource type="AtlasTexture" id="AtlasTexture_s0s36"]
+atlas = ExtResource("5_d0hh2")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2i0da"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0hh2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1m7x5")
+}],
+"loop": 1,
+"name": &"crying",
+"speed": 2.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2h03l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s0s36")
+}],
+"loop": 1,
+"name": &"with_doll",
+"speed": 2.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tjgix"]
 size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qlg0r"]
-size = Vector2(219.0001, 231)
+size = Vector2(146.00008, 154)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2i0da"]
+size = Vector2(64, 64)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
+size = Vector2(102, 156)
 
 [node name="Bedroom" type="Node2D" unique_id=1451377204]
 script = ExtResource("1_d0hh2")
 
-[node name="Background" type="Sprite2D" parent="." unique_id=1215372281]
-position = Vector2(918, -242)
-scale = Vector2(3, 3)
-texture = ExtResource("2_1m7x5")
+[node name="House" parent="." unique_id=1394089690 instance=ExtResource("5_8i0xj")]
+position = Vector2(-4387, 0)
 
-[node name="WallLeft" type="StaticBody2D" parent="." unique_id=2140995200]
-position = Vector2(-13, -285)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=363557033]
-shape = SubResource("SegmentShape2D_2f21x")
-
-[node name="WallRight" type="StaticBody2D" parent="." unique_id=1654935159]
-position = Vector2(1833, -247)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=602841317]
-shape = SubResource("SegmentShape2D_tuyoq")
-
-[node name="Ground" type="StaticBody2D" parent="." unique_id=1823080203]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1325624490]
-shape = SubResource("SegmentShape2D_bx5pa")
-
-[node name="Bedroom" type="Marker2D" parent="." unique_id=351361094 groups=["spawn point"]]
-position = Vector2(1616.9999, -95.99999)
-rotation = 3.1415927
-scale = Vector2(0.75653094, -0.44983667)
-script = ExtResource("3_2h03l")
+[node name="QuartoMeninas" parent="House/QuartoDasMeninas" parent_id_path=PackedInt32Array(1394089690, 207887793) index="0" unique_id=1464077330]
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="DoorTransition" type="Area2D" parent="." unique_id=470459369]
-process_mode = 4
-visible = false
-position = Vector2(1617.0001, -130.00002)
-scale = Vector2(-0.75653094, 0.44983667)
-script = ExtResource("4_s0s36")
-target_scene = "uid://beufraofiugvr"
-spawn_point = "ScareBird"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=1914249399]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1659317801]
-scale = Vector2(0.99999946, 0.9999996)
-shape = SubResource("RectangleShape2D_pwtdf")
-
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=782998894]
 
 [node name="Irma" type="Area2D" parent="." unique_id=1862668961]
-position = Vector2(1041, -164)
+position = Vector2(808, -64)
 script = ExtResource("5_7ii52")
 
-[node name="Sprite2D" type="Sprite2D" parent="Irma" unique_id=1708075807]
-scale = Vector2(0.99999994, 1)
-texture = ExtResource("6_5sodr")
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Irma" unique_id=1694408030]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2i0da")
+animation = &"with_doll"
+frame_progress = 0.55641174
 
 [node name="Irma" type="CollisionShape2D" parent="Irma" unique_id=690378885]
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
 
 [node name="Wardrobe" type="Area2D" parent="." unique_id=422154356]
-position = Vector2(652, -110)
+position = Vector2(438, -109)
 script = ExtResource("7_04xgw")
 
 [node name="Wardrobe" type="CollisionShape2D" parent="Wardrobe" unique_id=501015710]
-position = Vector2(3.5, -7.5)
 scale = Vector2(0.9999997, 1)
 shape = SubResource("RectangleShape2D_qlg0r")
+
+[node name="Character" parent="." unique_id=1215354689 instance=ExtResource("7_d0hh2")]
+position = Vector2(-4387, -64)
+character_id = "belonisia"
+can_move = true
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=847651489]
+position = Vector2(-4160, -64)
+scale = Vector2(2, 2)
+texture = SubResource("PlaceholderTexture2D_2i0da")
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=220300953]
+position = Vector2(-4834, -110)
+script = ExtResource("4_s0s36")
+target_scene = "uid://despj3e5uf3rb"
+spawn_point = "Outside"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=2145756262]
+shape = SubResource("RectangleShape2D_2i0da")
+
+[editable path="House"]

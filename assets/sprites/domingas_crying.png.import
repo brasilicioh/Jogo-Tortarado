@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8smdbny3llvy"
-path="res://.godot/imported/toalha.png-bc05ff2e32deafe4c0244bc0036ce37c.ctex"
+uid="uid://ca37t6d1urkd2"
+path="res://.godot/imported/domingas_crying.png-0adf1492036ece73e79041da760aa001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/itens_inventário/toalha.png"
-dest_files=["res://.godot/imported/toalha.png-bc05ff2e32deafe4c0244bc0036ce37c.ctex"]
+source_file="res://assets/sprites/domingas_crying.png"
+dest_files=["res://.godot/imported/domingas_crying.png-0adf1492036ece73e79041da760aa001.ctex"]
 
 [params]
 

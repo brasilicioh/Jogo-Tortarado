@@ -1,20 +1,11 @@
 [gd_scene format=3 uid="uid://c5o4ccbq080fw"]
 
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_j8v84"]
 [ext_resource type="Script" uid="uid://c6reqv1xtlcwc" path="res://scripts/tutorial/house.gd" id="1_viu1i"]
-[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="2_ed01o"]
-[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_g1flj"]
+[ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="2_nk3l3"]
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_eddn4"]
-size = Vector2(5000, 20)
-
-[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_eddn4"]
-load_path = "res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex"
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
-size = Vector2(20, 765)
+[ext_resource type="Texture2D" uid="uid://dgm3m2kifxnmj" path="res://assets/characters/belonisia.png" id="5_viu1i"]
+[ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://assets/characters/severo_walk.png" id="6_ed01o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
 size = Vector2(128, 128)
@@ -22,64 +13,36 @@ size = Vector2(128, 128)
 [node name="House" type="Node2D" unique_id=946214458]
 script = ExtResource("1_viu1i")
 
-[node name="Room" type="Sprite2D" parent="." unique_id=1869045958]
-position = Vector2(-1390, -376)
-scale = Vector2(3, 3)
-texture = ExtResource("2_ed01o")
-
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=222052316]
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1330374819]
-scale = Vector2(82.636894, 0.14697836)
-texture = ExtResource("1_j8v84")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=316807793]
-shape = SubResource("RectangleShape2D_eddn4")
-
-[node name="Start" type="Marker2D" parent="." unique_id=432029954 groups=["spawn point"]]
-position = Vector2(49, -144)
-script = ExtResource("2_g1flj")
-spawn_characters = Array[String](["belonisia"])
-active_character = "belonisia"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
+[node name="House" parent="." unique_id=1394089690 instance=ExtResource("2_nk3l3")]
 
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
-position = Vector2(-187, -74)
-target = Vector2(-600, -128)
-
-[node name="Sprite2D" type="Sprite2D" parent="Teleporter" unique_id=945590484]
-texture = SubResource("CompressedTexture2D_eddn4")
+position = Vector2(-968, -96)
+target = Vector2(7467, -108)
 
 [node name="Label" type="Label" parent="Teleporter" unique_id=402166908]
-offset_left = -36.0
-offset_top = -159.0
-offset_right = 4.0
-offset_bottom = -136.0
+offset_left = -74.0
+offset_top = -116.0
+offset_right = 79.0
+offset_bottom = -93.0
 size_flags_horizontal = 4
 text = "porta para o quarto"
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=532503459]
-position = Vector2(-465, -375)
-
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D2" unique_id=381355339]
-position = Vector2(0, -3.0517578e-05)
-scale = Vector2(0.15625004, 5.9843745)
-texture = ExtResource("1_j8v84")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1307385779]
-shape = SubResource("RectangleShape2D_tl472")
-
 [node name="Bibiana" type="Area2D" parent="." unique_id=1367271309]
-position = Vector2(-1389, -95)
+position = Vector2(6719, -64)
 script = ExtResource("4_eddn4")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=1352322646]
-texture = ExtResource("1_j8v84")
+scale = Vector2(2, 2)
+texture = ExtResource("5_viu1i")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=957274452]
 shape = SubResource("RectangleShape2D_c5ysd")
 
 [node name="Severo" type="Sprite2D" parent="." unique_id=1283774295]
 visible = false
-position = Vector2(-703, -204)
-texture = ExtResource("1_j8v84")
+position = Vector2(7464, -96)
+scale = Vector2(2, 2)
+texture = ExtResource("6_ed01o")
+flip_h = true
+hframes = 4
+frame = 1

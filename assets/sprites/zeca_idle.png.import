@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bay3kc7tfdhk8"
-path="res://.godot/imported/severo_andando.png-66fce06b4cbac9714cf479ac3a6963d9.ctex"
+uid="uid://dotqmbs3bq12d"
+path="res://.godot/imported/zeca_idle.png-2167d58deb74270d6da1fb9da8e4ca2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/severo_andando.png"
-dest_files=["res://.godot/imported/severo_andando.png-66fce06b4cbac9714cf479ac3a6963d9.ctex"]
+source_file="res://assets/sprites/zeca_idle.png"
+dest_files=["res://.godot/imported/zeca_idle.png-2167d58deb74270d6da1fb9da8e4ca2c.ctex"]
 
 [params]
 

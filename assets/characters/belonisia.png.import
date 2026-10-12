@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca37t6d1urkd2"
-path="res://.godot/imported/domingas-chorando.png-9b929fd67880c597a803f4d71cff8760.ctex"
+uid="uid://dgm3m2kifxnmj"
+path="res://.godot/imported/belonisia.png-685bfcf1c7226dd07527215f4a587e72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/domingas-chorando.png"
-dest_files=["res://.godot/imported/domingas-chorando.png-9b929fd67880c597a803f4d71cff8760.ctex"]
+source_file="res://assets/characters/belonisia.png"
+dest_files=["res://.godot/imported/belonisia.png-685bfcf1c7226dd07527215f4a587e72.ctex"]
 
 [params]
 
