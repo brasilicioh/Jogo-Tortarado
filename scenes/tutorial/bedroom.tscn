@@ -9,6 +9,9 @@
 [ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_04xgw"]
 [ext_resource type="PackedScene" uid="uid://msbs60ar4rsm" path="res://scenes/player.tscn" id="7_d0hh2"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
+size = Vector2(51, 79)
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_d0hh2"]
 atlas = ExtResource("5_650wj")
 region = Rect2(0, 0, 64, 64)
@@ -59,14 +62,22 @@ size = Vector2(146.00008, 154)
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_2i0da"]
 size = Vector2(64, 64)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
-size = Vector2(102, 156)
-
 [node name="Bedroom" type="Node2D" unique_id=1451377204]
 script = ExtResource("1_d0hh2")
 
 [node name="House" parent="." unique_id=1394089690 instance=ExtResource("5_8i0xj")]
 position = Vector2(-4387, 0)
+
+[node name="DoorTransition" type="Area2D" parent="House/Corredor2" parent_id_path=PackedInt32Array(1394089690, 1514774914) index="2" unique_id=1937299152]
+position = Vector2(51, 41.5)
+script = ExtResource("4_s0s36")
+target_scene = "uid://despj3e5uf3rb"
+spawn_point = "Outside"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="House/Corredor2/DoorTransition" unique_id=877580348]
+position = Vector2(1.5, -0.5)
+shape = SubResource("RectangleShape2D_mftj6")
 
 [node name="QuartoMeninas" parent="House/QuartoDasMeninas" parent_id_path=PackedInt32Array(1394089690, 207887793) index="0" unique_id=1464077330]
 spawn_characters = Array[String](["bibiana"])
@@ -103,15 +114,5 @@ can_move = true
 position = Vector2(-4160, -64)
 scale = Vector2(2, 2)
 texture = SubResource("PlaceholderTexture2D_2i0da")
-
-[node name="DoorTransition" type="Area2D" parent="." unique_id=220300953]
-position = Vector2(-4834, -110)
-script = ExtResource("4_s0s36")
-target_scene = "uid://despj3e5uf3rb"
-spawn_point = "Outside"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=2145756262]
-shape = SubResource("RectangleShape2D_2i0da")
 
 [editable path="House"]

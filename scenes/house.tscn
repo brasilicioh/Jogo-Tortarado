@@ -46,6 +46,8 @@ texture = ExtResource("2_f74lx")
 [node name="Corredor2" type="Marker2D" parent="Corredor2" unique_id=679902272 groups=["spawn point"]]
 position = Vector2(51, 41.5)
 script = ExtResource("1_qtlar")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Wall" type="StaticBody2D" parent="Corredor2" unique_id=1296331123]
