@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dotqmbs3bq12d"
-path="res://.godot/imported/zeca_idle.png-bc4ec9c26ef5ed9006b1212243854eac.ctex"
+path="res://.godot/imported/zeca_idle.png-2167d58deb74270d6da1fb9da8e4ca2c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/zeca_idle.png"
-dest_files=["res://.godot/imported/zeca_idle.png-bc4ec9c26ef5ed9006b1212243854eac.ctex"]
+source_file="res://assets/sprites/zeca_idle.png"
+dest_files=["res://.godot/imported/zeca_idle.png-2167d58deb74270d6da1fb9da8e4ca2c.ctex"]
 
 [params]
 

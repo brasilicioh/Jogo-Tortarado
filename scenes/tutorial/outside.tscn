@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="3_y7xuq"]
 [ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="4_7oiyi"]
 [ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_b3qvv"]
+[ext_resource type="Texture2D" uid="uid://dotqmbs3bq12d" path="res://assets/sprites/zeca_idle.png" id="6_gk2p8"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_gk2p8"]
+[ext_resource type="Texture2D" uid="uid://cjf3i1veafjqr" path="res://assets/sprites/zeca_tool.png" id="7_pdayf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(5000, 20)
@@ -16,6 +18,84 @@ size = Vector2(128, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(128, 128)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pi64v"]
+atlas = ExtResource("6_gk2p8")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uox6q"]
+atlas = ExtResource("6_gk2p8")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dp1ch"]
+atlas = ExtResource("6_gk2p8")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o4jxq"]
+atlas = ExtResource("6_gk2p8")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4fjwk"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smupg"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i1blh"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u0pju"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cngvx"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1e2uo"]
+atlas = ExtResource("7_pdayf")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_2i0da"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pi64v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uox6q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dp1ch")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o4jxq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4fjwk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smupg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i1blh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u0pju")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cngvx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1e2uo")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
 size = Vector2(100, 182)
@@ -52,10 +132,7 @@ script = ExtResource("3_y7xuq")
 shape = SubResource("RectangleShape2D_wrhxb")
 
 [node name="Zeca" type="Node2D" parent="." unique_id=1910350548]
-position = Vector2(330, -80)
-
-[node name="Sprite2D" type="Sprite2D" parent="Zeca" unique_id=1331022899]
-texture = ExtResource("2_bxvk8")
+position = Vector2(330, -74)
 
 [node name="Area2D" type="Area2D" parent="Zeca" unique_id=1874819971]
 script = ExtResource("4_7oiyi")
@@ -63,6 +140,11 @@ script = ExtResource("4_7oiyi")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca/Area2D" unique_id=361648425]
 position = Vector2(0.5004883, 0)
 shape = SubResource("RectangleShape2D_l85ff")
+
+[node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_2i0da")
+frame_progress = 0.14373997
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
