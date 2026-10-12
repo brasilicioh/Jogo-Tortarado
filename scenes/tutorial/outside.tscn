@@ -120,7 +120,7 @@ texture = ExtResource("2_bxvk8")
 shape = SubResource("RectangleShape2D_2i0da")
 
 [node name="Crow" type="Node2D" parent="." unique_id=1928070463]
-position = Vector2(281, -79)
+position = Vector2(2318, -64)
 
 [node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=1541964808]
 texture = ExtResource("2_bxvk8")
@@ -142,7 +142,7 @@ shape = SubResource("RectangleShape2D_l85ff")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
-frame_progress = 0.116260186
+frame_progress = 0.8516784
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
