@@ -224,7 +224,6 @@ offset_right = 151.0
 offset_bottom = -103.0
 text = "PORTA LEVA AO ATO 4"
 
-[editable path="House/StairTransition"]
 [node name="Casa" type="Sprite2D" parent="." unique_id=1738598041]
 position = Vector2(702, -457)
 texture = ExtResource("6_uaw8k")

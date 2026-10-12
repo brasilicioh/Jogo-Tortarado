@@ -3,7 +3,7 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_nvkv0"]
 [ext_resource type="Texture2D" uid="uid://d28efwbcsf3vi" path="res://unpacking/desenhos/cenários/corredor2.png" id="1_pgyjl"]
 [ext_resource type="Script" uid="uid://clg2cw6ij3gst" path="res://scripts/atatro/donana.gd" id="1_tdo0k"]
-[ext_resource type="Texture2D" uid="uid://f16538wte0mh" path="res://dict/index.icon.png" id="3_jiete"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="3_jiete"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_aj13y"]
 [ext_resource type="Script" uid="uid://b1rrrefgwrhna" path="res://scripts/atatro/filha_trigger.gd" id="4_jiete"]
 [ext_resource type="Script" uid="uid://ddl2i4tk61173" path="res://scripts/atatro/homem_trigger.gd" id="6_aj13y"]

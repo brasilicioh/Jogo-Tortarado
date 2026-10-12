@@ -56,7 +56,8 @@ func _physics_process(delta: float) -> void:
 	move_and_slide()
 
 func _process(_delta: float) -> void:
-	$Camera2D.enabled = character_id == GameState.active_player
+	if character_id == GameState.active_player:
+		$Camera2D.make_current()
 	
 	if GameState.debug.get("toggle_animations", true):
 		match state:
@@ -74,6 +75,7 @@ func _process(_delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if character_id == GameState.active_player\
 	   and can_interact:
+		print(GameState.was_interacting)
 		if event.is_action_pressed("interact") and nearby_interactable and not GameState.was_interacting:
 			GameState.was_interacting = true
 			# try to use item
@@ -81,11 +83,14 @@ func _input(event: InputEvent) -> void:
 			   nearby_interactable.has_method("use_item"):
 				nearby_interactable.use_item(GameState.held_item())
 				GameState.active_inventory().current_item = -1
+				GameState.was_interacting = false
 			# normal interact
 			elif GameState.held_item_index() == -1 and\
 			   nearby_interactable.has_method("interact"):
+				print("interacting")
 				nearby_interactable.interact()
-		elif event.is_action_released("interact"):
+				GameState.was_interacting = false
+		if event.is_action_released("interact"):
 			GameState.was_interacting = false
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
@@ -93,6 +98,7 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 	   and can_interact:
 		if area.has_method("highlight"):
 			area.highlight(true)
+		print(area)
 		nearby_interactable = area
 		
 	if area.name == "DoorTriggerArea":
