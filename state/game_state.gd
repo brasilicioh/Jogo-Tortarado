@@ -24,7 +24,12 @@ var camera_limits: Array[int] = [INT64_MIN, INT64_MAX, INT64_MAX, INT64_MIN]
 
 var no_left := false
 
-var main
+signal main_set
+
+var main:
+	set(value):
+		main = value
+		main_set.emit()
 
 #TODO: get id to change here later
 func change_active_player(new_active_player: String):

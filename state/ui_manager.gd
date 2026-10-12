@@ -10,13 +10,16 @@ var main
 func _ready() -> void:
 	GameState.active_player_changed.connect(update_ui)
 	GameState.inventory_updated.connect(update_inventory)
-	
+
+func _on_main_set():
 	main = GameState.main
 	
 	if not main:
+		print("not main")
 		# don't shit yourself
 		return
 	
+	print("connecting cutscene started")
 	main.cutscene_started.connect(_on_cutscene_started)
 	main.cutscene_ended.connect(_on_cutscene_ended)
 
