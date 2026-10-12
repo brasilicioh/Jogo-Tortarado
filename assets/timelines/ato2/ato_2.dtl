@@ -1,6 +1,7 @@
 join bibiana center
 if {Ato2.interacted_with_belonisia_firsttime} == false:
-	bibiana: Bom dia, irmã! Veio me chamar para os preparativos da festa do papai? Falaram que virá muita gente, então temos que fazer um negócio bem bonito!
+	bibiana: Bom dia, irmã! Veio me chamar para os preparativos da festa do papai?
+	bibiana: Falaram que virá muita gente, então temos que fazer um negócio bem bonito!
 	do UiManager.set_current_task("Festa de Zeca: Itens da Festa")
 	set {Ato2.interacted_with_belonisia_firsttime} = true
 	[signal arg="destroy1"]
