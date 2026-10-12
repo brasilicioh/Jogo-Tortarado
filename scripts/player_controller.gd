@@ -16,12 +16,22 @@ var speed = 300.0
 var nearby_interactable: Node = null
 var can_interact: bool = true
 
-@export var character_id: String
 @export var can_move: bool = true
+
+# each sprite frame should contain the idle, normal and walk animations
+@export var sprites: Dictionary[String, SpriteFrames]
 
 @onready var sprite: AnimatedSprite2D = $Sprite
 
+@export var character_id: String
+
 func _ready() -> void:
+	var character_sprite = sprites.get(character_id)
+	if character_sprite is SpriteFrames:
+		sprite.sprite_frames = sprites.get(character_id)
+	else:
+		print("could not find sprite")
+	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_ended)
 	

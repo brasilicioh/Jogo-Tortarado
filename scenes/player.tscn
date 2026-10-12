@@ -1,23 +1,129 @@
 [gd_scene format=3 uid="uid://msbs60ar4rsm"]
 
 [ext_resource type="Script" uid="uid://lvkib50pauxb" path="res://scripts/player_controller.gd" id="1_g2els"]
+[ext_resource type="Texture2D" uid="uid://dgm3m2kifxnmj" path="res://assets/characters/belonisia.png" id="2_dqkch"]
+[ext_resource type="Texture2D" uid="uid://stxqabr3rq2u" path="res://assets/characters/belonisia_walk.png" id="3_dqkch"]
 [ext_resource type="Texture2D" uid="uid://dqvgdbqxvosnh" path="res://assets/characters/bibiana_walk.png" id="3_qhqgy"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smehm"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ur7pv"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y4r1p"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d2wvv"]
+atlas = ExtResource("3_dqkch")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qhqgy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dqkch")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_dqkch")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smehm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ur7pv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y4r1p")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d2wvv")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qlg0r"]
 atlas = ExtResource("3_qhqgy")
 region = Rect2(64, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_3v2ag"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jej6c"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ej7"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oprun"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dqkch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlg0r")
+}],
+"loop": 1,
+"name": &"normal",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3v2ag")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jej6c")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ej7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oprun")
+}],
+"loop": 1,
+"name": &"walk",
+"speed": 6.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_dqkch"]
 atlas = ExtResource("3_qhqgy")
 region = Rect2(0, 0, 64, 64)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
-atlas = ExtResource("3_qhqgy")
-region = Rect2(128, 0, 64, 64)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_fjrip"]
 atlas = ExtResource("3_qhqgy")
 region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tuyoq"]
+atlas = ExtResource("3_qhqgy")
+region = Rect2(128, 0, 64, 64)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5tstl"]
 animations = [{
@@ -45,10 +151,10 @@ animations = [{
 "texture": SubResource("AtlasTexture_qlg0r")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_tuyoq")
+"texture": SubResource("AtlasTexture_fjrip")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_fjrip")
+"texture": SubResource("AtlasTexture_tuyoq")
 }],
 "loop": 1,
 "name": &"walk",
@@ -61,21 +167,22 @@ size = Vector2(42, 128)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(196, 196)
 
-[node name="Character" type="CharacterBody2D" unique_id=1215354689 node_paths=PackedStringArray("ground_raycast", "interaction_area") groups=["player"]]
+[node name="wal" type="CharacterBody2D" unique_id=1215354689 node_paths=PackedStringArray("ground_raycast", "interaction_area") groups=["player"]]
 collision_layer = 0
 floor_snap_length = 32.0
 script = ExtResource("1_g2els")
 ground_raycast = NodePath("RayCast2D")
 interaction_area = NodePath("InteractionArea")
-character_id = null
-can_move = null
+sprites = Dictionary[String, SpriteFrames]({
+"belonisia": SubResource("SpriteFrames_qhqgy"),
+"bibiana": SubResource("SpriteFrames_dqkch")
+})
 
 [node name="Sprite" type="AnimatedSprite2D" parent="." unique_id=396474184]
 light_mask = 3
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_5tstl")
 animation = &"walk"
-frame_progress = 0.46639833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=551043829]
 position = Vector2(3, 0)
