@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://irw46kxdx0g7"]
+
+[ext_resource type="Script" uid="uid://b5p1ln4wdkrxb" path="res://scripts/main_menu.gd" id="1_ekxnf"]
+[ext_resource type="Texture2D" uid="uid://olxosrx5tnjm" path="res://assets/menu_inicial.png" id="2_bqqt6"]
+[ext_resource type="PackedScene" uid="uid://bajd5k5d1d66y" path="res://scenes/main.tscn" id="2_wu84c"]
+
+[node name="MainMenu" type="Node2D" unique_id=1551987127]
+
+[node name="Control" type="Control" parent="." unique_id=2131697665]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_ekxnf")
+first_scene = ExtResource("2_wu84c")
+
+[node name="TextureRect" type="TextureRect" parent="Control" unique_id=1196168749]
+layout_mode = 0
+offset_right = 1672.0
+offset_bottom = 941.0
+scale = Vector2(0.766, 0.766)
+offset_transform_enabled = true
+texture = ExtResource("2_bqqt6")
