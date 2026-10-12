@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
 [ext_resource type="Texture2D" uid="uid://dgm3m2kifxnmj" path="res://assets/characters/belonisia.png" id="5_viu1i"]
-[ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://unpacking/desenhos/personagens/severo_andando.png" id="6_ed01o"]
+[ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://assets/characters/severo_walk.png" id="6_ed01o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
 size = Vector2(128, 128)

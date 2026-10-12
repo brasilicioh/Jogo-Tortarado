@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bay3kc7tfdhk8"
-path="res://.godot/imported/severo_andando.png-66fce06b4cbac9714cf479ac3a6963d9.ctex"
+path="res://.godot/imported/severo_walk.png-6e937ee3ced966bf6e5fb186a5c85d86.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/severo_andando.png"
-dest_files=["res://.godot/imported/severo_andando.png-66fce06b4cbac9714cf479ac3a6963d9.ctex"]
+source_file="res://assets/characters/severo_walk.png"
+dest_files=["res://.godot/imported/severo_walk.png-6e937ee3ced966bf6e5fb186a5c85d86.ctex"]
 
 [params]
 
