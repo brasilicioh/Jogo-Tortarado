@@ -1,0 +1,14 @@
+join donana center
+\donana: Foi você que fez isso?
+\donana: O que você fez?
+???: Fiz o que foi necessário ser feito.
+\donana: Você não tem esse direito...
+label ponto
+- Usar a faca
+	[signal arg="matar_homem"]
+- Pedir ajuda
+	\donana: Ninguém nos ajudaria nessa fazenda…
+	jump ponto
+- Fugir com a filha
+	\donana: E para onde eu fugiria?
+	jump ponto

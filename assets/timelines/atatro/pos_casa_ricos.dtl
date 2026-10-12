@@ -1,0 +1,8 @@
+join donana center
+\donana: Foi assim que tudo começou?
+[wait time="0.5"]
+\donana: Eu poderia ter pego qualquer outra coisa…
+[wait time="0.5"]
+\donana: Mas essa faca… essa maldita faca.
+[wait time="1.0"]
+[signal arg="prox_cena"]

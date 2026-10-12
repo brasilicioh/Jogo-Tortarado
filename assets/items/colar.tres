@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bewhg8vqsf1ry"]
+
+[ext_resource type="Texture2D" uid="uid://bsmstddsywldm" path="res://assets/sprites/colar.png" id="1_ko80x"]
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="1_pstc1"]
+
+[resource]
+script = ExtResource("1_pstc1")
+display_name = "Colar"
+id = &"colar"
+description = "Colar"
+icon = ExtResource("1_ko80x")
+metadata/_custom_type_script = "uid://bfgylyi7hocrr"

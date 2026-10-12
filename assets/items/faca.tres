@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bdnhs7bw5tfrx"]
+
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="1_0yacd"]
+[ext_resource type="Texture2D" uid="uid://pxsibtgpaiwo" path="res://assets/sprites/faca.png" id="1_ohs5e"]
+
+[resource]
+script = ExtResource("1_0yacd")
+display_name = "Faca"
+id = &"faca"
+description = "A cuja dita"
+icon = ExtResource("1_ohs5e")
+metadata/_custom_type_script = "uid://bfgylyi7hocrr"
