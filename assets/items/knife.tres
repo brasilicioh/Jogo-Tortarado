@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://c86iu03pwc6fk"]
+
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="1_bhyej"]
+
+[resource]
+script = ExtResource("1_bhyej")
+display_name = "Faca"
+id = &"knife"
+metadata/_custom_type_script = "uid://bfgylyi7hocrr"

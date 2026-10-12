@@ -1,0 +1,137 @@
+[gd_scene format=3 uid="uid://drxfnywwjfwef"]
+
+[ext_resource type="Texture2D" uid="uid://blgybxfu1lrpi" path="res://assets/sprites/rock.png" id="1_3did6"]
+[ext_resource type="Script" uid="uid://dv6mcpk1k0g0y" path="res://scripts/atatro/casa_ricos.gd" id="1_rvydw"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_rvydw"]
+[ext_resource type="Texture2D" uid="uid://f16538wte0mh" path="res://dict/index.icon.png" id="4_3e70c"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="5_asw6j"]
+[ext_resource type="Texture2D" uid="uid://bsmstddsywldm" path="res://assets/sprites/colar.png" id="6_yr0c7"]
+[ext_resource type="Script" uid="uid://cnier1fcb6v5" path="res://scripts/atatro/colar.gd" id="7_nj7qs"]
+[ext_resource type="Script" uid="uid://dxlfhndu5evi3" path="res://scripts/atatro/faca.gd" id="8_nj7qs"]
+[ext_resource type="Texture2D" uid="uid://pxsibtgpaiwo" path="res://assets/sprites/faca.png" id="9_s4vpo"]
+[ext_resource type="Script" uid="uid://b1mstjysdkta4" path="res://scripts/atatro/mala.gd" id="10_4ohw6"]
+[ext_resource type="Texture2D" uid="uid://baxjnuqscf2ga" path="res://assets/sprites/mala.png" id="11_81rde"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_3e70c"]
+a = Vector2(12, -340)
+b = Vector2(15, 283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l5msp"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_gkq51"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
+size = Vector2(43.061745, 180.43373)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wxcj"]
+size = Vector2(101, 99)
+
+[node name="CutsceneInicialQuatro" type="Node2D" unique_id=1886885134]
+script = ExtResource("1_rvydw")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1279565366]
+position = Vector2(3572.9998, -817.5)
+scale = Vector2(504.49997, 53.09375)
+texture = ExtResource("1_3did6")
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=1104840046]
+position = Vector2(-78, -266)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=1519195258]
+shape = SubResource("SegmentShape2D_3e70c")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=803805356]
+position = Vector2(2620, -196)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1518231135]
+shape = SubResource("SegmentShape2D_l5msp")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=1521886154]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=980160217]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_gkq51")
+
+[node name="Sala" type="Marker2D" parent="." unique_id=708289600 groups=["spawn point"]]
+position = Vector2(806, -5)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("2_rvydw")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=578731930]
+offset_left = 719.0
+offset_top = -257.0
+offset_right = 946.0
+offset_bottom = -137.0
+text = "TODO:
+MUDAR FUNDO
+DONANA JOGÁVEL
+Donana jovem (talvez não)"
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1988508530]
+position = Vector2(242, -44.5)
+scale = Vector2(2.53125, 0.6484375)
+texture = ExtResource("4_3e70c")
+
+[node name="Colar" type="Area2D" parent="Sprite2D" unique_id=1244038856]
+position = Vector2(-26.074074, -77.87951)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("7_nj7qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/Colar" unique_id=1615174165]
+position = Vector2(-3.3580246, -2.3132782)
+scale = Vector2(0.9999996, 0.9999999)
+shape = SubResource("RectangleShape2D_mftj6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D/Colar" unique_id=1244849777]
+material = ExtResource("5_asw6j")
+scale = Vector2(0.099259734, 0.38313365)
+texture = ExtResource("6_yr0c7")
+
+[node name="TextEdit2" type="TextEdit" parent="." unique_id=2136648786]
+offset_left = 169.0
+offset_top = -142.0
+offset_right = 324.0
+offset_bottom = -100.0
+text = "MESA COM COLAR"
+
+[node name="Sprite2D2" type="Sprite2D" parent="." unique_id=1264101562]
+position = Vector2(2413, -44.000004)
+scale = Vector2(2.53125, 0.6484375)
+texture = ExtResource("4_3e70c")
+
+[node name="Faca" type="Area2D" parent="Sprite2D2" unique_id=258247968]
+position = Vector2(-26.074074, -77.87951)
+scale = Vector2(0.99999994, 0.99999994)
+script = ExtResource("8_nj7qs")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D2/Faca" unique_id=453926514]
+position = Vector2(-3.3580246, -2.3132782)
+scale = Vector2(0.9999996, 0.9999999)
+shape = SubResource("RectangleShape2D_mftj6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Sprite2D2/Faca" unique_id=2102556307]
+material = ExtResource("5_asw6j")
+scale = Vector2(0.099259734, 0.38313365)
+texture = ExtResource("9_s4vpo")
+
+[node name="Mala" type="Area2D" parent="." unique_id=227089912]
+position = Vector2(1508, -61)
+script = ExtResource("10_4ohw6")
+
+[node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=768869191]
+material = ExtResource("5_asw6j")
+scale = Vector2(0.36000478, 0.4000002)
+texture = ExtResource("11_81rde")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=1913986105]
+material = ExtResource("5_asw6j")
+position = Vector2(-1.5, -0.5)
+shape = SubResource("RectangleShape2D_8wxcj")

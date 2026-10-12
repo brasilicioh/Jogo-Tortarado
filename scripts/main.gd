@@ -31,7 +31,7 @@ func new_player(player_position: Vector2, id: String):
 func load_scene(scene: String, spawn_name: String):
 	GameState.active_characters = []
 	for child in level_container.get_children():
-		child.queue_free()
+		child.free()
 	
 	var current_scene: Node2D = load(scene).instantiate()
 	
@@ -62,11 +62,21 @@ func load_minigame(minigame_name: String):
 func load_cutscene(cutscene_name: String):
 	var cutscene = load("res://scenes/cutscenes/" + cutscene_name + ".tscn").instantiate()
 	
+	var tween = get_tree().create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 0.2)
+	
+	await tween.finished
+	
 	GameState.active_characters = []
 	for child in level_container.get_children():
 		child.queue_free()
 	
 	cutscene_container.add_child(cutscene)
+	
+	var tween2 = get_tree().create_tween()
+	tween2.tween_property(self, "modulate:a", 1.0, 0.2)
+	
+	await tween2.finished
 	
 	cutscene_started.emit()
 

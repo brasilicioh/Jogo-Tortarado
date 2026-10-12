@@ -1,26 +1,11 @@
 [gd_scene format=3 uid="uid://beufraofiugvr"]
 
-[ext_resource type="Script" uid="uid://btet3ghnd7w3" path="res://scripts/some_testing_object.gd" id="1_7r1kg"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_nsm10"]
-[ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="1_uaw8k"]
-[ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="2_5tstl"]
-[ext_resource type="Script" uid="uid://chrku8u2w8nmm" path="res://scripts/electric_bogaloo.gd" id="2_bkgx0"]
 [ext_resource type="PackedScene" uid="uid://dnrxcns4fxtjd" path="res://scenes/stair_transition.tscn" id="3_8lkp2"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_udpx5"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="6_bkgx0"]
+[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_uaw8k"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="7_lt5my"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
-size = Vector2(262.51276, 237.4997)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
-size = Vector2(127.5, 187)
-
-[sub_resource type="CircleShape2D" id="CircleShape2D_2i0da"]
-radius = 136.09187
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l0mo1"]
-size = Vector2(212, 208)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
 a = Vector2(64000, 0)
@@ -41,6 +26,9 @@ _data = {
 }
 point_count = 2
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
+size = Vector2(127.5, 187)
+
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5tstl"]
 size = Vector2(127.5, 187)
 
@@ -52,77 +40,15 @@ size = Vector2(128, 128)
 
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
-[node name="Crow" type="Node2D" parent="." unique_id=1799719881]
-position = Vector2(-4058.9998, -30)
-scale = Vector2(1.5975798, 0.3893772)
-
-[node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=537755899]
-texture = ExtResource("1_nsm10")
-
-[node name="Area2D" type="Area2D" parent="Crow" unique_id=2044926982]
-position = Vector2(1.8776904, 33.386646)
-script = ExtResource("2_5tstl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/Area2D" unique_id=356593387]
-position = Vector2(-20.001038, -74.99991)
-scale = Vector2(0.9999998, 1)
-shape = SubResource("RectangleShape2D_8w0r3")
-
-[node name="Zeca" type="Node2D" parent="." unique_id=324790912]
-position = Vector2(-3175, -34)
-scale = Vector2(1.263954, 0.62400097)
-
-[node name="Sprite2D" type="Sprite2D" parent="Zeca" unique_id=2056038797]
-texture = ExtResource("1_nsm10")
-
-[node name="Area2D" type="Area2D" parent="Zeca" unique_id=707752180]
-script = ExtResource("1_uaw8k")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca/Area2D" unique_id=390585248]
-position = Vector2(-20.001038, -74.99991)
-scale = Vector2(0.9999998, 1)
-shape = SubResource("RectangleShape2D_8w0r3")
-
-[node name="DoorTransition" type="Area2D" parent="." unique_id=2109612268]
-position = Vector2(-107, -149)
-script = ExtResource("3_udpx5")
-target_scene = "uid://dkg5k0jttda7y"
-spawn_point = "Kitchen"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="HouseDoor" type="Marker2D" parent="DoorTransition" unique_id=475116156]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1862073015]
-shape = SubResource("RectangleShape2D_l85ff")
-
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1080675684]
-material = ExtResource("6_bkgx0")
-scale = Vector2(1, 1.48)
-texture = ExtResource("1_nsm10")
-
-[node name="ScareBird" type="Marker2D" parent="." unique_id=1721419977 groups=["spawn point"]]
-position = Vector2(-3284, -63)
-script = ExtResource("7_lt5my")
-spawn_characters = Array[String](["belonisia", "bibiana"])
-active_character = "belonisia"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="KeyGiber" type="Area2D" parent="." unique_id=934398588]
-position = Vector2(1016, -143)
-script = ExtResource("1_7r1kg")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyGiber" unique_id=1555913843]
-shape = SubResource("CircleShape2D_2i0da")
-
-[node name="KeyTakerer" type="Area2D" parent="." unique_id=1239243218]
-position = Vector2(1455, -160)
-script = ExtResource("2_bkgx0")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KeyTakerer" unique_id=1764722034]
-shape = SubResource("RectangleShape2D_l0mo1")
+[node name="Label" type="Label" parent="." unique_id=1945071346]
+offset_left = 5113.4126
+offset_top = -251.53528
+offset_right = 5153.4126
+offset_bottom = -228.53528
+text = "rio fodastico a direita"
 
 [node name="Outside" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
-position = Vector2(-665, -215)
+position = Vector2(0, -215)
 script = ExtResource("7_lt5my")
 spawn_characters = Array[String](["belonisia", "bibiana"])
 active_character = "bibiana"
@@ -138,152 +64,97 @@ texture = ExtResource("1_nsm10")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=227719484]
 shape = SubResource("SegmentShape2D_nsm10")
 
-[node name="House" type="StaticBody2D" parent="." unique_id=1153298674]
+[node name="MyChild" type="StaticBody2D" parent="." unique_id=1153298674]
+visible = false
 z_index = -1
-position = Vector2(2503, -128)
+position = Vector2(2297, 3910)
 
-[node name="Icon2" type="Sprite2D" parent="House" unique_id=1567862274]
+[node name="Icon2" type="Sprite2D" parent="MyChild" unique_id=1567862274]
 position = Vector2(-163, -238)
 rotation = -0.44361556
 scale = Vector2(4.8055134, 2.2291362)
 texture = ExtResource("1_nsm10")
 
-[node name="Icon3" type="Sprite2D" parent="House" unique_id=620127334]
+[node name="Icon3" type="Sprite2D" parent="MyChild" unique_id=620127334]
 position = Vector2(202, -244)
 rotation = 0.4736053
 scale = Vector2(4.185681, 2.367031)
 texture = ExtResource("1_nsm10")
 
-[node name="Icon" type="Sprite2D" parent="House" unique_id=1532237123]
+[node name="Icon" type="Sprite2D" parent="MyChild" unique_id=1532237123]
 position = Vector2(0, -80)
 scale = Vector2(7.82, 2.7600005)
 texture = ExtResource("1_nsm10")
 
-[node name="Sprite2D" type="Sprite2D" parent="House" unique_id=2061835413]
+[node name="Sprite2D" type="Sprite2D" parent="MyChild" unique_id=2061835413]
 position = Vector2(0, 63)
 scale = Vector2(7.82, 1)
 texture = ExtResource("1_nsm10")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House" unique_id=1342937290]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyChild" unique_id=1342937290]
 shape = SubResource("SegmentShape2D_2i0da")
 one_way_collision = true
 
-[node name="CollisionShape2D2" type="CollisionShape2D" parent="House" unique_id=362470850]
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="MyChild" unique_id=362470850]
 position = Vector2(-490, -82)
 shape = SubResource("RectangleShape2D_2i0da")
 
-[node name="CollisionShape2D3" type="CollisionShape2D" parent="House" unique_id=1446581144]
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="MyChild" unique_id=1446581144]
 position = Vector2(490, -82)
 shape = SubResource("RectangleShape2D_2i0da")
 
-[node name="StairTransition" parent="House" unique_id=481253536 instance=ExtResource("3_8lkp2")]
+[node name="StairTransition" parent="MyChild" unique_id=481253536 instance=ExtResource("3_8lkp2")]
 position = Vector2(329, 78)
 duration = 2.0
 
-[node name="CollisionShape2D" parent="House/StairTransition" index="0" unique_id=2144807847]
+[node name="CollisionShape2D" parent="MyChild/StairTransition" index="0" unique_id=2144807847]
 position = Vector2(0, 21.625)
 shape = SubResource("RectangleShape2D_nsm10")
 
-[node name="Path2D" parent="House/StairTransition" index="1" unique_id=28745975]
+[node name="Path2D" parent="MyChild/StairTransition" index="1" unique_id=28745975]
 curve = SubResource("Curve2D_8lkp2")
 
-[node name="DoorTransition" type="Area2D" parent="House" unique_id=497513784]
+[node name="DoorTransition" type="Area2D" parent="MyChild" unique_id=497513784]
 position = Vector2(-82, -96)
 script = ExtResource("3_udpx5")
 target_scene = "uid://dmb4qt2okhv0s"
 spawn_point = "Door"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
-[node name="HouseDoor" type="Marker2D" parent="House/DoorTransition" unique_id=122138981]
+[node name="HouseDoor" type="Marker2D" parent="MyChild/DoorTransition" unique_id=122138981]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House/DoorTransition" unique_id=608501714]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MyChild/DoorTransition" unique_id=608501714]
 shape = SubResource("RectangleShape2D_l85ff")
 
-[node name="Sprite2D" type="Sprite2D" parent="House/DoorTransition" unique_id=702360416]
+[node name="Sprite2D" type="Sprite2D" parent="MyChild/DoorTransition" unique_id=702360416]
 material = ExtResource("6_bkgx0")
 scale = Vector2(1, 1.48)
 texture = ExtResource("1_nsm10")
 
-[node name="Mountains" type="Parallax2D" parent="." unique_id=1718860442]
-visible = false
-z_index = -32
-scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(-960, -634)
-
-[node name="Icon" type="Sprite2D" parent="Mountains" unique_id=1763166656]
-position = Vector2(634.68494, 817.2617)
-rotation = -0.573568
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_nsm10")
-
-[node name="Icon2" type="Sprite2D" parent="Mountains" unique_id=1217801479]
-position = Vector2(1152.6849, 831.2617)
-rotation = 0.8446477
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_nsm10")
-
-[node name="Icon3" type="Sprite2D" parent="Mountains" unique_id=975021212]
-position = Vector2(1765.6849, 949.26184)
-rotation = -1.0200288
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_nsm10")
-
-[node name="Icon6" type="Sprite2D" parent="Mountains" unique_id=97851634]
-position = Vector2(3139.685, 583)
-rotation = -0.94858766
-scale = Vector2(6.3784175, 6.7436466)
-texture = ExtResource("1_nsm10")
-
-[node name="Icon4" type="Sprite2D" parent="Mountains" unique_id=1115492320]
-position = Vector2(2750.685, 673.00006)
-rotation = 0.35142136
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_nsm10")
-
-[node name="Icon5" type="Sprite2D" parent="Mountains" unique_id=1907886804]
-position = Vector2(3448, 665.9999)
-rotation = 0.35142136
-scale = Vector2(8.16619, 5.315786)
-texture = ExtResource("1_nsm10")
-
-[node name="Sun" type="Parallax2D" parent="." unique_id=464739375]
-z_index = -64
-scroll_scale = Vector2(0.1, 1)
-scroll_offset = Vector2(1574, -534)
-
-[node name="Sprite2D" type="Sprite2D" parent="Sun" unique_id=2126458105]
-position = Vector2(64, 64)
-texture = ExtResource("1_nsm10")
-
-[node name="DirectionalLight2D" type="DirectionalLight2D" parent="Sun/Sprite2D" unique_id=1123224322]
-rotation = 0.6361631
-color = Color(1, 1, 0.1254902, 0.48235294)
-shadow_enabled = true
-
-[node name="CanvasModulate" type="CanvasModulate" parent="." unique_id=170309682]
-color = Color(0.72156864, 0.5372549, 0.44705883, 1)
-
 [node name="DoorTransitionBedroom" type="Area2D" parent="." unique_id=1987809636]
-position = Vector2(-4300, -43)
-scale = Vector2(-0.75653094, 0.44983667)
+position = Vector2(-611, -102)
 script = ExtResource("3_udpx5")
 target_scene = "uid://cdxx5gmcaonwn"
-spawn_point = "Bedroom"
+spawn_point = "QuartoMeninas"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="HouseDoor" type="Marker2D" parent="DoorTransitionBedroom" unique_id=1371063968]
-position = Vector2(-4300, 0)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransitionBedroom" unique_id=829133563]
-position = Vector2(-4300, 0)
 shape = SubResource("RectangleShape2D_5tstl")
 
 [node name="Sprite2D" type="Sprite2D" parent="DoorTransitionBedroom" unique_id=858102959]
 z_index = 1
 material = ExtResource("6_bkgx0")
-position = Vector2(-4300, 0)
 scale = Vector2(1, 1.48)
 texture = ExtResource("1_nsm10")
+
+[node name="Label" type="Label" parent="DoorTransitionBedroom" unique_id=1365556434]
+offset_left = -87.99998
+offset_top = -224.52592
+offset_right = 89.00002
+offset_bottom = -201.52592
+text = "pro começo do tutorial"
 
 [node name="DoorTransition2" type="Area2D" parent="." unique_id=998467064]
 position = Vector2(6394, -69)
@@ -329,4 +200,33 @@ offset_right = 64.0
 offset_bottom = -67.0
 text = "porta poATO 2"
 
+[node name="DoorTransition4" type="Area2D" parent="." unique_id=364469388]
+position = Vector2(6665, -69)
+script = ExtResource("3_udpx5")
+target_scene = "uid://drxfnywwjfwef"
+spawn_point = "Sala"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition4" unique_id=199692741]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition4" unique_id=1166308591]
+material = ExtResource("6_bkgx0")
+position = Vector2(1.0000076, -5.499998)
+scale = Vector2(0.7343751, 1.4140625)
+texture = ExtResource("1_nsm10")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition4" unique_id=519903718]
+offset_left = -91.0
+offset_top = -150.0
+offset_right = 151.0
+offset_bottom = -103.0
+text = "PORTA LEVA AO ATO 4"
+
 [editable path="House/StairTransition"]
+[node name="Casa" type="Sprite2D" parent="." unique_id=1738598041]
+position = Vector2(702, -457)
+texture = ExtResource("6_uaw8k")
+
+[editable path="MyChild/StairTransition"]
