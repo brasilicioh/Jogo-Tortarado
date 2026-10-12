@@ -6,20 +6,14 @@ func interact():
 	Dialogic.start(timeline)
 
 func _ready() -> void:
-	if $Sprite2D is Node:
-		$Sprite2D.set_instance_shader_parameter("outline_enabled", false)
-
 	Dialogic.signal_event.connect(sucumba)
 
-	interact()
-	# Espera 2 segundo
 	get_tree().create_timer(0.75).timeout.connect(andando)
 
+	interact()
+
 func andando():
-	print("passou")
-
 	$Sprite2D.show()
-
 	# Pega o ponto de destino
 	var ponto_conversa = get_parent().get_node("PontoParada")
 
@@ -31,7 +25,7 @@ func andando():
 		ponto_conversa.global_position,
 		2.0
 	)
-	await tween.finished
+
 
 func sucumba(event_name):
 	if event_name == "bibiana_sair":
@@ -48,7 +42,3 @@ func sucumba(event_name):
 
 		await tween.finished
 		self.queue_free()
-
-func highlight(state: bool) -> void:
-	if $Sprite2D is Node:
-		$Sprite2D.set_instance_shader_parameter("outline_enabled", state)

@@ -56,19 +56,19 @@ position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_gdlgw")
 
 [node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
-position = Vector2(1388, -85.99999)
+position = Vector2(1388, -87)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_qpmet")
-spawn_characters = Array[String](["bibiana", "belonisia"])
-active_character = "bibiana"
+spawn_characters = Array[String](["bibiana_crianca", "belonisia_crianca"])
+active_character = "bibiana_crianca"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
 position = Vector2(1381, -149)
 script = ExtResource("6_6wtov")
-target_scene = "uid://c4y8wfmhf8gjx"
-spawn_point = "Sala2"
+target_scene = "uid://5gtlxj4yl3jv"
+spawn_point = "Corredor1Esquerda"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1353985260]

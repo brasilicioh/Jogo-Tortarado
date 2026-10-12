@@ -32,8 +32,8 @@ position = Vector2(454.99997, -24)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("1_ejme7")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
+spawn_characters = Array[String](["donana"])
+active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="TextEdit" type="TextEdit" parent="." unique_id=885293651]

@@ -1,4 +1,5 @@
 join bibiana center
+[wait time="1.0"]
 if {Atum.interacted_with_bibiana} == false:
 	bibiana: Belonísia, você não sabe o que eu vi no quarto da vovó.
 	belonisia: O que tem lá?

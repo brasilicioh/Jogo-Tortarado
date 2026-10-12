@@ -56,24 +56,16 @@ position = Vector2(837, -86)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_4i7bl")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
+spawn_characters = Array[String](["belonisia_crianca"])
+active_character = "belonisia_crianca"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1075622753]
-offset_left = 559.0
-offset_top = -92.0
-offset_right = 801.0
-offset_bottom = -17.0
-text = "BELONÍSIA CRIANÇA 
-SENTADA NO CHÃO"
-metadata/_edit_use_anchors_ = true
 
 [node name="Bibiana" type="Area2D" parent="." unique_id=1505591510]
 position = Vector2(1331, -146)
 script = ExtResource("4_n4q13")
 
 [node name="Sprite2D" type="Sprite2D" parent="Bibiana" unique_id=899709704]
+visible = false
 position = Vector2(1, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("5_4i7bl")
@@ -84,16 +76,6 @@ frame = 1
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Bibiana" unique_id=1573801079]
 position = Vector2(-4, 25)
 shape = SubResource("RectangleShape2D_lnihn")
-
-[node name="TextEdit2" type="TextEdit" parent="." unique_id=1928036999]
-offset_left = 718.0
-offset_top = -391.0
-offset_right = 1068.0
-offset_bottom = -291.0
-text = "TODO: BIBIANA CHEGAR NA PORTA
-BELONISIA SE LEVANTAR
-PERMITIR SAIR APENAS PÓS CONVERSA"
-metadata/_edit_use_anchors_ = true
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=478761277]
 position = Vector2(1351, -146)

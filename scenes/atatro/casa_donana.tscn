@@ -3,9 +3,9 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_nvkv0"]
 [ext_resource type="Texture2D" uid="uid://d28efwbcsf3vi" path="res://unpacking/desenhos/cenários/corredor2.png" id="1_pgyjl"]
 [ext_resource type="Script" uid="uid://clg2cw6ij3gst" path="res://scripts/atatro/donana.gd" id="1_tdo0k"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="3_jiete"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_aj13y"]
 [ext_resource type="Script" uid="uid://b1rrrefgwrhna" path="res://scripts/atatro/filha_trigger.gd" id="4_jiete"]
+[ext_resource type="Texture2D" uid="uid://d4cfrp2xgs3mm" path="res://assets/characters/filha_machucada.png" id="4_tdo0k"]
+[ext_resource type="Texture2D" uid="uid://b0xy8flqucs8r" path="res://assets/characters/homem_preto.png" id="6_88cn1"]
 [ext_resource type="Script" uid="uid://ddl2i4tk61173" path="res://scripts/atatro/homem_trigger.gd" id="6_aj13y"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tdo0k"]
@@ -15,10 +15,10 @@ b = Vector2(0, -1000)
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_88cn1"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
-size = Vector2(41.17949, 1433.84)
+size = Vector2(2051.523, 1433.84)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mprx0"]
-size = Vector2(155, 226)
+size = Vector2(1794.1675, 1310)
 
 [node name="CasaDonana" type="Node2D" unique_id=1299347218]
 script = ExtResource("1_tdo0k")
@@ -27,8 +27,8 @@ script = ExtResource("1_tdo0k")
 position = Vector2(1326, -109)
 scale = Vector2(2, 2)
 script = ExtResource("1_nvkv0")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
+spawn_characters = Array[String](["donana"])
+active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Resto4" type="Sprite2D" parent="." unique_id=335954190]
@@ -76,40 +76,29 @@ shape = SubResource("SegmentShape2D_tdo0k")
 shape = SubResource("WorldBoundaryShape2D_88cn1")
 
 [node name="Filha" type="Sprite2D" parent="." unique_id=40497560]
-position = Vector2(122, 26)
-scale = Vector2(3.046875, 0.1953125)
-texture = ExtResource("3_jiete")
+position = Vector2(304, 30.999996)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("4_tdo0k")
 
 [node name="FilhaTrigger" type="Area2D" parent="Filha" unique_id=282694370]
 script = ExtResource("4_jiete")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Filha/FilhaTrigger" unique_id=1417575342]
-position = Vector2(77.543594, -726.92)
+position = Vector2(2034.2385, -729.9999)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_mftj6")
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=723346682]
-offset_left = 61.0
-offset_top = -35.0
-offset_right = 208.0
-offset_bottom = 8.0
-text = "Filha machucada"
-
 [node name="Homem" type="Sprite2D" parent="." unique_id=844839213]
-position = Vector2(-1807, -96)
-texture = ExtResource("4_aj13y")
-
-[node name="TextEdit" type="TextEdit" parent="Homem" unique_id=1970576100]
-offset_left = -99.0
-offset_top = -124.0
-offset_right = 116.0
-offset_bottom = -82.0
-text = "Homem totalmente preto"
+position = Vector2(-1799, -95)
+scale = Vector2(0.15, 0.15)
+texture = ExtResource("6_88cn1")
 
 [node name="HomemTrigger" type="Area2D" parent="Homem" unique_id=522911372]
 script = ExtResource("6_aj13y")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Homem/HomemTrigger" unique_id=500666878]
-position = Vector2(121.5, -23)
+position = Vector2(1709.583, 44.99994)
+scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_mprx0")
 
 [connection signal="area_entered" from="Filha/FilhaTrigger" to="Filha/FilhaTrigger" method="_on_area_entered"]
