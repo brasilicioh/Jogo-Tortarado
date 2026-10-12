@@ -15,3 +15,4 @@ if {Ato2.second_intro_played} == false:
 	salustina: Va lá, procure elas para jantar.
 	[wait time="0.5"]
 	[signal arg="destroy1"]
+	set {Ato2.second_intro_played} = true

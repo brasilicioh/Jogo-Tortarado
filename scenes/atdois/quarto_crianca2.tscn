@@ -84,7 +84,7 @@ shape = SubResource("RectangleShape2D_2l0dh")
 [node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=497746735]
 
 [node name="Belonisia" type="Node2D" parent="." unique_id=1789059207]
-position = Vector2(829, 0)
+position = Vector2(718, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1158903697]
 scale = Vector2(2, 2)

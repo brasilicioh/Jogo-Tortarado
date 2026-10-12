@@ -1,9 +1,17 @@
 extends Area2D
 
+@export var domingas: Node2D
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	Dialogic.signal_event.connect(_on_dialogic_signal)
+	
+func _on_dialogic_signal(arg):
+	print("Sinal recebido: ", arg)
+	if arg == "destroy":
+		domingas.queue_free()
+	elif arg == "show":
+		domingas.show()
 
 func interact() -> void:
 	print("interagiu")

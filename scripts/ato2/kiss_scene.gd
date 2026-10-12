@@ -4,8 +4,11 @@ extends Area2D
 @export var belonisia: Node2D  
 
 func _on_body_entered(body):
-	if Dialogic.VAR.Ato2.found_domingas:
-		Dialogic.start("kiss_scene")
+	if body.name != "wal":
+		return
+	else:
+		if Dialogic.VAR.Ato2.found_domingas:
+			Dialogic.start("kiss_scene")
 		
 func _on_dialogic_signal(arg):
 	print("Sinal recebido: ", arg)

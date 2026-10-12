@@ -4,9 +4,10 @@
 [ext_resource type="Texture2D" uid="uid://qj8tvdw4wy6l" path="res://assets/scenaries/corredor1.png" id="2_klhf3"]
 [ext_resource type="Texture2D" uid="uid://bq4rbprbgh4ow" path="res://assets/scenaries/corredor2.png" id="3_on6c4"]
 [ext_resource type="Texture2D" uid="uid://45jf8yx18h6n" path="res://assets/scenaries/cozinha.png" id="6_j63x2"]
+[ext_resource type="Script" uid="uid://bgsdb4p400gjb" path="res://scenes/atdois/table_domingas.gd" id="6_s00ve"]
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="7_s00ve"]
+[ext_resource type="Texture2D" uid="uid://p5hun52nnlkw" path="res://assets/sprites/domingas_default.png" id="8_22ced"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="9_pxe8g"]
-[ext_resource type="Script" uid="uid://db3kbvp1eaxgf" path="res://scripts/ato2/table.gd" id="10_yalcr"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uj655"]
 a = Vector2(64000, 0)
@@ -85,17 +86,18 @@ shape = SubResource("SegmentShape2D_w2twm")
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
 position = Vector2(972, -150)
 script = ExtResource("9_pxe8g")
-target_scene = "uid://b5he2wu862wg3"
-spawn_point = "OutsideMarker"
+target_scene = "uid://c2bhinnndgu70"
+spawn_point = "OutsideMarker2"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=952093493]
 position = Vector2(0, 33.5)
 shape = SubResource("RectangleShape2D_kmohc")
 
-[node name="Table" type="Area2D" parent="." unique_id=306320946]
+[node name="Table" type="Area2D" parent="." unique_id=306320946 node_paths=PackedStringArray("domingas")]
 position = Vector2(-186, 24)
-script = ExtResource("10_yalcr")
+script = ExtResource("6_s00ve")
+domingas = NodePath("Domingas")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=2105996227]
 scale = Vector2(1.3749999, 0.5)
@@ -104,3 +106,11 @@ shape = SubResource("RectangleShape2D_grbu6")
 [node name="Doll" type="Sprite2D" parent="Table" unique_id=515944320]
 position = Vector2(-71, -44)
 texture = ExtResource("7_s00ve")
+
+[node name="Domingas" type="Node2D" parent="Table" unique_id=815998222]
+position = Vector2(-114, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/Domingas" unique_id=1980176186]
+scale = Vector2(2, 2)
+texture = ExtResource("8_22ced")
+flip_h = true
