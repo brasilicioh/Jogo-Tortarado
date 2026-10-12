@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dgm3m2kifxnmj"
-path="res://.godot/imported/belonisia.png-01a3c64a7f28c45afb2f1e4b3f509841.ctex"
+path="res://.godot/imported/belonisia.png-685bfcf1c7226dd07527215f4a587e72.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/belonisia.png"
-dest_files=["res://.godot/imported/belonisia.png-01a3c64a7f28c45afb2f1e4b3f509841.ctex"]
+source_file="res://assets/characters/belonisia.png"
+dest_files=["res://.godot/imported/belonisia.png-685bfcf1c7226dd07527215f4a587e72.ctex"]
 
 [params]
 

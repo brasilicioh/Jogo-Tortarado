@@ -144,7 +144,7 @@ shape = SubResource("RectangleShape2D_l85ff")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
-frame_progress = 0.14373997
+frame_progress = 0.455501
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
@@ -156,7 +156,7 @@ process_mode = 4
 position = Vector2(787, -94)
 script = ExtResource("7_gk2p8")
 target_scene = "uid://c5o4ccbq080fw"
-spawn_point = "Start"
+spawn_point = "Cozinha"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1802774484]
