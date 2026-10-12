@@ -1,13 +1,12 @@
 [gd_scene format=3 uid="uid://es5e3ud1jaye"]
 
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_0spms"]
 [ext_resource type="Script" uid="uid://c101sb3c4l6t" path="res://scripts/ato2/severo.gd" id="1_6sndf"]
+[ext_resource type="Texture2D" uid="uid://bf4fqng872yby" path="res://assets/sprites/severo.png" id="2_mfut7"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
 size = Vector2(128, 128)
 
 [node name="Severo_tscn" type="Node2D" unique_id=1809884994]
-visible = false
 
 [node name="Area2D" type="Area2D" parent="." unique_id=2099148958 node_paths=PackedStringArray("selfnode")]
 script = ExtResource("1_6sndf")
@@ -17,4 +16,5 @@ selfnode = NodePath("..")
 shape = SubResource("RectangleShape2D_yuu2t")
 
 [node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=642340278]
-texture = ExtResource("1_0spms")
+scale = Vector2(2, 2)
+texture = ExtResource("2_mfut7")
