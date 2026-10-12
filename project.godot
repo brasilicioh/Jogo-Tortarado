@@ -29,6 +29,7 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
+"???": "res://assets/characters/pholder.dch",
 "belonisia": "res://assets/characters/belonisia.dch",
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
