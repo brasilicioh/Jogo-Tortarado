@@ -43,7 +43,7 @@ func load_scene(scene: String, spawn_name: String):
 	await get_tree().process_frame
 	
 	var current_scene: Node2D = load(scene).instantiate()
-	
+
 	var spawns: Array[Node] = current_scene.find_children(
 		"*",
 		"SpawnMarker",

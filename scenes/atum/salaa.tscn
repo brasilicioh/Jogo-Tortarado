@@ -1,0 +1,129 @@
+[gd_scene format=3 uid="uid://5gtlxj4yl3jv"]
+
+[ext_resource type="Texture2D" uid="uid://dee87s38vwd04" path="res://assets/scenaries/corredor1_sem_quadro.png" id="1_v258d"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_t6yty"]
+[ext_resource type="Texture2D" uid="uid://d28efwbcsf3vi" path="res://unpacking/desenhos/cenários/corredor2.png" id="3_2cnsx"]
+[ext_resource type="Texture2D" uid="uid://d12b55ugywin6" path="res://unpacking/desenhos/cenários/cozinha.png" id="4_ce4jf"]
+[ext_resource type="Script" uid="uid://dw26qyxgtpyel" path="res://scripts/atum/interacao_donana_salustiana.gd" id="5_a4ped"]
+[ext_resource type="Texture2D" uid="uid://cwm5ewllriqtn" path="res://assets/characters/donana.png" id="6_n8pl5"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_bpd7k"]
+[ext_resource type="Texture2D" uid="uid://chpe472qkyii5" path="res://assets/sprites/salustiana.png" id="7_v258d"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bkd7j"]
+a = Vector2(0, 1000)
+b = Vector2(0, -1000)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
+size = Vector2(52.5, 78.5)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_8llcu"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wffnd"]
+size = Vector2(128, 128)
+
+[node name="Salaa" type="Node2D" unique_id=1540651783]
+
+[node name="Corredor1" type="Sprite2D" parent="." unique_id=2134434213]
+position = Vector2(-1224, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_v258d")
+
+[node name="Corredor1Direita" type="Marker2D" parent="Corredor1" unique_id=1749808194 groups=["spawn point"]]
+position = Vector2(125, 64.5)
+script = ExtResource("2_t6yty")
+spawn_characters = Array[String](["bibiana_crianca", "belonisia_crianca"])
+active_character = "belonisia_crianca"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Corredor1Esquerda" type="Marker2D" parent="Corredor1" unique_id=351635577 groups=["spawn point"]]
+position = Vector2(-135, 64.5)
+script = ExtResource("2_t6yty")
+spawn_characters = Array[String](["bibiana_crianca", "belonisia_crianca"])
+active_character = "belonisia_crianca"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="Corredor1" unique_id=928059325]
+position = Vector2(-306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor1/Wall" unique_id=1102527304]
+shape = SubResource("SegmentShape2D_bkd7j")
+
+[node name="DoorTransition" type="Area2D" parent="Corredor1" unique_id=910899683]
+position = Vector2(-136.5, 48.5)
+script = ExtResource("7_bpd7k")
+target_scene = "uid://orcvwblkeeec"
+spawn_point = "Bedroom"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor1/DoorTransition" unique_id=298875478]
+position = Vector2(-1.75, -6.75)
+shape = SubResource("RectangleShape2D_mftj6")
+
+[node name="Corredor2" type="Sprite2D" parent="." unique_id=1124138421]
+position = Vector2(1224, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("3_2cnsx")
+
+[node name="Corredor2" type="Marker2D" parent="Corredor2" unique_id=967109398 groups=["spawn point"]]
+position = Vector2(51, 41.5)
+script = ExtResource("2_t6yty")
+spawn_characters = Array[String](["belonisia"])
+active_character = "belonisia"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="Corredor2" unique_id=1876816333]
+position = Vector2(-57, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor2/Wall" unique_id=483950956]
+shape = SubResource("SegmentShape2D_bkd7j")
+
+[node name="Cozinha" type="Sprite2D" parent="." unique_id=1979182453]
+position = Vector2(0, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("4_ce4jf")
+
+[node name="Cozinha" type="Marker2D" parent="Cozinha" unique_id=158566369 groups=["spawn point"]]
+position = Vector2(-223, 42)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("2_t6yty")
+spawn_characters = Array[String](["bbb"])
+active_character = "bbb"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=693010063]
+position = Vector2(0, -28)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1974380272]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_8llcu")
+
+[node name="Donana" type="Area2D" parent="." unique_id=41335158]
+position = Vector2(-247, -92)
+script = ExtResource("5_a4ped")
+
+[node name="Sprite2D" type="Sprite2D" parent="Donana" unique_id=133276499]
+position = Vector2(1, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("6_n8pl5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Donana" unique_id=396819181]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_wffnd")
+
+[node name="Salustiana" type="Area2D" parent="." unique_id=1438229983]
+position = Vector2(-83, -92)
+script = ExtResource("5_a4ped")
+
+[node name="Sprite2D" type="Sprite2D" parent="Salustiana" unique_id=83123342]
+position = Vector2(1, 0)
+scale = Vector2(2, 2)
+texture = ExtResource("7_v258d")
+flip_h = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salustiana" unique_id=830174830]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_wffnd")
