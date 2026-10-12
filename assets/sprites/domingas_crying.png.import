@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b8foxde16n3uv"
-path="res://.godot/imported/boneca.png-ef3e814cccde6495783a0d28aee26165.ctex"
+uid="uid://ca37t6d1urkd2"
+path="res://.godot/imported/domingas_crying.png-0adf1492036ece73e79041da760aa001.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/itens_inventário/boneca.png"
-dest_files=["res://.godot/imported/boneca.png-ef3e814cccde6495783a0d28aee26165.ctex"]
+source_file="res://assets/sprites/domingas_crying.png"
+dest_files=["res://.godot/imported/domingas_crying.png-0adf1492036ece73e79041da760aa001.ctex"]
 
 [params]
 

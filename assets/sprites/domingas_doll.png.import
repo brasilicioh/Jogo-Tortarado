@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://der7qgm00nba2"
-path="res://.godot/imported/domingas-com-boneca.png-a9108d7d66ddcac58d30aa04ec8ae1f2.ctex"
+path="res://.godot/imported/domingas_doll.png-f570ddc98a86bae9ed1ce280fcc55618.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/domingas-com-boneca.png"
-dest_files=["res://.godot/imported/domingas-com-boneca.png-a9108d7d66ddcac58d30aa04ec8ae1f2.ctex"]
+source_file="res://assets/sprites/domingas_doll.png"
+dest_files=["res://.godot/imported/domingas_doll.png-f570ddc98a86bae9ed1ce280fcc55618.ctex"]
 
 [params]
 

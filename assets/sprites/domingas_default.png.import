@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ca37t6d1urkd2"
-path="res://.godot/imported/domingas-chorando.png-9b929fd67880c597a803f4d71cff8760.ctex"
+uid="uid://p5hun52nnlkw"
+path="res://.godot/imported/domingas_default.png-e5ba98f7d0209c652005bf370f94ccdc.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/domingas-chorando.png"
-dest_files=["res://.godot/imported/domingas-chorando.png-9b929fd67880c597a803f4d71cff8760.ctex"]
+source_file="res://assets/sprites/domingas_default.png"
+dest_files=["res://.godot/imported/domingas_default.png-e5ba98f7d0209c652005bf370f94ccdc.ctex"]
 
 [params]
 

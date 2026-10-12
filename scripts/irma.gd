@@ -5,11 +5,16 @@ var doll: ItemData = load("res://assets/items/doll.tres")
 
 func interact():
 	Dialogic.start(timeline)
+	
+	$Sprite2D.play("crying")
 
 func use_item(item: ItemData):
 	if GameState.held_item() == doll:
 		Dialogic.VAR.Tutorial.gave_doll = true
 		GameState.active_inventory().remove_item(item)
+		
+		$Sprite2D.play("with_doll")
+		
 		UiManager.set_current_task("Troque para Belonísia")
 		
 		Dialogic.start(timeline)
