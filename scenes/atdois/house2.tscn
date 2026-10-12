@@ -12,14 +12,12 @@
 [ext_resource type="Texture2D" uid="uid://bko04h5rs3e1p" path="res://assets/sprites/toalha.png" id="9_y7g12"]
 [ext_resource type="Texture2D" uid="uid://djcnd5fg118ms" path="res://assets/sprites/presente.png" id="10_aw45g"]
 [ext_resource type="Texture2D" uid="uid://dnyw2m13cr3ut" path="res://assets/sprites/enfeites.png" id="11_yjkpm"]
-[ext_resource type="Script" uid="uid://b6ti8j8twoqeq" path="res://scripts/ato2/belonisia.gd" id="12_y7g12"]
-[ext_resource type="Texture2D" uid="uid://dubfqipwotr2o" path="res://assets/sprites/belonisia.png" id="14_veivx"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
-size = Vector2(128, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
 size = Vector2(28.5, 20)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
+size = Vector2(128, 20)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uj655"]
 a = Vector2(64000, 0)
@@ -42,29 +40,19 @@ size = Vector2(105, 308)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
 size = Vector2(128.00002, 130)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_aw45g"]
-size = Vector2(125, 169)
-
 [node name="House" type="Node2D" unique_id=1394089690]
 
 [node name="BedroomToHall" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
-position = Vector2(-355, -80)
+position = Vector2(-449, 5)
 script = ExtResource("1_xg0qb")
-spawn_characters = Array[String](["bibiana"])
+spawn_characters = Array[String](["bibiana", "belonisia"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="MotherToHall" type="Marker2D" parent="." unique_id=791303504 groups=["spawn point"]]
-position = Vector2(442, -80)
+position = Vector2(85, 5)
 script = ExtResource("1_xg0qb")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="OutsideToHall" type="Marker2D" parent="." unique_id=1247868253 groups=["spawn point"]]
-position = Vector2(1023, -80)
-script = ExtResource("1_xg0qb")
-spawn_characters = Array[String](["bibiana"])
+spawn_characters = Array[String](["bibiana", "belonisia"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
@@ -73,13 +61,31 @@ position = Vector2(-171, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("2_yjkpm")
 
-[node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
-position = Vector2(758, -120)
+[node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
+position = Vector2(2277, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("3_veivx")
 
+[node name="CupsGiver" type="Area2D" parent="KitchenBg" unique_id=1263003621]
+z_index = 2
+position = Vector2(-380.5, 38)
+script = ExtResource("5_3gr70")
+
+[node name="Sprite2D" type="Sprite2D" parent="KitchenBg/CupsGiver" unique_id=178850610]
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_plsys")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenBg/CupsGiver" unique_id=2017737913]
+position = Vector2(0.25, 0)
+shape = SubResource("RectangleShape2D_yuu2t")
+
+[node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
+position = Vector2(1053, -120)
+scale = Vector2(2, 2)
+texture = ExtResource("6_gskv1")
+
 [node name="DecorGiver" type="Area2D" parent="Background2" unique_id=1102070948]
-position = Vector2(205, 98)
+position = Vector2(502, 98)
 script = ExtResource("3_rg5fe")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background2/DecorGiver" unique_id=749764343]
@@ -92,25 +98,8 @@ texture = ExtResource("11_yjkpm")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/DecorGiver" unique_id=1335054305]
 shape = SubResource("RectangleShape2D_fosw3")
 
-[node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
-position = Vector2(1420, -120)
-scale = Vector2(2, 2)
-texture = ExtResource("6_gskv1")
-
-[node name="CupsGiver" type="Area2D" parent="KitchenBg" unique_id=1263003621]
-position = Vector2(226.5, 38)
-script = ExtResource("5_3gr70")
-
-[node name="Sprite2D" type="Sprite2D" parent="KitchenBg/CupsGiver" unique_id=178850610]
-scale = Vector2(0.05, 0.05)
-texture = ExtResource("8_plsys")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenBg/CupsGiver" unique_id=2017737913]
-position = Vector2(0.25, 0)
-shape = SubResource("RectangleShape2D_yuu2t")
-
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1396541921]
-position = Vector2(0, 90)
+position = Vector2(0, 70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=180853329]
 shape = SubResource("SegmentShape2D_uj655")
@@ -119,6 +108,7 @@ shape = SubResource("SegmentShape2D_uj655")
 position = Vector2(2025, -110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=2049285261]
+position = Vector2(859, 0)
 shape = SubResource("SegmentShape2D_clvdy")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=1405121082]
@@ -181,19 +171,3 @@ visible = false
 position = Vector2(64, -41)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_yjkpm")
-
-[node name="Belonisia" type="Node2D" parent="." unique_id=1351386329]
-position = Vector2(340, 0)
-
-[node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1087991546]
-scale = Vector2(2, 2)
-texture = ExtResource("14_veivx")
-flip_h = true
-
-[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1590905186 node_paths=PackedStringArray("selfnode")]
-script = ExtResource("12_y7g12")
-selfnode = NodePath("..")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=1557855882]
-position = Vector2(-0.5, -20.5)
-shape = SubResource("RectangleShape2D_aw45g")

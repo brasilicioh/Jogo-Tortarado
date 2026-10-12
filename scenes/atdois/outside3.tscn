@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://23kxkc2nm8rt" path="res://assets/sprites/Tree.png" id="6_vodhl"]
 [ext_resource type="Texture2D" uid="uid://dubfqipwotr2o" path="res://assets/sprites/belonisia.png" id="7_5ft1l"]
 [ext_resource type="Script" uid="uid://cuh53pv8gbcul" path="res://scripts/ato2/kiss_scene.gd" id="8_2k86j"]
-[ext_resource type="Script" uid="uid://cqme7vcejah8d" path="res://scenes/atdois/salustina.gd" id="8_5ft1l"]
+[ext_resource type="Script" uid="uid://cqme7vcejah8d" path="res://scripts/ato2/salustina.gd" id="8_5ft1l"]
 [ext_resource type="Texture2D" uid="uid://chpe472qkyii5" path="res://assets/sprites/salustiana.png" id="10_hq1ev"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
@@ -79,7 +79,7 @@ scale = Vector2(8.16619, 5.315786)
 texture = ExtResource("1_vodhl")
 
 [node name="OutsideMarker2" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
-position = Vector2(2178, -101)
+position = Vector2(2178, -64)
 script = ExtResource("4_5ft1l")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
@@ -128,6 +128,7 @@ position = Vector2(-12, 3)
 shape = SubResource("RectangleShape2D_fosw3")
 
 [node name="Severo" type="Node2D" parent="." unique_id=1397827555]
+visible = false
 position = Vector2(-412, -53)
 
 [node name="Sprite2D" type="Sprite2D" parent="Severo" unique_id=893489261]
@@ -135,6 +136,7 @@ scale = Vector2(2, 2)
 texture = ExtResource("6_hq1ev")
 
 [node name="Belonisia" type="Node2D" parent="." unique_id=1762926739]
+visible = false
 position = Vector2(-293, -53)
 
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=413532596]

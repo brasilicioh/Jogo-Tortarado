@@ -53,13 +53,13 @@ position = Vector2(1220, -112)
 shape = SubResource("SegmentShape2D_gjln5")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=518471997]
-position = Vector2(0, 90)
+position = Vector2(0, 70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=1106246607]
 shape = SubResource("SegmentShape2D_gdlgw")
 
 [node name="Bedroom" type="Marker2D" parent="." unique_id=46439494 groups=["spawn point"]]
-position = Vector2(1077, -40)
+position = Vector2(1077, 5)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("2_ds7x1")
@@ -117,3 +117,11 @@ texture = ExtResource("6_o2psn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GiftGiver" unique_id=939686543]
 position = Vector2(0, 46)
 shape = SubResource("RectangleShape2D_a3o4s")
+
+[node name="Label" type="Label" parent="." unique_id=622401695]
+offset_left = 564.0
+offset_top = -429.0
+offset_right = 702.0
+offset_bottom = -380.0
+text = "ANimar essa puta
+e o namorado dela"

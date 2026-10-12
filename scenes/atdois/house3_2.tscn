@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://qj8tvdw4wy6l" path="res://assets/scenaries/corredor1.png" id="2_klhf3"]
 [ext_resource type="Texture2D" uid="uid://bq4rbprbgh4ow" path="res://assets/scenaries/corredor2.png" id="3_on6c4"]
 [ext_resource type="Texture2D" uid="uid://45jf8yx18h6n" path="res://assets/scenaries/cozinha.png" id="6_j63x2"]
-[ext_resource type="Script" uid="uid://bgsdb4p400gjb" path="res://scenes/atdois/table_domingas.gd" id="6_s00ve"]
+[ext_resource type="Script" uid="uid://bgsdb4p400gjb" path="res://scripts/ato2/table_domingas.gd" id="6_s00ve"]
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="7_s00ve"]
 [ext_resource type="Texture2D" uid="uid://p5hun52nnlkw" path="res://assets/sprites/domingas_default.png" id="8_22ced"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="9_pxe8g"]
@@ -29,22 +29,8 @@ size = Vector2(128.00002, 130)
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
-[node name="BedroomToHall" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
-position = Vector2(-355, -80)
-script = ExtResource("1_vmv7m")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="MotherToHall" type="Marker2D" parent="." unique_id=791303504 groups=["spawn point"]]
-position = Vector2(442, -80)
-script = ExtResource("1_vmv7m")
-spawn_characters = Array[String](["bibiana"])
-active_character = "bibiana"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
 [node name="OutsideToHall" type="Marker2D" parent="." unique_id=1247868253 groups=["spawn point"]]
-position = Vector2(1023, -80)
+position = Vector2(2381, 5)
 script = ExtResource("1_vmv7m")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
@@ -55,24 +41,24 @@ position = Vector2(-171, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("2_klhf3")
 
-[node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
-position = Vector2(758, -120)
-scale = Vector2(2, 2)
-texture = ExtResource("3_on6c4")
-
 [node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
-position = Vector2(1420, -120)
+position = Vector2(1053, -120)
 scale = Vector2(2, 2)
 texture = ExtResource("6_j63x2")
 
+[node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
+position = Vector2(2277, -120)
+scale = Vector2(2, 2)
+texture = ExtResource("3_on6c4")
+
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1396541921]
-position = Vector2(0, 90)
+position = Vector2(0, 70)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=180853329]
 shape = SubResource("SegmentShape2D_uj655")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=147488591]
-position = Vector2(2025, -110)
+position = Vector2(2886, -110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=2049285261]
 shape = SubResource("SegmentShape2D_clvdy")
@@ -84,7 +70,7 @@ position = Vector2(-793, -145)
 shape = SubResource("SegmentShape2D_w2twm")
 
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
-position = Vector2(972, -150)
+position = Vector2(2381, -150)
 script = ExtResource("9_pxe8g")
 target_scene = "uid://c2bhinnndgu70"
 spawn_point = "OutsideMarker2"
@@ -108,6 +94,7 @@ position = Vector2(-71, -44)
 texture = ExtResource("7_s00ve")
 
 [node name="Domingas" type="Node2D" parent="Table" unique_id=815998222]
+visible = false
 position = Vector2(-114, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Table/Domingas" unique_id=1980176186]

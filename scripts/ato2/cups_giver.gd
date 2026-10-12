@@ -7,3 +7,4 @@ func interact():
 		GameState.inventories[GameState.active_player].add_item(cups)
 		#UiManager.set_current_task("Espante os pássaros")
 		Dialogic.VAR.Ato2.GaveItems.cups = true;
+		$Sprite2D.hide()
