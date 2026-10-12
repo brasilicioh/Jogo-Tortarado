@@ -86,10 +86,26 @@ func load_scene(scene: String, spawn_name: String):
 	ui.show()
 
 func load_minigame(minigame_name: String):
+	#var tween = get_tree().create_tween()
+	#tween.set_parallel()
+	#tween.tween_property(self, "modulate:r", 0.0, 0.75)
+	#tween.tween_property(self, "modulate:g", 0.0, 0.75)
+	#tween.tween_property(self, "modulate:b", 0.0, 0.75)
+	#
+	#await tween.finished
+	
 	var minigame: PackedScene = load("res://scenes/minigames/" + minigame_name + ".tscn")
 	var instance = minigame.instantiate()
 	# add a separate container later
 	ui.add_child(instance)
+	
+	#var tween2 = get_tree().create_tween()
+	#tween2.set_parallel()
+	#tween2.tween_property(self, "modulate:r", 1.0, 0.75)
+	#tween2.tween_property(self, "modulate:g", 1.0, 0.75)
+	#tween2.tween_property(self, "modulate:b", 1.0, 0.75)
+	#
+	#await tween2.finished
 	
 	minigame_started.emit()
 
@@ -115,11 +131,25 @@ func load_cutscene(cutscene_name: String):
 	cutscene_started.emit()
 
 func end_minigame():
+	#var tween = get_tree().create_tween()
+	#tween.set_parallel()
+	#tween.tween_property(self, "modulate:r", 0.0, 0.75)
+	#tween.tween_property(self, "modulate:g", 0.0, 0.75)
+	#tween.tween_property(self, "modulate:b", 0.0, 0.75)
+	#
+	#await tween.finished
+	
 	#kill 8 billion minigames
 	for minigame in get_tree().get_nodes_in_group("minigame"):
 		minigame.queue_free()
-	
+		
 	minigame_ended.emit()
+	
+	#var tween2 = get_tree().create_tween()
+	#tween2.set_parallel()
+	#tween2.tween_property(self, "modulate:r", 1.0, 0.75)
+	#tween2.tween_property(self, "modulate:g", 1.0, 0.75)
+	#tween2.tween_property(self, "modulate:b", 1.0, 0.75)
 
 func end_cutscene():
 	#kill 8 billion ~minigames~cutscenes

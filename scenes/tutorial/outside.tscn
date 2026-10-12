@@ -175,7 +175,8 @@ shape = SubResource("RectangleShape2D_l85ff")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
-frame_progress = 0.044835556
+animation = &"give_rock"
+frame_progress = 0.8574952
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
