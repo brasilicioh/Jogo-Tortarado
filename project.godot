@@ -43,6 +43,7 @@ directories/dtl_directory={
 "ato_2": "res://assets/timelines/ato2/ato_2.dtl",
 "atum_2": "res://assets/timelines/atum/atum_2.dtl",
 "atum_3": "res://assets/timelines/atum/atum_3.dtl",
+"bedroom": "res://assets/timelines/atrez/bedroom.dtl",
 "casa_ricos_colar": "res://assets/timelines/atatro/casa_ricos_colar.dtl",
 "casa_ricos_faca": "res://assets/timelines/atatro/casa_ricos_faca.dtl",
 "casa_ricos_mala": "res://assets/timelines/atatro/casa_ricos_mala.dtl",
