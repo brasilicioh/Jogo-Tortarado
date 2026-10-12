@@ -122,4 +122,13 @@ texture = SubResource("PlaceholderTexture2D_2i0da")
 scale = Vector2(0.9999998, 1)
 shape = SubResource("RectangleShape2D_tjgix")
 
+[node name="Label" type="Label" parent="Salustiana" unique_id=1800072628]
+offset_left = -247.0
+offset_top = -119.0
+offset_right = 245.0
+offset_bottom = -70.0
+text = "SALUSTIANA ABAIXO
+POR FAVOR COLOCAR SPRITE ANTES DO DIA DE LANÇAR O JOGO"
+horizontal_alignment = 1
+
 [editable path="House"]
