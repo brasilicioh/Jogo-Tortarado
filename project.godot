@@ -64,6 +64,7 @@ directories/dtl_directory={
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
 "salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
 "severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
+"tutorial": "res://assets/timelines/tutorial/tutorial.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl",
 "zeca_boogaloo": "res://assets/timelines/tutorial/zeca_boogaloo.dtl"
 }
@@ -107,7 +108,8 @@ variables={
 "interacted_with_domingas": false,
 "interacted_with_father": false,
 "interacted_with_salustina": false
-}
+},
+"is_touchscreen": false
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
