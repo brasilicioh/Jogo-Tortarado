@@ -4,6 +4,7 @@ if {Tutorial.interacted_with_father} == false:
 	zeca: Aqueles pássaros apareceram de novo.\
 	Pegue essas pedras e espante eles.
 	[signal arg="give_rock"]
+	[wait time="2.6"]
 	set {Tutorial.interacted_with_father} = true
 else:
 	zeca: Vá assustar o pássaros!

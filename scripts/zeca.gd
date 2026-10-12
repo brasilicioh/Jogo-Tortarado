@@ -16,5 +16,8 @@ func interact():
 
 func event_signal(event):
 	if event == "give_rock":
+		$Sprite2D.play("give_rock")
+		await $Sprite2D.animation_looped
+		$Sprite2D.play("default")
 		GameState.inventories[GameState.active_player].add_item(rock)
 		UiManager.set_current_task("Espante os pássaros")
