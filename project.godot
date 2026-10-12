@@ -63,7 +63,8 @@ directories/dtl_directory={
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
 "salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
 "severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
-"zeca": "res://assets/timelines/tutorial/zeca.dtl"
+"zeca": "res://assets/timelines/tutorial/zeca.dtl",
+"zeca_boogaloo": "res://assets/timelines/tutorial/zeca_boogaloo.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true

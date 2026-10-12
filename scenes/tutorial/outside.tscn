@@ -120,7 +120,7 @@ texture = ExtResource("2_bxvk8")
 shape = SubResource("RectangleShape2D_2i0da")
 
 [node name="Crow" type="Node2D" parent="." unique_id=1928070463]
-position = Vector2(-472, -79)
+position = Vector2(281, -79)
 
 [node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=1541964808]
 texture = ExtResource("2_bxvk8")
@@ -132,7 +132,7 @@ script = ExtResource("3_y7xuq")
 shape = SubResource("RectangleShape2D_wrhxb")
 
 [node name="Zeca" type="Area2D" parent="." unique_id=1874819971]
-position = Vector2(330, -74)
+position = Vector2(1331, -74)
 script = ExtResource("4_7oiyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca" unique_id=361648425]
@@ -142,7 +142,7 @@ shape = SubResource("RectangleShape2D_l85ff")
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
-frame_progress = 0.87633044
+frame_progress = 0.80334675
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
