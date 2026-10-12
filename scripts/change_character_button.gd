@@ -11,7 +11,8 @@ func _on_dialogue_started():
 	hide()
 	
 func _on_dialogue_ended():
-	show()
+	if DisplayServer.is_touchscreen_available():
+		show()
 
 func _on_pressed() -> void:
 	Input.action_press("change_character")

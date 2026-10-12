@@ -139,6 +139,7 @@ script = ExtResource("4_gdt2y")
 layout_mode = 2
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=611191505]
+visible = false
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 0
 offset_top = 420.0
