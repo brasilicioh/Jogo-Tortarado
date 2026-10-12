@@ -1,0 +1,4 @@
+join donana center
+\donana: Essa faca... ela é bonita. Eles não vão sentir falta de uma simples faca.
+[wait time="1.0"]
+[signal arg="pegou_faca"]

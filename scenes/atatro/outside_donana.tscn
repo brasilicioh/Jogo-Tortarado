@@ -1,0 +1,77 @@
+[gd_scene format=3 uid="uid://bqebkk418tabu"]
+
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_ejme7"]
+[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="2_7edia"]
+[ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_7edia"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_r7x0m"]
+a = Vector2(64000, 0)
+b = Vector2(-64000, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_bssop"]
+a = Vector2(12, -340)
+b = Vector2(15, 283)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_n1rya"]
+a = Vector2(4, -379)
+b = Vector2(4, 246)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_r7x0m"]
+size = Vector2(202, 400)
+
+[node name="OutsideDonana" type="Node2D" unique_id=1939682416]
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=462201492]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=339425872]
+position = Vector2(1, 0)
+shape = SubResource("SegmentShape2D_r7x0m")
+
+[node name="Spawn" type="Marker2D" parent="." unique_id=1822799042 groups=["spawn point"]]
+position = Vector2(454.99997, -24)
+rotation = 3.1415927
+scale = Vector2(0.75653094, -0.44983667)
+script = ExtResource("1_ejme7")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=885293651]
+offset_left = 215.00003
+offset_top = -203.0
+offset_right = 480.12894
+offset_bottom = -83.0
+rotation = -0.0023698644
+scale = Vector2(0.7170573, 1)
+text = "TODO:
+MUDAR FUNDO
+DONANA JOGÁVEL
+Donana jovem (talvez não)"
+
+[node name="WallLeft" type="StaticBody2D" parent="." unique_id=963262510]
+position = Vector2(-657, -266)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=195920211]
+shape = SubResource("SegmentShape2D_bssop")
+
+[node name="WallRight" type="StaticBody2D" parent="." unique_id=1706423785]
+position = Vector2(544, -154)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1061828636]
+shape = SubResource("SegmentShape2D_n1rya")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=345552981]
+position = Vector2(-331, -243)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_7edia")
+
+[node name="DoorTransition" type="Area2D" parent="Sprite2D" unique_id=117884886]
+position = Vector2(2, 260)
+script = ExtResource("3_7edia")
+target_scene = "uid://dppel3bnl4gv"
+spawn_point = "Sala"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Sprite2D/DoorTransition" unique_id=1220544145]
+position = Vector2(-5, 8)
+shape = SubResource("RectangleShape2D_r7x0m")

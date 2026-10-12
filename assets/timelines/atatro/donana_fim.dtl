@@ -1,0 +1,7 @@
+join donana center
+[wait time="1.0"]
+(inicio da última cutscene do jogo)
+[wait time="1.0"]
+\donana: Me desculpe... eu não pude proteger você...
+[wait time="1.0"]
+(última cutscene sendo feita pelo dialogic)

@@ -329,4 +329,28 @@ offset_right = 64.0
 offset_bottom = -67.0
 text = "porta poATO 2"
 
+[node name="DoorTransition4" type="Area2D" parent="." unique_id=364469388]
+position = Vector2(6665, -69)
+script = ExtResource("3_udpx5")
+target_scene = "uid://drxfnywwjfwef"
+spawn_point = "Sala"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition4" unique_id=199692741]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition4" unique_id=1166308591]
+material = ExtResource("6_bkgx0")
+position = Vector2(1.0000076, -5.499998)
+scale = Vector2(0.7343751, 1.4140625)
+texture = ExtResource("1_nsm10")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition4" unique_id=519903718]
+offset_left = -91.0
+offset_top = -150.0
+offset_right = 151.0
+offset_bottom = -103.0
+text = "PORTA LEVA AO ATO 4"
+
 [editable path="House/StairTransition"]
