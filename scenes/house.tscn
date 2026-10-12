@@ -104,8 +104,6 @@ texture = ExtResource("5_bwc8c")
 position = Vector2(233.5, 42)
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_qtlar")
-spawn_characters = Array[String](["bbb"])
-active_character = "bbb"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Wall" type="StaticBody2D" parent="QuartoDasMeninas" unique_id=235501059]
