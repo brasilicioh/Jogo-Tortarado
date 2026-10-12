@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://cprhyv5pnlp6d"]
+
+[ext_resource type="Texture2D" uid="uid://hi8xx7c0w3bj" path="res://assets/scenaries/mesaCloseUp.png" id="1_ylpjy"]
+
+[node name="table_closeup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -4.9999995
+offset_top = -6.0
+offset_right = 866.6655
+offset_bottom = 377.68726
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(0.60000026, 0.65326476)
+texture = ExtResource("1_ylpjy")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=473912781]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=686925663]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0

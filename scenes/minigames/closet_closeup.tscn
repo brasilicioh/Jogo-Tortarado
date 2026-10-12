@@ -3,6 +3,7 @@
 [ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/closet.png" id="1_coitd"]
 [ext_resource type="Script" uid="uid://dmx1jljoh85x" path="res://scripts/tutorial/doll.gd" id="2_bu4yi"]
 [ext_resource type="Texture2D" uid="uid://dp0dcgvns8v3q" path="res://assets/sprites/doll.png" id="2_wec6w"]
+[ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="4_lhxne"]
 
 [node name="ClosetCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
 layout_mode = 3
@@ -32,4 +33,22 @@ texture_normal = ExtResource("2_wec6w")
 stretch_mode = 0
 script = ExtResource("2_bu4yi")
 
+[node name="Panel" type="Panel" parent="." unique_id=1563298677 groups=["minigame"]]
+z_index = 1
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 35.0
+offset_right = 1231.0
+offset_bottom = 75.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=233899769]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+text = "X"
+flat = true
+script = ExtResource("4_lhxne")
+
 [connection signal="pressed" from="Doll" to="Doll" method="_on_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]

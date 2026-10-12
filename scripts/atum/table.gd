@@ -1,7 +1,7 @@
 extends Area2D
 
 func interact():
-	GameState.main.load_minigame("mesaCloseUp")
+	GameState.main.load_minigame("TableCloseUp")
 	
 func highlight(state: bool) -> void:
 	if $Sprite2D is Node:

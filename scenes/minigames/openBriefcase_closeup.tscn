@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://cdgom7x7pw6i3"]
+
+[ext_resource type="Texture2D" uid="uid://duyapxy6loosv" path="res://assets/scenaries/gavetaCloseUp.png" id="1_j1hnl"]
+[ext_resource type="Script" uid="uid://ddkovejaj3u08" path="res://scripts/atum/openhandbag.gd" id="2_8qgq4"]
+
+[node name="DrawerCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = 6.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_j1hnl")
+expand_mode = 1
+
+[node name="openhandbag" type="TextureButton" parent="." unique_id=660045445]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 541.0
+offset_top = 320.0
+offset_right = 735.0
+offset_bottom = 515.0
+stretch_mode = 0
+script = ExtResource("2_8qgq4")
+
+[connection signal="pressed" from="openhandbag" to="openhandbag" method="_on_pressed"]

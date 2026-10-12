@@ -1,11 +1,12 @@
 [gd_scene format=3 uid="uid://cn82kyev8mwwm"]
 
-[ext_resource type="Script" uid="uid://jyfjy286shtt" path="res://scripts/suitcase/briefcase_game_ctrl.gd" id="1_dra6m"]
+[ext_resource type="Script" uid="uid://jyfjy286shtt" path="res://scripts/suitcase/controller.gd" id="1_dra6m"]
 [ext_resource type="Texture2D" uid="uid://c45yfhh7ktsko" path="res://assets/sprites/briefcase.png" id="2_ayn4d"]
 [ext_resource type="AudioStream" uid="uid://dnnjdb2yp26wp" path="res://assets/sfx/case_scroll_change.mp3" id="3_vah6b"]
 [ext_resource type="AudioStream" uid="uid://bqtmspwv2y1k6" path="res://assets/sfx/case_open.mp3" id="4_ejvrq"]
+[ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="5_ayn4d"]
 
-[node name="Control" type="Control" unique_id=1410283747 node_paths=PackedStringArray("password", "control_panel", "button_briefcase", "sfx_click", "sfx_unlocked_case")]
+[node name="Control" type="Control" unique_id=1410283747 node_paths=PackedStringArray("password", "control_panel", "button_briefcase", "sfx_click", "sfx_unlocked_case") groups=["minigame"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -30,6 +31,23 @@ action_mode = 0
 texture_normal = ExtResource("2_ayn4d")
 ignore_texture_size = true
 stretch_mode = 0
+
+[node name="Panel" type="Panel" parent="." unique_id=126400223]
+z_index = 1
+layout_mode = 0
+offset_left = 1191.0
+offset_top = 35.0
+offset_right = 1231.0
+offset_bottom = 75.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=1927050884]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 40.0
+offset_bottom = 42.0
+text = "X"
+flat = true
+script = ExtResource("5_ayn4d")
 
 [node name="BriefcaseUIPanel" type="Panel" parent="." unique_id=942194942]
 layout_mode = 1
@@ -168,6 +186,7 @@ stream = ExtResource("4_ejvrq")
 volume_db = 15.0
 
 [connection signal="pressed" from="ButtonBriefcase" to="." method="_on_case_pressed"]
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
 [connection signal="pressed" from="BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont0/Increase" to="." method="_on_arrow_pressed" binds= [0, 1]]
 [connection signal="pressed" from="BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont0/Decrease" to="." method="_on_arrow_pressed" binds= [0, -1]]
 [connection signal="pressed" from="BriefcaseUIPanel/NumRowHBoxCont/NumColVBoxCont1/Increase" to="." method="_on_arrow_pressed" binds= [1, 1]]

@@ -1,10 +1,10 @@
 [gd_scene format=3 uid="uid://dv5iy7wx1ntb7"]
 
-[ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/closet.png" id="1_k1cj5"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_k1cj5"]
-[ext_resource type="Script" uid="uid://b36kwbhcccttc" path="res://scenes/minigames/handbag.gd" id="3_hoy4w"]
+[ext_resource type="Texture2D" uid="uid://duyapxy6loosv" path="res://assets/scenaries/gavetaCloseUp.png" id="1_hpdfc"]
+[ext_resource type="Script" uid="uid://cldnhejc88o1v" path="res://scripts/atum/handbag.gd" id="3_hoy4w"]
+[ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="3_k1cj5"]
 
-[node name="ClosetCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+[node name="DrawerCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -17,19 +17,40 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -1.0
+offset_bottom = 6.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_k1cj5")
+texture = ExtResource("1_hpdfc")
+expand_mode = 1
+
+[node name="Panel" type="Panel" parent="." unique_id=1132338693]
+layout_mode = 0
+offset_left = 1173.0
+offset_top = 63.0
+offset_right = 1213.0
+offset_bottom = 103.0
+
+[node name="Button" type="Button" parent="Panel" unique_id=105848238]
+layout_mode = 0
+offset_left = -1.0
+offset_top = 1.0
+offset_right = 39.0
+offset_bottom = 41.0
+text = "X"
+flat = true
+script = ExtResource("3_k1cj5")
 
 [node name="handbag" type="TextureButton" parent="." unique_id=660045445]
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 0
 offset_left = 541.0
 offset_top = 320.0
-offset_right = 669.0
-offset_bottom = 448.0
-texture_normal = ExtResource("2_k1cj5")
+offset_right = 735.0
+offset_bottom = 515.0
 stretch_mode = 0
 script = ExtResource("3_hoy4w")
 
+[connection signal="pressed" from="Panel/Button" to="Panel/Button" method="_on_pressed"]
 [connection signal="pressed" from="handbag" to="handbag" method="_on_pressed"]

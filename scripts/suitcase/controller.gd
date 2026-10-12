@@ -1,11 +1,12 @@
 extends Control
 
-@export var target_password: Array[int] = [1, 1, 5, 0]
+@export var target_password: Array[int] = [1, 1, 4, 9]
 @export var password: Array[Label] = []
 @export var control_panel: Panel
 @export var button_briefcase: TextureButton
 @export var sfx_click: AudioStreamPlayer2D
 @export var sfx_unlocked_case: AudioStreamPlayer2D
+var faca: ItemData = load("res://assets/items/faca.tres")
 
 var unlocked: bool = false
 
@@ -43,6 +44,9 @@ func _open_briefcase() -> void:
 	print("case opened")
 	await get_tree().create_timer(2.0).timeout
 	control_panel.visible = false
+	GameState.inventories[GameState.active_player].add_item(faca)
+	GameState.state["gave_knife"] = true
+	GameState.main.end_minigame()
 	#emit_signal("mala_aberta") isso aq é o sinal de fim de jogo.
 	# aqui entra depois a animação de abertura + revelar a faca de marfim
 

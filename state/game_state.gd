@@ -2,7 +2,11 @@ extends Node
 
 const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
-var state = {};
+
+var state = {
+	"gave_knife": false,
+	"gave_doll": false
+	};
 
 var was_interacting := false
 
