@@ -10,9 +10,14 @@ var main
 func _ready() -> void:
 	GameState.active_player_changed.connect(update_ui)
 	GameState.inventory_updated.connect(update_inventory)
+	GameState.main_set.connect(_on_main_set)
 
 func _on_main_set():
+	if main:
+		return
+	
 	main = GameState.main
+	print("main set")
 	
 	if not main:
 		print("not main")
