@@ -29,6 +29,8 @@ gdscript/warnings/unused_signal=0
 [dialogic]
 
 directories/dch_directory={
+"???": "res://assets/characters/pholder.dch",
+"belonisia": "res://assets/characters/belonisia.dch",
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
 "donana": "res://assets/characters/donana.dch",
@@ -37,10 +39,20 @@ directories/dch_directory={
 "zeca": "res://assets/characters/zeca.dch"
 }
 directories/dtl_directory={
-"bedroom": "res://assets/timelines/atrez/bedroom.dtl",
+"ask_domingas": "res://assets/timelines/ato2/ask_domingas.dtl",
+"ato_2": "res://assets/timelines/ato2/ato_2.dtl",
+"atum_2": "res://assets/timelines/atum/atum_2.dtl",
+"atum_3": "res://assets/timelines/atum/atum_3.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
+"find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",
+"interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
+"kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
+"mala1": "res://assets/timelines/atum/mala1.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
+"salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
+"salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
+"severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
 "zeca": "res://assets/timelines/tutorial/zeca.dtl"
 }
 layout/style_directory={}
@@ -48,8 +60,32 @@ glossary/default_case_sensitive=true
 layout/style_list=[]
 layout/default_style="Default"
 variables={
-"Ato3": {
-"bedroom_progression": 0
+"Ato2": {
+"GaveItems": {
+"cloth": false,
+"cups": false,
+"decor": false,
+"gift": false
+},
+"PutItems": {
+"cloth": false,
+"cups": false,
+"decor": false,
+"gift": false
+},
+"found_domingas": false,
+"interacted_with_belonisia_firsttime": false,
+"interacted_with_belonisia_secondtime": false,
+"interacted_with_domingas": false,
+"kissscene_played": false,
+"second_intro_played": false,
+"table_complete": false,
+"table_half_complete": false
+},
+"Atum": {
+"interacted_with_belonisia": false,
+"interacted_with_bibiana": false,
+"interacted_with_donana": false
 },
 "Tutorial": {
 "gave_doll": false,

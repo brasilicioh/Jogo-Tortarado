@@ -1,0 +1,35 @@
+[gd_scene format=3 uid="uid://dv5iy7wx1ntb7"]
+
+[ext_resource type="Texture2D" uid="uid://ckwxhp3pl227j" path="res://assets/scenaries/closet.png" id="1_k1cj5"]
+[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_k1cj5"]
+[ext_resource type="Script" uid="uid://b36kwbhcccttc" path="res://scenes/minigames/handbag.gd" id="3_hoy4w"]
+
+[node name="ClosetCloseup" type="Control" unique_id=2044981229 groups=["minigame"]]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=227026910]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_k1cj5")
+
+[node name="handbag" type="TextureButton" parent="." unique_id=660045445]
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_left = 541.0
+offset_top = 320.0
+offset_right = 669.0
+offset_bottom = 448.0
+texture_normal = ExtResource("2_k1cj5")
+stretch_mode = 0
+script = ExtResource("3_hoy4w")
+
+[connection signal="pressed" from="handbag" to="handbag" method="_on_pressed"]

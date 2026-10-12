@@ -4,6 +4,8 @@ const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
 var state = {};
 
+var was_interacting := false
+
 signal active_player_changed
 signal inventory_updated
 

@@ -1,34 +1,155 @@
 [gd_scene format=3 uid="uid://dmb4qt2okhv0s"]
 
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_d7po0"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_qtlar"]
+[ext_resource type="Texture2D" uid="uid://d28efwbcsf3vi" path="res://unpacking/desenhos/cenários/corredor2.png" id="2_f74lx"]
+[ext_resource type="Texture2D" uid="uid://co8kbggh518hy" path="res://unpacking/desenhos/cenários/corredor1.png" id="2_qtlar"]
+[ext_resource type="Texture2D" uid="uid://d12b55ugywin6" path="res://unpacking/desenhos/cenários/cozinha.png" id="3_ptc3g"]
+[ext_resource type="Texture2D" uid="uid://dbxsrr6hm41sw" path="res://unpacking/desenhos/cenários/quartoAvo.png" id="4_wcu0q"]
+[ext_resource type="Texture2D" uid="uid://gsdkh6qpxskm" path="res://unpacking/desenhos/cenários/quartoDasMeninas.png" id="5_bwc8c"]
+[ext_resource type="Texture2D" uid="uid://ddktyw2wxlr2g" path="res://unpacking/desenhos/cenários/quartoDasMeninasComCamisa.png" id="6_mhx8p"]
 
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_2i0da"]
-a = Vector2(-1000, 0)
-b = Vector2(1000, 0)
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_l85ff"]
+a = Vector2(0, 1000)
+b = Vector2(0, -1000)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_2i0da"]
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
-[node name="Door" type="Marker2D" parent="." unique_id=277418770 groups=["spawn point"]]
-position = Vector2(49, -80)
+[node name="Corredor1" type="Sprite2D" parent="." unique_id=1752356399]
+position = Vector2(-1224, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("2_qtlar")
+
+[node name="Corredor1Direita" type="Marker2D" parent="Corredor1" unique_id=1616098316 groups=["spawn point"]]
+position = Vector2(125, 41.5)
 script = ExtResource("1_qtlar")
-spawn_characters = Array[String](["belonisia", "bibiana"])
-active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1219923547]
+[node name="Corredor1Esquerda" type="Marker2D" parent="Corredor1" unique_id=1381089345 groups=["spawn point"]]
+position = Vector2(-135, 38)
+script = ExtResource("1_qtlar")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1310512805]
-shape = SubResource("SegmentShape2D_2i0da")
+[node name="Wall" type="StaticBody2D" parent="Corredor1" unique_id=1370580494]
+position = Vector2(-306, 96)
+scale = Vector2(0.5, 0.5)
 
-[node name="Sprite2D" type="Sprite2D" parent="StaticBody2D" unique_id=183782919]
-position = Vector2(0, 64)
-scale = Vector2(100, 1)
-texture = ExtResource("1_d7po0")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor1/Wall" unique_id=320363010]
+shape = SubResource("SegmentShape2D_l85ff")
 
-[node name="Label" type="Label" parent="." unique_id=935178039]
-offset_left = 168.0
-offset_top = -148.0
-offset_right = 349.0
-offset_bottom = -125.0
-text = "sei la oque botar aqui :("
+[node name="Corredor2" type="Sprite2D" parent="." unique_id=1514774914]
+position = Vector2(1224, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("2_f74lx")
+
+[node name="Corredor2" type="Marker2D" parent="Corredor2" unique_id=679902272 groups=["spawn point"]]
+position = Vector2(51, 41.5)
+script = ExtResource("1_qtlar")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="Corredor2" unique_id=1296331123]
+position = Vector2(306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor2/Wall" unique_id=1393170690]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="Cozinha" type="Sprite2D" parent="." unique_id=484740427]
+position = Vector2(0, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("3_ptc3g")
+
+[node name="Cozinha" type="Marker2D" parent="Cozinha" unique_id=755628574 groups=["spawn point"]]
+position = Vector2(-223, 42)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_qtlar")
+spawn_characters = Array[String](["bbb"])
+active_character = "bbb"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="QuartoAvo" type="Sprite2D" parent="." unique_id=1330230649]
+position = Vector2(3000, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("4_wcu0q")
+
+[node name="QuartoAvo" type="Marker2D" parent="QuartoAvo" unique_id=1040194703 groups=["spawn point"]]
+position = Vector2(233.5, 42)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_qtlar")
+spawn_characters = Array[String](["bbb"])
+active_character = "bbb"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="QuartoAvo" unique_id=713722066]
+position = Vector2(306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoAvo/Wall" unique_id=398848748]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="Wall2" type="StaticBody2D" parent="QuartoAvo" unique_id=978164040]
+position = Vector2(-306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoAvo/Wall2" unique_id=1855255756]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="QuartoDasMeninas" type="Sprite2D" parent="." unique_id=207887793]
+position = Vector2(5000, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("5_bwc8c")
+
+[node name="QuartoMeninas" type="Marker2D" parent="QuartoDasMeninas" unique_id=1464077330 groups=["spawn point"]]
+position = Vector2(233.5, 42)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_qtlar")
+spawn_characters = Array[String](["bbb"])
+active_character = "bbb"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="QuartoDasMeninas" unique_id=235501059]
+position = Vector2(306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoDasMeninas/Wall" unique_id=1239779244]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="Wall2" type="StaticBody2D" parent="QuartoDasMeninas" unique_id=895243715]
+position = Vector2(-306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoDasMeninas/Wall2" unique_id=1794094565]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="QuartoDasMeninasComCamisa" type="Sprite2D" parent="." unique_id=1118305505]
+position = Vector2(7000, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("6_mhx8p")
+
+[node name="QuartoMeninasRoupa" type="Marker2D" parent="QuartoDasMeninasComCamisa" unique_id=2135177472 groups=["spawn point"]]
+position = Vector2(233.5, 42)
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_qtlar")
+spawn_characters = Array[String](["bbb"])
+active_character = "bbb"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Wall" type="StaticBody2D" parent="QuartoDasMeninasComCamisa" unique_id=759503407]
+position = Vector2(306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoDasMeninasComCamisa/Wall" unique_id=664706605]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="Wall2" type="StaticBody2D" parent="QuartoDasMeninasComCamisa" unique_id=1785560129]
+position = Vector2(-306, 96)
+scale = Vector2(0.5, 0.5)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="QuartoDasMeninasComCamisa/Wall2" unique_id=740886345]
+shape = SubResource("SegmentShape2D_l85ff")
+
+[node name="Ground" type="StaticBody2D" parent="." unique_id=686690898]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=436753944]
+shape = SubResource("WorldBoundaryShape2D_2i0da")

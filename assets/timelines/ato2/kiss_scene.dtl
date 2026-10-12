@@ -1,0 +1,24 @@
+join bibiana center
+join belonisia center
+join severo center
+if {Ato2.found_domingas} == true and {Ato2.kissscene_played} == false:
+	bibiana: Oi, irmã...
+	severo: Boa noite, Bibiana. Precisando de alguma ajuda?
+	bibiana: O que vocês estavam fazendo?
+	severo: A gente tava só conversando. Tava difícil conversar dentro da sua casa...
+	severo: Mainha deve estar me esperando para jantar. Até mais Bibiana.
+	[signal arg="seve_hide"]
+	[wait time="1.0"]
+	bibiana: Só conversando?
+	belonisia: ...
+	bibiana: Por que você não me contou sobre isso?!
+	bibiana: Você não tinha o direito de esconder isso de mim...
+	belonisia: ...
+	bibiana: Nós somos irmãs, poxa! Eu sempre contei tudo para você! Mas por que você nunca me conta nada?
+	[wait time="0.5"]
+	bibiana: Nós somos tão próximas… você precisa de mim\: eu sou sua fala.
+	bibiana: E eu… eu preciso de você.
+	bibiana: Desde que a vovó…  tudo mudou.
+	[wait time="1.0"]
+	bibiana: Desde que a vovó se...
+	set {Ato2.kissscene_played} = true

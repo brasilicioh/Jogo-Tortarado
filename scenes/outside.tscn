@@ -297,6 +297,7 @@ position = Vector2(-1, 1)
 shape = SubResource("RectangleShape2D_b5uqm")
 
 [node name="Sprite2D" type="Sprite2D" parent="DoorTransition2" unique_id=1076718217]
+material = ExtResource("6_bkgx0")
 position = Vector2(1.0000076, -5.499998)
 scale = Vector2(0.7343751, 1.4140625)
 texture = ExtResource("1_nsm10")

@@ -74,7 +74,8 @@ func _process(_delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if character_id == GameState.active_player\
 	   and can_interact:
-		if event.is_action_pressed("interact") and nearby_interactable:
+		if event.is_action_pressed("interact") and nearby_interactable and not GameState.was_interacting:
+			GameState.was_interacting = true
 			# try to use item
 			if GameState.held_item_index() != -1 and\
 			   nearby_interactable.has_method("use_item"):
@@ -84,6 +85,8 @@ func _input(event: InputEvent) -> void:
 			elif GameState.held_item_index() == -1 and\
 			   nearby_interactable.has_method("interact"):
 				nearby_interactable.interact()
+		elif event.is_action_released("interact"):
+			GameState.was_interacting = false
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
 	if area.has_method("interact") or area.has_method("use_item")\
@@ -91,7 +94,12 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 		if area.has_method("highlight"):
 			area.highlight(true)
 		nearby_interactable = area
-		print("new interactible", area)
+		
+	if area.name == "DoorTriggerArea":
+		can_move = false
+		area.ativar()
+		return
+
 
 func _on_interaction_area_area_exited(area: Area2D) -> void:
 	if area == nearby_interactable:

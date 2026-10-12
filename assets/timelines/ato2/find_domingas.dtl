@@ -1,0 +1,14 @@
+join domingas center
+join bibiana center
+if {Ato2.found_domingas} == false:
+	bibiana: Domingas!
+	\domingas: Como você me achou?
+	bibiana: Poder de irmã mais velha. Você viu a Belo?
+	\domingas: Vi. Ela tava lá fora, perto das árvores.
+	\domingas: E ela tava la com um menino, né não... ?
+	bibiana: Com um menino? ...
+	[signal arg="hide"]
+	bibiana: Ei menina! pera ai!
+	bibiana: Tanto faz... preciso achar Belonísia.
+	set {Ato2.found_domingas} = true
+	do UiManager.set_current_task("Festa de Zeca: Encontre Belonísia")
