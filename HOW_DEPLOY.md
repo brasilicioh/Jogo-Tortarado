@@ -16,15 +16,15 @@ Garanta essas configurações:
 - Para Desktop: [x]
 - Para Mobile: [x]
 - Ícone exportado: [x]
-- Documento HTML personalizado: ""
+- Documento HTML personalizado: `res://web/custom_shell.html`
 - Inclusão na Head: ""
 - Política de Redimensionamento: Adaptive
 - Focar Canvas ao Iniciar: [x]
 - Teclado virtual experimental: []
 - Habilitado: []
-- Garantir Headers: [x]
+- Garantir Headers: []
 - Página Offline: ""
-- Exibição: Standalone
+- PWA: []
 - Orientação: Landscape
 
 4.

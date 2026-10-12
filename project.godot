@@ -28,42 +28,8 @@ gdscript/warnings/unused_signal=0
 
 [dialogic]
 
-directories/dch_directory={
-"???": "res://assets/characters/pholder.dch",
-"belonisia": "res://assets/characters/belonisia.dch",
-"bibiana": "res://assets/characters/bibiana.dch",
-"domingas": "res://assets/characters/domingas.dch",
-"donana": "res://assets/characters/donana.dch",
-"salustina": "res://assets/characters/salustina.dch",
-"severo": "res://assets/characters/severo.dch",
-"zeca": "res://assets/characters/zeca.dch"
-}
-directories/dtl_directory={
-"ask_domingas": "res://assets/timelines/ato2/ask_domingas.dtl",
-"ato_2": "res://assets/timelines/ato2/ato_2.dtl",
-"atum_2": "res://assets/timelines/atum/atum_2.dtl",
-"atum_3": "res://assets/timelines/atum/atum_3.dtl",
-"bedroom": "res://assets/timelines/atrez/bedroom.dtl",
-"casa_ricos_colar": "res://assets/timelines/atatro/casa_ricos_colar.dtl",
-"casa_ricos_faca": "res://assets/timelines/atatro/casa_ricos_faca.dtl",
-"casa_ricos_mala": "res://assets/timelines/atatro/casa_ricos_mala.dtl",
-"clothes": "res://assets/timelines/tutorial/clothes.dtl",
-"domingas": "res://assets/timelines/tutorial/domingas.dtl",
-"donana_fim": "res://assets/timelines/atatro/donana_fim.dtl",
-"donana_sozinha": "res://assets/timelines/atatro/donana_sozinha.dtl",
-"filha_morta": "res://assets/timelines/atatro/filha_morta.dtl",
-"find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",
-"homem_morto": "res://assets/timelines/atatro/homem_morto.dtl",
-"interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
-"kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
-"mala1": "res://assets/timelines/atum/mala1.dtl",
-"pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
-"salustina": "res://assets/timelines/tutorial/salustina.dtl",
-"salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
-"salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
-"severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
-"zeca": "res://assets/timelines/tutorial/zeca.dtl"
-}
+directories/dch_directory={}
+directories/dtl_directory={}
 layout/style_directory={}
 glossary/default_case_sensitive=true
 layout/style_list=[]
