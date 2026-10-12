@@ -90,9 +90,10 @@ position = Vector2(718, 0)
 scale = Vector2(2, 2)
 texture = ExtResource("4_8uf34")
 
-[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1614044431 node_paths=PackedStringArray("selfnode")]
+[node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1614044431 node_paths=PackedStringArray("selfnode", "targetnode")]
 script = ExtResource("4_0wguo")
 selfnode = NodePath("..")
+targetnode = NodePath("../../Bedroom")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=2129015538]
 position = Vector2(62, -20)
@@ -117,11 +118,3 @@ texture = ExtResource("6_o2psn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GiftGiver" unique_id=939686543]
 position = Vector2(0, 46)
 shape = SubResource("RectangleShape2D_a3o4s")
-
-[node name="Label" type="Label" parent="." unique_id=622401695]
-offset_left = 564.0
-offset_top = -429.0
-offset_right = 702.0
-offset_bottom = -380.0
-text = "ANimar essa puta
-e o namorado dela"

@@ -11,5 +11,5 @@ func interact():
 		#fazer o negocio do closeup no chapeu aq.
 		var severo_instance = severo.instantiate() 
 		get_tree().current_scene.add_child(severo_instance) 
-		severo_instance.global_position = Vector2(617.0, 0.0)
+		severo_instance.global_position = Vector2(1077.0, 0.0)
 		severo_instance.scale.x = -1
