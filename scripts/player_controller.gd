@@ -64,6 +64,25 @@ func _physics_process(delta: float) -> void:
 		velocity.x = 0
 	
 	move_and_slide()
+	
+	if character_id == GameState.active_player\
+	   and can_interact:
+		if Input.is_action_just_pressed("interact") and nearby_interactable and not GameState.was_interacting:
+			GameState.was_interacting = true
+			# try to use item
+			if GameState.held_item_index() != -1 and\
+			   nearby_interactable.has_method("use_item"):
+				nearby_interactable.use_item(GameState.held_item())
+				GameState.active_inventory().current_item = -1
+				GameState.was_interacting = false
+			# normal interact
+			elif GameState.held_item_index() == -1 and\
+			   nearby_interactable.has_method("interact"):
+				print("interacting")
+				nearby_interactable.interact()
+				GameState.was_interacting = false
+		if Input.is_action_just_pressed("interact"):
+			GameState.was_interacting = false
 
 func _process(_delta: float) -> void:
 	if character_id == GameState.active_player:
@@ -81,26 +100,6 @@ func _process(_delta: float) -> void:
 				sprite.play("walk")
 	else:
 		sprite.play("normal")
-
-func _input(event: InputEvent) -> void:
-	if character_id == GameState.active_player\
-	   and can_interact:
-		if event.is_action_pressed("interact") and nearby_interactable and not GameState.was_interacting:
-			GameState.was_interacting = true
-			# try to use item
-			if GameState.held_item_index() != -1 and\
-			   nearby_interactable.has_method("use_item"):
-				nearby_interactable.use_item(GameState.held_item())
-				GameState.active_inventory().current_item = -1
-				GameState.was_interacting = false
-			# normal interact
-			elif GameState.held_item_index() == -1 and\
-			   nearby_interactable.has_method("interact"):
-				print("interacting")
-				nearby_interactable.interact()
-				GameState.was_interacting = false
-		if event.is_action_released("interact"):
-			GameState.was_interacting = false
 
 func _on_interaction_area_area_entered(area: Area2D) -> void:
 	if (area.has_method("interact") or area.has_method("use_item"))\
