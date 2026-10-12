@@ -85,7 +85,6 @@ func _process(_delta: float) -> void:
 func _input(event: InputEvent) -> void:
 	if character_id == GameState.active_player\
 	   and can_interact:
-		print(GameState.was_interacting)
 		if event.is_action_pressed("interact") and nearby_interactable and not GameState.was_interacting:
 			GameState.was_interacting = true
 			# try to use item
