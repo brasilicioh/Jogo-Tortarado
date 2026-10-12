@@ -36,6 +36,8 @@ func load_scene(scene: String, spawn_name: String):
 	
 	is_loading_scene = true
 	
+	ui.hide()
+	
 	var tween = get_tree().create_tween()
 	tween.set_parallel()
 	tween.tween_property(self, "modulate:r", 0.0, 0.75)
@@ -80,6 +82,8 @@ func load_scene(scene: String, spawn_name: String):
 	tween2.tween_property(self, "modulate:r", 1.0, 0.75)
 	tween2.tween_property(self, "modulate:g", 1.0, 0.75)
 	tween2.tween_property(self, "modulate:b", 1.0, 0.75)
+	
+	ui.show()
 
 func load_minigame(minigame_name: String):
 	var minigame: PackedScene = load("res://scenes/minigames/" + minigame_name + ".tscn")
