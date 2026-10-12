@@ -125,7 +125,7 @@ shape = SubResource("RectangleShape2D_8w0r3")
 position = Vector2(-1406, -67)
 
 [node name="SaidaDonana" type="Marker2D" parent="." unique_id=908463325]
-position = Vector2(-498, -72)
+position = Vector2(-498, -67)
 
 [node name="IdaIrma" type="Marker2D" parent="." unique_id=1585629313]
 position = Vector2(-1041, -82)
