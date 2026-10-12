@@ -56,7 +56,7 @@ animations = [{
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
-size = Vector2(128, 128)
+size = Vector2(42, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(196, 196)
@@ -78,6 +78,7 @@ animation = &"walk"
 frame_progress = 0.46639833
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=551043829]
+position = Vector2(3, 0)
 shape = SubResource("RectangleShape2D_2i0da")
 
 [node name="RayCast2D" type="RayCast2D" parent="." unique_id=832439427]
