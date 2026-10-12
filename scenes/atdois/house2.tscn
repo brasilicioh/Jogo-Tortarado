@@ -1,23 +1,25 @@
 [gd_scene format=3 uid="uid://ddl3or1wnkwtf"]
 
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_xg0qb"]
-[ext_resource type="Texture2D" uid="uid://tfktpt2xhjem" path="res://assets/scenaries/ParedeTest.png" id="2_w2twm"]
+[ext_resource type="Texture2D" uid="uid://qj8tvdw4wy6l" path="res://assets/scenaries/corredor1.png" id="2_yjkpm"]
 [ext_resource type="Script" uid="uid://dy51ayy0mji11" path="res://scripts/ato2/decor_giver.gd" id="3_rg5fe"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_uj655"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="4_w2twm"]
+[ext_resource type="Texture2D" uid="uid://bq4rbprbgh4ow" path="res://assets/scenaries/corredor2.png" id="3_veivx"]
 [ext_resource type="Script" uid="uid://db3kbvp1eaxgf" path="res://scripts/ato2/table.gd" id="4_y0qge"]
 [ext_resource type="Script" uid="uid://biqvym8aamulh" path="res://scripts/ato2/cups_giver.gd" id="5_3gr70"]
+[ext_resource type="Texture2D" uid="uid://45jf8yx18h6n" path="res://assets/scenaries/cozinha.png" id="6_gskv1"]
 [ext_resource type="Texture2D" uid="uid://bf07l0nxmo86x" path="res://assets/sprites/copos.png" id="8_plsys"]
 [ext_resource type="Texture2D" uid="uid://bko04h5rs3e1p" path="res://assets/sprites/toalha.png" id="9_y7g12"]
 [ext_resource type="Texture2D" uid="uid://djcnd5fg118ms" path="res://assets/sprites/presente.png" id="10_aw45g"]
 [ext_resource type="Texture2D" uid="uid://dnyw2m13cr3ut" path="res://assets/sprites/enfeites.png" id="11_yjkpm"]
 [ext_resource type="Script" uid="uid://b6ti8j8twoqeq" path="res://scripts/ato2/belonisia.gd" id="12_y7g12"]
+[ext_resource type="Texture2D" uid="uid://dubfqipwotr2o" path="res://assets/sprites/belonisia.png" id="14_veivx"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
 size = Vector2(128, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
-size = Vector2(128, 20)
+size = Vector2(28.5, 20)
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_uj655"]
 a = Vector2(64000, 0)
@@ -32,13 +34,13 @@ a = Vector2(12, -340)
 b = Vector2(12, 284)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_w2twm"]
-size = Vector2(109.711105, 534.98596)
+size = Vector2(134.16519, 645.4082)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_626oh"]
-size = Vector2(122, 238)
+size = Vector2(105, 308)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kmohc"]
-size = Vector2(116, 240)
+size = Vector2(104, 307)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
 size = Vector2(128.00002, 130)
@@ -71,58 +73,65 @@ metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Background1" type="Sprite2D" parent="." unique_id=1734855637]
 position = Vector2(-171, -120)
-texture = ExtResource("2_w2twm")
+scale = Vector2(2, 2)
+texture = ExtResource("2_yjkpm")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1395634599]
-position = Vector2(441, -120)
-texture = ExtResource("2_w2twm")
+position = Vector2(758, -120)
+scale = Vector2(2, 2)
+texture = ExtResource("3_veivx")
 
 [node name="DecorGiver" type="Area2D" parent="Background2" unique_id=1102070948]
 position = Vector2(205, 98)
 script = ExtResource("3_rg5fe")
 
 [node name="Sprite2D" type="Sprite2D" parent="Background2/DecorGiver" unique_id=749764343]
-position = Vector2(0, -1)
-scale = Vector2(1, 0.15624999)
-texture = ExtResource("4_w2twm")
+z_index = 2
+position = Vector2(0, 5.5)
+rotation = 1.5948249
+scale = Vector2(0.095, 0.095)
+texture = ExtResource("11_yjkpm")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Background2/DecorGiver" unique_id=1335054305]
 shape = SubResource("RectangleShape2D_fosw3")
 
 [node name="KitchenBg" type="Sprite2D" parent="." unique_id=93748171]
-position = Vector2(1053, -120)
-texture = ExtResource("2_w2twm")
+position = Vector2(1420, -120)
+scale = Vector2(2, 2)
+texture = ExtResource("6_gskv1")
 
 [node name="CupsGiver" type="Area2D" parent="KitchenBg" unique_id=1263003621]
-position = Vector2(146, 0)
+position = Vector2(226.5, 38)
 script = ExtResource("5_3gr70")
 
 [node name="Sprite2D" type="Sprite2D" parent="KitchenBg/CupsGiver" unique_id=178850610]
-scale = Vector2(1, 0.25)
-texture = ExtResource("4_w2twm")
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("8_plsys")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KitchenBg/CupsGiver" unique_id=2017737913]
+position = Vector2(0.25, 0)
 shape = SubResource("RectangleShape2D_yuu2t")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=1396541921]
+position = Vector2(0, 90)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=180853329]
 shape = SubResource("SegmentShape2D_uj655")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=147488591]
-position = Vector2(1356, -247)
+position = Vector2(2025, -110)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=2049285261]
 shape = SubResource("SegmentShape2D_clvdy")
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=1405121082]
-position = Vector2(-490, -285)
+position = Vector2(-793, -145)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=68545113]
 shape = SubResource("SegmentShape2D_w2twm")
 
 [node name="DoorTransition1" type="Area2D" parent="." unique_id=1592075119]
-position = Vector2(-1400, -130.00002)
+position = Vector2(-457.00012, -130.00002)
 scale = Vector2(-0.75653094, 0.44983667)
 script = ExtResource("3_uj655")
 target_scene = "uid://bcgkh4hyb8pqu"
@@ -130,110 +139,92 @@ spawn_point = "Bedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition1" unique_id=2030070674]
-position = Vector2(-1377.9996, 20.736664)
-scale = Vector2(0.9999992, 0.9999994)
+position = Vector2(-12.227112, 55.211105)
+scale = Vector2(0.99999905, 0.9999993)
 shape = SubResource("RectangleShape2D_w2twm")
 
 [node name="Label" type="Label" parent="." unique_id=935178039]
-offset_left = -416.0
+offset_left = -499.0
 offset_top = -290.0
-offset_right = 162.0
+offset_right = 79.0
 offset_bottom = -267.0
 text = "Quarto Irmas"
 
 [node name="Label3" type="Label" parent="Label" unique_id=333980591]
 layout_mode = 0
-offset_left = 1380.0
+offset_left = 1417.0
 offset_top = 17.0
-offset_right = 1490.0
+offset_right = 1527.0
 offset_bottom = 40.0
 text = "lado da fora"
 
 [node name="Label" type="Label" parent="Label" unique_id=1185367824]
 layout_mode = 0
-offset_left = 747.0
+offset_left = 535.0
 offset_top = 13.0
-offset_right = 990.0
+offset_right = 778.0
 offset_bottom = 36.0
 text = "Quarto de Mae"
 
-[node name="TextEdit" type="TextEdit" parent="." unique_id=1860661191]
-offset_left = 132.0
-offset_top = -237.0
-offset_right = 310.0
-offset_bottom = -94.0
-text = "Festa do Pai
-	- Copo de Plastico
-	- Toalha de mesa
-	- Enfeites de festa
-	-Presente"
-
 [node name="DoorTransition" type="Area2D" parent="." unique_id=1378394788]
-position = Vector2(440, -150)
+position = Vector2(86, -114)
 script = ExtResource("3_uj655")
 target_scene = "uid://beqctjtnlsan3"
 spawn_point = "MotherBedroom"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=266198716]
-position = Vector2(-50, 28)
 shape = SubResource("RectangleShape2D_626oh")
 
-[node name="Sprite2D" type="Sprite2D" parent="DoorTransition" unique_id=1117280381]
-
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
-position = Vector2(1020, -150)
+position = Vector2(972, -150)
 script = ExtResource("3_uj655")
 target_scene = "uid://b5he2wu862wg3"
 spawn_point = "OutsideMarker"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=952093493]
-position = Vector2(3, 30)
+position = Vector2(0, 33.5)
 shape = SubResource("RectangleShape2D_kmohc")
 
 [node name="Table" type="Area2D" parent="." unique_id=306320946]
+position = Vector2(-186, 24)
 script = ExtResource("4_y0qge")
 
-[node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=737560562]
-position = Vector2(-18.000006, -78)
-scale = Vector2(1.3749999, 0.5)
-texture = ExtResource("4_w2twm")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=2105996227]
-position = Vector2(-18.000004, -77.5)
 scale = Vector2(1.3749999, 0.5)
 shape = SubResource("RectangleShape2D_grbu6")
 
 [node name="Cups" type="Sprite2D" parent="Table" unique_id=1354714699]
 visible = false
-position = Vector2(-57.000008, -119.99999)
+position = Vector2(-50, -41)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("8_plsys")
 
 [node name="Cloth" type="Sprite2D" parent="Table" unique_id=1317653520]
 visible = false
-position = Vector2(-91.99999, -121.99999)
+position = Vector2(-78, -41)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("9_y7g12")
 
 [node name="Gift" type="Sprite2D" parent="Table" unique_id=2112307205]
 visible = false
-position = Vector2(-18.999998, -118.99999)
+position = Vector2(0, -41)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("10_aw45g")
 
 [node name="Decor" type="Sprite2D" parent="Table" unique_id=1002735945]
 visible = false
-position = Vector2(53.999996, -125.99999)
+position = Vector2(64, -41)
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("11_yjkpm")
 
 [node name="Belonisia" type="Node2D" parent="." unique_id=1351386329]
-position = Vector2(-172, -94)
+position = Vector2(340, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=1087991546]
-texture = ExtResource("4_w2twm")
+scale = Vector2(2, 2)
+texture = ExtResource("14_veivx")
 
 [node name="Area2D" type="Area2D" parent="Belonisia" unique_id=1590905186 node_paths=PackedStringArray("selfnode")]
 script = ExtResource("12_y7g12")

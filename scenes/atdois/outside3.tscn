@@ -1,12 +1,13 @@
 [gd_scene format=3 uid="uid://c2bhinnndgu70"]
 
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_vodhl"]
+[ext_resource type="Texture2D" uid="uid://dtn371f5t1fx" path="res://assets/sprites/casaNoite.png" id="3_2k86j"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="4_5ft1l"]
-[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="5_hq1ev"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="6_l8uq3"]
 [ext_resource type="Texture2D" uid="uid://23kxkc2nm8rt" path="res://assets/sprites/Tree.png" id="6_vodhl"]
 [ext_resource type="Texture2D" uid="uid://di24dr1qo0hv" path="res://assets/sprites/char.png" id="7_bgss2"]
 [ext_resource type="Script" uid="uid://cuh53pv8gbcul" path="res://scripts/ato2/kiss_scene.gd" id="8_2k86j"]
+[ext_resource type="Script" uid="uid://cqme7vcejah8d" path="res://scenes/atdois/salustina.gd" id="8_5ft1l"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
 a = Vector2(64000, 0)
@@ -89,7 +90,7 @@ position = Vector2(2503, -128)
 z_index = 1
 position = Vector2(-76, -89)
 scale = Vector2(0.5, 0.5)
-texture = ExtResource("5_hq1ev")
+texture = ExtResource("3_2k86j")
 
 [node name="DoorTransition" type="Area2D" parent="House" unique_id=497513784]
 position = Vector2(-78, 28)
@@ -135,3 +136,13 @@ script = ExtResource("8_2k86j")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=256491647]
 shape = SubResource("RectangleShape2D_yuu2t")
+
+[node name="Salustina" type="Node2D" parent="." unique_id=1473888529 node_paths=PackedStringArray("selfnode")]
+visible = false
+position = Vector2(2429, -53)
+script = ExtResource("8_5ft1l")
+selfnode = NodePath(".")
+
+[node name="Sprite2D" type="Sprite2D" parent="Salustina" unique_id=644687991]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("7_bgss2")

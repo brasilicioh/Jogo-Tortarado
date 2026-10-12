@@ -2,8 +2,9 @@ join bibiana center
 join salustina center
 join ??? center
 if {Ato2.second_intro_played} == false:
-	???:  festa foi muito boa Bibiana, fala para Dona Salustiana que a comida tava muito boa!!!\
-	 *gritando*
+	[wait time="1.0"]
+	???: festa foi muito boa Bibiana, fala para Dona Salustina que a comida tava muito boa!!!\
+	*gritando*
 	bibiana: Até mais Dona Tonha. Brigada por vir!
 	bibiana: Que bom que as pessoas gostaram da festa.
 	[wait time="1.0"]
@@ -13,4 +14,4 @@ if {Ato2.second_intro_played} == false:
 	bibiana: Eu não vi não. A Domingas tava brincando de se esconder com as outras crianças... mas a Belonísia...
 	salustina: Va lá, procure elas para jantar.
 	[wait time="0.5"]
-	[signal arg="hide"]
+	[signal arg="destroy1"]
