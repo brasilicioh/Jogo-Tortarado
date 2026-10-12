@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://bmi2e8wvqbi60"]
+
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="1_5ccdv"]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_dcmao"]
+size = Vector2(32, 32)
+
+[resource]
+script = ExtResource("1_5ccdv")
+display_name = "Mala"
+id = &"mala"
+icon = SubResource("PlaceholderTexture2D_dcmao")
+metadata/_custom_type_script = "uid://bfgylyi7hocrr"
