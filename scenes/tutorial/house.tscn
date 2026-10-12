@@ -6,8 +6,12 @@
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
 [ext_resource type="Texture2D" uid="uid://bekfbg6emw052" path="res://assets/characters/bibiana.png" id="5_viu1i"]
 [ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://assets/characters/severo_walk.png" id="6_ed01o"]
+[ext_resource type="Script" uid="uid://bpcniljpoeqba" path="res://scripts/tutorial/clothes_trigger.gd" id="7_ed01o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(128, 128)
 
 [node name="House" type="Node2D" unique_id=946214458]
@@ -50,5 +54,14 @@ texture = ExtResource("6_ed01o")
 flip_h = true
 hframes = 4
 frame = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=508476476]
+position = Vector2(6972, -64)
+script = ExtResource("7_ed01o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=605691687]
+shape = SubResource("RectangleShape2D_2i0da")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="entered"]
 
 [editable path="House"]
