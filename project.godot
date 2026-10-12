@@ -82,6 +82,9 @@ variables={
 "table_complete": false,
 "table_half_complete": false
 },
+"Ato3": {
+"bedroom_progression": 0
+},
 "Atum": {
 "interacted_with_belonisia": false,
 "interacted_with_bibiana": false,
