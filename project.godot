@@ -58,6 +58,7 @@ directories/dtl_directory={
 "find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",
 "homem_morto": "res://assets/timelines/atatro/homem_morto.dtl",
 "homem_morto1": "res://assets/timelines/atatro/homem_morto1.dtl",
+"house": "res://assets/timelines/ato2/house.dtl",
 "interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
 "inventario": "res://assets/timelines/tutorial/inventario.dtl",
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",

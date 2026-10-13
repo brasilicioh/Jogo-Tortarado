@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://bcgkh4hyb8pqu"]
 
+[ext_resource type="Script" uid="uid://b668ajh8h5g8s" path="res://scripts/ato2/quarto_crianca_controller.gd" id="1_0wguo"]
 [ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_h4wa5"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_ds7x1"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_7gfdh"]
@@ -25,7 +26,7 @@ b = Vector2(-64000, 0)
 size = Vector2(189.17206, 379.37378)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
-size = Vector2(164, 169)
+size = Vector2(147, 138.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
 size = Vector2(49, 51.66667)
@@ -34,6 +35,7 @@ size = Vector2(49, 51.66667)
 size = Vector2(112, 105)
 
 [node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
+script = ExtResource("1_0wguo")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
 position = Vector2(613, -120)
@@ -96,7 +98,6 @@ selfnode = NodePath("..")
 targetnode = NodePath("../../Bedroom")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Belonisia/Area2D" unique_id=2129015538]
-position = Vector2(62, -20)
 shape = SubResource("RectangleShape2D_yuu2t")
 
 [node name="ClothGiver" type="Area2D" parent="." unique_id=707933941]

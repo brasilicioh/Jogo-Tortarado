@@ -2,6 +2,7 @@ join bibiana center
 join belonisia center
 join severo center
 if {Ato2.found_domingas} == true and {Ato2.kissscene_played} == false:
+	[wait time="2.0"]
 	bibiana: Oi, irmã...
 	severo: Boa noite, Bibiana. Precisando de alguma ajuda?
 	bibiana: O que vocês estavam fazendo?
@@ -23,3 +24,6 @@ if {Ato2.found_domingas} == true and {Ato2.kissscene_played} == false:
 	[wait time="1.0"]
 	bibiana: Desde que a vovó se...
 	set {Ato2.kissscene_played} = true
+	[wait time="1.0"]
+	[signal arg="fim_ato2_to_a3"]
+	do GameState.change_scene("res://scenes/atrez/house.tscn", "QuartoAvo")
