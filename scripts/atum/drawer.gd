@@ -1,8 +1,10 @@
 extends Area2D
 
+var timeline: DialogicTimeline = preload("res://assets/timelines/atum/locked_drawer.dtl")
 
 func interact():
 	if not GameState.state["opened_drawer"]:
+		Dialogic.start(timeline)
 		return
 	if not GameState.state["briefcase_opened"]:
 		GameState.main.load_minigame("drawer_closeup")

@@ -2,6 +2,7 @@ extends Node2D
 
 var timeline: DialogicTimeline = preload("res://assets/timelines/atum/pos_faca.dtl")
 var ida_irma = null
+var faca: ItemData = load("res://assets/items/faca.tres")
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -32,4 +33,6 @@ func _process(delta: float) -> void:
 
 func trocar_cena(event_name):
 	if event_name == "dialogic_end":
+		GameState.inventories[GameState.active_player].add_item(faca)
+		await get_tree().create_timer(5.0).timeout
 		GameState.change_scene("res://scenes/atdois/quarto_crianca2.tscn", "Bedroom")
