@@ -2,4 +2,5 @@ join salustina center
 salustina: Servó chegou!
 leave salustina
 join severo center
+[wait time="0.5"]
 zeca: Procure sua irmã e comprimentem seus primos.

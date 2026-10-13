@@ -11,6 +11,9 @@ var mala: ItemData = load("res://assets/items/mala.tres")
 @export var door: DoorTransition
 
 func _ready() -> void:
+	if $Sprite2D is Node:
+		$Sprite2D.set_instance_shader_parameter("outline_enabled", false)
+
 	Dialogic.signal_event.connect(handle_event)
 
 func interact():
@@ -25,3 +28,7 @@ func handle_event(event) -> void:
 	elif event == "ended":
 		GameState.active_inventory().add_item(mala)
 		queue_free()
+
+func highlight(state: bool) -> void:
+	if $Sprite2D is Node:
+		$Sprite2D.set_instance_shader_parameter("outline_enabled", state)

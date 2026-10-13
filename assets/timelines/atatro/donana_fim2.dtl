@@ -1,4 +1,5 @@
 join belonisia center
+[wait time="1.0"]
 belonisia: Me desculpe… eu não pude proteger você…
 [wait time="1.0"]
 [signal arg="fim1"]

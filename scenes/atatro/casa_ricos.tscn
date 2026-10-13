@@ -25,12 +25,13 @@ a = Vector2(64000, 0)
 b = Vector2(-64000, 0)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
-size = Vector2(43.061745, 180.43373)
+size = Vector2(279.35944, 302.00003)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_8wxcj"]
-size = Vector2(101, 99)
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
+size = Vector2(335.00024, 272.5)
 
 [node name="CutsceneInicialQuatro" type="Node2D" unique_id=1886885134]
+visible = false
 script = ExtResource("1_rvydw")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1279565366]
@@ -87,58 +88,50 @@ active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Mesa3" type="Sprite2D" parent="." unique_id=65342663]
-position = Vector2(202, 34)
-scale = Vector2(2.5, 2.5)
+position = Vector2(192, 2)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("4_4ohw6")
 
 [node name="Colar" type="Area2D" parent="." unique_id=1244038856]
-position = Vector2(271, -9.000002)
-rotation = -1.8546541
-scale = Vector2(2.5312498, 0.64843744)
+position = Vector2(237, -30)
+rotation = -1.8465583
+scale = Vector2(0.2, 0.2)
 script = ExtResource("7_nj7qs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Colar" unique_id=1615174165]
-position = Vector2(-3.3580246, -2.3132782)
-scale = Vector2(0.9999996, 0.9999999)
 shape = SubResource("RectangleShape2D_mftj6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Colar" unique_id=1244849777]
 material = ExtResource("5_asw6j")
-scale = Vector2(0.099259734, 0.38313365)
 texture = ExtResource("6_yr0c7")
 
 [node name="Mala" type="Area2D" parent="." unique_id=227089912]
-position = Vector2(1527, 31.000002)
-scale = Vector2(0.7, 0.7)
+position = Vector2(1527, 0)
+scale = Vector2(0.25, 0.25)
 script = ExtResource("10_4ohw6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=768869191]
 material = ExtResource("5_asw6j")
-scale = Vector2(0.36000478, 0.4000002)
 texture = ExtResource("9_4ohw6")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=1913986105]
-material = ExtResource("5_asw6j")
-position = Vector2(-1.5, -0.5)
-shape = SubResource("RectangleShape2D_8wxcj")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=482089504]
+scale = Vector2(0.99999976, 0.99999976)
+shape = SubResource("RectangleShape2D_b5uqm")
 
 [node name="Mesa2" type="Sprite2D" parent="." unique_id=1264101562]
-position = Vector2(2316.0002, 34.000008)
-scale = Vector2(2.5, 2.5)
+position = Vector2(2316, 2)
+scale = Vector2(1.8, 1.8)
 texture = ExtResource("4_4ohw6")
 
 [node name="Faca" type="Area2D" parent="." unique_id=258247968]
-position = Vector2(2257, -8.00004)
-rotation = 0.643111
-scale = Vector2(2.5312498, 0.64843744)
+position = Vector2(2268, -23.000195)
+rotation = 0.87266463
+scale = Vector2(0.15, 0.15)
 script = ExtResource("8_nj7qs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Faca" unique_id=453926514]
-position = Vector2(-3.3580246, -2.3132782)
-scale = Vector2(0.9999996, 0.9999999)
 shape = SubResource("RectangleShape2D_mftj6")
 
 [node name="Sprite2D" type="Sprite2D" parent="Faca" unique_id=2102556307]
 material = ExtResource("5_asw6j")
-scale = Vector2(0.099259734, 0.38313365)
 texture = ExtResource("9_s4vpo")

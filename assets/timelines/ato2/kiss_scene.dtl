@@ -14,7 +14,8 @@ if {Ato2.found_domingas} == true and {Ato2.kissscene_played} == false:
 	bibiana: Por que você não me contou sobre isso?!
 	bibiana: Você não tinha o direito de esconder isso de mim...
 	belonisia: ...
-	bibiana: Nós somos irmãs, poxa! Eu sempre contei tudo para você! Mas por que você nunca me conta nada?
+	bibiana: Nós somos irmãs, poxa! Eu sempre contei tudo para você!
+	bibiana: Mas por que você nunca me conta nada?
 	[wait time="0.5"]
 	bibiana: Nós somos tão próximas… você precisa de mim\: eu sou sua fala.
 	bibiana: E eu… eu preciso de você.

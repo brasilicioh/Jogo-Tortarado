@@ -3,13 +3,9 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_nvkv0"]
 [ext_resource type="Texture2D" uid="uid://d28efwbcsf3vi" path="res://unpacking/desenhos/cenários/corredor2.png" id="1_pgyjl"]
 [ext_resource type="Script" uid="uid://clg2cw6ij3gst" path="res://scripts/atatro/donana.gd" id="1_tdo0k"]
-[ext_resource type="Script" uid="uid://b1rrrefgwrhna" path="res://scripts/atatro/filha_trigger.gd" id="4_jiete"]
 [ext_resource type="Texture2D" uid="uid://d4cfrp2xgs3mm" path="res://assets/characters/filha_machucada.png" id="4_tdo0k"]
 [ext_resource type="Texture2D" uid="uid://b0xy8flqucs8r" path="res://assets/characters/homem_preto.png" id="6_88cn1"]
 [ext_resource type="Script" uid="uid://ddl2i4tk61173" path="res://scripts/atatro/homem_trigger.gd" id="6_aj13y"]
-[ext_resource type="Texture2D" uid="uid://drshx5qp0m7r5" path="res://assets/cutscenes/donana_faca.png" id="8_cte50"]
-[ext_resource type="Texture2D" uid="uid://dsm28mps5dbs0" path="res://assets/cutscenes/donana_faca_sangue.png" id="9_5yvgl"]
-[ext_resource type="Texture2D" uid="uid://60lv5v6e6ti7" path="res://assets/cutscenes/donana_faca_muito.png" id="10_6gebp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tdo0k"]
 a = Vector2(0, 1000)
@@ -23,6 +19,9 @@ size = Vector2(2051.523, 1433.84)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mprx0"]
 size = Vector2(1794.1675, 1310)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b5uqm"]
+size = Vector2(1259.999, 1260)
+
 [node name="CasaDonana" type="Node2D" unique_id=1299347218]
 script = ExtResource("1_tdo0k")
 
@@ -33,6 +32,26 @@ script = ExtResource("1_nvkv0")
 spawn_characters = Array[String](["donana"])
 active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Resto8" type="Sprite2D" parent="." unique_id=597070516]
+position = Vector2(-4079, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_pgyjl")
+
+[node name="Resto7" type="Sprite2D" parent="." unique_id=1944388110]
+position = Vector2(-3413, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_pgyjl")
+
+[node name="Resto6" type="Sprite2D" parent="." unique_id=2054641894]
+position = Vector2(-2748, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_pgyjl")
+
+[node name="Resto5" type="Sprite2D" parent="." unique_id=1108211617]
+position = Vector2(-2082, -192)
+scale = Vector2(2, 2)
+texture = ExtResource("1_pgyjl")
 
 [node name="Resto4" type="Sprite2D" parent="." unique_id=335954190]
 position = Vector2(-1417, -192)
@@ -67,7 +86,7 @@ scale = Vector2(0.5, 0.5)
 shape = SubResource("SegmentShape2D_tdo0k")
 
 [node name="WallLeft" type="StaticBody2D" parent="Corredor2" unique_id=1351449694]
-position = Vector2(-1624.5, 96)
+position = Vector2(-2932, 96)
 scale = Vector2(0.5, 0.5)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Corredor2/WallLeft" unique_id=901190691]
@@ -84,7 +103,8 @@ scale = Vector2(0.1, 0.1)
 texture = ExtResource("4_tdo0k")
 
 [node name="FilhaTrigger" type="Area2D" parent="Filha" unique_id=282694370]
-script = ExtResource("4_jiete")
+script = ExtResource("6_aj13y")
+cena = "filha"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Filha/FilhaTrigger" unique_id=1417575342]
 position = Vector2(2034.2385, -729.9999)
@@ -92,35 +112,27 @@ scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_mftj6")
 
 [node name="Homem" type="Sprite2D" parent="." unique_id=844839213]
-position = Vector2(-1799, -95)
+position = Vector2(-4294, -95)
 scale = Vector2(0.15, 0.15)
 texture = ExtResource("6_88cn1")
 
-[node name="HomemTrigger" type="Area2D" parent="Homem" unique_id=522911372]
+[node name="HomemTrigger2" type="Area2D" parent="Homem" unique_id=522911372]
 script = ExtResource("6_aj13y")
+cena = "2"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Homem/HomemTrigger" unique_id=500666878]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Homem/HomemTrigger2" unique_id=500666878]
 position = Vector2(1709.583, 44.99994)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_mprx0")
 
-[node name="Donana_faca_1" type="Sprite2D" parent="." unique_id=715526479]
-visible = false
-position = Vector2(-1445, 0)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("8_cte50")
+[node name="HomemTrigger1" type="Area2D" parent="Homem" unique_id=1558259386]
+position = Vector2(11546.666, 0)
+script = ExtResource("6_aj13y")
+cena = "1"
 
-[node name="Donana_faca_2" type="Sprite2D" parent="." unique_id=2122467440]
-visible = false
-position = Vector2(-1445, 0)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("9_5yvgl")
-
-[node name="Donana_faca_3" type="Sprite2D" parent="." unique_id=780002435]
-visible = false
-position = Vector2(-1445, 0)
-scale = Vector2(0.8, 0.8)
-texture = ExtResource("10_6gebp")
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Homem/HomemTrigger1" unique_id=21046382]
+shape = SubResource("RectangleShape2D_b5uqm")
 
 [connection signal="area_entered" from="Filha/FilhaTrigger" to="Filha/FilhaTrigger" method="_on_area_entered"]
-[connection signal="area_entered" from="Homem/HomemTrigger" to="Homem/HomemTrigger" method="_on_area_entered"]
+[connection signal="area_entered" from="Homem/HomemTrigger2" to="Homem/HomemTrigger2" method="_on_area_entered"]
+[connection signal="area_entered" from="Homem/HomemTrigger1" to="Homem/HomemTrigger1" method="_on_area_entered"]

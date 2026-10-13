@@ -1,0 +1,7 @@
+join donana center
+\donana: Quem é aquele?
+[wait time="0.5"]
+\donana: Quem é esse homem na minha casa?
+[wait time="0.5"]
+\donana: Não consigo me lmebrar...
+[wait time="1.0"]

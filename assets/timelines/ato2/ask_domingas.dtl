@@ -3,7 +3,7 @@ join domingas center
 if {Ato2.table_half_complete} == true:
 	if {Ato2.interacted_with_domingas} == false:
 		\domingas: Nem pense, eu não vou falar nada!
-		bibiana: Não vai falar o que?
+		bibiana: Não vai falar o quê?
 		- A gente nem liga para isso, Domingas, não precisa contar mesmo!
 			\domingas: Eu não vou contar nada! Mas minha boneca vai ajudar vocês.
 		- Você sabe onde está o presente do papai, é?
@@ -12,6 +12,6 @@ if {Ato2.table_half_complete} == true:
 			\domingas: Eu não vou contar nada! Mas minha boneca vai ajudar vocês.
 		set {Ato2.interacted_with_domingas} = true
 	else:
-		\domingas: Eu ja disse que a boneca ia ajudar você! eu não vou dizer nada!
+		\domingas: Eu já disse que a boneca vai ajudar vocês! Eu não vou dizer nada!
 else:
 	bibiana: Oi Tia!

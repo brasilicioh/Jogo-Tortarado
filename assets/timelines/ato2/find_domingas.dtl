@@ -6,10 +6,10 @@ if {Ato2.found_domingas} == false:
 	\domingas: Como você me achou?
 	bibiana: Poder de irmã mais velha. Você viu a Belo?
 	\domingas: Vi. Ela tava lá fora, perto das árvores.
-	\domingas: E ela tava la com um menino, né não... ?
+	\domingas: E ela tava com um menino, né não... ?
 	bibiana: Com um menino? ...
 	[signal arg="destroy"]
-	bibiana: Ei menina! pera ai!
+	bibiana: Ei menina! pera aí!
 	bibiana: Tanto faz... preciso achar Belonísia.
 	set {Ato2.found_domingas} = true
 	do UiManager.set_current_task("Festa de Zeca: Encontre Belonísia")

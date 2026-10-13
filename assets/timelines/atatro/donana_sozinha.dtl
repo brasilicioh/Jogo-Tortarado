@@ -1,9 +1,10 @@
 join donana center
 [wait time="1.0"]
-\donana: Disseram que eu estava amaldiçoada.
+\donana: Disseram que eu estava amaldiçoada...
+\donana: Não fiz boas decisões quando eu era mais jovem.
 [wait time="2.0"]
 [signal arg="fim_cutscene"]
-???: Menina, varra direito essa parte, eu e esses senhores vamos sair para cavalgar.
+Menina, varra direito essa parte, eu e esses senhores vamos sair para cavalgar.
 [wait time="2.0"]
 \donana: Todos eles são ricos, e eu não tenho nada.
 \donana: É difícil garantir o futuro dos meus filhos com esse trabalho.

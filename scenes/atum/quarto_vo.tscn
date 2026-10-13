@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://orcvwblkeeec"]
 
 [ext_resource type="Texture2D" uid="uid://buepm4gug6vlj" path="res://assets/scenaries/quartoAvo.png" id="1_7ysry"]
-[ext_resource type="Script" uid="uid://v00pk03ldaio" path="res://scenes/atum/quarto_vo.gd" id="1_qpmet"]
+[ext_resource type="Script" uid="uid://v00pk03ldaio" path="res://scripts/atum/quarto_vo.gd" id="1_qpmet"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_qpmet"]
 [ext_resource type="Script" uid="uid://diwmmws77vykn" path="res://scripts/atum/drawer.gd" id="4_1hk0o"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="5_1hk0o"]

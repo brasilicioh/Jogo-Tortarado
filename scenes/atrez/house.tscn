@@ -3,22 +3,27 @@
 [ext_resource type="Script" uid="uid://by5svy43s2006" path="res://scripts/atrez/house.gd" id="1_as8sy"]
 [ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="2_37p1q"]
 [ext_resource type="Script" uid="uid://cgqdafwiroegj" path="res://scripts/atrez/mala.gd" id="2_bt4ot"]
+[ext_resource type="Texture2D" uid="uid://dee87s38vwd04" path="res://assets/scenaries/corredor1_sem_quadro.png" id="3_bxyba"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_37p1q"]
-[ext_resource type="Texture2D" uid="uid://baxjnuqscf2ga" path="res://assets/sprites/mala.png" id="4_as8sy"]
+[ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="4_rqoc5"]
+[ext_resource type="Texture2D" uid="uid://cxa8j3aed2rlx" path="res://assets/sprites/malaa.png" id="5_bxyba"]
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="6_as8sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
 size = Vector2(52, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
-size = Vector2(102, 4148)
+size = Vector2(102, 159)
 
 [node name="House" type="Node2D" unique_id=791172823]
 script = ExtResource("1_as8sy")
 
 [node name="House" parent="." unique_id=1394089690 instance=ExtResource("2_37p1q")]
 
-[node name="Corredor1Direita" parent="House/Corredor1" parent_id_path=PackedInt32Array(1394089690, 1752356399) index="0" unique_id=1616098316]
+[node name="Corredor1" parent="House" index="0" unique_id=1752356399]
+texture = ExtResource("3_bxyba")
+
+[node name="Corredor1Direita" parent="House/Corredor1" index="0" unique_id=1616098316]
 position = Vector2(129, 49)
 
 [node name="QuartoAvo" parent="House/QuartoAvo" parent_id_path=PackedInt32Array(1394089690, 1330230649) index="0" unique_id=1040194703]
@@ -32,8 +37,9 @@ teleporter = NodePath("../Teleporter")
 door = NodePath("../DoorTransition")
 
 [node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=1078194155]
+material = ExtResource("4_rqoc5")
 scale = Vector2(0.2, 0.2)
-texture = ExtResource("4_as8sy")
+texture = ExtResource("5_bxyba")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=301406170]
 position = Vector2(0, 1)
@@ -49,7 +55,7 @@ spawn_point = "Outside"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=898102659]
-position = Vector2(0, 2037)
+position = Vector2(0, 42.5)
 shape = SubResource("RectangleShape2D_c5ysd")
 
 [node name="ColorRect" type="ColorRect" parent="." unique_id=5583337]

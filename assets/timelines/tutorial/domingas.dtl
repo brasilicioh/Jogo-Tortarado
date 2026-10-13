@@ -2,9 +2,11 @@ join domingas center
 
 if {Tutorial.gave_doll} == true:
 	\domingas: Obrigado por achar minha boneca!
+	[wait time="1.0"]
+	Agora, troque de personagem.
 elif {Tutorial.interacted_with_domingas} == false:
-	\domingas: Quero mostrar minha boneca para as priminhas que estão chegando.\
-	Mas não achei ela.
+	\domingas: Quero mostrar minha boneca para as priminhas que estão chegando.
+	\domingas: Mas não achei ela.
 	set {Tutorial.interacted_with_domingas} = true
 else:
 	\domingas: Você achou minha boneca?
