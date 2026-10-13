@@ -66,6 +66,8 @@ position = Vector2(-284, -219)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D2" unique_id=426486859]
 shape = SubResource("SegmentShape2D_tl472")
 
+[node name="CanvasModulate" type="CanvasModulate" parent="Area2D" unique_id=2057161011]
+
 [node name="Label" type="RichTextLabel" parent="." unique_id=139815582]
 offset_left = 311.0
 offset_top = -165.0

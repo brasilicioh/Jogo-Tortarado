@@ -139,6 +139,7 @@ script = ExtResource("4_gdt2y")
 layout_mode = 2
 
 [node name="VirtualJoystick" type="VirtualJoystick" parent="." unique_id=611191505]
+visible = false
 custom_minimum_size = Vector2(300, 300)
 layout_mode = 0
 offset_top = 420.0
@@ -155,7 +156,6 @@ action_down = &"down"
 script = ExtResource("4_p7vwb")
 
 [node name="InputButtons" type="HBoxContainer" parent="." unique_id=2074615532]
-visible = false
 layout_mode = 1
 anchors_preset = 3
 anchor_left = 1.0
@@ -168,6 +168,7 @@ grow_horizontal = 0
 grow_vertical = 0
 
 [node name="Interact" type="Button" parent="InputButtons" unique_id=1520677176]
+visible = false
 custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -176,6 +177,7 @@ text = "Interact"
 script = ExtResource("5_8dubc")
 
 [node name="ChangeCharacter" type="Button" parent="InputButtons" unique_id=1694119187]
+visible = false
 custom_minimum_size = Vector2(300, 0)
 custom_maximum_size = Vector2(300, -1)
 layout_mode = 2

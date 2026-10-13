@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://bqebkk418tabu"]
 
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_ejme7"]
+[ext_resource type="Texture2D" uid="uid://cyujaqmygkmjk" path="res://assets/scenaries/fundo_casa.png" id="1_r7x0m"]
 [ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="2_7edia"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="3_7edia"]
 
@@ -21,6 +22,11 @@ size = Vector2(202, 400)
 
 [node name="OutsideDonana" type="Node2D" unique_id=1939682416]
 
+[node name="Background" type="Sprite2D" parent="." unique_id=1836718588]
+position = Vector2(0, -510)
+scale = Vector2(2, 2)
+texture = ExtResource("1_r7x0m")
+
 [node name="Ground" type="StaticBody2D" parent="." unique_id=462201492]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=339425872]
@@ -35,18 +41,6 @@ script = ExtResource("1_ejme7")
 spawn_characters = Array[String](["donana"])
 active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
-
-[node name="TextEdit" type="TextEdit" parent="." unique_id=885293651]
-offset_left = 215.00003
-offset_top = -203.0
-offset_right = 480.12894
-offset_bottom = -83.0
-rotation = -0.0023698644
-scale = Vector2(0.7170573, 1)
-text = "TODO:
-MUDAR FUNDO
-DONANA JOGÁVEL
-Donana jovem (talvez não)"
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=963262510]
 position = Vector2(-657, -266)

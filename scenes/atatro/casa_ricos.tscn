@@ -8,9 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bsmstddsywldm" path="res://assets/sprites/colar.png" id="6_yr0c7"]
 [ext_resource type="Script" uid="uid://cnier1fcb6v5" path="res://scripts/atatro/colar.gd" id="7_nj7qs"]
 [ext_resource type="Script" uid="uid://dxlfhndu5evi3" path="res://scripts/atatro/faca.gd" id="8_nj7qs"]
+[ext_resource type="Texture2D" uid="uid://cxa8j3aed2rlx" path="res://assets/sprites/malaa.png" id="9_4ohw6"]
 [ext_resource type="Texture2D" uid="uid://pxsibtgpaiwo" path="res://assets/sprites/faca.png" id="9_s4vpo"]
 [ext_resource type="Script" uid="uid://b1mstjysdkta4" path="res://scripts/atatro/mala.gd" id="10_4ohw6"]
-[ext_resource type="Texture2D" uid="uid://baxjnuqscf2ga" path="res://assets/sprites/mala.png" id="11_81rde"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_3e70c"]
 a = Vector2(12, -340)
@@ -115,7 +115,7 @@ script = ExtResource("10_4ohw6")
 [node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=768869191]
 material = ExtResource("5_asw6j")
 scale = Vector2(0.36000478, 0.4000002)
-texture = ExtResource("11_81rde")
+texture = ExtResource("9_4ohw6")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=1913986105]
 material = ExtResource("5_asw6j")

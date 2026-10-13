@@ -1,8 +1,6 @@
 [gd_scene format=3 uid="uid://dol62tqke60g"]
 
-[node name="Cutscene" type="Node2D" unique_id=785840485]
+[ext_resource type="Script" uid="uid://c4sharmauxt3o" path="res://scripts/atrez/cutscene.gd" id="1_hjng1"]
 
-[node name="Label" type="Label" parent="." unique_id=1547185489]
-offset_right = 40.0
-offset_bottom = 23.0
-text = "sem cutscene ainda"
+[node name="Cutscene" type="Node2D" unique_id=785840485]
+script = ExtResource("1_hjng1")

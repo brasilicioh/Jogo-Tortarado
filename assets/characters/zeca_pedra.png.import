@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baxjnuqscf2ga"
-path="res://.godot/imported/mala.png-69bcd306794f53efef0f4bc0695657ba.ctex"
+uid="uid://bbewpufu6bf5o"
+path="res://.godot/imported/zeca_pedra.png-064ba208799bd646383046f6bedadfb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mala.png"
-dest_files=["res://.godot/imported/mala.png-69bcd306794f53efef0f4bc0695657ba.ctex"]
+source_file="res://assets/characters/zeca_pedra.png"
+dest_files=["res://.godot/imported/zeca_pedra.png-064ba208799bd646383046f6bedadfb6.ctex"]
 
 [params]
 

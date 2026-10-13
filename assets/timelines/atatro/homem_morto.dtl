@@ -5,6 +5,7 @@ join donana center
 \donana: Você não tem esse direito...
 label ponto
 - Usar a faca
+	[wait time="1.0"]
 	[signal arg="matar_homem"]
 - Pedir ajuda
 	\donana: Ninguém nos ajudaria nessa fazenda…

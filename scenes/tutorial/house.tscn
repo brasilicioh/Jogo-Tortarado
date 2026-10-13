@@ -4,10 +4,14 @@
 [ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="2_nk3l3"]
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
-[ext_resource type="Texture2D" uid="uid://dgm3m2kifxnmj" path="res://assets/characters/belonisia.png" id="5_viu1i"]
+[ext_resource type="Texture2D" uid="uid://bekfbg6emw052" path="res://assets/characters/bibiana.png" id="5_viu1i"]
 [ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://assets/characters/severo_walk.png" id="6_ed01o"]
+[ext_resource type="Script" uid="uid://bpcniljpoeqba" path="res://scripts/tutorial/clothes_trigger.gd" id="7_ed01o"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
+size = Vector2(128, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(128, 128)
 
 [node name="House" type="Node2D" unique_id=946214458]
@@ -20,7 +24,7 @@ spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"
 
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
-position = Vector2(-968, -96)
+position = Vector2(-1499, -96)
 target = Vector2(7467, -108)
 
 [node name="Label" type="Label" parent="Teleporter" unique_id=402166908]
@@ -30,6 +34,7 @@ offset_right = 79.0
 offset_bottom = -93.0
 size_flags_horizontal = 4
 text = "porta para o quarto"
+metadata/_edit_use_anchors_ = true
 
 [node name="Bibiana" type="Area2D" parent="." unique_id=1367271309]
 position = Vector2(6719, -64)
@@ -50,5 +55,14 @@ texture = ExtResource("6_ed01o")
 flip_h = true
 hframes = 4
 frame = 1
+
+[node name="Area2D" type="Area2D" parent="." unique_id=508476476]
+position = Vector2(6972, -64)
+script = ExtResource("7_ed01o")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=605691687]
+shape = SubResource("RectangleShape2D_2i0da")
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="entered"]
 
 [editable path="House"]

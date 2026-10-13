@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bbewpufu6bf5o"
-path="res://.godot/imported/zeca_pedra.png-6f41bafdaf4af03d74ae3d2bd691c22c.ctex"
+uid="uid://bt5mupt5au5th"
+path="res://.godot/imported/fundo_faca.png-bcac0ce5460912eb224e1f4d4ab7e80b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/zeca_pedra.png"
-dest_files=["res://.godot/imported/zeca_pedra.png-6f41bafdaf4af03d74ae3d2bd691c22c.ctex"]
+source_file="res://assets/cutscenes/fundo_faca.png"
+dest_files=["res://.godot/imported/fundo_faca.png-bcac0ce5460912eb224e1f4d4ab7e80b.ctex"]
 
 [params]
 

@@ -1,84 +1,69 @@
 [gd_scene format=3 uid="uid://dhkeqrmrrxvtb"]
 
 [ext_resource type="Script" uid="uid://by5svy43s2006" path="res://scripts/atrez/house.gd" id="1_as8sy"]
-[ext_resource type="Texture2D" uid="uid://d26jrt3ahranw" path="res://assets/scenaries/room.png" id="1_t26a3"]
+[ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="2_37p1q"]
 [ext_resource type="Script" uid="uid://cgqdafwiroegj" path="res://scripts/atrez/mala.gd" id="2_bt4ot"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_d5tvp"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="4_37p1q"]
-[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="5_as8sy"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bt4ot"]
-size = Vector2(5000, 20)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_rqoc5"]
-size = Vector2(20, 470)
+[ext_resource type="Texture2D" uid="uid://baxjnuqscf2ga" path="res://assets/sprites/mala.png" id="4_as8sy"]
+[ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="6_as8sy"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
-size = Vector2(64, 32)
+size = Vector2(52, 50)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c5ysd"]
-size = Vector2(136, 4121)
+size = Vector2(102, 4148)
 
 [node name="House" type="Node2D" unique_id=791172823]
 script = ExtResource("1_as8sy")
 
-[node name="Room" type="Sprite2D" parent="." unique_id=2098664819]
-position = Vector2(0, -224)
-scale = Vector2(2, 2)
-texture = ExtResource("1_t26a3")
+[node name="House" parent="." unique_id=1394089690 instance=ExtResource("2_37p1q")]
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=489941107]
+[node name="Corredor1Direita" parent="House/Corredor1" parent_id_path=PackedInt32Array(1394089690, 1752356399) index="0" unique_id=1616098316]
+position = Vector2(129, 49)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1425424563]
-shape = SubResource("RectangleShape2D_bt4ot")
+[node name="QuartoAvo" parent="House/QuartoAvo" parent_id_path=PackedInt32Array(1394089690, 1330230649) index="0" unique_id=1040194703]
+spawn_characters = Array[String](["donana"])
+active_character = "donana"
 
-[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=1759050541]
-position = Vector2(622, -246)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=1896075528]
-shape = SubResource("RectangleShape2D_rqoc5")
-
-[node name="Mala" type="Area2D" parent="." unique_id=187649299 node_paths=PackedStringArray("door")]
-position = Vector2(-111, -26)
+[node name="Mala" type="Area2D" parent="." unique_id=187649299 node_paths=PackedStringArray("teleporter", "door")]
+position = Vector2(2598, -26)
 script = ExtResource("2_bt4ot")
+teleporter = NodePath("../Teleporter")
 door = NodePath("../DoorTransition")
 
-[node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=240490833]
-scale = Vector2(0.5, 0.25)
-texture = ExtResource("2_d5tvp")
+[node name="Sprite2D" type="Sprite2D" parent="Mala" unique_id=1078194155]
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("4_as8sy")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Mala" unique_id=301406170]
+position = Vector2(0, 1)
+scale = Vector2(0.99999994, 0.99999994)
 shape = SubResource("RectangleShape2D_tl472")
-
-[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=549287987]
-position = Vector2(-622, -246)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=1199755862]
-shape = SubResource("RectangleShape2D_rqoc5")
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=172809540]
 process_mode = 4
-position = Vector2(464, -151)
+position = Vector2(1329, -151)
 script = ExtResource("4_37p1q")
 target_scene = "uid://bnmhhcpmc05gd"
 spawn_point = "Outside"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=898102659]
-position = Vector2(0, 2050.5)
+position = Vector2(0, 2037)
 shape = SubResource("RectangleShape2D_c5ysd")
 
-[node name="Door" type="Marker2D" parent="." unique_id=1507025844 groups=["spawn point"]]
-position = Vector2(465, -149)
-script = ExtResource("5_as8sy")
-spawn_characters = Array[String](["donana"])
-active_character = "donana"
-metadata/_custom_type_script = "uid://xxber3ayswrc"
-
 [node name="ColorRect" type="ColorRect" parent="." unique_id=5583337]
+visible = false
 z_index = 1000
 offset_left = -1372.0
 offset_top = -1075.0
 offset_right = 1383.0
 offset_bottom = 948.0
 color = Color(0, 0, 0, 1)
+
+[node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("6_as8sy")]
+process_mode = 4
+position = Vector2(3464, -96)
+target = Vector2(-966, -94)
+
+[editable path="House"]
