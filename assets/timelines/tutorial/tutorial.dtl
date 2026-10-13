@@ -1,0 +1,4 @@
+if {is_touchscreen} == true:
+	Use o joystick para se mover e os botões para interagir com o mundo.
+else:
+	Use "A" e "D" para se movimentar, "E" para interagir com o mundo e "Q" para trocar de personagem.

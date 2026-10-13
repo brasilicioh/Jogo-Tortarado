@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://der7qgm00nba2" path="res://assets/sprites/domingas_doll.png" id="5_d0hh2"]
 [ext_resource type="Script" uid="uid://dv74bxqvik8ui" path="res://scripts/wardrobe.gd" id="7_04xgw"]
 [ext_resource type="PackedScene" uid="uid://msbs60ar4rsm" path="res://scenes/player.tscn" id="7_d0hh2"]
+[ext_resource type="Script" uid="uid://5jow63yes6nv" path="res://scripts/tutorial/salustiana.gd" id="9_2h03l"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_mftj6"]
 size = Vector2(51, 79)
@@ -109,9 +110,25 @@ shape = SubResource("RectangleShape2D_qlg0r")
 position = Vector2(-4387, -64)
 character_id = "belonisia"
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=847651489]
+[node name="Salustiana" type="Area2D" parent="." unique_id=1997795483]
 position = Vector2(-4160, -64)
+script = ExtResource("9_2h03l")
+
+[node name="Sprite2D" type="Sprite2D" parent="Salustiana" unique_id=847651489]
 scale = Vector2(2, 2)
 texture = SubResource("PlaceholderTexture2D_2i0da")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Salustiana" unique_id=553444369]
+scale = Vector2(0.9999998, 1)
+shape = SubResource("RectangleShape2D_tjgix")
+
+[node name="Label" type="Label" parent="Salustiana" unique_id=1800072628]
+offset_left = -247.0
+offset_top = -119.0
+offset_right = 245.0
+offset_bottom = -70.0
+text = "SALUSTIANA ABAIXO
+POR FAVOR COLOCAR SPRITE ANTES DO DIA DE LANÇAR O JOGO"
+horizontal_alignment = 1
 
 [editable path="House"]

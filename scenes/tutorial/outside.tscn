@@ -9,6 +9,7 @@
 [ext_resource type="Texture2D" uid="uid://dotqmbs3bq12d" path="res://assets/sprites/zeca_idle.png" id="6_gk2p8"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_gk2p8"]
 [ext_resource type="Texture2D" uid="uid://cjf3i1veafjqr" path="res://assets/sprites/zeca_tool.png" id="7_pdayf"]
+[ext_resource type="Texture2D" uid="uid://bbewpufu6bf5o" path="res://assets/characters/zeca_pedra.png" id="8_pdayf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
 size = Vector2(5000, 20)
@@ -59,6 +60,18 @@ region = Rect2(320, 0, 64, 64)
 atlas = ExtResource("7_pdayf")
 region = Rect2(384, 0, 64, 64)
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_qlagu"]
+atlas = ExtResource("8_pdayf")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rpkyh"]
+atlas = ExtResource("8_pdayf")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhumy"]
+atlas = ExtResource("8_pdayf")
+region = Rect2(128, 0, 64, 64)
+
 [sub_resource type="SpriteFrames" id="SpriteFrames_2i0da"]
 animations = [{
 "frames": [{
@@ -94,7 +107,27 @@ animations = [{
 }],
 "loop": 1,
 "name": &"default",
-"speed": 5.0
+"speed": 3.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qlagu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rpkyh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhumy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhumy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dhumy")
+}],
+"loop": 1,
+"name": &"give_rock",
+"speed": 2.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
@@ -120,7 +153,7 @@ texture = ExtResource("2_bxvk8")
 shape = SubResource("RectangleShape2D_2i0da")
 
 [node name="Crow" type="Node2D" parent="." unique_id=1928070463]
-position = Vector2(-472, -79)
+position = Vector2(2318, -64)
 
 [node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=1541964808]
 texture = ExtResource("2_bxvk8")
@@ -131,20 +164,19 @@ script = ExtResource("3_y7xuq")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/Area2D" unique_id=731466537]
 shape = SubResource("RectangleShape2D_wrhxb")
 
-[node name="Zeca" type="Node2D" parent="." unique_id=1910350548]
-position = Vector2(330, -74)
-
-[node name="Area2D" type="Area2D" parent="Zeca" unique_id=1874819971]
+[node name="Zeca" type="Area2D" parent="." unique_id=1874819971]
+position = Vector2(1331, -74)
 script = ExtResource("4_7oiyi")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca/Area2D" unique_id=361648425]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca" unique_id=361648425]
 position = Vector2(0.5004883, 0)
 shape = SubResource("RectangleShape2D_l85ff")
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="Zeca" unique_id=1285255419]
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
-frame_progress = 0.455501
+animation = &"give_rock"
+frame_progress = 0.8574952
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
 position = Vector2(787, -249)
@@ -156,7 +188,7 @@ process_mode = 4
 position = Vector2(787, -94)
 script = ExtResource("7_gk2p8")
 target_scene = "uid://c5o4ccbq080fw"
-spawn_point = "Cozinha"
+spawn_point = "Corredor2"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1802774484]

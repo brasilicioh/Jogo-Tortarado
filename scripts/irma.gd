@@ -1,6 +1,5 @@
 extends Area2D
 
-var timeline_salustiana: DialogicTimeline = preload("res://assets/timelines/tutorial/salustina.dtl")
 var timeline: DialogicTimeline = preload("res://assets/timelines/tutorial/domingas.dtl")
 var doll: ItemData = load("res://assets/items/doll.tres")
 
@@ -22,13 +21,6 @@ func use_item(item: ItemData):
 		Dialogic.start(timeline)
 		
 		add_sister()
-		GameState.active_player_changed.connect(load_belonisia)
 
 func add_sister() -> void:
 	GameState.active_characters.append("belonisia")
-
-func load_belonisia() -> void:
-	if GameState.active_player == "belonisia":
-		Dialogic.start(timeline_salustiana)
-		GameState.active_player_changed.disconnect(load_belonisia)
-		GameState.active_characters.erase("belonisia")

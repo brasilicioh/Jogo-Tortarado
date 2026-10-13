@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbewpufu6bf5o"
-path="res://.godot/imported/zeca_pedra.png-6f41bafdaf4af03d74ae3d2bd691c22c.ctex"
+path="res://.godot/imported/zeca_pedra.png-064ba208799bd646383046f6bedadfb6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/personagens/zeca_pedra.png"
-dest_files=["res://.godot/imported/zeca_pedra.png-6f41bafdaf4af03d74ae3d2bd691c22c.ctex"]
+source_file="res://assets/characters/zeca_pedra.png"
+dest_files=["res://.godot/imported/zeca_pedra.png-064ba208799bd646383046f6bedadfb6.ctex"]
 
 [params]
 

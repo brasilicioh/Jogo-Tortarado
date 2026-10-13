@@ -47,6 +47,7 @@ directories/dtl_directory={
 "casa_ricos_faca": "res://assets/timelines/atatro/casa_ricos_faca.dtl",
 "casa_ricos_mala": "res://assets/timelines/atatro/casa_ricos_mala.dtl",
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
+"cutscene": "res://assets/timelines/atrez/cutscene.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
 "donana_fim": "res://assets/timelines/atatro/donana_fim.dtl",
 "donana_fim2": "res://assets/timelines/atatro/donana_fim2.dtl",
@@ -59,11 +60,14 @@ directories/dtl_directory={
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
+"rock_giver": "res://assets/timelines/tutorial/rock_giver.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",
 "salutana_appears2": "res://assets/timelines/ato2/salutana_appears2.dtl",
 "severo_appears": "res://assets/timelines/ato2/severo_appears.dtl",
-"zeca": "res://assets/timelines/tutorial/zeca.dtl"
+"tutorial": "res://assets/timelines/tutorial/tutorial.dtl",
+"zeca": "res://assets/timelines/tutorial/zeca.dtl",
+"zeca_boogaloo": "res://assets/timelines/tutorial/zeca_boogaloo.dtl"
 }
 layout/style_directory={}
 glossary/default_case_sensitive=true
@@ -105,7 +109,8 @@ variables={
 "interacted_with_domingas": false,
 "interacted_with_father": false,
 "interacted_with_salustina": false
-}
+},
+"is_touchscreen": false
 }
 text/letter_speed=0.01
 text/initial_text_reveal_skippable=true
@@ -218,10 +223,6 @@ change_character={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
-
-[input_devices]
-
-pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
