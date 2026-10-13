@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://bnqhp16wgx2px"]
+
+[ext_resource type="Texture2D" uid="uid://dulehaw1xgf0j" path="res://assets/scenaries/fundo_stitched.png" id="1_vkg5x"]
+[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="2_n3hlk"]
+[ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="3_vqbwu"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_tl472"]
+a = Vector2(2014, 0)
+b = Vector2(-2044, 0)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_c5ysd"]
+a = Vector2(0, -179)
+b = Vector2(0, 225)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_vkg5x"]
+a = Vector2(78, -56)
+b = Vector2(-105, 15)
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_ddxkj"]
+a = Vector2(78, -57)
+b = Vector2(-105, 15)
+
+[node name="OutsideBackground" type="Node2D" unique_id=292768363]
+
+[node name="FundoStitched" type="Sprite2D" parent="." unique_id=1169314965]
+position = Vector2(2052, -934)
+scale = Vector2(4, 4)
+texture = ExtResource("1_vkg5x")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=852128229]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=423049287]
+shape = SubResource("SegmentShape2D_tl472")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1938206444]
+position = Vector2(-1409, -179)
+shape = SubResource("SegmentShape2D_c5ysd")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=1004990239]
+position = Vector2(4134, -70)
+shape = SubResource("SegmentShape2D_tl472")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=1029589029]
+position = Vector2(2013, -15)
+shape = SubResource("SegmentShape2D_vkg5x")
+one_way_collision = true
+one_way_collision_direction = Vector2(0.45641848, 0.88976526)
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="StaticBody2D" unique_id=1372003951]
+position = Vector2(2013, -12)
+shape = SubResource("SegmentShape2D_ddxkj")
+
+[node name="Casa" type="Sprite2D" parent="." unique_id=1823851069]
+position = Vector2(-308, -280)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_n3hlk")
+
+[node name="SpawnMarker" type="Marker2D" parent="Casa" unique_id=1790535410]
+position = Vector2(0, 390)
+scale = Vector2(2, 2)
+script = ExtResource("3_vqbwu")
+metadata/_custom_type_script = "uid://xxber3ayswrc"

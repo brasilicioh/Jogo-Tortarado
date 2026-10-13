@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cvwbrngb1jp1b"
-path="res://.godot/imported/cenarioPlantacao.png-696d7839fe18dc33f9b31e1c61eceede.ctex"
+path="res://.godot/imported/cenarioPlantacao.png-1d9c3d13485d9e43ed6666e2b597f8ab.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://unpacking/desenhos/cenários/cenarioPlantacao.png"
-dest_files=["res://.godot/imported/cenarioPlantacao.png-696d7839fe18dc33f9b31e1c61eceede.ctex"]
+source_file="res://assets/scenaries/cenarioPlantacao.png"
+dest_files=["res://.godot/imported/cenarioPlantacao.png-1d9c3d13485d9e43ed6666e2b597f8ab.ctex"]
 
 [params]
 
