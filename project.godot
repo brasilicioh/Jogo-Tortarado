@@ -49,6 +49,8 @@ directories/dtl_directory={
 "clothes": "res://assets/timelines/tutorial/clothes.dtl",
 "domingas": "res://assets/timelines/tutorial/domingas.dtl",
 "donana_fim": "res://assets/timelines/atatro/donana_fim.dtl",
+"donana_fim2": "res://assets/timelines/atatro/donana_fim2.dtl",
+"donana_fim3": "res://assets/timelines/atatro/donana_fim3.dtl",
 "donana_sozinha": "res://assets/timelines/atatro/donana_sozinha.dtl",
 "filha_morta": "res://assets/timelines/atatro/filha_morta.dtl",
 "find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",

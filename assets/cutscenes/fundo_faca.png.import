@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://baxjnuqscf2ga"
-path="res://.godot/imported/mala.png-69bcd306794f53efef0f4bc0695657ba.ctex"
+uid="uid://bt5mupt5au5th"
+path="res://.godot/imported/fundo_faca.png-bcac0ce5460912eb224e1f4d4ab7e80b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/mala.png"
-dest_files=["res://.godot/imported/mala.png-69bcd306794f53efef0f4bc0695657ba.ctex"]
+source_file="res://assets/cutscenes/fundo_faca.png"
+dest_files=["res://.godot/imported/fundo_faca.png-bcac0ce5460912eb224e1f4d4ab7e80b.ctex"]
 
 [params]
 
