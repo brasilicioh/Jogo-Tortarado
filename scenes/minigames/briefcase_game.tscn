@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://cn82kyev8mwwm"]
 
 [ext_resource type="Script" uid="uid://jyfjy286shtt" path="res://scripts/suitcase/controller.gd" id="1_dra6m"]
-[ext_resource type="Texture2D" uid="uid://c45yfhh7ktsko" path="res://assets/sprites/briefcase.png" id="2_ayn4d"]
+[ext_resource type="Texture2D" uid="uid://cb6vmibc6losn" path="res://unpacking/desenhos/close-ups/gavetaCloseUp.png" id="2_ayn4d"]
 [ext_resource type="AudioStream" uid="uid://dnnjdb2yp26wp" path="res://assets/sfx/case_scroll_change.mp3" id="3_vah6b"]
 [ext_resource type="AudioStream" uid="uid://bqtmspwv2y1k6" path="res://assets/sfx/case_open.mp3" id="4_ejvrq"]
 [ext_resource type="Script" uid="uid://osiekg08clk2" path="res://scripts/ExitMinigameButton.gd" id="5_ayn4d"]
@@ -25,6 +25,10 @@ layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = -996.0
+offset_top = -948.0
+offset_right = 997.0
+offset_bottom = 572.0
 grow_horizontal = 2
 grow_vertical = 2
 action_mode = 0

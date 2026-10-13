@@ -6,7 +6,10 @@ const PLAYER_SCENE = preload("res://scenes/player.tscn")
 var state = {
 	"gave_knife": false,
 	"gave_doll": false,
-	"briefcase_opened": false
+	"briefcase_opened": false,
+	"gave_key": false,
+	"opened_drawer": false,
+	"cutscene_pos_faca": false
 	};
 
 var was_interacting := false
