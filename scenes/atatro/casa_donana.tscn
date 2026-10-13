@@ -7,6 +7,9 @@
 [ext_resource type="Texture2D" uid="uid://d4cfrp2xgs3mm" path="res://assets/characters/filha_machucada.png" id="4_tdo0k"]
 [ext_resource type="Texture2D" uid="uid://b0xy8flqucs8r" path="res://assets/characters/homem_preto.png" id="6_88cn1"]
 [ext_resource type="Script" uid="uid://ddl2i4tk61173" path="res://scripts/atatro/homem_trigger.gd" id="6_aj13y"]
+[ext_resource type="Texture2D" uid="uid://drshx5qp0m7r5" path="res://assets/cutscenes/donana_faca.png" id="8_cte50"]
+[ext_resource type="Texture2D" uid="uid://dsm28mps5dbs0" path="res://assets/cutscenes/donana_faca_sangue.png" id="9_5yvgl"]
+[ext_resource type="Texture2D" uid="uid://60lv5v6e6ti7" path="res://assets/cutscenes/donana_faca_muito.png" id="10_6gebp"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tdo0k"]
 a = Vector2(0, 1000)
@@ -24,7 +27,7 @@ size = Vector2(1794.1675, 1310)
 script = ExtResource("1_tdo0k")
 
 [node name="Sala" type="Marker2D" parent="." unique_id=935502016 groups=["spawn point"]]
-position = Vector2(1326, -109)
+position = Vector2(1326, -64)
 scale = Vector2(2, 2)
 script = ExtResource("1_nvkv0")
 spawn_characters = Array[String](["donana"])
@@ -100,6 +103,24 @@ script = ExtResource("6_aj13y")
 position = Vector2(1709.583, 44.99994)
 scale = Vector2(0.9999998, 0.9999998)
 shape = SubResource("RectangleShape2D_mprx0")
+
+[node name="Donana_faca_1" type="Sprite2D" parent="." unique_id=715526479]
+visible = false
+position = Vector2(-1445, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("8_cte50")
+
+[node name="Donana_faca_2" type="Sprite2D" parent="." unique_id=2122467440]
+visible = false
+position = Vector2(-1445, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("9_5yvgl")
+
+[node name="Donana_faca_3" type="Sprite2D" parent="." unique_id=780002435]
+visible = false
+position = Vector2(-1445, 0)
+scale = Vector2(0.8, 0.8)
+texture = ExtResource("10_6gebp")
 
 [connection signal="area_entered" from="Filha/FilhaTrigger" to="Filha/FilhaTrigger" method="_on_area_entered"]
 [connection signal="area_entered" from="Homem/HomemTrigger" to="Homem/HomemTrigger" method="_on_area_entered"]

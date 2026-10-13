@@ -1,0 +1,8 @@
+join donana center
+\donana: Eu queria ter feito diferente.
+[wait time="1.5"]
+belonisia: E eu… eu queria ter feito diferente.
+Mas algumas coisas…
+A gente só entende depois.
+[wait time="2.0"]
+[signal arg="fimfim"]
