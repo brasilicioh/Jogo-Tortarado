@@ -75,3 +75,5 @@ offset_right = 561.0
 offset_bottom = -135.0
 bbcode_enabled = true
 text = "Imagine que tá chovendo [b]muito[/b]"
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="interact"]
