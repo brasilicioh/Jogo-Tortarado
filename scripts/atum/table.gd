@@ -1,5 +1,6 @@
 extends Area2D
 
+	
 func interact():
 	GameState.main.load_minigame("TableCloseUp")
 	

@@ -33,6 +33,7 @@ directories/dch_directory={
 "bibiana": "res://assets/characters/bibiana.dch",
 "domingas": "res://assets/characters/domingas.dch",
 "donana": "res://assets/characters/donana.dch",
+"pholder": "res://assets/characters/pholder.dch",
 "salustina": "res://assets/characters/salustina.dch",
 "severo": "res://assets/characters/severo.dch",
 "zeca": "res://assets/characters/zeca.dch"
@@ -60,6 +61,7 @@ directories/dtl_directory={
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
+"pos_faca": "res://assets/timelines/atum/pos_faca.dtl",
 "rock_giver": "res://assets/timelines/tutorial/rock_giver.dtl",
 "salustina": "res://assets/timelines/tutorial/salustina.dtl",
 "salutana_appears": "res://assets/timelines/ato2/salutana_appears.dtl",

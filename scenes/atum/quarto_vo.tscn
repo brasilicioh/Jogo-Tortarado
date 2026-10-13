@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://orcvwblkeeec"]
 
 [ext_resource type="Texture2D" uid="uid://buepm4gug6vlj" path="res://assets/scenaries/quartoAvo.png" id="1_7ysry"]
+[ext_resource type="Script" uid="uid://v00pk03ldaio" path="res://scenes/atum/quarto_vo.gd" id="1_qpmet"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_qpmet"]
 [ext_resource type="Script" uid="uid://diwmmws77vykn" path="res://scripts/atum/drawer.gd" id="4_1hk0o"]
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="5_1hk0o"]
@@ -28,7 +29,8 @@ size = Vector2(112, 32)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qpmet"]
 size = Vector2(242.64719, 54.54561)
 
-[node name="QuartoCrianca" type="Node2D" unique_id=1471913803]
+[node name="QuartoVo" type="Node2D" unique_id=1471913803]
+script = ExtResource("1_qpmet")
 
 [node name="Background2" type="Sprite2D" parent="." unique_id=1015145927]
 position = Vector2(918, -244)
@@ -97,3 +99,13 @@ position = Vector2(37.499878, -9.090942)
 shape = SubResource("RectangleShape2D_qpmet")
 
 [node name="Sprite2D" type="Sprite2D" parent="Table" unique_id=6077518]
+
+[node name="disfarce" type="ColorRect" parent="." unique_id=1905887306]
+offset_left = 936.0
+offset_top = -196.0
+offset_right = 976.0
+offset_bottom = -156.0
+color = Color(0.50980395, 0.3254902, 0.21568628, 1)
+
+[node name="IdaIrma" type="Marker2D" parent="." unique_id=1949795054]
+position = Vector2(820, -143)

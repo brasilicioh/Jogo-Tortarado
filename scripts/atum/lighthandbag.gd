@@ -4,5 +4,5 @@ var faca: ItemData = load("res://assets/items/faca.tres")
 func _on_pressed():
 	GameState.inventories[GameState.active_player].add_item(faca)
 	GameState.state["gave_knife"] = true
-	GameState.main.load_minigame("openBriefcase_closeup")
+	GameState.main.end_minigame()
 	

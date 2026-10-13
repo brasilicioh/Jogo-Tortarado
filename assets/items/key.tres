@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="ItemData" format=3 uid="uid://b5n4fpccc5eoe"]
+
+[ext_resource type="Script" uid="uid://bfgylyi7hocrr" path="res://assets/items/item_data.gd" id="1_42tpf"]
+[ext_resource type="Texture2D" uid="uid://d332bbnkm1qii" path="res://unpacking/desenhos/itens_inventário/chave.png" id="1_w4f0c"]
+
+[resource]
+script = ExtResource("1_42tpf")
+display_name = "Chave"
+id = &"key"
+description = "Chave para abrir uma gaveta"
+icon = ExtResource("1_w4f0c")
+metadata/_custom_type_script = "uid://bfgylyi7hocrr"
