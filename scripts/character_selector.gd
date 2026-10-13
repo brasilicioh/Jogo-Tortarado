@@ -1,5 +1,15 @@
 extends Control
 
+var main
+
+func _ready() -> void:
+	GameState.main_set.connect(main_set)
+
+func main_set():
+	main = GameState.main
+	
+	main.interrupt_ui.connect(kille)
+
 func _process(_delta: float) -> void:
 	if Input.is_action_just_pressed("change_character"):
 		if not visible:
@@ -27,11 +37,14 @@ func appear() -> void:
 	
 	show()
 
-func _on_button_pressed(id: String):
+func kille():
 	# the twice killing
 	for child in $VBoxContainer.get_children():
 		# kill all the children
 		child.queue_free()
-	
-	GameState.change_active_player(id)
+		
 	hide()
+
+func _on_button_pressed(id: String):
+	kille()
+	GameState.change_active_player(id)

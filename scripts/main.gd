@@ -6,6 +6,8 @@ signal minigame_ended
 signal cutscene_started
 signal cutscene_ended
 
+signal interrupt_ui
+
 const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
 @onready var level_container = $Level
@@ -33,6 +35,8 @@ func new_player(player_position: Vector2, id: String):
 func load_scene(scene: String, spawn_name: String):
 	if is_loading_scene:
 		return
+	
+	interrupt_ui.emit()
 	
 	is_loading_scene = true
 	
@@ -86,6 +90,8 @@ func load_scene(scene: String, spawn_name: String):
 	ui.show()
 
 func load_minigame(minigame_name: String):
+	interrupt_ui.emit()
+	
 	#var tween = get_tree().create_tween()
 	#tween.set_parallel()
 	#tween.tween_property(self, "modulate:r", 0.0, 0.75)
@@ -110,6 +116,8 @@ func load_minigame(minigame_name: String):
 	minigame_started.emit()
 
 func load_cutscene(cutscene_name: String):
+	interrupt_ui.emit()
+	
 	var cutscene = load("res://scenes/cutscenes/" + cutscene_name + ".tscn").instantiate()
 	
 	var tween = get_tree().create_tween()
