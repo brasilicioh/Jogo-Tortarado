@@ -9,5 +9,4 @@ func _ready() -> void:
 	Dialogic.timeline_ended.connect(switch_scene)
 
 func switch_scene() -> void:
-	#TODO: switch scene here
-	print("change scene")
+	GameState.change_scene("res://scenes/atatro/casa_ricos.tscn", "Sala")
