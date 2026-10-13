@@ -5,6 +5,7 @@ if {Ato2.interacted_with_belonisia_firsttime} == false:
 	do UiManager.set_current_task("Festa de Zeca: Itens da Festa")
 	set {Ato2.interacted_with_belonisia_firsttime} = true
 	[signal arg="move"]
+	[wait time="2.5"]
 elif {Ato2.interacted_with_belonisia_secondtime} == false:
 	bibiana: Que bom que você anotou! A gente pega tudo isso e deixa aqui na mesa da sala, tá?
 	set {Ato2.interacted_with_belonisia_secondtime} = true

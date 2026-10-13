@@ -1,0 +1,5 @@
+join belonisia center
+join bibiana center
+[wait time="0.5"]
+bibiana: Que bom que você anotou! A gente pega tudo isso e deixa aqui na mesa da sala, tá?
+[wait time="1.0"]

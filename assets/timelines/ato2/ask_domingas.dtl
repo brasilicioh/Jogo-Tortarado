@@ -13,5 +13,3 @@ if {Ato2.table_half_complete} == true:
 		set {Ato2.interacted_with_domingas} = true
 	else:
 		\domingas: Eu já disse que a boneca vai ajudar vocês! Eu não vou dizer nada!
-else:
-	bibiana: Oi Tia!

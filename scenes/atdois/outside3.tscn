@@ -120,9 +120,6 @@ shape = SubResource("RectangleShape2D_fosw3")
 [node name="Tree2" type="StaticBody2D" parent="." unique_id=421527052]
 position = Vector2(3108, -200)
 
-[node name="Sprite2D" type="Sprite2D" parent="Tree2" unique_id=186191608]
-texture = ExtResource("6_vodhl")
-
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree2" unique_id=822843860]
 position = Vector2(-12, 3)
 shape = SubResource("RectangleShape2D_fosw3")
@@ -144,13 +141,28 @@ scale = Vector2(2, 2)
 texture = ExtResource("7_5ft1l")
 
 [node name="DialogTrigger" type="Area2D" parent="." unique_id=1654873036 node_paths=PackedStringArray("severo", "belonisia")]
-position = Vector2(106, -124)
+position = Vector2(106, 0)
 script = ExtResource("8_2k86j")
 severo = NodePath("../Severo")
 belonisia = NodePath("../Belonisia")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DialogTrigger" unique_id=256491647]
 shape = SubResource("RectangleShape2D_yuu2t")
+
+[node name="IdaBelo" type="Marker2D" parent="DialogTrigger" unique_id=2116834939]
+position = Vector2(-29, -53)
+script = ExtResource("4_5ft1l")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="IdaSevero" type="Marker2D" parent="DialogTrigger" unique_id=1867161047]
+position = Vector2(-119, -53)
+script = ExtResource("4_5ft1l")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Saida" type="Marker2D" parent="DialogTrigger" unique_id=1630576763]
+position = Vector2(1076, -53)
+script = ExtResource("4_5ft1l")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Salustina" type="Node2D" parent="." unique_id=1473888529 node_paths=PackedStringArray("selfnode")]
 visible = false
