@@ -229,6 +229,10 @@ change_character={
 ]
 }
 
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
+
 [internationalization]
 
 locale/test="en"
