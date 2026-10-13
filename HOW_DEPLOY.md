@@ -28,7 +28,10 @@ Garanta essas configurações:
 - Orientação: Landscape
 
 4.
-Exportar Projeto
+Na janela de exportação, use **Exportar Projeto** (Release/produção), e não **Exportar Projeto para Depuração** (Debug/desenvolvimento).
+
+O arquivo `dict/index.html` e os arquivos gerados ao lado dele (`.pck`,
+`.wasm`, `.js` e ícones) devem ser enviados juntos. A itch.io hospeda esses arquivos estaticamente e executa o HTML dentro de um iframe.
 
 5.
 ```bash
