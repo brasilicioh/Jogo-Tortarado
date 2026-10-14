@@ -3,7 +3,7 @@ bibiana: Bibiana, mainha disse que o primo Severo tem nossa idade.
 bibiana: Quero estar bonita. Qual roupa é melhor, a azul ou a amarela?
 - A azul
 - A amarela
-belonisia: Então vou vestir essa mesmo!
+bibiana: Então vou vestir essa mesmo!
 audio "res://assets/sounds/Tutorial/TocToc.mp3" [bus=""]
 [wait time="2.0" hide_text="false"]
 [signal arg="severo"]

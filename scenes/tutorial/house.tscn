@@ -23,6 +23,12 @@ script = ExtResource("1_viu1i")
 [node name="Corredor1" parent="House" index="0" unique_id=1752356399]
 texture = ExtResource("3_nk3l3")
 
+[node name="QuartoAvo" parent="House" index="3" unique_id=1330230649]
+position = Vector2(-4195, 3519)
+
+[node name="QuartoDasMeninas" parent="House" index="4" unique_id=207887793]
+position = Vector2(6658, 3574)
+
 [node name="QuartoMeninasRoupa" parent="House/QuartoDasMeninasComCamisa" parent_id_path=PackedInt32Array(1394089690, 1118305505) index="0" unique_id=2135177472]
 spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"

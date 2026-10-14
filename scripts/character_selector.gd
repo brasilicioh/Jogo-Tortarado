@@ -4,7 +4,7 @@ var main
 
 var id_to_name = {
 	"donana": "Donana",
-	"belonisia": "Belonisia",
+	"belonisia": "Belonísia",
 	"bibiana": "Bibiana",
 	"belonisia_crianca": "Belonísia",
 	"bibiana_crianca": "Bibiana"

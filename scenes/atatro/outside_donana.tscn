@@ -56,8 +56,8 @@ position = Vector2(2574, -154)
 shape = SubResource("SegmentShape2D_n1rya")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=345552981]
-position = Vector2(1739, -280)
-scale = Vector2(0.5, 0.5)
+position = Vector2(1747, -189)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_7edia")
 
 [node name="DoorTransition" type="Area2D" parent="Sprite2D" unique_id=117884886]

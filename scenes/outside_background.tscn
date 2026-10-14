@@ -65,7 +65,7 @@ shape = SubResource("SegmentShape2D_vkg5x")
 position = Vector2(2013, -14)
 shape = SubResource("SegmentShape2D_ddxkj")
 one_way_collision = true
-one_way_collision_direction = Vector2(0.3867542, 0.9221828)
+one_way_collision_direction = Vector2(0.38675424, 0.92218286)
 
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="StaticBody2D" unique_id=457735811]
 position = Vector2(5853, -17)
@@ -88,6 +88,6 @@ position = Vector2(7720, -205)
 shape = SubResource("SegmentShape2D_l85ff")
 
 [node name="Casa" type="Sprite2D" parent="." unique_id=1823851069]
-position = Vector2(-308, -280)
-scale = Vector2(0.5, 0.5)
+position = Vector2(-290, -188)
+scale = Vector2(0.3, 0.3)
 texture = ExtResource("2_n3hlk")

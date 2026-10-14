@@ -96,9 +96,8 @@ script = ExtResource("4_5ft1l")
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Salustina" type="Node2D" parent="." unique_id=1473888529]
-visible = false
 z_index = 1
-position = Vector2(-300, -101)
+position = Vector2(-290, -101)
 script = ExtResource("8_5ft1l")
 
 [node name="Sprite2D" type="Sprite2D" parent="Salustina" unique_id=644687991]
