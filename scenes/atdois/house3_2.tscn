@@ -73,7 +73,7 @@ shape = SubResource("SegmentShape2D_w2twm")
 position = Vector2(2381, -150)
 script = ExtResource("9_pxe8g")
 target_scene = "uid://c2bhinnndgu70"
-spawn_point = "OutsideMarker2"
+spawn_point = "Outside"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=952093493]

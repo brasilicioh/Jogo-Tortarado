@@ -1,7 +1,6 @@
 [gd_scene format=3 uid="uid://c2bhinnndgu70"]
 
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="1_vodhl"]
-[ext_resource type="Texture2D" uid="uid://dtn371f5t1fx" path="res://assets/sprites/casaNoite.png" id="3_2k86j"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="4_5ft1l"]
 [ext_resource type="Texture2D" uid="uid://bf4fqng872yby" path="res://assets/sprites/severo.png" id="6_hq1ev"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="6_l8uq3"]
@@ -9,14 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://dubfqipwotr2o" path="res://assets/sprites/belonisia.png" id="7_5ft1l"]
 [ext_resource type="Script" uid="uid://cuh53pv8gbcul" path="res://scripts/ato2/kiss_scene.gd" id="8_2k86j"]
 [ext_resource type="Script" uid="uid://cqme7vcejah8d" path="res://scripts/ato2/salustina.gd" id="8_5ft1l"]
+[ext_resource type="PackedScene" uid="uid://bnqhp16wgx2px" path="res://scenes/outside_background.tscn" id="8_l8uq3"]
 [ext_resource type="Texture2D" uid="uid://chpe472qkyii5" path="res://assets/sprites/salustiana.png" id="10_hq1ev"]
-
-[sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
-a = Vector2(64000, 0)
-b = Vector2(-64000, 0)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
-size = Vector2(127.5, 187)
+[ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="10_vog8n"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fosw3"]
 size = Vector2(44, 360)
@@ -24,91 +18,24 @@ size = Vector2(44, 360)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_yuu2t"]
 size = Vector2(20, 220)
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o2njp"]
+size = Vector2(3660, 128)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_3di4l"]
+size = Vector2(100, 220)
+
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
-[node name="Ground" type="StaticBody2D" parent="." unique_id=769522013]
-
-[node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1825814621]
-position = Vector2(0, 128)
-scale = Vector2(100, 2)
-texture = ExtResource("1_vodhl")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Ground" unique_id=227719484]
-shape = SubResource("SegmentShape2D_nsm10")
-
-[node name="Mountains" type="Parallax2D" parent="." unique_id=1718860442]
-visible = false
-z_index = -32
-scroll_scale = Vector2(0.5, 0.5)
-scroll_offset = Vector2(-960, -634)
-
-[node name="Icon" type="Sprite2D" parent="Mountains" unique_id=1763166656]
-position = Vector2(634.68494, 817.2617)
-rotation = -0.573568
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_vodhl")
-
-[node name="Icon2" type="Sprite2D" parent="Mountains" unique_id=1217801479]
-position = Vector2(1152.6849, 831.2617)
-rotation = 0.8446477
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_vodhl")
-
-[node name="Icon3" type="Sprite2D" parent="Mountains" unique_id=975021212]
-position = Vector2(1765.6849, 949.26184)
-rotation = -1.0200288
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_vodhl")
-
-[node name="Icon6" type="Sprite2D" parent="Mountains" unique_id=97851634]
-position = Vector2(3139.685, 583)
-rotation = -0.94858766
-scale = Vector2(6.3784175, 6.7436466)
-texture = ExtResource("1_vodhl")
-
-[node name="Icon4" type="Sprite2D" parent="Mountains" unique_id=1115492320]
-position = Vector2(2750.685, 673.00006)
-rotation = 0.35142136
-scale = Vector2(5.9921875, 9)
-texture = ExtResource("1_vodhl")
-
-[node name="Icon5" type="Sprite2D" parent="Mountains" unique_id=1907886804]
-position = Vector2(3448, 665.9999)
-rotation = 0.35142136
-scale = Vector2(8.16619, 5.315786)
-texture = ExtResource("1_vodhl")
-
 [node name="OutsideMarker2" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
-position = Vector2(2178, -64)
+position = Vector2(-681, -64)
 script = ExtResource("4_5ft1l")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="House" type="StaticBody2D" parent="." unique_id=1153298674]
-z_index = -1
-position = Vector2(2503, -128)
-
-[node name="Sprite2D" type="Sprite2D" parent="House" unique_id=698622877]
-z_index = 1
-position = Vector2(-76, -13)
-scale = Vector2(0.3, 0.3)
-texture = ExtResource("3_2k86j")
-
-[node name="DoorTransition" type="Area2D" parent="House" unique_id=497513784]
-position = Vector2(-78, 28)
-script = ExtResource("6_l8uq3")
-target_scene = "uid://jc3kwhoyujsv"
-spawn_point = "OutsideToHall"
-metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
-
-[node name="HouseDoor" type="Marker2D" parent="House/DoorTransition" unique_id=122138981]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="House/DoorTransition" unique_id=608501714]
-shape = SubResource("RectangleShape2D_l85ff")
-
 [node name="Tree" type="StaticBody2D" parent="." unique_id=1609903329]
-position = Vector2(-146, -187)
+z_index = 1
+position = Vector2(-1301, -160)
 
 [node name="Sprite2D" type="Sprite2D" parent="Tree" unique_id=986159816]
 texture = ExtResource("6_vodhl")
@@ -118,7 +45,8 @@ position = Vector2(-12, 3)
 shape = SubResource("RectangleShape2D_fosw3")
 
 [node name="Tree2" type="StaticBody2D" parent="." unique_id=421527052]
-position = Vector2(3108, -200)
+z_index = 1
+position = Vector2(1826, -221)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Tree2" unique_id=822843860]
 position = Vector2(-12, 3)
@@ -126,7 +54,8 @@ shape = SubResource("RectangleShape2D_fosw3")
 
 [node name="Severo" type="Node2D" parent="." unique_id=1397827555]
 visible = false
-position = Vector2(-412, -53)
+z_index = 1
+position = Vector2(-1735, -74)
 
 [node name="Sprite2D" type="Sprite2D" parent="Severo" unique_id=893489261]
 scale = Vector2(2, 2)
@@ -134,14 +63,16 @@ texture = ExtResource("6_hq1ev")
 
 [node name="Belonisia" type="Node2D" parent="." unique_id=1762926739]
 visible = false
-position = Vector2(-293, -53)
+z_index = 1
+position = Vector2(-1612, -74)
 
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=413532596]
 scale = Vector2(2, 2)
 texture = ExtResource("7_5ft1l")
 
 [node name="DialogTrigger" type="Area2D" parent="." unique_id=1654873036 node_paths=PackedStringArray("severo", "belonisia")]
-position = Vector2(106, 0)
+z_index = 1
+position = Vector2(-1049, -21)
 script = ExtResource("8_2k86j")
 severo = NodePath("../Severo")
 belonisia = NodePath("../Belonisia")
@@ -166,7 +97,8 @@ metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Salustina" type="Node2D" parent="." unique_id=1473888529 node_paths=PackedStringArray("selfnode")]
 visible = false
-position = Vector2(2429, -53)
+z_index = 1
+position = Vector2(-300, -101)
 script = ExtResource("8_5ft1l")
 selfnode = NodePath(".")
 
@@ -174,5 +106,38 @@ selfnode = NodePath(".")
 scale = Vector2(2, 2)
 texture = ExtResource("10_hq1ev")
 flip_h = true
+
+[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("8_l8uq3")]
+position = Vector2(1, 0)
+
+[node name="Outside" type="Marker2D" parent="." unique_id=929703061 groups=["spawn point"]]
+position = Vector2(-307, -94)
+script = ExtResource("4_5ft1l")
+spawn_characters = Array[String](["bibiana"])
+active_character = "bibiana"
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
+[node name="Crow" type="Node2D" parent="." unique_id=2108722587]
+position = Vector2(3913, -64)
+
+[node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=152527862]
+visible = false
+texture = ExtResource("1_vodhl")
+
+[node name="Area2D" type="Area2D" parent="Crow" unique_id=15155125]
+script = ExtResource("10_vog8n")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Crow/Area2D" unique_id=1960966887]
+shape = SubResource("RectangleShape2D_o2njp")
+
+[node name="DoorTransition" type="Area2D" parent="." unique_id=1871797107]
+position = Vector2(-306, -141)
+script = ExtResource("6_l8uq3")
+target_scene = "uid://jc3kwhoyujsv"
+spawn_point = "OutsideToHall"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=1352313603]
+shape = SubResource("RectangleShape2D_3di4l")
 
 [connection signal="area_entered" from="DialogTrigger" to="DialogTrigger" method="_on_area_entered"]
