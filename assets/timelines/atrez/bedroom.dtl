@@ -1,6 +1,6 @@
 join donana center
 if {Ato3.bedroom_progression} == 0.0:
-	\donana: Porque eu deixei isso acontecer?
+	\donana: Por que eu deixei isso acontecer?
 	\donana: As minhas netinhas...
 	\donana: É tudo culpa desses encantados!\
 	É tudo culpa dessa onça que me persegue!

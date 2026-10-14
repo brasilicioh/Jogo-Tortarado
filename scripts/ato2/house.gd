@@ -5,7 +5,10 @@ var timeline: DialogicTimeline = preload("res://assets/timelines/ato2/house.dtl"
 # Called when the node eters the scene tree for the first time.
 func _ready() -> void:
 	Dialogic.signal_event.connect(funcao)
-	
+	if Dialogic.VAR.Ato2.GaveItems.cups:
+		$Background2/CupsGiver.hide()
+	if Dialogic.VAR.Ato2.GaveItems.decor:
+		$Background2/DecorGiver.hide()	
 	if not GameState.state.get("alredy_exit"):
 		Dialogic.start(timeline)
 		GameState.state["alredy_exit"] = true

@@ -4,7 +4,7 @@ audio "res://assets/sounds/Tutorial/TocToc.mp3"
 [wait time="4.5"]
 [signal arg="enter"]
 severo: Bom dia, senhoritas.
-bibiana: Bom dia Severo, chegou cedo para a festa.
+bibiana: Bom dia, Severo, chegou cedo para a festa.
 severo: Painho mandou eu ajudar o tio Zeca antes do povo chegar.
 [wait time="1.0"]
 severo: E como andam as organizações?

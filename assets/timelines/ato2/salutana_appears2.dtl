@@ -3,8 +3,8 @@ join salustina center
 join  center
 if {Ato2.second_intro_played} == false:
 	[wait time="1.0"]
-	???: A festa foi muito boa Bibiana, fala para Dona Salustina que a comida tava muito boa!!!
-	bibiana: Até mais Dona Tonha. Brigada por vir!
+	???: A festa foi muito boa, Bibiana, fala para Dona Salustina que a comida tava muito boa!!!
+	bibiana: Até mais, Dona Tonha. Brigada por vir!
 	bibiana: Que bom que as pessoas gostaram da festa.
 	[wait time="1.0"]
 	[signal arg="show"]
