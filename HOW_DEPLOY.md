@@ -36,6 +36,8 @@ O arquivo `dict/index.html` e os arquivos gerados ao lado dele (`.pck`,
 
 Para testar com o Live Preview do VS Code, abra `dict/index.html`, e não `web/custom_shell.html`. Sempre exporte novamente antes do teste, pois o `index.pck` contém as cenas e imagens do projeto. O iframe da itch.io deve ter proporção 16:9 (por exemplo, 1280×720) e pode ser reduzido automaticamente em celulares na horizontal.
 
+Ao clicar no menu inicial, o navegador solicita tela cheia e tenta travar a orientação em landscape. Isso depende da permissão do navegador e do iframe; não é possível forçar tela cheia automaticamente sem uma ação do usuário. O painel de debug (atalho F4) funciona somente em builds Debug e é ignorado na exportação Release.
+
 5.
 ```bash
 git checkout gh-pages

@@ -13,6 +13,8 @@ func _ready() -> void:
 	submit_scene_button.pressed.connect(change_scene)
 
 func _input(event: InputEvent) -> void:
+	if not OS.is_debug_build():
+		return
 	if event.is_action_pressed("open_debug"):
 		visible = not visible
 
