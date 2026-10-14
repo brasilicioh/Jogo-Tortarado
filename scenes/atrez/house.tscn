@@ -79,6 +79,6 @@ color = Color(0, 0, 0, 1)
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("6_as8sy")]
 process_mode = 4
 position = Vector2(4745, -96)
-target = Vector2(-966, -94)
+target = Vector2(-1500, -94)
 
 [editable path="House"]
