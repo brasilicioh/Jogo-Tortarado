@@ -2,17 +2,26 @@
 
 [ext_resource type="Script" uid="uid://do7qurw4t0s6d" path="res://scripts/initial_cutscene.gd" id="1_p471c"]
 
-[node name="Inicial" type="Node2D" unique_id=1036599543]
-script = ExtResource("1_p471c")
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_v17tq"]
+file = "res://assets/cutscenes/cutscene.ogv"
 
-[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=669794617]
+[node name="Inicial" type="Control" unique_id=141102042]
+layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_p471c")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=669794617]
+layout_mode = 1
+offset_right = 1278.0
+offset_bottom = 720.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+stream = SubResource("VideoStreamTheora_v17tq")
 autoplay = true
 
 [connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]
+[connection signal="gui_input" from="VideoStreamPlayer" to="." method="_on_video_stream_player_gui_input"]
