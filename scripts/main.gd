@@ -22,7 +22,8 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	GameState.main = self
 	await get_tree().process_frame
-	load_scene("res://scenes/outside.tscn", "Outside")
+	load_cutscene("inicial")
+	#load_scene("res://scenes/outside.tscn", "Outside")
 
 func new_player(player_position: Vector2, id: String):
 	var player: Node2D = PLAYER_SCENE.instantiate()
