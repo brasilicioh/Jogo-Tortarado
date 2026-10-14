@@ -5,6 +5,7 @@ var timeline: DialogicTimeline = load("res://assets/timelines/tutorial/tutorial.
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	GameState.main.ui.get_child(0).show()
 	if DisplayServer.is_touchscreen_available():
 		Dialogic.VAR.is_touchscreen = true
 	Dialogic.start(timeline)

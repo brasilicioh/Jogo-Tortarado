@@ -78,9 +78,15 @@ metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 position = Vector2(1.5, -0.5)
 shape = SubResource("RectangleShape2D_mftj6")
 
+[node name="QuartoAvo" parent="House" index="3" unique_id=1330230649]
+position = Vector2(4596, 1494)
+
 [node name="QuartoMeninas" parent="House/QuartoDasMeninas" parent_id_path=PackedInt32Array(1394089690, 207887793) index="0" unique_id=1464077330]
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
+
+[node name="QuartoDasMeninasComCamisa" parent="House" index="5" unique_id=1118305505]
+position = Vector2(5138, 1552)
 
 [node name="Irma" type="Area2D" parent="." unique_id=1862668961]
 position = Vector2(808, -64)

@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://jysbrsrdmejm"]
+
+[ext_resource type="Script" uid="uid://do7qurw4t0s6d" path="res://scripts/initial_cutscene.gd" id="1_p471c"]
+
+[node name="Inicial" type="Node2D" unique_id=1036599543]
+script = ExtResource("1_p471c")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=669794617]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+autoplay = true
+
+[connection signal="finished" from="VideoStreamPlayer" to="." method="_on_video_stream_player_finished"]

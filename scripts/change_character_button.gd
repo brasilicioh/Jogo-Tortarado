@@ -1,12 +1,14 @@
 extends Button
 
+var main
+
 func _ready() -> void:
 	if DisplayServer.is_touchscreen_available():
 		show()
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_ended)
-	
+
 func _on_dialogue_started():
 	hide()
 	

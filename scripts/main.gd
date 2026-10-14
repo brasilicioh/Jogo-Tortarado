@@ -6,6 +6,8 @@ signal minigame_ended
 signal cutscene_started
 signal cutscene_ended
 
+signal interrupt_ui
+
 const PLAYER_SCENE = preload("res://scenes/player.tscn")
 
 @onready var level_container = $Level
@@ -20,7 +22,8 @@ func _enter_tree() -> void:
 func _ready() -> void:
 	GameState.main = self
 	await get_tree().process_frame
-	load_scene("res://scenes/outside.tscn", "Outside")
+	load_cutscene("inicial")
+	#load_scene("res://scenes/outside.tscn", "Outside")
 
 func new_player(player_position: Vector2, id: String):
 	var player: Node2D = PLAYER_SCENE.instantiate()
@@ -33,6 +36,8 @@ func new_player(player_position: Vector2, id: String):
 func load_scene(scene: String, spawn_name: String):
 	if is_loading_scene:
 		return
+	
+	interrupt_ui.emit()
 	
 	is_loading_scene = true
 	
@@ -48,6 +53,9 @@ func load_scene(scene: String, spawn_name: String):
 	
 	GameState.active_characters = []
 	for child in level_container.get_children():
+		child.queue_free()
+	
+	for child in cutscene_container.get_children():
 		child.queue_free()
 	
 	await get_tree().process_frame
@@ -84,8 +92,11 @@ func load_scene(scene: String, spawn_name: String):
 	tween2.tween_property(self, "modulate:b", 1.0, 0.75)
 	
 	ui.show()
+	ui.get_child(0).show()
 
 func load_minigame(minigame_name: String):
+	interrupt_ui.emit()
+	
 	#var tween = get_tree().create_tween()
 	#tween.set_parallel()
 	#tween.tween_property(self, "modulate:r", 0.0, 0.75)
@@ -110,6 +121,8 @@ func load_minigame(minigame_name: String):
 	minigame_started.emit()
 
 func load_cutscene(cutscene_name: String):
+	interrupt_ui.emit()
+	
 	var cutscene = load("res://scenes/cutscenes/" + cutscene_name + ".tscn").instantiate()
 	
 	var tween = get_tree().create_tween()

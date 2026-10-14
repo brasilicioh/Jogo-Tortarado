@@ -20,11 +20,13 @@ grow_vertical = 2
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
+offset_bottom = 68.0
 grow_horizontal = 2
 
 [node name="TaskContainer" type="PanelContainer" parent="HBoxContainer" unique_id=1122330097]
 layout_mode = 2
 size_flags_horizontal = 3
+size_flags_stretch_ratio = 4.0
 
 [node name="TaskLabel" type="RichTextLabel" parent="HBoxContainer/TaskContainer" unique_id=1332095769]
 layout_mode = 2
@@ -34,6 +36,11 @@ fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
 script = ExtResource("1_x4jx1")
+
+[node name="Spacer" type="Control" parent="HBoxContainer" unique_id=362473712]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 7.0
 
 [node name="InventoryContainer" type="PanelContainer" parent="HBoxContainer" unique_id=1220763535]
 layout_mode = 2
@@ -50,12 +57,13 @@ theme_override_constants/margin_bottom = 4
 [node name="HBoxContainer" type="HBoxContainer" parent="HBoxContainer/InventoryContainer/MarginContainer" unique_id=528571142]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
-alignment = 1
+alignment = 2
 
 [node name="Slot0" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=2062202642 instance=ExtResource("2_x4jx1")]
 layout_mode = 2
 
 [node name="Spacer1" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=1429315043]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -64,6 +72,7 @@ layout_mode = 2
 id = 1
 
 [node name="Spacer2" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=2128048021]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -72,6 +81,7 @@ layout_mode = 2
 id = 2
 
 [node name="Spacer3" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=1277515003]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -80,6 +90,7 @@ layout_mode = 2
 id = 3
 
 [node name="Spacer4" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=338607987]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -88,6 +99,7 @@ layout_mode = 2
 id = 4
 
 [node name="Spacer5" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=1949683827]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
@@ -96,26 +108,32 @@ layout_mode = 2
 id = 5
 
 [node name="Spacer6" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=1090592383]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Slot6" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=2089937869 instance=ExtResource("2_x4jx1")]
+visible = false
 layout_mode = 2
 id = 6
 
 [node name="Spacer7" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=2072537242]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Slot7" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=33183937 instance=ExtResource("2_x4jx1")]
+visible = false
 layout_mode = 2
 id = 7
 
 [node name="Spacer8" type="Control" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=293376194]
+visible = false
 layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Slot8" parent="HBoxContainer/InventoryContainer/MarginContainer/HBoxContainer" unique_id=1568051793 instance=ExtResource("2_x4jx1")]
+visible = false
 layout_mode = 2
 id = 8
 

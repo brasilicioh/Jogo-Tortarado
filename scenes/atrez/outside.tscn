@@ -1,13 +1,10 @@
 [gd_scene format=3 uid="uid://bnmhhcpmc05gd"]
 
 [ext_resource type="Script" uid="uid://b7fkh8qt3n46s" path="res://scripts/atrez/outside.gd" id="1_umhw1"]
+[ext_resource type="PackedScene" uid="uid://bnqhp16wgx2px" path="res://scenes/outside_background.tscn" id="2_h4omk"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="2_v4vu4"]
-[ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="3_h4omk"]
-[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="4_pqb1r"]
+[ext_resource type="Texture2D" uid="uid://dtn371f5t1fx" path="res://assets/sprites/casaNoite.png" id="5_h4omk"]
 [ext_resource type="Script" uid="uid://oeay7l3y6ig" path="res://scripts/atrez/rio.gd" id="5_v4vu4"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_auff3"]
-size = Vector2(5000, 20)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tl472"]
 size = Vector2(673, 76)
@@ -15,50 +12,48 @@ size = Vector2(673, 76)
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_tl472"]
 b = Vector2(0, 200)
 
+[sub_resource type="Gradient" id="Gradient_v4vu4"]
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 0)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_2i0da"]
+gradient = SubResource("Gradient_v4vu4")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.5, 0)
+
+[sub_resource type="Gradient" id="Gradient_pqb1r"]
+colors = PackedColorArray(0, 0, 1, 1, 0.08640001, 0.08640001, 0.72, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_2i0da"]
+gradient = SubResource("Gradient_pqb1r")
+width = 16
+
 [node name="Outside" type="Node2D" unique_id=2120221174]
 script = ExtResource("1_umhw1")
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=828967567]
-position = Vector2(-2, 2)
+[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("2_h4omk")]
+position = Vector2(313, 33)
 
-[node name="Outside" type="Marker2D" parent="StaticBody2D" unique_id=494272593 groups=["spawn point"]]
-position = Vector2(7, -94)
+[node name="CollisionShape2D5" parent="OutsideBackground/StaticBody2D" parent_id_path=PackedInt32Array(292768363, 852128229) index="4" unique_id=1372003951]
+one_way_collision_direction = Vector2(0.38675424, 0.92218286)
+
+[node name="CollisionShape2D9" parent="OutsideBackground/StaticBody2D" parent_id_path=PackedInt32Array(292768363, 852128229) index="8" unique_id=628485086]
+position = Vector2(7835, 663)
+
+[node name="Outside" type="Marker2D" parent="." unique_id=494272593 groups=["spawn point"]]
+position = Vector2(5, -46)
 script = ExtResource("2_v4vu4")
 spawn_characters = Array[String](["donana"])
 active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=986149933]
-scale = Vector2(82.636894, 0.14697836)
-texture = ExtResource("3_h4omk")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1353726203]
-shape = SubResource("RectangleShape2D_auff3")
-
-[node name="Casa" type="Sprite2D" parent="." unique_id=1638860927]
-position = Vector2(5, -247)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("4_pqb1r")
-
 [node name="Area2D" type="Area2D" parent="." unique_id=654639337]
-position = Vector2(1751, -19)
+position = Vector2(8491, 35)
 script = ExtResource("5_v4vu4")
-
-[node name="Sprite2D" type="Sprite2D" parent="Area2D" unique_id=872272879]
-scale = Vector2(5.258903, 0.59527826)
-texture = ExtResource("3_h4omk")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008640872]
 position = Vector2(0.5, 1)
 shape = SubResource("RectangleShape2D_tl472")
-
-[node name="Label" type="Label" parent="Area2D" unique_id=80261702]
-offset_left = -75.0
-offset_top = -90.0
-offset_right = 75.0
-offset_bottom = -67.0
-text = "Rio muito fodastico"
-horizontal_alignment = 1
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Area2D" unique_id=1049746326]
 position = Vector2(-284, -219)
@@ -67,11 +62,34 @@ position = Vector2(-284, -219)
 shape = SubResource("SegmentShape2D_tl472")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Area2D" unique_id=2057161011]
+color = Color(0.22323787, 0.24924013, 0.2679402, 1)
 
-[node name="Label" type="RichTextLabel" parent="." unique_id=139815582]
-offset_left = 311.0
-offset_top = -165.0
-offset_right = 561.0
-offset_bottom = -135.0
-bbcode_enabled = true
-text = "Imagine que tá chovendo [b]muito[/b]"
+[node name="CasaNoite" type="Sprite2D" parent="." unique_id=248015958]
+position = Vector2(5, -247)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("5_h4omk")
+
+[node name="PointLight2D" type="PointLight2D" parent="." unique_id=1413634001]
+position = Vector2(5, -190)
+blend_mode = 2
+shadow_enabled = true
+shadow_color = Color(9.62615e-07, 0.6419649, 0.7759956, 0)
+texture = SubResource("GradientTexture2D_2i0da")
+texture_scale = 9.0
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="." unique_id=1794074832]
+position = Vector2(4576, -969)
+amount = 4096
+texture = SubResource("GradientTexture1D_2i0da")
+lifetime = 1.43
+preprocess = 5.0
+emission_shape = 3
+emission_rect_extents = Vector2(7000, 1)
+angle_min = 90.0
+angle_max = 90.0
+scale_amount_min = 1.5
+scale_amount_max = 2.5
+
+[connection signal="area_entered" from="Area2D" to="Area2D" method="interact"]
+
+[editable path="OutsideBackground"]

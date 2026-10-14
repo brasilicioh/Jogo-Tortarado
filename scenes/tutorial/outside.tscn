@@ -3,19 +3,16 @@
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="1_3q0b4"]
 [ext_resource type="Script" uid="uid://eyek5arxnd2" path="res://scripts/tutorial/outside.gd" id="1_7oiyi"]
 [ext_resource type="Texture2D" uid="uid://cpvsqarvluq5" path="res://icon.svg" id="2_bxvk8"]
+[ext_resource type="PackedScene" uid="uid://bnqhp16wgx2px" path="res://scenes/outside_background.tscn" id="2_pdayf"]
 [ext_resource type="Script" uid="uid://bxld2t7ujookp" path="res://scripts/bird_scaring_loader.gd" id="3_y7xuq"]
 [ext_resource type="Script" uid="uid://dwijyavv5h52b" path="res://scripts/zeca.gd" id="4_7oiyi"]
-[ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_b3qvv"]
 [ext_resource type="Texture2D" uid="uid://dotqmbs3bq12d" path="res://assets/sprites/zeca_idle.png" id="6_gk2p8"]
 [ext_resource type="Script" uid="uid://c0pvna5rlt7q3" path="res://scripts/door_transition.gd" id="7_gk2p8"]
 [ext_resource type="Texture2D" uid="uid://cjf3i1veafjqr" path="res://assets/sprites/zeca_tool.png" id="7_pdayf"]
 [ext_resource type="Texture2D" uid="uid://bbewpufu6bf5o" path="res://assets/characters/zeca_pedra.png" id="8_pdayf"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_2i0da"]
-size = Vector2(5000, 20)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_wrhxb"]
-size = Vector2(128, 128)
+size = Vector2(3660, 128)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_l85ff"]
 size = Vector2(128, 128)
@@ -136,6 +133,9 @@ size = Vector2(100, 182)
 [node name="Outside" type="Node2D" unique_id=724247517]
 script = ExtResource("1_7oiyi")
 
+[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("2_pdayf")]
+position = Vector2(1095, 0)
+
 [node name="Outside" type="Marker2D" parent="." unique_id=176470904 groups=["spawn point"]]
 position = Vector2(787, -94)
 script = ExtResource("1_3q0b4")
@@ -143,19 +143,11 @@ spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=62377360]
-
-[node name="Icon" type="Sprite2D" parent="StaticBody2D" unique_id=1636216879]
-scale = Vector2(82.636894, 0.14697836)
-texture = ExtResource("2_bxvk8")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2047638995]
-shape = SubResource("RectangleShape2D_2i0da")
-
 [node name="Crow" type="Node2D" parent="." unique_id=1928070463]
-position = Vector2(2318, -64)
+position = Vector2(5007, -64)
 
 [node name="Sprite2D" type="Sprite2D" parent="Crow" unique_id=1541964808]
+visible = false
 texture = ExtResource("2_bxvk8")
 
 [node name="Area2D" type="Area2D" parent="Crow" unique_id=1940569417]
@@ -165,7 +157,7 @@ script = ExtResource("3_y7xuq")
 shape = SubResource("RectangleShape2D_wrhxb")
 
 [node name="Zeca" type="Area2D" parent="." unique_id=1874819971]
-position = Vector2(1331, -74)
+position = Vector2(1593, -66)
 script = ExtResource("4_7oiyi")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Zeca" unique_id=361648425]
@@ -177,11 +169,6 @@ scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_2i0da")
 animation = &"give_rock"
 frame_progress = 0.8574952
-
-[node name="Casa" type="Sprite2D" parent="." unique_id=1822026811]
-position = Vector2(787, -249)
-scale = Vector2(0.5, 0.5)
-texture = ExtResource("6_b3qvv")
 
 [node name="DoorTransition" type="Area2D" parent="." unique_id=8250780]
 process_mode = 4

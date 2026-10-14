@@ -6,6 +6,7 @@
 [ext_resource type="Material" uid="uid://n1ysel4epily" path="res://shaders/outline/default_outline.tres" id="6_bkgx0"]
 [ext_resource type="Texture2D" uid="uid://brs6q3fhe60td" path="res://assets/scenaries/casa.png" id="6_uaw8k"]
 [ext_resource type="Script" uid="uid://xxber3ayswrc" path="res://scripts/spawn_marker.gd" id="7_lt5my"]
+[ext_resource type="PackedScene" uid="uid://bnqhp16wgx2px" path="res://scenes/outside_background.tscn" id="7_uaw8k"]
 
 [sub_resource type="SegmentShape2D" id="SegmentShape2D_nsm10"]
 a = Vector2(64000, 0)
@@ -40,6 +41,9 @@ size = Vector2(128, 128)
 
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
+[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("7_uaw8k")]
+position = Vector2(-660, 28)
+
 [node name="Label" type="Label" parent="." unique_id=1945071346]
 offset_left = 5113.4126
 offset_top = -251.53528
@@ -55,9 +59,10 @@ active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=769522013]
+position = Vector2(-12, 232)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1825814621]
-position = Vector2(0, 128)
+position = Vector2(-50, 0)
 scale = Vector2(100, 2)
 texture = ExtResource("1_nsm10")
 
