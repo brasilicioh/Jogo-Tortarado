@@ -9,8 +9,6 @@ extends Area2D
 #		$Sprite2D.set_instance_shader_parameter("outline_enabled", false)
 
 func interact():
-	print("door function called")
-	print(target_scene, spawn_point)
 	GameState.change_scene(target_scene, spawn_point)
 
 #func highlight(state: bool) -> void:

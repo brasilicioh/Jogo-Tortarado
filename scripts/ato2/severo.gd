@@ -2,7 +2,6 @@ extends Area2D
 @export var selfnode: Node2D;
 
 func _on_dialogic_signal(arg):
-	print("Sinal recebido: ", arg)
 	if arg == "destroy":
 		selfnode.queue_free()
 	elif arg == "show":

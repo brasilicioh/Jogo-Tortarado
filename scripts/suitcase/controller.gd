@@ -15,7 +15,6 @@ func _ready() -> void:
 	control_panel.visible = false
 
 func _on_case_pressed() -> void:
-	print("case panel UI shown, code:")
 	control_panel.visible = true
 
 func _on_arrow_pressed(scroll_index: int, increment: int) -> void:
@@ -40,7 +39,6 @@ func _open_briefcase() -> void:
 	unlocked = true
 	if sfx_unlocked_case:
 		sfx_unlocked_case.play()
-	print("case opened")
 	await get_tree().create_timer(2.0).timeout
 	control_panel.visible = false
 	GameState.state["briefcase_opened"] = true

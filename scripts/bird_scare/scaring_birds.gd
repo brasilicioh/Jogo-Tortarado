@@ -146,7 +146,6 @@ func pick_random_no_repeat():
 	
 func check_win_condition(condition):
 	if condition >= 4:
-		print("Assustou os passaroosodo")
 		GameState.main.end_minigame()
 		UiManager.set_current_task("Vá para dentro e fale com sua irmã")
 	else:

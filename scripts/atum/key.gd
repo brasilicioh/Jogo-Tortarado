@@ -9,7 +9,6 @@ func _ready() -> void:
 
 
 func _on_pressed() -> void:
-	print("clique registrado")
 	if not GameState.state["gave_key"]:
 		queue_free()
 		GameState.state["gave_key"] = true

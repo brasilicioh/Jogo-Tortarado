@@ -9,7 +9,6 @@ func _ready() -> void:
 		Dialogic.signal_event.connect(_on_dialogic_signal)
 
 func _on_dialogic_signal(arg):
-	print("Sinal recebido: ", arg)
 	if arg == "destroy1":
 		selfnode.queue_free()
 	elif arg == "show":

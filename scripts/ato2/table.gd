@@ -52,12 +52,9 @@ func interact():
 		#UiManager.set_current_task("Espante os pássaros")
 		Dialogic.VAR.Ato2.PutItems.gift = true;
 		$Gift.show()
-	else:
-		print("tu tem porra nenhuma1.")
 	
 	if Dialogic.VAR.Ato2.PutItems.cups and Dialogic.VAR.Ato2.PutItems.cloth and Dialogic.VAR.Ato2.PutItems.decor and Dialogic.VAR.Ato2.PutItems.gift:
 		#UiManager.set_current_task("Espante os pássaros")
-		print("mesa completa")
 		table_complete = true;
 		Dialogic.VAR.Ato2.table_complete = true;
 		await get_tree().create_timer(2.0).timeout
@@ -72,7 +69,6 @@ func interact():
 						continue
 				continue
 		Dialogic.start(timeline)
-		print(player.character_id)
 		var tween = create_tween()
 		tween.tween_property(player, "global_position", $IdaIrma.global_position, 2)
 
@@ -81,11 +77,8 @@ func interact():
 
 	elif Dialogic.VAR.Ato2.PutItems.cups and Dialogic.VAR.Ato2.PutItems.cloth and Dialogic.VAR.Ato2.PutItems.decor:
 		#UiManager.set_current_task("Espante os pássaros")
-		print("mesa semi completa")
 		table_half_complete = true;
 		Dialogic.VAR.Ato2.table_half_complete = true;
 		Dialogic.start("salutana_appears")
 		DoorMotherNode.process_mode = Node.PROCESS_MODE_INHERIT
 
-	else:
-		print("tu tem porra nenhuma2.")

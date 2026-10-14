@@ -11,14 +11,12 @@ func _ready():
 		GameState.state["alredy_talk"] = false
 
 func _on_dialogic_signal(arg):
-	print("Sinal recebido: ", arg)
 	if arg == "destroy1":
 		selfnode.queue_free()
 	elif arg == "move":
 		mover_personagem()
 
 func interact() -> void:
-	print("interagiu")
 	Dialogic.start("ato_2")
 
 func mover_personagem():

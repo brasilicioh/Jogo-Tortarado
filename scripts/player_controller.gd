@@ -29,8 +29,6 @@ func _ready() -> void:
 	var character_sprite = sprites.get(character_id)
 	if character_sprite is SpriteFrames:
 		sprite.sprite_frames = sprites.get(character_id)
-	else:
-		print("could not find sprite")
 	
 	Dialogic.timeline_started.connect(_on_dialogue_started)
 	Dialogic.timeline_ended.connect(_on_dialogue_ended)
@@ -78,7 +76,6 @@ func _physics_process(delta: float) -> void:
 			# normal interact
 			elif GameState.held_item_index() == -1 and\
 			   nearby_interactable.has_method("interact"):
-				print("interacting")
 				nearby_interactable.interact()
 				GameState.was_interacting = false
 		if Input.is_action_just_pressed("interact"):
@@ -106,7 +103,6 @@ func _on_interaction_area_area_entered(area: Area2D) -> void:
 	   and can_interact:
 		if area.has_method("highlight"):
 			area.highlight(true)
-		print(area)
 		nearby_interactable = area
 		
 	if area.name == "DoorTriggerArea":
@@ -120,7 +116,6 @@ func _on_interaction_area_area_exited(area: Area2D) -> void:
 		if area.has_method("highlight"):
 			area.highlight(false)
 		nearby_interactable = null
-		print("reset interactible")
 
 func _on_minigame_started():
 	can_move = false

@@ -23,6 +23,5 @@ func _on_button_toggled(toggled_on: bool) -> void:
 		$PanelContainer/Icon.modulate = Color.WHITE
 		GameState.active_inventory().current_item = id
 		$PanelContainer/Button.set_pressed_no_signal(true)
-		print(GameState.held_item_index())
 	else:
 		$PanelContainer/Icon.modulate = modulate_color

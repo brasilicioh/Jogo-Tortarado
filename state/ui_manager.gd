@@ -17,14 +17,11 @@ func _on_main_set():
 		return
 	
 	main = GameState.main
-	print("main set")
 	
 	if not main:
-		print("not main")
 		# don't shit yourself
 		return
-	
-	print("connecting cutscene started")
+
 	main.cutscene_started.connect(_on_cutscene_started)
 	main.cutscene_ended.connect(_on_cutscene_ended)
 

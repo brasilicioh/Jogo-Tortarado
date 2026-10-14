@@ -8,10 +8,8 @@ func _ready() -> void:
 		selfnode.queue_free()
 
 func _on_dialogic_signal(arg):
-	print("Sinal recebido: ", arg)
 	if arg == "destroy":
 		selfnode.queue_free()
 
 func interact() -> void:
-	print("interagiu")
 	Dialogic.start("ask_domingas")
