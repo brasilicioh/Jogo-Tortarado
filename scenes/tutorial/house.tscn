@@ -24,10 +24,11 @@ spawn_characters = Array[String](["belonisia"])
 active_character = "belonisia"
 
 [node name="Teleporter" parent="." unique_id=85933971 instance=ExtResource("3_g1flj")]
-position = Vector2(-1499, -96)
+position = Vector2(-967, -96)
 target = Vector2(7467, -108)
 
 [node name="Label" type="Label" parent="Teleporter" unique_id=402166908]
+visible = false
 offset_left = -74.0
 offset_top = -116.0
 offset_right = 79.0
