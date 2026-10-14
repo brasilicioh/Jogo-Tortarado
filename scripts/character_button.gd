@@ -9,6 +9,7 @@ var character_name: String:
 var character_id: String
 
 func _ready():
+	add_theme_font_size_override("font_size", 32)
 	pressed.connect(_on_button_pressed)
 
 func _on_button_pressed():

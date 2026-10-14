@@ -29,7 +29,7 @@ func appear() -> void:
 	# kill all children of the vbox
 	# twice for good measure
 	# then spawn new buttons
-	for child in $VBoxContainer.get_children():
+	for child in $MarginContainer/VBoxContainer.get_children():
 		# kill the child
 		child.queue_free()
 	
@@ -41,13 +41,13 @@ func appear() -> void:
 		button.character_name = id_to_name.get(character, "no name avaliables")
 		button.character_id = character
 		button.character_selected.connect(_on_button_pressed)
-		$VBoxContainer.add_child(button)
+		$MarginContainer/VBoxContainer.add_child(button)
 	
 	show()
 
 func kille():
 	# the twice killing
-	for child in $VBoxContainer.get_children():
+	for child in $MarginContainer/VBoxContainer.get_children():
 		# kill all the children
 		child.queue_free()
 		
