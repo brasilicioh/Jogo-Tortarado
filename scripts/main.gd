@@ -55,6 +55,9 @@ func load_scene(scene: String, spawn_name: String):
 	for child in level_container.get_children():
 		child.queue_free()
 	
+	for child in cutscene_container.get_children():
+		child.queue_free()
+	
 	await get_tree().process_frame
 	
 	var current_scene: Node2D = load(scene).instantiate()
@@ -89,6 +92,7 @@ func load_scene(scene: String, spawn_name: String):
 	tween2.tween_property(self, "modulate:b", 1.0, 0.75)
 	
 	ui.show()
+	ui.get_child(0).show()
 
 func load_minigame(minigame_name: String):
 	interrupt_ui.emit()

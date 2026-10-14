@@ -41,6 +41,9 @@ size = Vector2(128, 128)
 
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
+[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("7_uaw8k")]
+position = Vector2(-660, 28)
+
 [node name="Label" type="Label" parent="." unique_id=1945071346]
 offset_left = 5113.4126
 offset_top = -251.53528
@@ -56,9 +59,10 @@ active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=769522013]
+position = Vector2(-12, 232)
 
 [node name="Sprite2D" type="Sprite2D" parent="Ground" unique_id=1825814621]
-position = Vector2(0, 128)
+position = Vector2(-50, 0)
 scale = Vector2(100, 2)
 texture = ExtResource("1_nsm10")
 
@@ -228,8 +232,5 @@ text = "PORTA LEVA AO ATO 4"
 [node name="Casa" type="Sprite2D" parent="." unique_id=1738598041]
 position = Vector2(702, -457)
 texture = ExtResource("6_uaw8k")
-
-[node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("7_uaw8k")]
-position = Vector2(-660, 28)
 
 [editable path="MyChild/StairTransition"]
