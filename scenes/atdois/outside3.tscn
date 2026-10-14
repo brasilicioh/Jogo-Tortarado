@@ -27,14 +27,14 @@ size = Vector2(100, 220)
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
 [node name="OutsideMarker2" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
-position = Vector2(-681, -64)
+position = Vector2(-607, -64)
 script = ExtResource("4_5ft1l")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Tree" type="StaticBody2D" parent="." unique_id=1609903329]
-z_index = 1
+z_index = 2
 position = Vector2(-1301, -160)
 
 [node name="Sprite2D" type="Sprite2D" parent="Tree" unique_id=986159816]
@@ -55,7 +55,7 @@ shape = SubResource("RectangleShape2D_fosw3")
 [node name="Severo" type="Node2D" parent="." unique_id=1397827555]
 visible = false
 z_index = 1
-position = Vector2(-1735, -74)
+position = Vector2(-1543, -74)
 
 [node name="Sprite2D" type="Sprite2D" parent="Severo" unique_id=893489261]
 scale = Vector2(2, 2)
@@ -64,7 +64,7 @@ texture = ExtResource("6_hq1ev")
 [node name="Belonisia" type="Node2D" parent="." unique_id=1762926739]
 visible = false
 z_index = 1
-position = Vector2(-1612, -74)
+position = Vector2(-1469, -74)
 
 [node name="Sprite2D" type="Sprite2D" parent="Belonisia" unique_id=413532596]
 scale = Vector2(2, 2)
