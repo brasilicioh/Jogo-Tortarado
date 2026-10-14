@@ -8,3 +8,11 @@ func interact():
 		#UiManager.set_current_task("Espante os pássaros")
 		Dialogic.VAR.Ato2.GaveItems.decor = true;
 		$Sprite2D.hide()
+
+func _ready() -> void:
+	if $Sprite2D is Node:
+		$Sprite2D.set_instance_shader_parameter("outline_enabled", false)
+
+func highlight(state: bool) -> void:
+	if $Sprite2D is Node:
+		$Sprite2D.set_instance_shader_parameter("outline_enabled", state)

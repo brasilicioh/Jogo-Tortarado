@@ -25,7 +25,7 @@ b = Vector2(12, 284)
 size = Vector2(104, 307)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_grbu6"]
-size = Vector2(128.00002, 130)
+size = Vector2(39.272728, 130)
 
 [node name="House" type="Node2D" unique_id=1394089690]
 
@@ -69,14 +69,14 @@ position = Vector2(-793, -145)
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=68545113]
 shape = SubResource("SegmentShape2D_w2twm")
 
-[node name="DoorTransition3" type="Area2D" parent="." unique_id=2014590193]
+[node name="DoorTransition" type="Area2D" parent="." unique_id=2014590193]
 position = Vector2(2381, -150)
 script = ExtResource("9_pxe8g")
 target_scene = "uid://c2bhinnndgu70"
 spawn_point = "OutsideMarker2"
 metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition3" unique_id=952093493]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition" unique_id=952093493]
 position = Vector2(0, 33.5)
 shape = SubResource("RectangleShape2D_kmohc")
 
@@ -85,7 +85,13 @@ position = Vector2(-186, 24)
 script = ExtResource("6_s00ve")
 domingas = NodePath("Domingas")
 
+[node name="SaidaDomingas" type="Marker2D" parent="Table" unique_id=1933981787]
+position = Vector2(923, 13)
+script = ExtResource("1_vmv7m")
+metadata/_custom_type_script = "uid://xxber3ayswrc"
+
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Table" unique_id=2105996227]
+position = Vector2(-73, 1)
 scale = Vector2(1.3749999, 0.5)
 shape = SubResource("RectangleShape2D_grbu6")
 
@@ -99,5 +105,14 @@ position = Vector2(-114, 0)
 
 [node name="Sprite2D" type="Sprite2D" parent="Table/Domingas" unique_id=1980176186]
 scale = Vector2(2, 2)
+texture = ExtResource("8_22ced")
+flip_h = true
+
+[node name="DomingasEscondida" type="Node2D" parent="Table" unique_id=1941338664]
+modulate = Color(1, 1, 1, 0.20392157)
+show_behind_parent = true
+position = Vector2(-74, -16)
+
+[node name="Sprite2D" type="Sprite2D" parent="Table/DomingasEscondida" unique_id=1781305856]
 texture = ExtResource("8_22ced")
 flip_h = true

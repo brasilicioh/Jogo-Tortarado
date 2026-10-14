@@ -7,6 +7,8 @@ func _ready():
 	Dialogic.signal_event.connect(_on_dialogic_signal)
 	if get_parent().get_parent().name == "QuartoCrianca" and Dialogic.VAR.Ato2.interacted_with_belonisia_firsttime == true:
 		selfnode.queue_free()
+	else:
+		GameState.state["alredy_talk"] = false
 
 func _on_dialogic_signal(arg):
 	print("Sinal recebido: ", arg)
@@ -18,7 +20,6 @@ func _on_dialogic_signal(arg):
 func interact() -> void:
 	print("interagiu")
 	Dialogic.start("ato_2")
-	
 
 func mover_personagem():
 	var tween = create_tween()
@@ -30,4 +31,4 @@ func mover_personagem():
 	)
 	await tween.finished
 	selfnode.queue_free()
-	
+	GameState.state["alredy_talk"] = true
