@@ -1,7 +1,7 @@
 [gd_scene format=3 uid="uid://bu6fqr8rc3dd0"]
 
 [ext_resource type="Script" uid="uid://d1pypjuq5teh8" path="res://scripts/bird_scare/bird.gd" id="1_kqhkv"]
-[ext_resource type="Texture2D" uid="uid://c7jt7u7g6biat" path="res://assets/sprites/crow.png" id="2_3po83"]
+[ext_resource type="Texture2D" uid="uid://chn3kod7smbkp" path="res://assets/sprites/passaropequeno1.png" id="2_3po83"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_8w0r3"]
 size = Vector2(91, 59)
@@ -16,5 +16,6 @@ position = Vector2(-0.5, -1.5)
 shape = SubResource("RectangleShape2D_8w0r3")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=42583279]
-scale = Vector2(0.1, 0.1)
+scale = Vector2(3, 3)
 texture = ExtResource("2_3po83")
+hframes = 2
