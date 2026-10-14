@@ -1,7 +1,7 @@
 join severo center
 join bibiana center
 [wait time="1.0"]
-*TOC TOC*
+audio "res://assets/sounds/Tutorial/TocToc.mp3"
 [wait time="1.5"]
 [signal arg="enter"]
 severo: Bom dia, senhoritas.

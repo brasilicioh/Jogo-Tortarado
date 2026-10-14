@@ -8,10 +8,14 @@ func interact():
 		return
 	if not GameState.state["briefcase_opened"]:
 		GameState.main.load_minigame("drawer_closeup")
+		GameState.load_audio("res://assets/sounds/atum/abrindo_gaveta.mp3")
 	elif not GameState.state["gave_knife"]:
 		GameState.main.load_minigame("lightBriefcase_closeup")
+		GameState.load_audio("res://assets/sounds/atum/abrindo_gaveta.mp3")
 	else:
+		return
 		GameState.main.load_minigame("openBriefcase_closeup")
+		GameState.load_audio("res://assets/sounds/atum/abrindo_gaveta.mp3")
 	
 func use_item(item: ItemData):
 	if item.id == "key":

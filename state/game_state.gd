@@ -65,3 +65,17 @@ func change_scene(scene: String, spawn_name: String):
 
 func load_cutscene(scene: String):
 	main.load_cutscene(scene)
+	
+func load_audio(audio: String):
+	var audioPlayer = AudioStreamPlayer.new()
+	add_child(audioPlayer)
+	
+	var stream = load(audio)
+	if stream:
+		audioPlayer.stream = stream
+		audioPlayer.play()
+	else:
+		print("Erro ao carregar o áudio: ", audio)
+		audioPlayer.queue_free()
+		return
+	audioPlayer.finished.connect(func(): audioPlayer.queue_free())

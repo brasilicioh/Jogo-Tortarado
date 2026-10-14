@@ -36,4 +36,5 @@ func trocar_cena(event_name):
 		GameState.inventories[GameState.active_player].add_item(faca)
 		await get_tree().create_timer(5.0).timeout
 		UiManager.set_current_task("")
+		GameState.load_audio("res://assets/sounds/atum/faca_caindo.mp3")
 		GameState.change_scene("res://scenes/atdois/quarto_crianca2.tscn", "Bedroom")

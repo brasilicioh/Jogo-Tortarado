@@ -84,7 +84,7 @@ func _on_pedra_hit(alvo: Area2D, projetil: Control) -> void:
 	if bird.has_method("sair"):
 		birds_hit += 1
 		check_win_condition(birds_hit)
-		sfx_Crow.play()
+		GameState.load_audio("res://assets/sounds/tutorial/som_de_passaros.mp3")
 		bird.sair()
 	if is_instance_valid(projetil):
 		projetil.queue_free()
@@ -105,7 +105,7 @@ func atirar():
 		size.x / 2 - projetil.size.x / 2,
 		size.y - projetil.size.y / 2
 	)
-	sfx_Throw.play()
+	GameState.load_audio("res://assets/sounds/tutorial/lanca_pedra.mp3")
 	
 	var area = Area2D.new()
 	area.collision_layer = 2  # camada da "pedra" (ajuste ao seu projeto)

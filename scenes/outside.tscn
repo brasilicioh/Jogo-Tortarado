@@ -180,6 +180,30 @@ offset_right = 151.0
 offset_bottom = -103.0
 text = "PORTA LEVA AO ATO 1"
 
+[node name="DoorTransition2" type="Area2D" parent="DoorTransition2" unique_id=554162213]
+position = Vector2(-809, -12)
+script = ExtResource("3_udpx5")
+target_scene = "uid://dhkeqrmrrxvtb"
+spawn_point = "QuartoAvo"
+metadata/_custom_type_script = "uid://c0pvna5rlt7q3"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DoorTransition2/DoorTransition2" unique_id=1252246222]
+position = Vector2(-1, 1)
+shape = SubResource("RectangleShape2D_b5uqm")
+
+[node name="Sprite2D" type="Sprite2D" parent="DoorTransition2/DoorTransition2" unique_id=1683893098]
+material = ExtResource("6_bkgx0")
+position = Vector2(1.0000076, -5.499998)
+scale = Vector2(0.7343751, 1.4140625)
+texture = ExtResource("1_nsm10")
+
+[node name="TextEdit" type="TextEdit" parent="DoorTransition2/DoorTransition2" unique_id=427952486]
+offset_left = -91.0
+offset_top = -150.0
+offset_right = 151.0
+offset_bottom = -103.0
+text = "PORTA LEVA AO ATO 3"
+
 [node name="DoorTransition3" type="Area2D" parent="." unique_id=1788716658]
 position = Vector2(5842, -101)
 script = ExtResource("3_udpx5")

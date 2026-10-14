@@ -2,3 +2,4 @@ join donana center
 [wait time="1.0"]
 \donana: Filha...
 [wait time="1.0"]
+do UiManager.set_current_task("Continue...")
