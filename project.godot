@@ -58,9 +58,11 @@ directories/dtl_directory={
 "find_domingas": "res://assets/timelines/ato2/find_domingas.dtl",
 "homem_morto": "res://assets/timelines/atatro/homem_morto.dtl",
 "homem_morto1": "res://assets/timelines/atatro/homem_morto1.dtl",
+"house": "res://assets/timelines/ato2/house.dtl",
 "interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
 "inventario": "res://assets/timelines/tutorial/inventario.dtl",
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
+"locked_drawer": "res://assets/timelines/atum/locked_drawer.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
 "pos_faca": "res://assets/timelines/atum/pos_faca.dtl",
@@ -159,7 +161,8 @@ translation/add_separator=false
 
 window/size/viewport_width=1280
 window/size/viewport_height=720
-window/stretch/mode="viewport"
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
 
 [editor_plugins]
 
@@ -226,6 +229,10 @@ change_character={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 

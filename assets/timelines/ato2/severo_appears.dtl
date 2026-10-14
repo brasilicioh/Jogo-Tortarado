@@ -1,16 +1,15 @@
 join severo center
 join bibiana center
-[wait time="1.0"]
-*TOC TOC*
-[wait time="1.5"]
+audio "res://assets/sounds/Tutorial/TocToc.mp3"
+[wait time="4.5"]
 [signal arg="enter"]
 severo: Bom dia, senhoritas.
-bibiana: Bom dia Severo, chegou cedo para a festa.
+bibiana: Bom dia, Severo, chegou cedo para a festa.
 severo: Painho mandou eu ajudar o tio Zeca antes do povo chegar.
+[wait time="1.0"]
 severo: E como andam as organizações?
 bibiana: A gente já fez tudo. Só falta terminar agora.
 severo: Aposto que vai ficar muito bom, vocês são ótimas nisso!
-severo: Vou indo agora. Até mais meninas!
 do UiManager.set_current_task("Festa de Zeca: O Final da Festa")
 [wait time="1.0"]
-[signal arg="leave"]
+[signal arg="ir_outside_ato2"]

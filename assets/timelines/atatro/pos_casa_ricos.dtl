@@ -6,3 +6,4 @@ join donana center
 \donana: Mas essa faca… essa maldita faca.
 [wait time="1.0"]
 [signal arg="prox_cena"]
+do UiManager.set_current_task("Explore a casa")

@@ -4,7 +4,7 @@ bibiana: Quero estar bonita. Qual roupa é melhor, a azul ou a amarela?
 - A azul
 - A amarela
 belonisia: Então vou vestir essa mesmo!
-audio "res://assets/sfx/crow.mp3"
+audio "res://assets/sounds/Tutorial/TocToc.mp3" [bus=""]
 [wait time="2.0" hide_text="false"]
 [signal arg="severo"]
 # Severo entra
@@ -17,7 +17,7 @@ severo: Bem,[pause=0.5+] tio Zeca tá chamando vocês.
 bibiana: Não não. A gente já tava indo lá para fora.
 severo: Então vamos!
 [wait time="0.5"]
-severo: Inclusive[lspeed=0.5]...[lspeed]\
+severo: Inclusive...[lspeed=0.5]...[lspeed]\
 Algum gato mordeu sua lingua, Belonísia?
 bibiana: A Belonísia é muda, e essa é uma história um pouco longa.
 [wait time="0.5"]

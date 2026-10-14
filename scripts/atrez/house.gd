@@ -4,6 +4,7 @@ var timeline: DialogicTimeline = load("res://assets/timelines/atrez/bedroom.dtl"
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
+	UiManager.set_current_task("Rio de Sangue: A Donana")
 	Dialogic.signal_event.connect(handle_event)
 	
 	Dialogic.start(timeline)
