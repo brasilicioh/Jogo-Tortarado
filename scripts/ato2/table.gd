@@ -13,6 +13,9 @@ var gift: ItemData = load("res://assets/items/gift.tres")
 
 var timeline: DialogicTimeline = preload("res://assets/timelines/ato2/severo_appears.dtl")
 
+func use_item(_unused: ItemData):
+	interact()
+
 func _ready() -> void:
 	GameState.state["atatro_items_gotten"] = 0
 	if Dialogic.VAR.Ato2.PutItems.cups:
@@ -57,9 +60,10 @@ func interact():
 		#UiManager.set_current_task("Espante os pássaros")
 		table_complete = true;
 		Dialogic.VAR.Ato2.table_complete = true;
-		await get_tree().create_timer(2.0).timeout
+		#await get_tree().create_timer(2.0).timeout
 		#fazer cutscene de noite aqui.
 		
+		Dialogic.start(timeline)
 		var player = null
 		for chars in GameState.active_characters:
 			if chars != GameState.active_player:
@@ -68,7 +72,6 @@ func interact():
 						player = node
 						continue
 				continue
-		Dialogic.start(timeline)
 		var tween = create_tween()
 		tween.tween_property(player, "global_position", $IdaIrma.global_position, 2)
 
@@ -81,4 +84,3 @@ func interact():
 		Dialogic.VAR.Ato2.table_half_complete = true;
 		Dialogic.start("salutana_appears")
 		DoorMotherNode.process_mode = Node.PROCESS_MODE_INHERIT
-

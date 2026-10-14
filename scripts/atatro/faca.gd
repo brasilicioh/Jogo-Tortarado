@@ -4,7 +4,7 @@ var faca: ItemData = load("res://assets/items/faca.tres")
 var timeline: DialogicTimeline = preload("res://assets/timelines/atatro/casa_ricos_faca.dtl")
 
 func interact():
-	hide()
+	self.queue_free()
 	GameState.active_inventory().add_item(faca)
 	Dialogic.start(timeline)
 

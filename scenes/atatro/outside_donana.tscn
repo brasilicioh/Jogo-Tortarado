@@ -23,8 +23,8 @@ size = Vector2(202, 400)
 [node name="OutsideDonana" type="Node2D" unique_id=1939682416]
 
 [node name="Background" type="Sprite2D" parent="." unique_id=1836718588]
-position = Vector2(0, -552)
-scale = Vector2(2.5, 2.5)
+position = Vector2(4126, -932)
+scale = Vector2(4, 4)
 texture = ExtResource("1_r7x0m")
 
 [node name="Ground" type="StaticBody2D" parent="." unique_id=462201492]
@@ -35,7 +35,7 @@ position = Vector2(1, 0)
 shape = SubResource("SegmentShape2D_r7x0m")
 
 [node name="Spawn" type="Marker2D" parent="." unique_id=1822799042 groups=["spawn point"]]
-position = Vector2(455, 22)
+position = Vector2(2347, -61.999992)
 rotation = 3.1415927
 scale = Vector2(0.75653094, -0.44983667)
 script = ExtResource("1_ejme7")
@@ -44,19 +44,19 @@ active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="WallLeft" type="StaticBody2D" parent="." unique_id=963262510]
-position = Vector2(-657, -266)
+position = Vector2(1006, -266)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallLeft" unique_id=195920211]
 shape = SubResource("SegmentShape2D_bssop")
 
 [node name="WallRight" type="StaticBody2D" parent="." unique_id=1706423785]
-position = Vector2(544, -154)
+position = Vector2(2574, -154)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="WallRight" unique_id=1061828636]
 shape = SubResource("SegmentShape2D_n1rya")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=345552981]
-position = Vector2(-331, -243)
+position = Vector2(1739, -280)
 scale = Vector2(0.5, 0.5)
 texture = ExtResource("2_7edia")
 

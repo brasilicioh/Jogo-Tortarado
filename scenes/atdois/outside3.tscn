@@ -27,7 +27,7 @@ size = Vector2(100, 220)
 [node name="Outside" type="Node2D" unique_id=1893350408]
 
 [node name="OutsideMarker2" type="Marker2D" parent="." unique_id=851272880 groups=["spawn point"]]
-position = Vector2(-607, -64)
+position = Vector2(51, -64)
 script = ExtResource("4_5ft1l")
 spawn_characters = Array[String](["bibiana"])
 active_character = "bibiana"
@@ -95,17 +95,15 @@ position = Vector2(1076, -53)
 script = ExtResource("4_5ft1l")
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
-[node name="Salustina" type="Node2D" parent="." unique_id=1473888529 node_paths=PackedStringArray("selfnode")]
+[node name="Salustina" type="Node2D" parent="." unique_id=1473888529]
 visible = false
 z_index = 1
 position = Vector2(-300, -101)
 script = ExtResource("8_5ft1l")
-selfnode = NodePath(".")
 
 [node name="Sprite2D" type="Sprite2D" parent="Salustina" unique_id=644687991]
 scale = Vector2(2, 2)
 texture = ExtResource("10_hq1ev")
-flip_h = true
 
 [node name="OutsideBackground" parent="." unique_id=292768363 instance=ExtResource("8_l8uq3")]
 position = Vector2(1, 0)

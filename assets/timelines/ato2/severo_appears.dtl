@@ -1,7 +1,7 @@
+[wait time="3.0"]
 join severo center
 join bibiana center
 audio "res://assets/sounds/Tutorial/TocToc.mp3"
-[wait time="4.5"]
 [signal arg="enter"]
 severo: Bom dia, senhoritas.
 bibiana: Bom dia, Severo, chegou cedo para a festa.

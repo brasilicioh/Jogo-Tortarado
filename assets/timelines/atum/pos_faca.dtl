@@ -4,3 +4,4 @@ belonisia: O que é isso??
 bibiana: Meu Deus!
 bibiana: A vovó é maluca!
 [signal arg="dialogic_end"]
+[wait time="3.0"]

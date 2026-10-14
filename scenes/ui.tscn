@@ -198,7 +198,7 @@ custom_minimum_size = Vector2(300, 0)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 50
-text = "Interact"
+text = "Interagir"
 script = ExtResource("5_8dubc")
 
 [node name="ChangeCharacter" type="Button" parent="InputButtons" unique_id=1694119187]
@@ -208,7 +208,7 @@ custom_maximum_size = Vector2(300, -1)
 layout_mode = 2
 size_flags_horizontal = 8
 theme_override_font_sizes/font_size = 50
-text = "Change character"
+text = "Trocar Personagem"
 autowrap_mode = 2
 script = ExtResource("5_wm3ai")
 

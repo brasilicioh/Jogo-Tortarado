@@ -4,7 +4,7 @@ var colar: ItemData = load("res://assets/items/colar.tres")
 var timeline: DialogicTimeline = preload("res://assets/timelines/atatro/casa_ricos_colar.dtl")
 
 func interact():
-	hide()
+	self.queue_free()
 	GameState.active_inventory().add_item(colar)
 	Dialogic.start(timeline)
 

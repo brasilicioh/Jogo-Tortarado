@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://c6reqv1xtlcwc" path="res://scripts/tutorial/house.gd" id="1_viu1i"]
 [ext_resource type="PackedScene" uid="uid://dmb4qt2okhv0s" path="res://scenes/house.tscn" id="2_nk3l3"]
 [ext_resource type="PackedScene" uid="uid://cgmtn6j1n53nr" path="res://scenes/teleporter.tscn" id="3_g1flj"]
+[ext_resource type="Texture2D" uid="uid://dee87s38vwd04" path="res://assets/scenaries/corredor1_sem_quadro.png" id="3_nk3l3"]
 [ext_resource type="Script" uid="uid://jipeg6mdvv5l" path="res://scripts/tutorial/bibiana.gd" id="4_eddn4"]
 [ext_resource type="Texture2D" uid="uid://bekfbg6emw052" path="res://assets/characters/bibiana.png" id="5_viu1i"]
 [ext_resource type="Texture2D" uid="uid://bay3kc7tfdhk8" path="res://assets/characters/severo_walk.png" id="6_ed01o"]
@@ -18,6 +19,9 @@ size = Vector2(128, 128)
 script = ExtResource("1_viu1i")
 
 [node name="House" parent="." unique_id=1394089690 instance=ExtResource("2_nk3l3")]
+
+[node name="Corredor1" parent="House" index="0" unique_id=1752356399]
+texture = ExtResource("3_nk3l3")
 
 [node name="QuartoMeninasRoupa" parent="House/QuartoDasMeninasComCamisa" parent_id_path=PackedInt32Array(1394089690, 1118305505) index="0" unique_id=2135177472]
 spawn_characters = Array[String](["belonisia"])

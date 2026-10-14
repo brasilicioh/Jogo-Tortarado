@@ -1,7 +1,5 @@
 extends Node2D
 
-@export var selfnode: Node2D;
-
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
 	if Dialogic.VAR.Ato2.second_intro_played == false:
@@ -10,9 +8,9 @@ func _ready() -> void:
 
 func _on_dialogic_signal(arg):
 	if arg == "destroy1":
-		selfnode.queue_free()
+		self.queue_free()
 	elif arg == "show":
-		selfnode.show()
+		self.show()
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:

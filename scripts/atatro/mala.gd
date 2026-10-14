@@ -4,7 +4,7 @@ var mala: ItemData = load("res://assets/items/mala.tres")
 var timeline: DialogicTimeline = preload("res://assets/timelines/atatro/casa_ricos_mala.dtl")
 
 func interact():
-	hide()
+	self.queue_free()
 	GameState.active_inventory().add_item(mala)
 	Dialogic.start(timeline)
 

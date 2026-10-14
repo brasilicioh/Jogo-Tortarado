@@ -8,7 +8,7 @@ var dialogo_iniciado := false
 func _on_dialogic_signal(arg):
 	if arg == "seve_hide":
 		var tween = create_tween()
-		tween.tween_property(severo, "global_position", $Saida.global_position, 2)
+		tween.tween_property(severo, "global_position", $Saida.global_position, 3)
 		await tween.finished
 		severo.queue_free()
 

@@ -9,7 +9,7 @@ audio "res://assets/sounds/Tutorial/TocToc.mp3" [bus=""]
 [signal arg="severo"]
 # Severo entra
 join severo center
-severo: Boa tarde, vocês são bibiana e Belonisía?
+severo: Boa tarde, vocês são Bibiana e Belonisía?
 severo: Eu sou Severo, primo de vocês.
 bibiana: Ah, boa tarde! Isso, eu sou Bibiana, é um prazer.
 severo: Eu interrompi algo? Me desculpem.
