@@ -28,6 +28,9 @@ colors = PackedColorArray(0, 0, 1, 1, 0.08640001, 0.08640001, 0.72, 1)
 gradient = SubResource("Gradient_pqb1r")
 width = 16
 
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_2i0da"]
+b = Vector2(103, 47)
+
 [node name="Outside" type="Node2D" unique_id=2120221174]
 script = ExtResource("1_umhw1")
 
@@ -48,17 +51,18 @@ active_character = "donana"
 metadata/_custom_type_script = "uid://xxber3ayswrc"
 
 [node name="Area2D" type="Area2D" parent="." unique_id=654639337]
-position = Vector2(8491, 35)
+position = Vector2(8571, 35)
 script = ExtResource("5_v4vu4")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=2008640872]
-position = Vector2(0.5, 1)
+position = Vector2(85, 1)
 shape = SubResource("RectangleShape2D_tl472")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="Area2D" unique_id=1049746326]
 position = Vector2(-284, -219)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/StaticBody2D2" unique_id=426486859]
+position = Vector2(71, 0)
 shape = SubResource("SegmentShape2D_tl472")
 
 [node name="CanvasModulate" type="CanvasModulate" parent="Area2D" unique_id=2057161011]
@@ -89,6 +93,12 @@ angle_min = 90.0
 angle_max = 90.0
 scale_amount_min = 1.5
 scale_amount_max = 2.5
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=996493243]
+position = Vector2(8256, 29)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=2101065130]
+shape = SubResource("SegmentShape2D_2i0da")
 
 [connection signal="area_entered" from="Area2D" to="Area2D" method="interact"]
 
