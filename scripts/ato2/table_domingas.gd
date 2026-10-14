@@ -18,3 +18,4 @@ func _on_dialogic_signal(arg):
 
 func interact() -> void:
 	Dialogic.start("find_domingas")
+	UiManager.set_current_task("Vá para dentro e fale com sua irmã")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d4krh1vshf2tr"
+path="res://.godot/imported/som_de_fundo (vejam).mp3-4358dc2b856d4c16f25a6faba8f1099f.mp3str"
+
+[deps]
+
+source_file="res://assets/sounds/Tutorial/som_de_fundo (vejam).mp3"
+dest_files=["res://.godot/imported/som_de_fundo (vejam).mp3-4358dc2b856d4c16f25a6faba8f1099f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

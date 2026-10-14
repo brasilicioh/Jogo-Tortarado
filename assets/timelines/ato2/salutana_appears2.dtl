@@ -9,7 +9,7 @@ if {Ato2.second_intro_played} == false:
 	[wait time="1.0"]
 	[signal arg="show"]
 	[wait time="0.5"]
-	salustina: Minha filha, já guardei tudo.
+	salustiana: Minha filha, já guardei tudo.
 	salustina: Tá tudo guardado para o próximo aniversário.
 	salustina: Agora tô procurando suas irmãs. Você viu elas?
 	bibiana: Eu não vi não. A Domingas tava brincando de se esconder com as outras crianças... mas a Belonísia...
@@ -17,3 +17,4 @@ if {Ato2.second_intro_played} == false:
 	[wait time="0.5"]
 	[signal arg="destroy1"]
 	set {Ato2.second_intro_played} = true
+	do UiManager.set_current_task("Festa de Zeca: Procure suas irmãs")

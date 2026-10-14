@@ -62,6 +62,7 @@ directories/dtl_directory={
 "interacao_donana_salustiana": "res://assets/timelines/atum/interacao_donana_salustiana.dtl",
 "inventario": "res://assets/timelines/tutorial/inventario.dtl",
 "kiss_scene": "res://assets/timelines/ato2/kiss_scene.dtl",
+"locked_drawer": "res://assets/timelines/atum/locked_drawer.dtl",
 "mala1": "res://assets/timelines/atum/mala1.dtl",
 "pos_casa_ricos": "res://assets/timelines/atatro/pos_casa_ricos.dtl",
 "pos_faca": "res://assets/timelines/atum/pos_faca.dtl",
@@ -227,6 +228,10 @@ change_character={
 "events": [Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":-1,"window_id":0,"alt_pressed":false,"shift_pressed":false,"ctrl_pressed":false,"meta_pressed":false,"pressed":false,"keycode":0,"physical_keycode":81,"key_label":0,"unicode":113,"location":0,"echo":false,"script":null)
 ]
 }
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [internationalization]
 
